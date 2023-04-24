@@ -38,8 +38,8 @@
 //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
                         bindings = <
    &kp C_PP             &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U     &kp Y   &kp SEMI &kp BSPC
-   &mt LCTRL ESC        &kp A &kp R &kp S &kp T &kp G   &kp M &kp N  &kp E     &kp I   &kp O    &kp SQT
-   &mt LSHFT TAB        &kp Z &kp X &kp C &kp D &kp V   &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &mt RSHFT RET
+   &mt LCTRL TAB        &kp A &kp R &kp S &kp T &kp G   &kp M &kp N  &kp E     &kp I   &kp O    &kp SQT
+   &mt LSHFT ESC        &kp Z &kp X &kp C &kp D &kp V   &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &mt RSHFT RET
                         &mt LGUI MINUS &lt 1 SPACE &lt 2 RET &mt LSHFT BSPC &mt RALT EQUAL
                         >;
                         
