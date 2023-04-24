@@ -29,21 +29,23 @@
    &mt LSHFT TAB        &kp Z &kp X &kp C &kp D &kp V   &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &mt RSHFT RET
                         &mt LGUI MINUS &lt 1 SPACE &lt 2 RET &mt LSHFT BSPC &mt RALT EQUAL
                         >;
+                        
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
 
                 lower_layer {
 // ----------------------------------------------------------------------------------
 // |    |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |    DEL    |
-// |    |  _  |  +  |  {  |  }  | "|" |   | LFT | DWN |  UP | RGT |  `  |     ~     |
+// |    |  =  |  +  |  {  |  }  | "|" |   | LFT | DWN |  UP | RGT |  `  |     ~     |
 // |    | ESC | GUI | ALT | CAPS|  "  |   | HOME| END | PGUP| PGDN| PRSC| SHFT(RET) |
 //                       |     |     | RET | ADJ |     |
                         bindings = <
-   &kp C_MUTE   &kp EXCL  &kp AT      &kp HASH &kp DLLR &kp PRCNT      &kp CARET &kp AMPS &kp N8    &kp LPAR  &kp RPAR  &trans
-   &trans       &kp MINUS &kp KP_PLUS &kp LBRC &kp RBRC &kp PIPE       &kp LEFT  &kp DOWN &kp UP    &kp RIGHT &kp GRAVE &kp TILDE
-   &trans       &kp ESC   &kp LGUI    &kp LALT &kp CLCK &kp DQT        &kp HOME  &kp END  &kp PG_UP &kp PG_DN &kp PSCRN &mt RSHFT RET
-                                 &trans      &trans       &trans        &kp DEL    &trans
+   &kp C_MUTE           &kp EXCL  &kp AT      &kp HASH    &kp DLLR &kp PRCNT      &kp PLUS   &kp N7 &kp N8  &kp N9 &kp ASTRK &trans
+   &trans               &kp AMPS  &kp COLON   &kp KP_LPAR &kp LBRC &kp LBKT       &kp MINUS  &kp N4 &kp N5  &kp N6 &kp FSLH  &kp PIPE
+   &kp LG(GRAVE)        &kp CARET &kp UNDER   &kp KP_RPAR &kp RBRC &kp RBKT       &kp N0     &kp N1 &kp N2  &kp N3 &kp BSLH  &KP F12
+                                                  &trans      &trans       &trans        &kp DEL    &trans
                         >;
+                        
                         sensor-bindings = <&inc_dec_kp C_AC_ZOOM_IN C_AC_ZOOM_OUT>;
                 };
 
@@ -54,11 +56,12 @@
 // |    | ESC | GUI | ALT | CAPS|  "  |   | F7  | F8  | F9  | F10 | F11 | F12 |
 //                       |     | ADJ | BKSP |    |     |
                         bindings = <
-   &kp ESC &kp N1       &kp N2          &kp N3          &kp N4          &kp N5        &kp N6    &kp LA(LEFT) &kp UP    &kp LA(RIGHT) &kp LA(BSPC)   &trans
-   &trans  &kp MINUS    &kp EQUAL       &kp LSHFT       &kp LALT        &kp BSLH      &kp F1    &kp LEFT     &kp DOWN  &kp RIGHT     &kp F5         &kp F6
-   &trans  &kp LG(Z)    &kp LG(X)       &kp LG(C)       &kp LG(V)    &kp LS(LG(Z))    &kp F7    &kp HOME     &kp F9    &kp END       &kp F11        &kp F12
-                                &trans      &trans       &trans        &trans      &trans
+   &trans  &none        &kp LA(SPACE)   &kp LG(SPACE)   &kp LS(LC(N4))  &kp LS(LC(N5))          &kp LA(UP)        &kp LA(LEFT) &kp UP    &kp LA(RIGHT) &kp LA(BSPC)   &trans
+   &trans  &kp LG(A)    &kp EQUAL       &kp LSHFT       &kp LALT        &kp CLCK                &kp LA(DOWN)      &kp LEFT     &kp DOWN  &kp RIGHT     &none          &trans
+   &trans  &kp LG(Z)    &kp LG(X)       &kp LG(C)       &kp LG(V)       &kp LS(LG(Z))           &none             &kp LG(LEFT) &none     &kp LG(RIGHT) &kp LG(BSPC)   &trans
+                                                                &trans      &trans       &trans        &trans      &trans
                         >;
+                        
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
 
@@ -74,6 +77,7 @@
    &ext_power EP_TOG &none         &none           &none           &none &none              &none       &none        &none        &none        &none        &none
                                                              &trans      &trans     &out OUT_TOG        &trans      &trans
                         >;
+                        
                         sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN>;
                 };
         };
