@@ -75,10 +75,11 @@
 // |          |          |          |          |    |         |   |       |     |     |     |     |        |
 //                                              |     |     |     |     |     |
                         bindings = <
+
    &none &rgb_ug RGB_BRI &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_EFF &rgb_ug RGB_TOG    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR      
    &to 0 &rgb_ug RGB_BRD &rgb_ug RGB_SAD &rgb_ug RGB_HUD &rgb_ug RGB_EFR &none              &kp F1        &kp F2        &kp F3        &kp F4        &kp F5        &kp F6
-   &none &ext_power EP_TOG &none         &none           &none           &none              &kp F7        &kp F8        &kp F9        &kp F10       &kp F11       &kp F12
-                                                             &trans      &trans     &out OUT_TOG        &trans      &trans
+   &none &none           &none           &none           &out OUT_USB    &out OUT_BLE       &kp F7        &kp F8        &kp F9        &kp F10       &kp F11       &kp F12
+                                                             &trans      &trans     &trans        &trans      &trans
                         >;
                         
                         sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN>;
