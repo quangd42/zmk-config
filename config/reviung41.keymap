@@ -59,7 +59,7 @@
 // |    | ESC | GUI | ALT | CAPS|  "  |   | F7  | F8  | F9  | F10 | F11 | F12 |
 //                       |     | ADJ | BKSP |    |     |
                         bindings = <
-   &trans  &none        &kp LA(SPACE)   &kp LG(SPACE)   &kp LS(LC(N4))  &kp LS(LC(N5))          &kp LA(UP)        &kp LA(LEFT) &kp UP    &kp LA(RIGHT) &kp LA(BSPC)   &to 3
+   &trans  &none        &kp LA(SPACE)   &kp LG(SPACE)   &kp LS(LG(N4))  &kp LS(LG(N5))          &kp LA(UP)        &kp LA(LEFT) &kp UP    &kp LA(RIGHT) &kp LA(BSPC)   &to 3
    &trans  &kp LG(A)    &kp EQUAL       &kp LSHFT       &kp LALT        &kp CLCK                &kp LA(DOWN)      &kp LEFT     &kp DOWN  &kp RIGHT     &none          &trans
    &trans  &kp LG(Z)    &kp LG(X)       &kp LG(C)       &kp LG(V)       &kp LS(LG(Z))           &kp DEL           &kp LG(LEFT) &none     &kp LG(RIGHT) &kp LG(BSPC)   &trans
                                                                 &trans      &mo 3       &trans        &trans      &trans
