@@ -22,7 +22,8 @@
                         label = "GRAVE_ESCAPE";
                         #binding-cells = <0>;
                         bindings = <&mt LCTRL ESC>, <&kp GRAVE>;
-                        mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+                        mods = <(MOD_LGUI|MOD_RSFT)>;
+                        keep-mods = <(MOD_LGUI|MOD_RSFT)>;
                 };
         };
         keymap {
@@ -38,7 +39,7 @@
    &kp C_PP             &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U     &kp Y   &kp SEMI &to 1
    &gresc               &kp A &kp R &kp S &kp T &kp G   &kp M &kp N  &kp E     &kp I   &kp O    &kp SQT
    &mt LSHFT TAB        &kp Z &kp X &kp C &kp D &kp V   &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &mt RGUI RET
-                        &mt LGUI MINUS &lt 1 SPACE &lt 2 RET &mt LSHFT BSPC &mt RALT EQUAL
+                        &mt LGUI MINUS &lt 1 SPACE &lt 2 RET &mt RSHFT BSPC &mt RALT EQUAL
                         >;
                         
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
