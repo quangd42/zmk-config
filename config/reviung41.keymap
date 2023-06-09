@@ -56,10 +56,10 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-     &kp C_PP  &kp Q  &mt LG(W) W           &kp F            &kp P  &kp B                 &kp J           &kp L           &kp U    &kp Y  &kp SEMI     &to LOWER
-       &gresc  &kp A        &kp R           &kp S            &kp T  &kp G                 &kp M           &kp N           &kp E    &kp I     &kp O       &kp SQT
-&mt LSHFT TAB  &kp Z        &kp X           &kp C            &kp D  &kp V                 &kp K           &kp H       &kp COMMA  &kp DOT  &kp FSLH  &mt RGUI RET
-                                   &mt LGUI MINUS  &lt LOWER SPACE         &lt RAISE RET         &mt RSHFT BSPC  &mt RALT EQUAL
+     &kp C_PP  &kp Q  &kp W           &kp F            &kp P  &kp B                 &kp J           &kp L           &kp U    &kp Y  &kp SEMI     &to LOWER
+       &gresc  &kp A  &kp R           &kp S            &kp T  &kp G                 &kp M           &kp N           &kp E    &kp I     &kp O       &kp SQT
+&mt LSHFT TAB  &kp Z  &kp X           &kp C            &kp D  &kp V                 &kp K           &kp H       &kp COMMA  &kp DOT  &kp FSLH  &mt RGUI RET
+                             &mt LGUI MINUS  &lt LOWER SPACE         &lt RAISE RET         &mt RSHFT BSPC  &mt RALT EQUAL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
