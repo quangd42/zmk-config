@@ -46,6 +46,17 @@
             global-quick-tap;
             flavor = "tap-preferred";
         };
+        first_tab: first_tab {
+            compatible = "zmk,behavior-mod-morph";
+            label = "FIRST_TAB";
+            bindings =
+                <&kp Q>,
+                <&kp NUMBER_1>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LGUI)>;
+        };
     };
 
     combos {
@@ -68,7 +79,7 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-     &kp C_PP            &kp Q  &q_hold LG(W) W  &q_hold LG(F) F            &kp P                &kp B                 &q_hold LG(Y) J            &kp L           &kp U    &kp Y  &kp SEMI  &to LOWER
+     &kp C_PP       &first_tab  &q_hold LG(W) W  &q_hold LG(F) F            &kp P                &kp B                 &q_hold LG(Y) J            &kp L           &kp U    &kp Y  &kp SEMI  &to LOWER
        &gresc  &q_hold LG(A) A            &kp R            &kp S  &q_hold LG(T) T                &kp G                           &kp M  &q_hold LG(N) N           &kp E    &kp I     &kp O    &kp SQT
 &mt LSHFT TAB  &q_hold LG(Z) Z  &q_hold LG(X) X  &q_hold LG(C) C  &q_hold LG(V) D  &q_hold LG(LS(Z)) V                           &kp K  &q_hold LG(M) H       &kp COMMA  &kp DOT  &kp FSLH   &kp RCMD
                                                   &mt LGUI MINUS  &lt LOWER SPACE                       &lt RAISE RET                    &mt RSHFT BSPC  &mt RALT EQUAL
