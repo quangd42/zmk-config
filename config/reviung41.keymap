@@ -68,17 +68,6 @@
             mods = <(MOD_LGUI)>;
             keep-mods = <(MOD_LGUI)>;
         };
-        last_tab: last_tab {
-            compatible = "zmk,behavior-mod-morph";
-            label = "LAST_TAB";
-            bindings =
-                <&kp Y>,
-                <&kp NUMBER_9>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LGUI)>;
-            keep-mods = <(MOD_LGUI)>;
-        };
         third_tab: third_tab {
             compatible = "zmk,behavior-mod-morph";
             label = "THIRD_TAB";
@@ -101,12 +90,12 @@
             mods = <(MOD_LGUI)>;
             keep-mods = <(MOD_LGUI)>;
         };
-        fifth_tab: fifth_tab {
+        last_tab: last_tab {
             compatible = "zmk,behavior-mod-morph";
-            label = "FIFTH_TAB";
+            label = "LAST_TAB";
             bindings =
                 <&q_hold LG(LS(NUMBER_5)) B>,
-                <&kp NUMBER_5>;
+                <&kp NUMBER_9>;
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI)>;
@@ -116,11 +105,6 @@
 
     combos {
         compatible = "zmk,combos";
-
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <1 2>;
-        };
     };
 
     keymap {
@@ -134,9 +118,9 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-     &kp C_PP       &first_tab      &second_tab       &third_tab      &fourth_tab           &fifth_tab                 &q_hold LG(Y) J            &kp L           &kp U  &last_tab  &kp SEMI  &to LOWER
-       &gresc  &q_hold LG(A) A            &kp R            &kp S  &q_hold LG(T) T                &kp G                           &kp M  &q_hold LG(N) N           &kp E      &kp I     &kp O    &kp SQT
-&mt LSHFT TAB  &q_hold LG(Z) Z  &q_hold LG(X) X  &q_hold LG(C) C  &q_hold LG(V) D  &q_hold LG(LS(Z)) V                           &kp K  &q_hold LG(M) H       &kp COMMA    &kp DOT  &kp FSLH   &kp RCMD
+     &kp C_PP       &first_tab      &second_tab       &third_tab      &fourth_tab            &last_tab                 &q_hold LG(Y) J            &kp L           &kp U    &kp Y  &kp SEMI  &to LOWER
+       &gresc  &q_hold LG(A) A            &kp R            &kp S  &q_hold LG(T) T                &kp G                           &kp M  &q_hold LG(N) N           &kp E    &kp I     &kp O    &kp SQT
+&mt LSHFT TAB  &q_hold LG(Z) Z  &q_hold LG(X) X  &q_hold LG(C) C  &q_hold LG(V) D  &q_hold LG(LS(Z)) V                           &kp K  &q_hold LG(M) H       &kp COMMA  &kp DOT  &kp FSLH   &kp RCMD
                                                   &mt LGUI MINUS  &lt LOWER SPACE                       &lt RAISE RET                    &mt RSHFT BSPC  &mt RALT EQUAL
             >;
 
