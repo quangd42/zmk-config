@@ -68,9 +68,9 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-     &kp C_PP            &kp Q  &q_hold LG(W) W            &kp F            &kp P                &kp B                 &q_hold LG(Y) J            &kp L           &kp U    &kp Y  &kp SEMI     &to LOWER
-       &gresc  &q_hold LG(A) A            &kp R            &kp S  &q_hold LG(T) T                &kp G                           &kp M            &kp N           &kp E    &kp I     &kp O       &kp SQT
-&mt LSHFT TAB  &q_hold LG(Z) Z  &q_hold LG(X) X  &q_hold LG(C) C  &q_hold LG(V) D  &q_hold LG(LS(Z)) V                           &kp K  &q_hold LG(M) H       &kp COMMA  &kp DOT  &kp FSLH  &mt RGUI RET
+     &kp C_PP            &kp Q  &q_hold LG(W) W  &q_hold LG(F) F            &kp P                &kp B                 &q_hold LG(Y) J            &kp L           &kp U    &kp Y  &kp SEMI  &to LOWER
+       &gresc  &q_hold LG(A) A            &kp R            &kp S  &q_hold LG(T) T                &kp G                           &kp M  &q_hold LG(N) N           &kp E    &kp I     &kp O    &kp SQT
+&mt LSHFT TAB  &q_hold LG(Z) Z  &q_hold LG(X) X  &q_hold LG(C) C  &q_hold LG(V) D  &q_hold LG(LS(Z)) V                           &kp K  &q_hold LG(M) H       &kp COMMA  &kp DOT  &kp FSLH   &kp RCMD
                                                   &mt LGUI MINUS  &lt LOWER SPACE                       &lt RAISE RET                    &mt RSHFT BSPC  &mt RALT EQUAL
             >;
 
@@ -85,9 +85,9 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-     &kp C_PP            &kp F  &q_hold LG(W) L            &kp H            &kp V                &kp Z                 &q_hold LG(Y) SQT            &kp W           &kp U    &kp O     &kp Y      &to LOWER
-       &gresc  &q_hold LG(A) S            &kp R            &kp N            &kp T                &kp K                             &kp C            &kp D           &kp E    &kp A     &kp I       &kp SEMI
-&mt LSHFT TAB  &q_hold LG(Z) X  &q_hold LG(X) J  &q_hold LG(C) B  &q_hold LG(V) M  &q_hold LG(LS(Z)) Q                             &kp P  &q_hold LG(M) G       &kp COMMA  &kp DOT  &kp FSLH  &mt RSHFT RET
+     &kp C_PP            &kp F  &q_hold LG(W) L  &q_hold LG(F) H            &kp V                &kp Z                 &q_hold LG(Y) SQT            &kp W           &kp U    &kp O     &kp Y  &to LOWER
+       &gresc  &q_hold LG(A) S            &kp R            &kp N  &q_hold LG(T) T                &kp K                             &kp C  &q_hold LG(N) D           &kp E    &kp A     &kp I   &kp SEMI
+&mt LSHFT TAB  &q_hold LG(Z) X  &q_hold LG(X) J  &q_hold LG(C) B  &q_hold LG(V) M  &q_hold LG(LS(Z)) Q                             &kp P  &q_hold LG(M) G       &kp COMMA  &kp DOT  &kp FSLH   &kp RCMD
                                                   &mt LGUI MINUS  &lt LOWER SPACE                       &lt RAISE RET                      &mt RSHFT BSPC  &mt RALT EQUAL
             >;
 
@@ -102,8 +102,8 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-     &kp C_PP            &kp Q  &q_hold LG(W) W            &kp E            &kp R                &kp T                 &q_hold LG(Y) Y            &kp U           &kp I    &kp O     &kp P  &to LOWER
-       &gresc  &q_hold LG(A) A            &kp S            &kp D            &kp F                &kp G                           &kp H            &kp J           &kp K    &kp L  &kp SEMI    &kp SQT
+     &kp C_PP            &kp Q  &q_hold LG(W) W  &q_hold LG(F) E            &kp R                &kp T                 &q_hold LG(Y) Y            &kp U           &kp I    &kp O     &kp P  &to LOWER
+       &gresc  &q_hold LG(A) A            &kp S            &kp D  &q_hold LG(T) F                &kp G                           &kp H  &q_hold LG(N) J           &kp K    &kp L  &kp SEMI    &kp SQT
 &mt LSHFT TAB  &q_hold LG(Z) Z  &q_hold LG(X) X  &q_hold LG(C) C  &q_hold LG(V) V  &q_hold LS(LG(Z)) B                           &kp N  &q_hold LG(M) M       &kp COMMA  &kp DOT  &kp FSLH   &kp RGUI
                                                   &mt LGUI MINUS  &lt LOWER SPACE                       &lt RAISE RET                    &mt RSHFT BSPC  &mt RALT EQUAL
             >;
