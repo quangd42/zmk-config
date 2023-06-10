@@ -45,6 +45,7 @@
             tapping-term-ms = <250>;
             global-quick-tap;
             flavor = "tap-preferred";
+            hold-trigger-on-release;
         };
         first_tab: first_tab {
             compatible = "zmk,behavior-mod-morph";
@@ -119,14 +120,6 @@
     };
 
     macros {
-        lock_lower: lock_lower {
-            compatible = "zmk,behavior-macro";
-            label = "LOCK_LOWER";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_release &mo LOWER>,
-                <&to LOWER>;
-        };
     };
 
     keymap {
@@ -191,9 +184,9 @@
             //                       |     |     | RET | ADJ |     |
 
             bindings = <
-   &kp C_MUTE   &kp EXCL     &kp AT  &kp HASH  &kp DLLR  &kp PRCNT          &kp PLUS  &kp N7   &kp N8  &kp N9  &kp ASTRK  &lock_lower
-        &to 0   &kp AMPS  &kp COLON  &kp LPAR  &kp LBRC   &kp LBKT         &kp MINUS  &kp N4   &kp N5  &kp N6   &kp FSLH     &kp PIPE
-&kp LG(GRAVE)  &kp CARET  &kp UNDER  &kp RPAR  &kp RBRC   &kp RBKT            &kp N0  &kp N1   &kp N2  &kp N3   &kp BSLH     &kp RCMD
+   &kp C_MUTE   &kp EXCL     &kp AT  &kp HASH  &kp DLLR  &kp PRCNT          &kp PLUS  &kp N7   &kp N8  &kp N9  &kp ASTRK     &to 4
+        &to 0   &kp AMPS  &kp COLON  &kp LPAR  &kp LBRC   &kp LBKT         &kp MINUS  &kp N4   &kp N5  &kp N6   &kp FSLH  &kp PIPE
+&kp LG(GRAVE)  &kp CARET  &kp UNDER  &kp RPAR  &kp RBRC   &kp RBKT            &kp N0  &kp N1   &kp N2  &kp N3   &kp BSLH  &kp RCMD
                                        &trans    &trans             &mo 5             &trans  &kp DOT
             >;
 
