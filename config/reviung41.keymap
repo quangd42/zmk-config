@@ -124,10 +124,8 @@
             label = "LOCK_LOWER";
             #binding-cells = <0>;
             bindings =
-                <&macro_release>,
-                <&mo 3>,
-                <&macro_tap>,
-                <&to 3>;
+                <&macro_release &mo LOWER>,
+                <&to LOWER>;
         };
     };
 
