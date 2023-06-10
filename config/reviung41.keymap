@@ -123,7 +123,11 @@
             compatible = "zmk,behavior-macro";
             label = "LOCK_LOWER";
             #binding-cells = <0>;
-            bindings = <&mo 3 &to 3>;
+            bindings =
+                <&macro_release>,
+                <&mo 3>,
+                <&macro_tap>,
+                <&to 3>;
         };
     };
 
