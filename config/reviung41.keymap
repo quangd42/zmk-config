@@ -212,7 +212,7 @@
             //                       |     | ADJ | BKSP |    |     |
 
             bindings = <
-&trans      &none      &none      &none  &kp LS(LG(N4))  &kp LS(LG(N5))            &kp LA(UP)  &kp LA(LEFT)    &kp UP  &kp LA(RIGHT)  &kp LA(BSPC)   &to 3
+&trans      &none  &kp LG(W)      &none  &kp LS(LG(N4))  &kp LS(LG(N5))            &kp LA(UP)  &kp LA(LEFT)    &kp UP  &kp LA(RIGHT)  &kp LA(BSPC)   &to 3
  &to 0  &kp LG(A)  &kp LSHFT  &kp LCTRL        &kp LALT        &kp CLCK          &kp LA(DOWN)      &kp LEFT  &kp DOWN      &kp RIGHT      &kp BSPC  &trans
 &trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)       &kp LG(V)   &kp LS(LG(Z))               &kp DEL  &kp LG(LEFT)     &none  &kp LG(RIGHT)  &kp LG(BSPC)  &trans
                                  &trans           &mo 6                  &trans                      &trans    &trans
