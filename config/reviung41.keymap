@@ -153,7 +153,7 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        canary_layer {
+        crest_layer {
             // -------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  :  |   BKSP    |
             // | CTRL |  A  |  R  |  S  |  T  |  G  |   |  M  |  N   |  E  |  I  |  O  |    '      |
@@ -161,10 +161,10 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-     &kp C_PP            &kp W            &kp L            &kp Y            &kp P        &kp B            &kp Z           &kp F           &kp O      &kp U  &kp SQT  &lt 6 MINUS
-       &gresc            &kp C            &kp R            &kp S            &kp T        &kp G            &kp M           &kp N           &kp E      &kp I    &kp A     &kp SEMI
-&mt LSHFT TAB  &q_hold LG(Z) Q  &q_hold LG(X) J  &q_hold LG(C) V  &q_hold LG(V) D  &q_mt_a 5 K            &kp X           &kp H        &kp FSLH  &kp COMMA  &kp DOT     &kp RCMD
-                                                  &mt LGUI MINUS      &lt 3 SPACE               &raycast         &mt RSHFT BSPC  &mt RALT EQUAL
+     &kp C_PP              &kp W            &kp L            &kp F            &kp D        &kp K            &kp Z           &kp J           &kp U    &kp O     &kp Y  &lt 6 MINUS
+       &gresc              &kp C            &kp R            &kp S            &kp T        &kp G            &kp P           &kp N           &kp E    &kp A     &kp I     &kp FSLH
+&mt LSHFT TAB  &q_hold LG(Z) SQT  &q_hold LG(X) X  &q_hold LG(C) V  &q_hold LG(V) M  &q_mt_a 5 Q            &kp B           &kp H       &kp COMMA  &kp DOT  &kp SEMI     &kp RCMD
+                                                    &mt LGUI MINUS      &lt 3 SPACE               &raycast         &mt RSHFT BSPC  &mt RALT EQUAL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
