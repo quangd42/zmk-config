@@ -161,9 +161,9 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-     &kp C_PP            &kp P            &kp L            &kp D            &kp G        &kp V            &kp Z           &kp K           &kp O      &kp U  &kp SEMI  &lt 6 MINUS
-       &gresc            &kp N            &kp R            &kp T            &kp S        &kp W            &kp Y           &kp H           &kp E      &kp I     &kp A     &kp FSLH
-&mt LSHFT TAB  &q_hold LG(Z) Q  &q_hold LG(X) J  &q_hold LG(C) M  &q_hold LG(V) C  &q_mt_a 5 X            &kp B           &kp F         &kp SQT  &kp COMMA   &kp DOT     &kp RCMD
+     &kp C_PP            &kp P            &kp L            &kp D            &kp G        &kp V            &kp Z           &kp K           &kp O     &kp U  &kp COMMA  &lt 6 MINUS
+       &gresc            &kp N            &kp R            &kp T            &kp S        &kp W            &kp Y           &kp H           &kp E     &kp I      &kp A     &kp SEMI
+&mt LSHFT TAB  &q_hold LG(Z) Q  &q_hold LG(X) J  &q_hold LG(C) M  &q_hold LG(V) C  &q_mt_a 5 X            &kp B           &kp F         &kp SQT  &kp FSLH    &kp DOT     &kp RCMD
                                                   &mt LGUI MINUS      &lt 3 SPACE               &raycast         &mt RSHFT BSPC  &mt RALT EQUAL
             >;
 
