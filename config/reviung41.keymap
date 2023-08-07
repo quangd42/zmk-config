@@ -152,6 +152,13 @@
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40>;
             global-quick-tap;
         };
+        q_caps_word: q_caps_word {
+            compatible = "zmk,behavior-caps-word";
+            label = "Q_CAPS_WORD";
+            #binding-cells = <0>;
+            continue-list = <MINUS>;
+            mods = <(MOD_RSFT)>;
+        };
     };
 
     combos {
@@ -250,7 +257,7 @@
 
             bindings = <
 &trans      &none  &kp LG(W)      &none  &kp LS(LG(N4))  &kp LS(LG(N5))            &kp LA(UP)  &kp LA(LEFT)    &kp UP  &kp LA(RIGHT)  &kp LA(BSPC)   &to 5
- &to 0  &kp LG(A)  &kp LSHFT  &kp LCTRL        &kp LALT      &caps_word          &kp LA(DOWN)      &kp LEFT  &kp DOWN      &kp RIGHT      &kp BSPC  &trans
+ &to 0  &kp LG(A)  &kp LSHFT  &kp LCTRL        &kp LALT    &q_caps_word          &kp LA(DOWN)      &kp LEFT  &kp DOWN      &kp RIGHT      &kp BSPC  &trans
 &trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)       &kp LG(V)   &kp LS(LG(Z))               &kp DEL  &kp LG(LEFT)     &none  &kp LG(RIGHT)  &kp LG(BSPC)  &trans
                                  &trans           &mo 7                  &trans                    &kp BSPC    &trans
             >;
