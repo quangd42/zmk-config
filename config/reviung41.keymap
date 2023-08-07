@@ -105,7 +105,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "RAYCAST";
             bindings =
-                <&lt 4 ENTER>,
+                <&lt 5 ENTER>,
                 <&kp SPACE>;
 
             #binding-cells = <0>;
@@ -123,6 +123,34 @@
             flavor = "tap-preferred";
             global-quick-tap;
             tapping-term-ms = <200>;
+        };
+        lh_hm: lh_hm {
+            compatible = "zmk,behavior-hold-tap";
+            label = "left_hand_homerow_mods";
+            bindings =
+                <&kp>,
+                <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <100>;
+            quick-tap-ms = <200>;
+            global-quick-tap;
+            flavor = "tap-unless-interrupted";
+            hold-trigger-key-positions = <6 18 30 31 19 7 8 9 10 20 21 22 32 33 34 11 35 23 38 37 40 36 39>;
+        };
+        rh_hm: rh_hm {
+            compatible = "zmk,behavior-hold-tap";
+            label = "right_hand_homerow_mods";
+            bindings =
+                <&kp>,
+                <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <100>;
+            quick-tap-ms = <200>;
+            global-quick-tap;
+            flavor = "tap-unless-interrupted";
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40>;
         };
     };
 
@@ -144,10 +172,10 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-     &kp C_PP            &kp Q            &kp W            &kp F            &kp P        &kp B               &kp J           &kp L           &kp U     &kp Y  &kp COMMA  &lt 6 MINUS
+     &kp C_PP            &kp Q            &kp W            &kp F            &kp P        &kp B               &kp J           &kp L           &kp U     &kp Y  &kp COMMA  &lt 7 MINUS
        &gresc            &kp A            &kp R            &kp S            &kp T        &kp G               &kp M           &kp N           &kp E     &kp I      &kp O     &kp SEMI
-&mt LSHFT TAB  &q_hold LG(Z) Z  &q_hold LG(X) X  &q_hold LG(C) C  &q_hold LG(V) D  &q_mt_a 5 V               &kp K           &kp H         &kp SQT  &kp FSLH    &kp DOT     &kp RCMD
-                                                  &mt LGUI MINUS      &lt 3 SPACE               &lt 4 ENTER         &mt RSHFT BSPC  &mt RALT EQUAL
+&mt LSHFT TAB  &q_hold LG(Z) Z  &q_hold LG(X) X  &q_hold LG(C) C  &q_hold LG(V) D  &q_mt_a 6 V               &kp K           &kp H         &kp SQT  &kp FSLH    &kp DOT     &kp RCMD
+                                                  &mt LGUI MINUS      &lt 4 SPACE               &lt 5 ENTER         &mt RSHFT BSPC  &mt RALT EQUAL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -161,10 +189,10 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-     &kp C_PP            &kp F            &kp L            &kp H            &kp D        &kp V               &kp Z           &kp Y           &kp O     &kp U  &kp COMMA  &lt 6 MINUS
+     &kp C_PP            &kp F            &kp L            &kp H            &kp D        &kp V               &kp Z           &kp Y           &kp O     &kp U  &kp COMMA  &lt 7 MINUS
        &gresc            &kp S            &kp R            &kp N            &kp T        &kp M               &kp G           &kp C           &kp E     &kp I      &kp A     &kp SEMI
-&mt LSHFT TAB  &q_hold LG(Z) J  &q_hold LG(X) X  &q_hold LG(C) B  &q_hold LG(V) K  &q_mt_a 5 Q               &kp P           &kp W         &kp SQT  &kp FSLH    &kp DOT     &kp RCMD
-                                                  &mt LGUI MINUS      &lt 3 SPACE               &lt 4 ENTER         &mt RSHFT BSPC  &mt RALT EQUAL
+&mt LSHFT TAB  &q_hold LG(Z) J  &q_hold LG(X) X  &q_hold LG(C) B  &q_hold LG(V) K  &q_mt_a 6 Q               &kp P           &kp W         &kp SQT  &kp FSLH    &kp DOT     &kp RCMD
+                                                  &mt LGUI MINUS      &lt 4 SPACE               &lt 5 ENTER         &mt RSHFT BSPC  &mt RALT EQUAL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -178,13 +206,22 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-     &kp C_PP            &kp Q            &kp W            &kp E            &kp R        &kp T               &kp Y           &kp U           &kp I    &kp O     &kp P  &lt 6 MINUS
+     &kp C_PP            &kp Q            &kp W            &kp E            &kp R        &kp T               &kp Y           &kp U           &kp I    &kp O     &kp P  &lt 7 MINUS
        &gresc            &kp A            &kp S            &kp D            &kp F        &kp G               &kp H           &kp J           &kp K    &kp L  &kp SEMI      &kp SQT
-&mt LSHFT TAB  &q_hold LG(Z) Z  &q_hold LG(X) X  &q_hold LG(C) C  &q_hold LG(V) V  &q_mt_a 5 B               &kp N           &kp M       &kp COMMA  &kp DOT  &kp FSLH     &kp RGUI
-                                                  &mt LGUI MINUS      &lt 3 SPACE               &lt 4 ENTER         &mt RSHFT BSPC  &mt RALT EQUAL
+&mt LSHFT TAB  &q_hold LG(Z) Z  &q_hold LG(X) X  &q_hold LG(C) C  &q_hold LG(V) V  &q_mt_a 6 B               &kp N           &kp M       &kp COMMA  &kp DOT  &kp FSLH     &kp RGUI
+                                                  &mt LGUI MINUS      &lt 4 SPACE               &lt 5 ENTER         &mt RSHFT BSPC  &mt RALT EQUAL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        hrm_colemakdh {
+            bindings = <
+     &kp C_PP           &kp Q          &kp W          &kp F           &kp P        &kp B               &kp J           &kp L          &kp U          &kp Y       &kp COMMA  &lt 7 MINUS
+       &gresc  &lh_hm LCTRL A  &lh_hm LALT R  &lh_hm LCMD S  &lh_hm LSHFT T        &kp G               &kp M  &rh_hm RSHFT N  &rh_hm RCMD E  &rh_hm RALT I  &rh_hm RCTRL O     &kp SEMI
+&mt LSHFT TAB           &kp Z          &kp X          &kp C           &kp D  &q_mt_a 6 V               &kp K           &kp H        &kp SQT       &kp FSLH         &kp DOT     &kp RGUI
+                                                  &kp MINUS     &lt 4 SPACE               &lt 5 ENTER               &kp BSPC      &kp EQUAL
+            >;
         };
 
         lower_layer {
@@ -195,7 +232,7 @@
             //                       |     |     | RET | ADJ |     |
 
             bindings = <
-   &kp C_MUTE   &kp EXCL     &kp AT  &kp HASH  &kp DLLR  &kp PRCNT                  &kp FSLH    &kp N7   &kp N8  &kp N9  &kp MINUS     &to 4
+   &kp C_MUTE   &kp EXCL     &kp AT  &kp HASH  &kp DLLR  &kp PRCNT                  &kp FSLH    &kp N7   &kp N8  &kp N9  &kp MINUS     &to 5
         &to 0   &kp AMPS  &kp COLON  &kp LPAR  &kp LBRC   &kp LBKT                 &kp ASTRK    &kp N4   &kp N5  &kp N6   &kp PLUS  &kp PIPE
 &kp LG(GRAVE)  &kp CARET  &kp UNDER  &kp RPAR  &kp RBRC   &kp RBKT                    &kp N0    &kp N1   &kp N2  &kp N3   &kp BSLH  &kp RCMD
                                        &trans    &trans             &kp LA(SPACE)             &kp BSPC  &kp DOT
@@ -212,10 +249,10 @@
             //                       |     | ADJ | BKSP |    |     |
 
             bindings = <
-&trans      &none  &kp LG(W)      &none  &kp LS(LG(N4))  &kp LS(LG(N5))            &kp LA(UP)  &kp LA(LEFT)    &kp UP  &kp LA(RIGHT)  &kp LA(BSPC)   &to 3
- &to 0  &kp LG(A)  &kp LSHFT  &kp LCTRL        &kp LALT        &kp CLCK          &kp LA(DOWN)      &kp LEFT  &kp DOWN      &kp RIGHT      &kp BSPC  &trans
+&trans      &none  &kp LG(W)      &none  &kp LS(LG(N4))  &kp LS(LG(N5))            &kp LA(UP)  &kp LA(LEFT)    &kp UP  &kp LA(RIGHT)  &kp LA(BSPC)   &to 5
+ &to 0  &kp LG(A)  &kp LSHFT  &kp LCTRL        &kp LALT      &caps_word          &kp LA(DOWN)      &kp LEFT  &kp DOWN      &kp RIGHT      &kp BSPC  &trans
 &trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)       &kp LG(V)   &kp LS(LG(Z))               &kp DEL  &kp LG(LEFT)     &none  &kp LG(RIGHT)  &kp LG(BSPC)  &trans
-                                 &trans           &mo 6                  &trans                    &kp BSPC    &trans
+                                 &trans           &mo 7                  &trans                    &kp BSPC    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -241,7 +278,7 @@
 &none  &rgb_ug RGB_BRI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_EFF  &rgb_ug RGB_TOG         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR  &trans
 &to 0  &rgb_ug RGB_BRD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_EFR            &none                &none         &none         &none         &none       &none   &none
 &none            &none           &tog 1           &tog 2     &out OUT_USB     &out OUT_BLE                &none         &none         &none         &none       &none   &none
-                                                  &trans            &to 3                   &to 4                      &trans        &trans
+                                                  &trans            &to 5                   &to 5                      &trans        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN>;
