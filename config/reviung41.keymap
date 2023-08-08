@@ -158,7 +158,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "SMART_SHFT";
             bindings =
-                <&sk RSHFT>,
+                <&quick_sticky_key RSHFT>,
                 <&caps_word>;
 
             #binding-cells = <0>;
@@ -176,6 +176,14 @@
             quick-tap-ms = <175>;
             flavor = "tap-unless-interrupted";
             hold-trigger-on-release;
+        };
+        quick_sticky_key: quick_sticky_key {
+            compatible = "zmk,behavior-sticky-key";
+            label = "QUICK_STICKY_KEY";
+            bindings = <&kp>;
+            #binding-cells = <1>;
+            release-after-ms = <900>;
+            quick-release;
         };
     };
 
@@ -285,10 +293,10 @@
 
         function_layer {
             bindings = <
-&none  &none  &none  &none  &kp LS(LG(N4))  &kp LS(LG(N5))         &kp F12  &kp F7  &kp F8  &kp F9  &none  &none
-&to 0  &none  &none  &none           &none           &none         &kp F11  &kp F4  &kp F5  &kp F6  &none  &none
-&none  &none  &none  &none           &none           &none         &kp F10  &kp F1  &kp F2  &kp F3  &none  &none
-                     &none           &none                  &none            &none   &none
+&none      &none     &none      &none  &kp LS(LG(N4))  &kp LS(LG(N5))         &kp F12  &kp F7  &kp F8  &kp F9  &none  &none
+&to 0  &sk LCTRL  &sk LALT  &sk LSHFT        &sk LCMD           &none         &kp F11  &kp F4  &kp F5  &kp F6  &none  &none
+&none      &none     &none      &none           &none           &none         &kp F10  &kp F1  &kp F2  &kp F3  &none  &none
+                                &none           &none                  &none            &none   &none
             >;
         };
 
