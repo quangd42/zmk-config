@@ -147,10 +147,10 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-     &kp C_PP            &kp Q            &kp W            &kp F            &kp P        &kp B               &kp J           &kp L           &kp U     &kp Y  &kp COMMA  &lt 7 MINUS
-       &gresc            &kp A            &kp R            &kp S            &kp T        &kp G               &kp M           &kp N           &kp E     &kp I      &kp O     &kp SEMI
-&mt LSHFT TAB  &q_hold LG(Z) Z  &q_hold LG(X) X  &q_hold LG(C) C  &q_hold LG(V) D  &q_mt_a 6 V               &kp K           &kp H         &kp SQT  &kp FSLH    &kp DOT     &kp RCMD
-                                                  &mt LGUI MINUS      &lt 4 SPACE               &lt 5 ENTER         &mt RSHFT BSPC  &mt RALT EQUAL
+     &kp C_PP            &kp Q            &kp W            &kp F            &kp P  &kp B               &kp J           &kp L           &kp U     &kp Y  &kp COMMA  &lt 7 MINUS
+       &gresc            &kp A            &kp R            &kp S            &kp T  &kp G               &kp M           &kp N           &kp E     &kp I      &kp O     &kp SEMI
+&mt LSHFT TAB  &q_hold LG(Z) Z  &q_hold LG(X) X  &q_hold LG(C) C  &q_hold LG(V) D  &kp V               &kp K           &kp H         &kp SQT  &kp FSLH    &kp DOT     &kp RCMD
+                                                  &mt LGUI MINUS      &lt 4 SPACE         &lt 5 ENTER         &mt RSHFT BSPC  &mt RALT EQUAL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -164,10 +164,10 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-     &kp C_PP            &kp F            &kp L            &kp H            &kp D        &kp V               &kp Z           &kp Y           &kp O     &kp U  &kp COMMA  &lt 7 MINUS
-       &gresc            &kp S            &kp R            &kp N            &kp T        &kp M               &kp G           &kp C           &kp E     &kp I      &kp A     &kp SEMI
-&mt LSHFT TAB  &q_hold LG(Z) J  &q_hold LG(X) X  &q_hold LG(C) B  &q_hold LG(V) K  &q_mt_a 6 Q               &kp P           &kp W         &kp SQT  &kp FSLH    &kp DOT     &kp RCMD
-                                                  &mt LGUI MINUS      &lt 4 SPACE               &lt 5 ENTER         &mt RSHFT BSPC  &mt RALT EQUAL
+     &kp C_PP            &kp F            &kp L            &kp H            &kp D  &kp V               &kp Z           &kp Y           &kp O     &kp U  &kp COMMA  &lt 7 MINUS
+       &gresc            &kp S            &kp R            &kp N            &kp T  &kp M               &kp G           &kp C           &kp E     &kp I      &kp A     &kp SEMI
+&mt LSHFT TAB  &q_hold LG(Z) J  &q_hold LG(X) X  &q_hold LG(C) B  &q_hold LG(V) K  &kp Q               &kp P           &kp W         &kp SQT  &kp FSLH    &kp DOT     &kp RCMD
+                                                  &mt LGUI MINUS      &lt 4 SPACE         &lt 5 ENTER         &mt RSHFT BSPC  &mt RALT EQUAL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -181,10 +181,10 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-     &kp C_PP            &kp Q            &kp W            &kp E            &kp R        &kp T               &kp Y           &kp U           &kp I    &kp O     &kp P  &lt 7 MINUS
-       &gresc            &kp A            &kp S            &kp D            &kp F        &kp G               &kp H           &kp J           &kp K    &kp L  &kp SEMI      &kp SQT
-&mt LSHFT TAB  &q_hold LG(Z) Z  &q_hold LG(X) X  &q_hold LG(C) C  &q_hold LG(V) V  &q_mt_a 6 B               &kp N           &kp M       &kp COMMA  &kp DOT  &kp FSLH     &kp RGUI
-                                                  &mt LGUI MINUS      &lt 4 SPACE               &lt 5 ENTER         &mt RSHFT BSPC  &mt RALT EQUAL
+     &kp C_PP            &kp Q            &kp W            &kp E            &kp R  &kp T               &kp Y           &kp U           &kp I    &kp O     &kp P  &lt 7 MINUS
+       &gresc            &kp A            &kp S            &kp D            &kp F  &kp G               &kp H           &kp J           &kp K    &kp L  &kp SEMI      &kp SQT
+&mt LSHFT TAB  &q_hold LG(Z) Z  &q_hold LG(X) X  &q_hold LG(C) C  &q_hold LG(V) V  &kp B               &kp N           &kp M       &kp COMMA  &kp DOT  &kp FSLH     &kp RGUI
+                                                  &mt LGUI MINUS      &lt 4 SPACE         &lt 5 ENTER         &mt RSHFT BSPC  &mt RALT EQUAL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
