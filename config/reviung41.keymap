@@ -68,28 +68,6 @@
             mods = <(MOD_LGUI)>;
             keep-mods = <(MOD_LGUI)>;
         };
-        third_tab: third_tab {
-            compatible = "zmk,behavior-mod-morph";
-            label = "THIRD_TAB";
-            bindings =
-                <&q_hold LG(F) F>,
-                <&kp NUMBER_3>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LGUI)>;
-            keep-mods = <(MOD_LGUI)>;
-        };
-        fourth_tab: fourth_tab {
-            compatible = "zmk,behavior-mod-morph";
-            label = "FOURTH_TAB";
-            bindings =
-                <&q_hold LS(LG(NUMBER_4)) P>,
-                <&kp NUMBER_4>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LGUI)>;
-            keep-mods = <(MOD_LGUI)>;
-        };
         last_tab: last_tab {
             compatible = "zmk,behavior-mod-morph";
             label = "LAST_TAB";
@@ -100,29 +78,6 @@
             #binding-cells = <0>;
             mods = <(MOD_LGUI)>;
             keep-mods = <(MOD_LGUI)>;
-        };
-        raycast: raycast {
-            compatible = "zmk,behavior-mod-morph";
-            label = "RAYCAST";
-            bindings =
-                <&lt 5 ENTER>,
-                <&kp SPACE>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LGUI|MOD_RALT)>;
-            keep-mods = <(MOD_LGUI|MOD_RALT)>;
-        };
-        q_mt_a: q_mt_a {
-            compatible = "zmk,behavior-hold-tap";
-            label = "mt for alpha";
-            bindings =
-                <&mo>,
-                <&kp>;
-
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            global-quick-tap;
-            tapping-term-ms = <200>;
         };
         lh_hm: lh_hm {
             compatible = "zmk,behavior-hold-tap";
@@ -163,19 +118,6 @@
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT)>;
-        };
-        lh_hm_index: lh_hm_index {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LH_HM_INDEX";
-            bindings =
-                <&kp>,
-                <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <175>;
-            flavor = "tap-unless-interrupted";
-            hold-trigger-on-release;
         };
         quick_sticky_key: quick_sticky_key {
             compatible = "zmk,behavior-sticky-key";
@@ -250,10 +192,10 @@
 
         hrm_colemakdh {
             bindings = <
-     &kp C_PP           &kp Q          &kp W           &kp F                &kp P        &kp B               &kp J           &kp L           &kp U          &kp Y       &kp COMMA  &lt 7 MINUS
-       &gresc  &lh_hm LCTRL A  &lh_hm LALT R  &lh_hm LSHFT S  &lh_hm_index LCMD T        &kp G               &kp M   &rh_hm RCMD N  &rh_hm RSHFT E  &rh_hm RALT I  &rh_hm RCTRL O     &kp SEMI
-&mt LSHFT TAB           &kp Z          &kp X           &kp C                &kp D  &q_mt_a 6 V               &kp K           &kp H         &kp SQT       &kp FSLH         &kp DOT     &sk RCMD
-                                                   &kp MINUS          &lt 4 SPACE               &lt 5 ENTER         &mt RSHFT BSPC     &smart_shft
+     &kp C_PP           &kp Q          &kp W           &kp F          &kp P  &kp B               &kp J           &kp L           &kp U          &kp Y       &kp COMMA  &lt 7 MINUS
+       &gresc  &lh_hm LCTRL A  &lh_hm LALT R  &lh_hm LSHFT S  &lh_hm LCMD T  &kp G               &kp M   &rh_hm RCMD N  &rh_hm RSHFT E  &rh_hm RALT I  &rh_hm RCTRL O     &kp SEMI
+&mt LSHFT TAB           &kp Z          &kp X           &kp C          &kp D  &kp V               &kp K           &kp H         &kp SQT       &kp FSLH         &kp DOT     &sk RCMD
+                                                   &lt 6 TAB    &lt 4 SPACE         &lt 5 ENTER         &mt RSHFT BSPC     &smart_shft
             >;
         };
 
