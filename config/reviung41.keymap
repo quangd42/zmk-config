@@ -192,10 +192,10 @@
 
         hrm_colemakdh {
             bindings = <
-     &kp C_PP           &kp Q          &kp W           &kp F          &kp P  &kp B               &kp J           &kp L           &kp U          &kp Y       &kp COMMA  &lt 7 MINUS
-       &gresc  &lh_hm LCTRL A  &lh_hm LALT R  &lh_hm LSHFT S  &lh_hm LCMD T  &kp G               &kp M   &rh_hm RCMD N  &rh_hm RSHFT E  &rh_hm RALT I  &rh_hm RCTRL O     &kp SEMI
-&mt LSHFT TAB           &kp Z          &kp X           &kp C          &kp D  &kp V               &kp K           &kp H         &kp SQT       &kp FSLH         &kp DOT     &sk RCMD
-                                                   &lt 6 TAB    &lt 4 SPACE         &lt 5 ENTER         &mt RSHFT BSPC     &smart_shft
+     &kp C_PP           &kp Q          &kp W           &kp F          &kp P  &kp B               &kp J          &kp L           &kp U          &kp Y       &kp COMMA  &lt 7 MINUS
+       &gresc  &lh_hm LCTRL A  &lh_hm LALT R  &lh_hm LSHFT S  &lh_hm LCMD T  &kp G               &kp M  &rh_hm RCMD N  &rh_hm RSHFT E  &rh_hm RALT I  &rh_hm RCTRL O     &kp SEMI
+&mt LSHFT TAB           &kp Z          &kp X           &kp C          &kp D  &kp V               &kp K          &kp H         &kp SQT       &kp FSLH         &kp DOT     &sk RCMD
+                                                   &lt 6 TAB    &lt 4 SPACE         &lt 5 ENTER           &smart_shft      &lt 6 BSPC
             >;
         };
 
