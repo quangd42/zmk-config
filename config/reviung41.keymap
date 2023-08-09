@@ -50,7 +50,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "left_hand_homerow_mods";
             bindings =
-                <&kp>,
+                <&sk>,
                 <&kp>;
 
             #binding-cells = <2>;
@@ -65,7 +65,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "right_hand_homerow_mods";
             bindings =
-                <&kp>,
+                <&sk>,
                 <&kp>;
 
             #binding-cells = <2>;
