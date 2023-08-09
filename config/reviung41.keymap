@@ -46,39 +46,6 @@
             global-quick-tap;
             flavor = "tap-preferred";
         };
-        first_tab: first_tab {
-            compatible = "zmk,behavior-mod-morph";
-            label = "FIRST_TAB";
-            bindings =
-                <&kp Q>,
-                <&kp NUMBER_1>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LGUI)>;
-            keep-mods = <(MOD_LGUI)>;
-        };
-        second_tab: second_tab {
-            compatible = "zmk,behavior-mod-morph";
-            label = "SECOND_TAB";
-            bindings =
-                <&q_hold LG(W) W>,
-                <&kp NUMBER_2>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LGUI)>;
-            keep-mods = <(MOD_LGUI)>;
-        };
-        last_tab: last_tab {
-            compatible = "zmk,behavior-mod-morph";
-            label = "LAST_TAB";
-            bindings =
-                <&q_hold LG(LS(NUMBER_5)) B>,
-                <&kp NUMBER_9>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LGUI)>;
-            keep-mods = <(MOD_LGUI)>;
-        };
         lh_hm: lh_hm {
             compatible = "zmk,behavior-hold-tap";
             label = "left_hand_homerow_mods";
@@ -147,13 +114,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <90>;
         };
-    };
-
-    combos {
-        compatible = "zmk,combos";
-    };
-
-    macros {
     };
 
     keymap {
