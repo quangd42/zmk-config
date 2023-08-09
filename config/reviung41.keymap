@@ -127,6 +127,16 @@
             release-after-ms = <900>;
             quick-release;
         };
+        quick_hold_tap: quick_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "QUICK_HOLD_TAP";
+            bindings =
+                <&quick_sticky_key>,
+                <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <100>;
+        };
     };
 
     combos {
@@ -147,10 +157,10 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-     &kp C_PP            &kp Q            &kp W            &kp F            &kp P  &kp B               &kp J           &kp L        &kp U     &kp Y  &kp COMMA  &lt 7 BSPC
-       &gresc            &kp A            &kp R            &kp S            &kp T  &kp G               &kp M           &kp N        &kp E     &kp I      &kp O    &kp SEMI
-&mt LSHFT TAB  &q_hold LG(Z) Z  &q_hold LG(X) X  &q_hold LG(C) C  &q_hold LG(V) D  &kp V               &kp K           &kp H      &kp SQT  &kp FSLH    &kp DOT   &sk RSHFT
-                                                       &lt 6 TAB      &lt 4 SPACE         &lt 5 ENTER         &mt RSHFT BSPC  &smart_shft
+     &kp C_PP            &kp Q            &kp W            &kp F            &kp P  &kp B               &kp J                       &kp L        &kp U     &kp Y  &kp COMMA  &lt 7 BSPC
+       &gresc            &kp A            &kp R            &kp S            &kp T  &kp G               &kp M                       &kp N        &kp E     &kp I      &kp O    &kp SEMI
+&mt LSHFT TAB  &q_hold LG(Z) Z  &q_hold LG(X) X  &q_hold LG(C) C  &q_hold LG(V) D  &kp V               &kp K                       &kp H      &kp SQT  &kp FSLH    &kp DOT   &sk RSHFT
+                                                       &lt 6 TAB      &lt 4 SPACE         &lt 5 ENTER         &quick_hold_tap RSHFT BSPC  &smart_shft
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -192,10 +202,10 @@
 
         hrm_colemakdh {
             bindings = <
-     &kp C_PP           &kp Q          &kp W           &kp F          &kp P  &kp B               &kp J          &kp L           &kp U          &kp Y       &kp COMMA  &lt 7 MINUS
-       &gresc  &lh_hm LCTRL A  &lh_hm LALT R  &lh_hm LSHFT S  &lh_hm LCMD T  &kp G               &kp M  &rh_hm RCMD N  &rh_hm RSHFT E  &rh_hm RALT I  &rh_hm RCTRL O     &kp SEMI
-&mt LSHFT TAB           &kp Z          &kp X           &kp C          &kp D  &kp V               &kp K          &kp H         &kp SQT       &kp FSLH         &kp DOT     &sk RCMD
-                                                   &lt 6 TAB    &lt 4 SPACE         &lt 5 ENTER           &smart_shft      &lt 6 BSPC
+     &kp C_PP           &kp Q          &kp W           &kp F          &kp P  &kp B               &kp J           &kp L           &kp U          &kp Y       &kp COMMA  &lt 7 MINUS
+       &gresc  &lh_hm LCTRL A  &lh_hm LALT R  &lh_hm LSHFT S  &lh_hm LCMD T  &kp G               &kp M   &rh_hm RCMD N  &rh_hm RSHFT E  &rh_hm RALT I  &rh_hm RCTRL O     &kp SEMI
+&mt LSHFT TAB           &kp Z          &kp X           &kp C          &kp D  &kp V               &kp K           &kp H         &kp SQT       &kp FSLH         &kp DOT     &sk RCMD
+                                                   &lt 6 TAB    &lt 4 SPACE         &lt 5 ENTER         &mt RSHFT BSPC     &smart_shft
             >;
         };
 
