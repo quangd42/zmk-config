@@ -147,9 +147,9 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-     &kp C_PP            &kp Q            &kp W            &kp F            &kp P  &kp B               &kp J           &kp L        &kp U     &kp Y  &kp COMMA  &lt 7 MINUS
-       &gresc            &kp A            &kp R            &kp S            &kp T  &kp G               &kp M           &kp N        &kp E     &kp I      &kp O     &kp SEMI
-&mt LSHFT TAB  &q_hold LG(Z) Z  &q_hold LG(X) X  &q_hold LG(C) C  &q_hold LG(V) D  &kp V               &kp K           &kp H      &kp SQT  &kp FSLH    &kp DOT    &sk RSHFT
+     &kp C_PP            &kp Q            &kp W            &kp F            &kp P  &kp B               &kp J           &kp L        &kp U     &kp Y  &kp COMMA  &lt 7 BSPC
+       &gresc            &kp A            &kp R            &kp S            &kp T  &kp G               &kp M           &kp N        &kp E     &kp I      &kp O    &kp SEMI
+&mt LSHFT TAB  &q_hold LG(Z) Z  &q_hold LG(X) X  &q_hold LG(C) C  &q_hold LG(V) D  &kp V               &kp K           &kp H      &kp SQT  &kp FSLH    &kp DOT   &sk RSHFT
                                                        &lt 6 TAB      &lt 4 SPACE         &lt 5 ENTER         &mt RSHFT BSPC  &smart_shft
             >;
 
@@ -252,7 +252,7 @@
             bindings = <
 &none  &rgb_ug RGB_BRI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_EFF  &rgb_ug RGB_TOG         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR  &trans
 &to 0  &rgb_ug RGB_BRD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_EFR            &none                &none         &none         &none         &none       &none   &none
-&none           &tog 1           &tog 2           &tog 3     &out OUT_USB     &out OUT_BLE                &none         &none         &none         &none       &none   &none
+&none           &tog 1           &tog 2           &tog 3     &out OUT_USB     &out OUT_BLE          &bootloader         &none         &none         &none       &none   &none
                                                   &trans            &to 4                   &to 5                      &trans        &trans
             >;
 
