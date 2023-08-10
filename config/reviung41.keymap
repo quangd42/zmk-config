@@ -45,7 +45,7 @@
             keep-mods = <(MOD_LGUI|MOD_RSFT)>;
         };
         smart_mouse: smart_mouse {
-            compatible = "zmk, tri_state";
+            compatible = "zmk,behavior-tri-state";
             label = "smart_mouse";
             bindings = <&tog MOUSE>, <&none>, <&tog MOUSE>;
             #binding-cells = <0>;
