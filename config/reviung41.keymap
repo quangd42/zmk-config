@@ -238,7 +238,7 @@
 &none  &kp LG(N1)     &none      &none  &kp LS(LG(N4))  &kp LS(LG(N5))             &kp F12  &kp F7  &kp F8  &kp F9  &none  &none
 &to 0   &sk LCTRL  &sk LALT  &sk LSHFT        &sk LCMD           &none             &kp F11  &kp F4  &kp F5  &kp F6  &none  &none
 &none       &none     &none      &none           &none           &none             &kp F10  &kp F1  &kp F2  &kp F3  &none  &none
-                                 &none       &kp SPACE                  &kp ENTER            &none   &smart_mouse
+                                 &none       &kp SPACE                  &kp ENTER            &none   &mo MOUSE
             >;
         };
         
@@ -262,10 +262,10 @@
 
         mouse_layer {
             bindings = <
-&none   &none     &none      &none  &none  &none                    &none  U_WH_D  U_MS_U  U_WH_U  &none  &none
-&to 0   &sk LCTRL  &sk LALT  &sk LSHFT        &sk LCMD           &none             &none  U_MS_L  U_MS_D  U_MS_R  &none  &none
-&none       &none     &none      &none           &none           &none             &none  &none  U_BTN3  &none  &none  &none
-                                 &none       &none                  &kp ENTER            U_BTN1   U_BTN2
+&none   &none      &none      &none           &none       &none             &mwh SCROLL_UP    &mwh SCROLL_LEFT  &mmv MOVE_UP    &mwh SCROLL_RIGHT   &none  &none
+&to 0   &sk LCTRL  &sk LALT   &sk LSHFT       &sk LCMD    &none             &mwh SCROLL_DOWN  &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_RIGHT     &none  &none
+&none   &none      &none      &none           &none       &none             &none             &none             &mkp MB3        &none               &none  &none
+                                 &none       &none                  &kp ENTER            &mkp MB1   &mkp MB2
             >;
         };
     };
