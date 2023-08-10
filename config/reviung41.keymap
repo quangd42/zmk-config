@@ -24,11 +24,11 @@
 };
 
 // smart-mouse, requires PR #1366
-ZMK_BEHAVIOR(smart_mouse, tri_state,
-    bindings = <&tog MOUSE>, <&none>, <&tog MOUSE>;
-    ignored-key-positions = <7 8 9 13 14 15 16 19 20 21 30 38 39 40>;
-    ignored-layers = <MOUSE>;
-)
+// ZMK_BEHAVIOR(smart_mouse, tri_state,
+//    bindings = <&tog MOUSE>, <&none>, <&tog MOUSE>;
+//    ignored-key-positions = <7 8 9 13 14 15 16 19 20 21 30 38 39 40>;
+//    ignored-layers = <MOUSE>;
+//)
 
 
 / {
@@ -43,6 +43,13 @@ ZMK_BEHAVIOR(smart_mouse, tri_state,
 
             mods = <(MOD_LGUI|MOD_LSFT|MOD_RSFT|MOD_RGUI)>;
             keep-mods = <(MOD_LGUI|MOD_RSFT)>;
+        };
+        smart_mouse: smart_mouse {
+            compatible = "zmk, tri_state";
+            label = "smart_mouse";
+            bindings = <&tog MOUSE>, <&none>, <&tog MOUSE>;
+            ignored-key-positions = <7 8 9 13 14 15 16 19 20 21 30 38 39 40>;
+            ignored-layers = <MOUSE>;
         };
         q_hold: q_hold {
             compatible = "zmk,behavior-hold-tap";
