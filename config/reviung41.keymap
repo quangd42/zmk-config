@@ -48,6 +48,7 @@
             compatible = "zmk, tri_state";
             label = "smart_mouse";
             bindings = <&tog MOUSE>, <&none>, <&tog MOUSE>;
+            #binding-cells = <0>;
             ignored-key-positions = <7 8 9 13 14 15 16 19 20 21 30 38 39 40>;
             ignored-layers = <MOUSE>;
         };
