@@ -6,15 +6,14 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/bt.h>
 
 #define DEFAULT 0
 #define LOWER   1
 #define RAISE   2
 
 / {
-    chosen { 
-        zmk,matrix_transform = &layout_grid_transform; 
+    chosen {
+        zmk,matrix_transform = &layout_grid_transform;
     };
 
     behaviors {
@@ -116,11 +115,11 @@
 
         colemakDH_hrm {
             bindings = <
-&kp GRAVE  &kp N1     &kp N2       &kp N3  &kp N4     &kp N5     &kp N6      &kp N7  &kp N8   &kp N9    &kp N0   &kp BSPC
-    &kp Q   &kp W      &kp F        &kp P   &kp B      &none      &none       &kp J   &kp L    &kp U     &kp Y  &kp COMMA
-    &lh_hm LCTRL A    &lh_hm LALT R   &lh_hm LSHFT S    &lh_hm LCMD T   &kp G   &kp DOWN     &kp UP     &kp H  &rh_hm RCMD N  &rh_hm RSHFT E  &rh_hm RALT I  &rh_hm RCTRL O
-    &kp Z   &kp X      &kp C        &kp D   &kp V   &kp LEFT  &kp RIGHT       &kp K   &kp H  &kp SQT  &kp FSLH    &kp DOT
-    &none   &none  &lt 2 ESC  &lt 2 SPACE   &kp TAB  &kp SPACE  &kp SPACE  &lt 3 BSPC   &smart_shft    &none     &none      &none
+     &kp GRAVE         &kp N1          &kp N2         &kp N3   &kp N4     &kp N5     &kp N6      &kp N7         &kp N8          &kp N9         &kp N0        &kp BSPC
+         &kp Q          &kp W           &kp F          &kp P    &kp B      &none      &none       &kp J          &kp L           &kp U          &kp Y       &kp COMMA
+&lh_hm LCTRL A  &lh_hm LALT R  &lh_hm LSHFT S  &lh_hm LCMD T    &kp G   &kp DOWN     &kp UP       &kp H  &rh_hm RCMD N  &rh_hm RSHFT E  &rh_hm RALT I  &rh_hm RCTRL O
+         &kp Z          &kp X           &kp C          &kp D    &kp V   &kp LEFT  &kp RIGHT       &kp K          &kp H         &kp SQT       &kp FSLH         &kp DOT
+         &none          &none       &lt 4 ESC    &lt 2 SPACE  &kp TAB  &kp SPACE  &kp SPACE  &lt 0 BSPC    &smart_shft           &none          &none           &none
             >;
 
             label = "colemakDH";
@@ -133,43 +132,63 @@
             // |  ESC  |  A   |  S   |  D   |  F    |  G     |   H     |  J     |  K   |  L    |   ;   |  '     |
             // | SHIFT |  Z   |  X   |  C   |  V    |  B     |   N     |  M     |  ,   |  .    |   /   | RET    |
             // |       | LGUI | LALT | LCTL | LOWER | SPACE  |  SPACE  |  RAISE | LEFT |  DOWN |   UP  | RIGHT  |
+
             bindings = <
-                &kp GRAVE   &kp N1     &kp N2    &kp N3    &kp N4     &kp N5     &kp N6     &kp N7     &kp N8     &kp N9    &kp N0     &kp BSPC
-                &kp TAB     &kp Q      &kp W     &kp E     &kp R      &kp T      &kp Y      &kp U      &kp I      &kp O     &kp P      &kp DEL
-                &kp ESC     &kp A      &kp S     &kp D     &kp F      &kp G      &kp H      &kp J      &kp K      &kp L     &kp SEMI   &kp SQT
-                &kp LSHIFT  &kp Z      &kp X     &kp C     &kp V      &kp B      &kp N      &kp M      &kp COMMA  &kp DOT   &kp SLASH  &kp RET
-                &none       &kp LCTRL  &kp LALT  &kp LGUI  &mo LOWER  &kp SPACE  &kp SPACE  &mo RAISE  &kp LEFT   &kp DOWN  &kp UP     &kp RIGHT
-                >;
+ &kp GRAVE     &kp N1    &kp N2    &kp N3  &kp N4     &kp N5     &kp N6  &kp N7     &kp N8    &kp N9     &kp N0   &kp BSPC
+   &kp TAB      &kp Q     &kp W     &kp E   &kp R      &kp T      &kp Y   &kp U      &kp I     &kp O      &kp P    &kp DEL
+   &kp ESC      &kp A     &kp S     &kp D   &kp F      &kp G      &kp H   &kp J      &kp K     &kp L   &kp SEMI    &kp SQT
+&kp LSHIFT      &kp Z     &kp X     &kp C   &kp V      &kp B      &kp N   &kp M  &kp COMMA   &kp DOT  &kp SLASH    &kp RET
+     &none  &kp LCTRL  &kp LALT  &kp LGUI   &mo 1  &kp SPACE  &kp SPACE   &mo 2   &kp LEFT  &kp DOWN     &kp UP  &kp RIGHT
+            >;
         };
-        lower {
+
+        symbol {
             // ------------------------------------------------------------------------------------------
             // |   ~   |  !   |  @   |  #   |  $   |  %   |   ^   |   &   |   *  |  (   |   )   | BSPC  |
             // |   ~   |  !   |  @   |  #   |  $   |  %   |   ^   |   &   |   *  |  (   |   )   | DEL   |
             // |  DEL  |  F1  |  F2  |  F3  |  F4  |  F5  |  F6   |   -   |   +  |  [   |   ]   |  |    |
             // |       |  F7  |  F8  |  F9  |  F10 |  F11 |  F12  |       | LCTL | HOME |  END  |       |
             // | LALT  |      |      |      |      |      |       |       | NEXT | VOL- | VOL+  | PLAY  |
+
             bindings = <
-                &kp LS(GRAVE)  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)  &kp LS(N6)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)        &kp LS(N0)         &kp BSPC
-                &kp LS(GRAVE)  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)  &kp LS(N6)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)        &kp LS(N0)         &kp DEL
-                &kp DEL        &kp F1      &kp F2      &kp F3      &kp F4      &kp F5      &kp F6      &kp MINUS   &kp PLUS    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PIPE
-                &none          &kp F7      &kp F8      &kp F9      &kp F10     &kp F11     &kp F12     &none       &kp LCTRL   &kp HOME          &kp END            &none
-                &kp LALT       &none       &none       &none       &trans      &none       &none       &none       &kp C_NEXT  &kp C_VOL_UP      &kp C_VOL_UP       &kp C_PLAY
-                >;
+&kp TILDE     &kp F1     &kp F2    &kp F3     &kp F4   &kp F5    &kp F6     &kp F7        &kp F8   &kp F9  &kp F10   &kp BSPC
+ &kp EXCL     &kp AT  &kp POUND  &kp DLLR  &kp PRCNT  &kp F11   &kp F12   &kp FSLH        &kp N7   &kp N8   &kp N9  &kp MINUS
+ &kp AMPS  &kp COLON   &kp LPAR  &kp LBRC   &kp LBKT    &none  &kp PIPE  &kp ASTRK        &kp N4   &kp N5   &kp N6   &kp PLUS
+&kp CARET  &kp UNDER   &kp RPAR  &kp RBRC   &kp RBKT    &none  &kp BSLH      &none        &kp N1   &kp N2   &kp N3  &kp EQUAL
+    &none      &none      &none     &none     &trans    &none     &none   &kp BSPC  &kp NUMBER_0  &kp DOT    &none      &none
+            >;
         };
-        raise {
-            // -------------------------------------------------------------------------------------------
-            // |   `   |  1   |  2   |  3   |  4   |   5   |   6   |   7   |   8  |  9   |   0   | BSPC  |
-            // |   `   |  1   |  2   |  3   |  4   |   5   |   6   |   7   |   8  |  9   |   0   | DEL   |
-            // |  DEL  |  F1  |  F2  |  F3  |  F4  |  F5   |  F6   |   -   |   =  |  [   |   ]   |  \    |
-            // |       |  F7  |  F8  |  F9  |  F10 |  F11  |  F12  |   #   |   \  | PGUP |  PGDN |       |
-            // |       |      |      |      |      | SHIFT |       |       | NEXT | VOL- |  VOL+ | PLAY  |
+
+        nav {
             bindings = <
-                &kp GRAVE  &kp N1  &kp N2  &kp N3  &kp N4   &kp N5      &kp N6   &kp N7     &kp N8        &kp N9            &kp N0             &kp BSPC
-                &kp GRAVE  &kp N1  &kp N2  &kp N3  &kp N4   &kp N5      &kp N6   &kp N7     &kp N8        &kp N9            &kp N0             &kp DEL
-                &kp DEL    &kp F1  &kp F2  &kp F3  &kp F4   &kp F5      &kp F6   &kp MINUS  &kp KP_EQUAL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BSLH
-                &none      &kp F7  &kp F8  &kp F9  &kp F10  &kp F11     &kp F12  &kp HASH   &kp BSLH      &kp PG_UP         &kp PG_DN          &none
-                &none      &none   &none   &none   &none    &kp LSHIFT  &none    &trans     &kp C_NEXT    &kp C_VOL_DN      &kp C_VOL_UP       &kp C_PLAY
-                >;
+    &none      &none      &none     &none     &none  &none  &none         &none         &none     &none          &none         &none
+    &none      &none      &none     &none     &none  &none  &none    &kp LA(UP)  &kp LA(LEFT)    &kp UP  &kp LA(RIGHT)  &kp LA(BSPC)
+&kp LG(A)  &sk LCTRL  &sk LSHFT  &sk LCMD  &kp CAPS  &none  &none  &kp LA(DOWN)      &kp LEFT  &kp DOWN      &kp RIGHT      &kp BSPC
+    &none      &none      &none     &none     &none  &none  &none       &kp DEL  &kp LG(LEFT)     &none  &kp LG(RIGHT)  &kp LG(BSPC)
+    &none      &none      &none     &none     &none  &none  &none      &kp BSPC         &none     &none          &none         &none
+            >;
+        };
+
+        func {
+            bindings = <
+    &none      &none      &none                 &none                 &none         &none         &none    &none   &none   &none   &none  &none
+    &none      &none      &none  &kp LG(LS(NUMBER_4))  &kp LG(LS(NUMBER_5))         &none         &none  &kp F12  &kp F7  &kp F8  &kp F9  &none
+&sk LCTRL   &sk LALT  &sk LSHFT              &sk LCMD                 &none  &kp C_VOL_DN  &kp C_VOL_UP  &kp F11  &kp F4  &kp F5  &kp F6  &none
+&kp LG(Z)  &kp LG(X)  &kp LG(C)             &kp LG(V)         &kp LG(LS(Z))    &kp K_MUTE      &kp C_PP  &kp F10  &kp F1  &kp F2  &kp F3  &none
+    &none      &none      &none                 &none                 &none         &none         &none    &none   &none   &none   &none  &none
+            >;
+
+            label = "Func";
+        };
+
+        system {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
         };
     };
 };
