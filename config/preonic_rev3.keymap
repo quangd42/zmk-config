@@ -93,11 +93,11 @@
 
         colemakDH_hrm {
             bindings = <
-     &kp GRAVE         &kp N1          &kp N2         &kp N3   &kp N4     &kp N5     &kp N6      &kp N7         &kp N8          &kp N9         &kp N0        &kp BSPC
-         &kp Q          &kp W           &kp F          &kp P    &kp B      &none      &none       &kp J          &kp L           &kp U          &kp Y       &kp COMMA
-&lh_hm LCTRL A  &lh_hm LALT R  &lh_hm LSHFT S  &lh_hm LCMD T    &kp G   &kp DOWN     &kp UP       &kp H  &rh_hm RCMD N  &rh_hm RSHFT E  &rh_hm RALT I  &rh_hm RCTRL O
-         &kp Z          &kp X           &kp C          &kp D    &kp V   &kp LEFT  &kp RIGHT       &kp K          &kp H         &kp SQT       &kp FSLH         &kp DOT
-         &none          &none       &lt 4 ESC    &lt 2 SPACE  &kp TAB  &kp ENTER  &kp ENTER  &lt 3 BSPC    &smart_shft           &none          &none           &none
+     &kp GRAVE         &kp N1          &kp N2         &kp N3   &kp N4       &kp N5       &kp N6      &kp N7         &kp N8          &kp N9         &kp N0        &kp BSPC
+         &kp Q          &kp W           &kp F          &kp P    &kp B    &kp MINUS    &kp EQUAL       &kp J          &kp L           &kp U          &kp Y       &kp COMMA
+&lh_hm LCTRL A  &lh_hm LALT R  &lh_hm LSHFT S  &lh_hm LCMD T    &kp G     &kp DOWN       &kp UP       &kp H  &rh_hm RCMD N  &rh_hm RSHFT E  &rh_hm RALT I  &rh_hm RCTRL O
+         &kp Z          &kp X           &kp C          &kp D    &kp V     &kp LEFT    &kp RIGHT       &kp K          &kp H         &kp SQT       &kp FSLH         &kp DOT
+         &none          &none       &lt 6 ESC    &lt 4 SPACE  &kp TAB  &lt 5 ENTER  &lt 5 ENTER  &lt 3 BSPC    &smart_shft       &lt 3 DEL          &none           &none
             >;
 
             label = "colemakDH";
@@ -141,11 +141,11 @@
             // | LALT  |      |      |      |      |      |       |       | NEXT | VOL- | VOL+  | PLAY  |
 
             bindings = <
-&kp TILDE     &kp F1     &kp F2    &kp F3     &kp F4   &kp F5    &kp F6     &kp F7        &kp F8   &kp F9  &kp F10   &kp BSPC
- &kp EXCL     &kp AT  &kp POUND  &kp DLLR  &kp PRCNT  &kp F11   &kp F12   &kp FSLH        &kp N7   &kp N8   &kp N9  &kp MINUS
- &kp AMPS  &kp COLON   &kp LPAR  &kp LBRC   &kp LBKT    &none  &kp PIPE  &kp ASTRK        &kp N4   &kp N5   &kp N6   &kp PLUS
-&kp CARET  &kp UNDER   &kp RPAR  &kp RBRC   &kp RBKT    &none  &kp BSLH  &kp COMMA        &kp N1   &kp N2   &kp N3  &kp EQUAL
-    &none      &none      &to 0     &none     &trans    &none     &none   &kp BSPC  &kp NUMBER_0  &kp DOT    &none      &none
+&kp TILDE     &kp F1     &kp F2    &kp F3     &kp F4    &kp F5   &kp F6  &kp F7    &kp F8     &kp F9   &kp F10   &kp BSPC
+ &kp EXCL     &kp AT  &kp POUND  &kp DLLR  &kp PRCNT   &kp F11  &kp F12   &none     &none      &none     &none      &none
+ &kp AMPS  &kp COLON   &kp LPAR  &kp LBRC   &kp LBKT  &kp PIPE    &none   &none  &sk RCMD  &sk RSHFT  &sk RALT  &sk RCTRL
+&kp CARET  &kp UNDER   &kp RPAR  &kp RBRC   &kp RBKT  &kp BSLH    &none   &none     &none      &none     &none      &none
+    &none      &none      &to 0     &none     &trans     &none    &none   &none     &none      &none     &none      &none
             >;
         };
 
@@ -158,11 +158,11 @@
             // | LALT  |      |      |      |      |      |       |       | NEXT | VOL- | VOL+  | PLAY  |
 
             bindings = <
-&kp TILDE     &kp F1     &kp F2    &kp F3     &kp F4   &kp F5    &kp F6     &kp F7        &kp F8   &kp F9  &kp F10   &kp BSPC
- &kp EXCL     &kp AT  &kp POUND  &kp DLLR  &kp PRCNT  &kp F11   &kp F12   &kp FSLH        &kp N7   &kp N8   &kp N9  &kp MINUS
- &kp AMPS  &kp COLON   &kp LPAR  &kp LBRC   &kp LBKT    &none  &kp PIPE  &kp ASTRK        &kp N4   &kp N5   &kp N6   &kp PLUS
-&kp CARET  &kp UNDER   &kp RPAR  &kp RBRC   &kp RBKT    &none  &kp BSLH  &kp COMMA        &kp N1   &kp N2   &kp N3  &kp EQUAL
-    &none      &none      &to 0     &none     &trans    &none     &none   &kp BSPC  &kp NUMBER_0  &kp DOT    &none      &none
+&kp TILDE     &kp F1     &kp F2    &kp F3     &kp F4    &kp F5    &kp F6     &kp F7        &kp F8   &kp F9  &kp F10   &kp BSPC
+ &kp EXCL     &kp AT  &kp POUND  &kp DLLR  &kp PRCNT   &kp F11   &kp F12   &kp FSLH        &kp N7   &kp N8   &kp N9  &kp MINUS
+ &kp AMPS  &kp COLON   &kp LPAR  &kp LBRC   &kp LBKT  &kp SEMI  &kp PIPE  &kp ASTRK        &kp N4   &kp N5   &kp N6   &kp PLUS
+&kp CARET  &kp UNDER   &kp RPAR  &kp RBRC   &kp RBKT     &none  &kp BSLH  &kp COMMA        &kp N1   &kp N2   &kp N3  &kp EQUAL
+    &none      &none      &to 0     &none     &trans     &none     &none   &kp BSPC  &kp NUMBER_0  &kp DOT    &none      &none
             >;
         };
 
@@ -193,7 +193,7 @@
 &trans  &trans  &trans  &trans           &trans           &trans           &trans       &trans      &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &rgb_ug RGB_TOG           &trans           &trans       &trans      &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans           &trans  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI       &trans      &trans  &trans  &trans  &trans
-&tog 1  &trans  &trans  &trans           &trans  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &bootloader  &sys_reset  &trans  &trans  &trans
+&tog 1  &tog 2  &trans  &trans           &trans  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &bootloader  &sys_reset  &trans  &trans  &trans
 &trans  &trans   &to 0  &trans           &trans           &trans           &trans       &trans      &trans  &trans  &trans  &trans
             >;
         };
