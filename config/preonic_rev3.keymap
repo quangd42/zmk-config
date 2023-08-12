@@ -95,7 +95,7 @@
             bindings = <
      &kp GRAVE         &kp N1          &kp N2         &kp N3     &kp N4       &kp N5       &kp N6      &kp N7         &kp N8          &kp N9         &kp N0        &kp BSPC
          &kp Q          &kp W           &kp F          &kp P      &kp B     &kp DOWN       &kp UP       &kp J          &kp L           &kp U          &kp Y       &kp COMMA
-&lh_hm LCTRL A  &lh_hm LALT R  &lh_hm LSHFT S  &lh_hm LCMD T      &kp G     &kp LEFT    &kp RIGHT       &kp H  &rh_hm RCMD N  &rh_hm RSHFT E  &rh_hm RALT I  &rh_hm RCTRL O
+&lh_hm LCTRL A  &lh_hm LALT R  &lh_hm LSHFT S  &lh_hm LCMD T      &kp G     &kp LEFT    &kp RIGHT       &kp M  &rh_hm RCMD N  &rh_hm RSHFT E  &rh_hm RALT I  &rh_hm RCTRL O
          &kp Z          &kp X           &kp C          &kp D      &kp V    &kp MINUS    &kp EQUAL       &kp K          &kp H         &kp SQT       &kp FSLH         &kp DOT
          &none          &none       &lt 6 ESC    &lt 4 SPACE  &lt 5 TAB  &lt 5 ENTER  &lt 5 ENTER  &lt 3 BSPC    &smart_shft       &lt 7 DEL          &none           &none
             >;
@@ -179,9 +179,9 @@
         fun_layer {
             bindings = <
     &none      &none      &none                 &none                 &none         &none         &none    &none   &none   &none   &none  &none
-    &none      &none      &none  &kp LG(LS(NUMBER_4))  &kp LG(LS(NUMBER_5))  &kp C_BRI_DN  &kp C_BRI_UP  &kp F12  &kp F7  &kp F8  &kp F9  &none
-&sk LCTRL   &sk LALT  &sk LSHFT              &sk LCMD                 &none  &kp C_VOL_DN  &kp C_VOL_UP  &kp F11  &kp F4  &kp F5  &kp F6  &none
-&kp LG(Z)  &kp LG(X)  &kp LG(C)             &kp LG(V)         &kp LG(LS(Z))    &kp K_MUTE      &kp C_PP  &kp F10  &kp F1  &kp F2  &kp F3  &none
+    &none      &none      &none  &kp LG(LS(NUMBER_4))  &kp LG(LS(NUMBER_5))  &kp C_VOL_DN  &kp C_VOL_UP  &kp F12  &kp F7  &kp F8  &kp F9  &none
+&sk LCTRL   &sk LALT  &sk LSHFT              &sk LCMD                 &none   &kp K_MUTE      &kp C_PP &kp F11  &kp F4  &kp F5  &kp F6  &none
+&kp LG(Z)  &kp LG(X)  &kp LG(C)             &kp LG(V)         &kp LG(LS(Z))    &kp C_BRI_DN  &kp C_BRI_UP  &kp F10  &kp F1  &kp F2  &kp F3  &none
     &none      &none      &none                 &none                 &none         &none         &none    &none   &none   &none   &none  &none
             >;
 
@@ -191,9 +191,9 @@
         sys_layer {
             bindings = <
 &trans  &trans  &trans  &trans           &trans           &trans           &trans       &trans      &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &rgb_ug RGB_TOG           &trans           &trans       &trans      &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans           &trans  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI       &trans      &trans  &trans  &trans  &trans
-&tog 1  &tog 2  &trans  &trans           &trans  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &bootloader  &sys_reset  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &rgb_ug RGB_TOG  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI       &trans      &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans           &trans  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF       &trans      &trans  &trans  &trans  &trans
+&tog 1  &tog 2  &trans  &trans           &trans           &trans           &trans  &bootloader  &sys_reset  &trans  &trans  &trans
 &trans  &trans   &to 0  &trans           &trans           &trans           &trans       &trans      &trans  &trans  &trans  &trans
             >;
         };
