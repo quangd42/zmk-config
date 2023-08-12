@@ -118,9 +118,9 @@
             bindings = <
 &kp GRAVE  &kp N1     &kp N2       &kp N3  &kp N4     &kp N5     &kp N6      &kp N7  &kp N8   &kp N9    &kp N0   &kp BSPC
     &kp Q   &kp W      &kp F        &kp P   &kp B      &none      &none       &kp J   &kp L    &kp U     &kp Y  &kp COMMA
-    &kp A   &kp R      &kp S        &kp T   &kp G   &kp DOWN     &kp UP       &kp M   &kp N    &kp E     &kp I      &kp O
+    &lh_hm LCTRL A    &lh_hm LALT R   &lh_hm LSHFT S    &lh_hm LCMD T   &kp G   &kp DOWN     &kp UP       &rh_hm RCMD N  &rh_hm RSHFT E  &rh_hm RALT I  &rh_hm RCTRL O
     &kp Z   &kp X      &kp C        &kp D   &kp V   &kp LEFT  &kp RIGHT       &kp K   &kp H  &kp SQT  &kp FSLH    &kp DOT
-    &none   &none  &lt 2 ESC  &lt 2 SPACE   &none  &kp SPACE  &kp SPACE  &lt 3 BSPC   &none    &none     &none      &none
+    &none   &none  &lt 2 ESC  &lt 2 SPACE   &kp TAB  &kp SPACE  &kp SPACE  &lt 3 BSPC   &smart_shft    &none     &none      &none
             >;
 
             label = "colemakDH";
