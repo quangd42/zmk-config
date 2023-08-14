@@ -13,6 +13,6 @@
 #
 ---
 include:
-  # - board: nrfmicro_13
-  #   shield: reviung41
-  - board: preonic_rev3
+  - board: nrfmicro_13
+    shield: reviung41
+  # - board: preonic_rev3

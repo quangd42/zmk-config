@@ -21,6 +21,10 @@
     quick-tap-ms = <150>;
 };
 
+&sl {
+    /delete-property/ quick-release;
+}
+
 / {
     behaviors {
         gresc: grave_escape {
