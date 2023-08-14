@@ -80,11 +80,11 @@
             compatible = "zmk,behavior-mod-morph";
             label = "SMART_SHFT";
             bindings =
-                <&quick_sticky_key RSHFT>,
+                <&quick_sticky_key LSHFT>,
                 <&caps_word>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT)>;
+            mods = <(MOD_LSFT)>;
         };
         quick_sticky_key: quick_sticky_key {
             compatible = "zmk,behavior-sticky-key";
@@ -154,7 +154,7 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-     &kp C_PP            &kp F            &kp L            &kp H            &kp D                &kp V               &kp Z                       &kp Y           &kp O          &kp U       &kp COMMA   &lt 7 BSPC
+     &kp C_PP            &kp F            &kp L            &kp H            &kp D                &kp V               &kp Z                       &kp Y           &kp O          &kp U     &comma_semi   &lt 7 BSPC
        &gresc   &lh_hm LCTRL S    &lh_hm LALT R   &lh_hm LSHFT N    &lh_hm LCMD T                &kp M               &kp G               &rh_hm RCMD C  &rh_hm RSHFT E  &rh_hm RALT I  &rh_hm RCTRL A     &kp SEMI
 &mt LSHFT TAB  &q_hold LG(Z) J  &q_hold LG(X) X  &q_hold LG(C) B  &q_hold LG(V) K  &q_hold LS(LG(Z)) Q               &kp P                       &kp W         &kp SQT       &kp FSLH         &kp DOT  &smart_shft
                                                        &lt 6 TAB      &lt 4 SPACE                       &lt 5 ENTER         &quick_hold_tap RSHFT BSPC           &sl 3
