@@ -148,7 +148,7 @@
      &kp C_PP            &kp Q            &kp W            &kp F            &kp P                &kp B               &kp J                       &kp L           &kp U          &kp Y       &kp COMMA  &lt 7 BSPC
        &gresc   &lh_hm LCTRL A    &lh_hm LALT R   &lh_hm LSHFT S    &lh_hm LCMD T                &kp G               &kp M               &rh_hm RCMD N  &rh_hm RSHFT E  &rh_hm RALT I  &rh_hm RCTRL O    &kp SEMI
 &mt LSHFT TAB  &q_hold LG(Z) Z  &q_hold LG(X) X  &q_hold LG(C) C  &q_hold LG(V) D  &q_hold LG(LS(Z)) V               &kp K                       &kp H         &kp SQT       &kp FSLH         &kp DOT   &sk RSHFT
-                                                       &lt 6 TAB      &lt 4 SPACE                       &lt 5 ENTER         &quick_hold_tap RSHFT BSPC     &mo MOUSE
+                                                       &lt 6 TAB      &lt 4 SPACE                       &lt 5 ENTER         &quick_hold_tap RSHFT BSPC     &smart_mouse
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
