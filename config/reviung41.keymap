@@ -24,11 +24,11 @@
 };
 
 // smart-mouse, requires PR #1366
-ZMK_BEHAVIOR(smart_mouse, tri_state,
-    bindings = <&tog MOUSE>, <&none>, <&tog MOUSE>;
-    ignored-key-positions = <7 8 9 13 14 15 16 19 20 21 30 38 39 40>;
-    ignored-layers = <MOUSE>;
-)
+//ZMK_BEHAVIOR(smart_mouse, tri_state,
+//    bindings = <&tog MOUSE>, <&none>, <&tog MOUSE>;
+//    ignored-key-positions = <7 8 9 13 14 15 16 19 20 21 30 38 39 40>;
+//    ignored-layers = <MOUSE>;
+//)
 
 
 / {
