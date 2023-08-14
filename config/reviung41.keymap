@@ -114,6 +114,16 @@
             #binding-cells = <2>;
             tapping-term-ms = <90>;
         };
+        comma_semi: comma_semi {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COMMA_SEMI";
+            bindings =
+                <&kp COMMA>,
+                <&kp SEMI>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -127,7 +137,7 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-     &kp C_PP            &kp Q            &kp W            &kp F            &kp P                &kp B               &kp J                       &kp L           &kp U          &kp Y       &kp COMMA   &lt 7 BSPC
+     &kp C_PP            &kp Q            &kp W            &kp F            &kp P                &kp B               &kp J                       &kp L           &kp U          &kp Y     &comma_semi   &lt 7 BSPC
        &gresc   &lh_hm LCTRL A    &lh_hm LALT R   &lh_hm LSHFT S    &lh_hm LCMD T                &kp G               &kp M               &rh_hm RCMD N  &rh_hm RSHFT E  &rh_hm RALT I  &rh_hm RCTRL O     &kp SEMI
 &mt LSHFT TAB  &q_hold LG(Z) Z  &q_hold LG(X) X  &q_hold LG(C) C  &q_hold LG(V) D  &q_hold LG(LS(Z)) V               &kp K                       &kp H         &kp SQT       &kp FSLH         &kp DOT  &smart_shft
                                                        &lt 6 TAB      &lt 4 SPACE                       &lt 5 ENTER         &quick_hold_tap RSHFT BSPC           &sl 3
@@ -181,7 +191,7 @@
 &kp C_MUTE   &kp EXCL     &kp AT   &kp HASH   &kp DLLR  &kp PRCNT         &none     &none      &none     &none      &none  &to 5
      &to 0   &kp AMPS  &kp COLON   &kp LPAR   &kp LBRC   &kp LBKT         &none  &sk RCMD  &sk RSHFT  &sk RALT  &sk RCTRL  &none
  &kp GRAVE  &kp CARET   &kp BSLH   &kp RPAR   &kp RBRC   &kp RBKT         &none     &none      &none     &none      &none  &none
-                                  &kp EQUAL  &kp MINUS             &mo 7         &kp BSPC    &kp DOT
+                                  &kp EQUAL  &kp MINUS             &mo 7         &kp BSPC      &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN>;
