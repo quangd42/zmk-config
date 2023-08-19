@@ -168,16 +168,16 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-     &kp C_PP            &kp F            &kp L            &kp H            &kp D                &kp V               &kp Z             &kp Y           &kp O          &kp U     &comma_semi   &lt 8 BSPC
+     &kp C_PP            &kp F            &kp L            &kp H            &kp K                &kp Q               &kp Z             &kp Y           &kp O          &kp U     &comma_semi   &lt 8 BSPC
        &gresc   &lh_hm LCTRL S    &lh_hm LALT R   &lh_hm LSHFT N    &lh_hm LCMD T                &kp M               &kp G     &rh_hm RCMD C  &rh_hm RSHFT E  &rh_hm RALT I  &rh_hm RCTRL A     &kp SEMI
-&mt LSHFT TAB  &q_hold LG(Z) J  &q_hold LG(X) X  &q_hold LG(C) B  &q_hold LG(V) K  &q_hold LS(LG(Z)) Q               &kp P             &kp W         &kp SQT       &kp FSLH         &kp DOT  &smart_shft
+&mt LSHFT TAB  &q_hold LG(Z) J  &q_hold LG(X) X  &q_hold LG(C) B  &q_hold LG(V) D  &q_hold LS(LG(Z)) V               &kp P             &kp W         &kp SQT       &kp FSLH         &kp DOT  &smart_shft
                                                        &lt 7 TAB      &lt 5 SPACE                       &lt 6 ENTER         &bspc_smart_shft           &sl 4
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        semimakjq_layer {
+        gallium_layer {
             // -------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  :  |   BKSP    |
             // | CTRL |  A  |  R  |  S  |  T  |  G  |   |  M  |  N   |  E  |  I  |  O  |    '      |
@@ -185,9 +185,9 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-     &kp C_PP            &kp W            &kp L            &kp Y            &kp P                &kp B               &kp Z             &kp F           &kp O          &kp U       &kp COMMA   &lt 7 BSPC
-       &gresc   &lh_hm LCTRL C    &lh_hm LALT R   &lh_hm LSHFT S    &lh_hm LCMD T                &kp G               &kp M     &rh_hm RCMD N  &rh_hm RSHFT E  &rh_hm RALT I  &rh_hm RCTRL A     &kp SEMI
-&mt LSHFT TAB  &q_hold LG(Z) Q  &q_hold LG(X) J  &q_hold LG(C) V  &q_hold LG(V) D  &q_hold LS(LG(Z)) K               &kp X             &kp H         &kp SQT       &kp FSLH         &kp DOT  &smart_shft
+     &kp C_PP            &kp B            &kp L            &kp D            &kp C                &kp V               &kp Z             &kp Y           &kp O          &kp U       &kp COMMA   &lt 7 BSPC
+       &gresc   &lh_hm LCTRL N    &lh_hm LALT R   &lh_hm LSHFT T    &lh_hm LCMD S                &kp G               &kp P     &rh_hm RCMD H  &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I     &kp SEMI
+&mt LSHFT TAB  &q_hold LG(Z) Q  &q_hold LG(X) X  &q_hold LG(C) M  &q_hold LG(V) W  &q_hold LS(LG(Z)) J               &kp K             &kp F         &kp SQT       &kp FSLH         &kp DOT  &smart_shft
                                                        &lt 7 TAB      &lt 5 SPACE                       &lt 6 ENTER         &bspc_smart_shft           &sl 4
             >;
 
