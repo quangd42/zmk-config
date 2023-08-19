@@ -168,9 +168,9 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-     &kp C_PP            &kp F            &kp L            &kp H            &kp K                &kp Q               &kp Z             &kp Y           &kp O          &kp U     &comma_semi   &lt 8 BSPC
+     &kp C_PP            &kp F            &kp L            &kp H            &kp D                &kp V               &kp Z             &kp Y           &kp O          &kp U     &comma_semi   &lt 8 BSPC
        &gresc   &lh_hm LCTRL S    &lh_hm LALT R   &lh_hm LSHFT N    &lh_hm LCMD T                &kp M               &kp G     &rh_hm RCMD C  &rh_hm RSHFT E  &rh_hm RALT I  &rh_hm RCTRL A     &kp SEMI
-&mt LSHFT TAB  &q_hold LG(Z) J  &q_hold LG(X) X  &q_hold LG(C) B  &q_hold LG(V) D  &q_hold LS(LG(Z)) V               &kp P             &kp W         &kp SQT       &kp FSLH         &kp DOT  &smart_shft
+&mt LSHFT TAB  &q_hold LG(Z) J  &q_hold LG(X) X  &q_hold LG(C) B  &q_hold LG(V) K  &q_hold LS(LG(Z)) Q               &kp P             &kp W         &kp SQT       &kp FSLH         &kp DOT  &smart_shft
                                                        &lt 7 TAB      &lt 5 SPACE                       &lt 6 ENTER         &bspc_smart_shft           &sl 4
             >;
 
