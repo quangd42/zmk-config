@@ -249,10 +249,10 @@
             //                       |     |     | RET | ADJ |     |
 
             bindings = <
-&kp C_MUTE   &kp EXCL     &kp AT   &kp HASH  &kp DLLR  &kp PRCNT         &none     &none      &none     &none      &none  &to 7
-     &to 0   &kp AMPS  &kp COLON  &kp MINUS  &kp LPAR   &kp LBKT         &none  &sk RCMD  &sk RSHFT  &sk RALT  &sk RCTRL  &none
- &kp GRAVE  &kp CARET   &kp BSLH  &kp EQUAL  &kp RPAR   &kp RBKT         &none     &none      &none     &none      &none  &none
-                                      &none     &none             &none         &kp BSPC      &none
+&kp C_MUTE   &kp EXCL     &kp AT   &kp HASH   &kp DLLR  &kp PRCNT         &none     &none      &none     &none      &none  &to 7
+ &kp TILDE   &kp AMPS  &kp COLON  &kp MINUS   &kp LPAR   &kp LBKT         &none  &sk RCMD  &sk RSHFT  &sk RALT  &sk RCTRL  &none
+  &kp PIPE  &kp CARET   &kp BSLH  &kp EQUAL   &kp RPAR   &kp RBKT         &none     &none      &none     &none      &none  &none
+                                      &none  &kp SPACE             &none         &kp BSPC      &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN>;
