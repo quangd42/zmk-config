@@ -190,7 +190,7 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        dwarfq2_layer {
+        dwarfq3_layer {
             // -------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  :  |   BKSP    |
             // | CTRL |  A  |  R  |  S  |  T  |  G  |   |  M  |  N   |  E  |  I  |  O  |    '      |
@@ -198,8 +198,8 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-     &kp C_PP            &kp F            &kp L            &kp H            &kp K                &kp Q               &kp Z             &kp W           &kp O          &kp U     &comma_semi   &lt 9 BSPC
-       &gresc   &lh_hm LCTRL S    &lh_hm LALT R   &lh_hm LSHFT N    &lh_hm LCMD T                &kp M               &kp G     &rh_hm RCMD Y  &rh_hm RSHFT E  &rh_hm RALT I  &rh_hm RCTRL A     &kp SEMI
+     &kp C_PP            &kp F            &kp L            &kp N            &kp K                &kp Q               &kp Z             &kp Y           &kp O          &kp U     &comma_semi   &lt 9 BSPC
+       &gresc   &lh_hm LCTRL S    &lh_hm LALT R   &lh_hm LSHFT H    &lh_hm LCMD T                &kp M               &kp G     &rh_hm RCMD W  &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I     &kp SEMI
 &mt LSHFT TAB  &q_hold LG(Z) J  &q_hold LG(X) X  &q_hold LG(C) B  &q_hold LG(V) D  &q_hold LS(LG(Z)) V               &kp P             &kp C         &kp SQT       &kp FSLH         &kp DOT  &smart_shft
                                                        &lt 8 TAB      &lt 7 SPACE                       &lt 4 ENTER         &bspc_smart_shft           &sl 6
             >;
