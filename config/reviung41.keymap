@@ -27,17 +27,6 @@
 
 / {
     behaviors {
-        gresc: grave_escape {
-            compatible = "zmk,behavior-mod-morph";
-            label = "GRAVE_ESCAPE";
-            #binding-cells = <0>;
-            bindings =
-                <&mt LCTRL ESC>,
-                <&kp GRAVE>;
-
-            mods = <(MOD_LGUI|MOD_LSFT|MOD_RSFT|MOD_RGUI)>;
-            keep-mods = <(MOD_LGUI|MOD_RSFT)>;
-        };
         q_hold: q_hold {
             compatible = "zmk,behavior-hold-tap";
             label = "Q_HOLD";
@@ -107,6 +96,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <120>;
+            flavor = "balanced";
         };
         smart_shft_tap: smart_shft_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -250,8 +240,8 @@
 
             bindings = <
 &kp C_MUTE   &kp EXCL     &kp AT   &kp HASH   &kp DLLR  &kp PRCNT         &none     &none      &none     &none      &none  &to 7
- &kp TILDE   &kp AMPS  &kp COLON  &kp MINUS   &kp LPAR   &kp LBKT         &none  &sk RCMD  &sk RSHFT  &sk RALT  &sk RCTRL  &none
-  &kp PIPE  &kp CARET   &kp BSLH  &kp EQUAL   &kp RPAR   &kp RBKT         &none     &none      &none     &none      &none  &none
+ &kp GRAVE   &kp AMPS  &kp COLON  &kp MINUS   &kp LPAR   &kp LBKT         &none  &sk RCMD  &sk RSHFT  &sk RALT  &sk RCTRL  &none
+     &none  &kp CARET   &kp BSLH  &kp EQUAL   &kp RPAR   &kp RBKT         &none     &none      &none     &none      &none  &none
                                       &none  &kp SPACE             &none         &kp BSPC      &none
             >;
 
@@ -269,9 +259,9 @@
 
         num2_layer {
             bindings = <
-&none    &kp DOT  &kp N7     &kp N8    &kp N9  &kp EQUAL             &none     &none      &none     &none      &none  &none
+&none  &kp COMMA  &kp N7     &kp N8    &kp N9  &kp EQUAL             &none     &none      &none     &none      &none  &none
 &to 0     &kp N0  &kp N1     &kp N2    &kp N3   &kp FSLH             &none  &sk RCMD  &sk RSHFT  &sk RALT  &sk RCTRL  &none
-&none  &kp COMMA  &kp N4     &kp N5    &kp N6  &kp ASTRK             &none     &none      &none     &none      &none  &none
+&none    &kp DOT  &kp N4     &kp N5    &kp N6  &kp ASTRK             &none     &none      &none     &none      &none  &none
                           &kp MINUS  &kp PLUS             &kp ENTER         &kp BSPC      &none
             >;
         };
