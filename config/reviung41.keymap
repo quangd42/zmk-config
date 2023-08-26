@@ -240,8 +240,8 @@
 
             bindings = <
 &kp C_MUTE   &kp EXCL     &kp AT   &kp HASH   &kp DLLR  &kp PRCNT         &none     &none      &none     &none      &none  &to 7
- &kp GRAVE   &kp AMPS  &kp COLON  &kp MINUS   &kp LPAR   &kp LBKT         &none  &sk RCMD  &sk RSHFT  &sk RALT  &sk RCTRL  &none
-     &none  &kp CARET   &kp BSLH  &kp EQUAL   &kp RPAR   &kp RBKT         &none     &none      &none     &none      &none  &none
+ &kp TILDE   &kp AMPS  &kp COLON  &kp MINUS   &kp LPAR   &kp LBKT         &none  &sk RCMD  &sk RSHFT  &sk RALT  &sk RCTRL  &none
+  &kp PIPE  &kp CARET   &kp BSLH  &kp EQUAL   &kp RPAR   &kp RBKT         &none     &none      &none     &none      &none  &none
                                       &none  &kp SPACE             &none         &kp BSPC      &none
             >;
 
