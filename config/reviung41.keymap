@@ -162,8 +162,8 @@
             compatible = "zmk,behavior-mod-morph";
             label = "GRAVE_ESCAPE";
             bindings =
-                <&kp GRAVE>,
-                <&kp ESC>;
+                <&kp ESC>,
+                <&kp GRAVE>;
 
             #binding-cells = <0>;
             keep-mods = <(MOD_LGUI|MOD_LCTL)>;
