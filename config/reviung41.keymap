@@ -158,6 +158,26 @@
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40>;
             hold-trigger-on-release;
         };
+        grave_escape: grave_escape {
+            compatible = "zmk,behavior-mod-morph";
+            label = "GRAVE_ESCAPE";
+            bindings =
+                <&kp GRAVE>,
+                <&kp ESC>;
+
+            #binding-cells = <0>;
+            keep-mods = <(MOD_LGUI|MOD_LCTL)>;
+            mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_LSFT|MOD_RALT|MOD_RSFT|MOD_LALT)>;
+        };
+    };
+
+    macros {
+        up_dir: up_dir {
+            compatible = "zmk,behavior-macro";
+            label = "UP_DIR";
+            #binding-cells = <0>;
+            bindings = <&none &kp DOT &kp DOT &kp FSLH>;
+        };
     };
 
     keymap {
@@ -171,10 +191,10 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-&kp C_PP           &kp Q          &kp W           &kp F          &kp P  &kp B               &kp J             &kp L      &rh_lt 6 U          &kp Y     &comma_semi   &lt 9 BSPC
-  &gresc  &lh_hm LCTRL A  &lh_hm LALT R  &lh_hm LSHFT S  &lh_hm LCMD T  &kp G               &kp M     &rh_hm RCMD N  &rh_hm RSHFT E  &rh_hm RALT I  &rh_hm RCTRL O     &kp SEMI
-   &mo 8           &kp Z          &kp X           &kp C          &kp D  &kp V               &kp K             &kp H         &kp SQT       &kp FSLH         &kp DOT  &smart_shft
-                                              &lt 8 TAB    &lt 7 SPACE         &lt 4 ENTER         &bspc_smart_shft           &sl 6
+     &kp C_PP           &kp Q          &kp W           &kp F          &kp P  &kp B               &kp J             &kp L      &rh_lt 6 U          &kp Y     &comma_semi   &lt 9 BSPC
+&grave_escape  &lh_hm LCTRL A  &lh_hm LALT R  &lh_hm LSHFT S  &lh_hm LCMD T  &kp G               &kp M     &rh_hm RCMD N  &rh_hm RSHFT E  &rh_hm RALT I  &rh_hm RCTRL O  &key_repeat
+        &mo 8           &kp Z          &kp X           &kp C          &kp D  &kp V               &kp K             &kp H         &kp SQT       &kp FSLH         &kp DOT  &smart_shft
+                                                   &lt 8 TAB    &lt 7 SPACE         &lt 5 ENTER         &bspc_smart_shft           &sl 4
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -189,9 +209,9 @@
 
             bindings = <
      &kp C_PP            &kp F            &kp L            &kp H            &kp K                &kp Q               &kp Z             &kp Y      &rh_lt 6 O          &kp U     &comma_semi   &lt 9 BSPC
-       &gresc   &lh_hm LCTRL S    &lh_hm LALT R   &lh_hm LSHFT N    &lh_hm LCMD T                &kp M               &kp G     &rh_hm RCMD W  &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I     &kp SEMI
+&grave_escape   &lh_hm LCTRL S    &lh_hm LALT R   &lh_hm LSHFT N    &lh_hm LCMD T                &kp M               &kp G     &rh_hm RCMD W  &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &key_repeat
 &mt LSHFT TAB  &q_hold LG(Z) J  &q_hold LG(X) X  &q_hold LG(C) B  &q_hold LG(V) D  &q_hold LS(LG(Z)) V               &kp P             &kp C         &kp SQT       &kp FSLH         &kp DOT  &smart_shft
-                                                       &lt 8 TAB      &lt 7 SPACE                       &lt 4 ENTER         &bspc_smart_shft           &sl 6
+                                                       &lt 8 TAB      &lt 7 SPACE                       &lt 5 ENTER         &bspc_smart_shft           &sl 4
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -205,10 +225,10 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-     &kp C_PP            &kp B            &kp L            &kp D            &kp C                &kp V               &kp Z             &kp Y           &kp O          &kp U       &kp COMMA   &lt 8 BSPC
-       &gresc   &lh_hm LCTRL N    &lh_hm LALT R   &lh_hm LSHFT T    &lh_hm LCMD S                &kp G               &kp P     &rh_hm RCMD H  &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I     &kp SEMI
+     &kp C_PP            &kp B            &kp L            &kp D            &kp C                &kp V               &kp Z             &kp Y      &rh_lt 6 O          &kp U       &kp COMMA   &lt 8 BSPC
+&grave_escape   &lh_hm LCTRL N    &lh_hm LALT R   &lh_hm LSHFT T    &lh_hm LCMD S                &kp G               &kp P     &rh_hm RCMD H  &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &key_repeat
 &mt LSHFT TAB  &q_hold LG(Z) Q  &q_hold LG(X) X  &q_hold LG(C) M  &q_hold LG(V) W  &q_hold LS(LG(Z)) J               &kp K             &kp F         &kp SQT       &kp FSLH         &kp DOT  &smart_shft
-                                                       &lt 8 TAB      &lt 7 SPACE                       &lt 4 ENTER         &bspc_smart_shft           &sl 6
+                                                       &lt 8 TAB      &lt 7 SPACE                       &lt 5 ENTER         &bspc_smart_shft           &sl 4
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -222,10 +242,10 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-     &kp C_PP            &kp Q            &kp W            &kp E            &kp R                &kp T               &kp Y             &kp U           &kp I          &kp O              &kp P   &lt 9 BSPC
-       &gresc   &lh_hm LCTRL A    &lh_hm LALT S   &lh_hm LSHFT D    &lh_hm LCMD F                &kp G               &kp H     &rh_hm RCMD J  &rh_hm RSHFT K  &rh_hm RALT L  &rh_hm RCTRL SEMI      &kp SQT
+     &kp C_PP            &kp Q            &kp W            &kp E            &kp R                &kp T               &kp Y             &kp U      &rh_lt 6 I          &kp O              &kp P   &lt 9 BSPC
+&grave_escape   &lh_hm LCTRL A    &lh_hm LALT S   &lh_hm LSHFT D    &lh_hm LCMD F                &kp G               &kp H     &rh_hm RCMD J  &rh_hm RSHFT K  &rh_hm RALT L  &rh_hm RCTRL SEMI      &kp SQT
 &mt LSHFT TAB  &q_hold LG(Z) Z  &q_hold LG(X) X  &q_hold LG(C) C  &q_hold LG(V) V  &q_hold LS(LG(Z)) B               &kp N             &kp M       &kp COMMA        &kp DOT           &kp FSLH  &smart_shft
-                                                       &lt 8 TAB      &lt 7 SPACE                       &lt 4 ENTER         &bspc_smart_shft           &sl 6
+                                                       &lt 8 TAB      &lt 7 SPACE                       &lt 5 ENTER         &bspc_smart_shft           &sl 4
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -250,16 +270,16 @@
 
         code_sym_layer {
             bindings = <
-&none  &none  &none  &none  &none  &none         &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none         &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none         &none  &none  &none  &none  &none  &none
-                     &none  &none         &none         &none  &none
+&none     &kp AT   &kp PIPE   &kp DLLR  &kp LBRC  &kp RBRC            &none     &kp LT  &kp UNDER     &kp GT   &kp SEMI  &none
+&none  &kp PRCNT   &kp AMPS  &kp COLON  &kp LPAR  &kp RPAR         &kp HASH  &kp EQUAL  &kp MINUS   &kp PLUS   &kp EXCL  &none
+&none  &kp GRAVE  &kp TILDE  &kp CARET  &kp LBKT  &kp RBKT          &up_dir  &kp UNDER   &kp FSLH  &kp ASTRK  &kp CARET  &none
+                                 &none     &none            &none             &kp BSPC      &none
             >;
         };
 
         num2_layer {
             bindings = <
-&none  &kp COMMA  &kp N7     &kp N8    &kp N9  &kp EQUAL             &none     &none      &none     &none      &none  &none
+&none  &kp COLON  &kp N7     &kp N8    &kp N9  &kp EQUAL             &none     &none      &none     &none      &none  &none
 &to 0     &kp N0  &kp N1     &kp N2    &kp N3   &kp FSLH             &none  &sk RCMD  &sk RSHFT  &sk RALT  &sk RCTRL  &none
 &none    &kp DOT  &kp N4     &kp N5    &kp N6  &kp ASTRK             &none     &none      &none     &none      &none  &none
                           &kp MINUS  &kp PLUS             &kp ENTER         &kp BSPC      &none
