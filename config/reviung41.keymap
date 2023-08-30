@@ -116,7 +116,7 @@
                 <&kp SEMI>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT)>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
         };
         bspc_smart_shft: bspc_smart_shft {
             compatible = "zmk,behavior-mod-morph";
