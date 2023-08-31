@@ -169,6 +169,16 @@
             keep-mods = <(MOD_LGUI|MOD_LCTL)>;
             mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_LSFT|MOD_RALT|MOD_RSFT|MOD_LALT)>;
         };
+        dot_ellipsis: dot_ellipsis {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOT_ELLIPSIS";
+            bindings =
+                <&kp DOT>,
+                <&ellipsis>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     macros {
@@ -176,7 +186,13 @@
             compatible = "zmk,behavior-macro";
             label = "UP_DIR";
             #binding-cells = <0>;
-            bindings = <&none &kp DOT &kp DOT &kp FSLH>;
+            bindings = <&kp DOT &kp DOT &kp FSLH>;
+        };
+        ellipsis: ellipsis {
+            compatible = "zmk,behavior-macro";
+            label = "ELLIPSIS";
+            #binding-cells = <0>;
+            bindings = <&kp DOT &kp DOT &kp DOT>;
         };
     };
 
@@ -191,10 +207,10 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-     &kp C_PP           &kp Q          &kp W           &kp F          &kp P  &kp B               &kp J                       &kp L           &kp U          &kp Y     &comma_semi   &lt 9 BSPC
-&grave_escape  &lh_hm LCTRL A  &lh_hm LALT R  &lh_hm LSHFT S  &lh_hm LCMD T  &kp G               &kp M               &rh_hm RCMD N  &rh_hm RSHFT E  &rh_hm RALT I  &rh_hm RCTRL O  &key_repeat
-        &mo 8           &kp Z          &kp X      &lh_lt 6 C          &kp D  &kp V               &kp K                       &kp H         &kp SQT       &kp FSLH         &kp DOT  &smart_shft
-                                                   &lt 8 TAB    &lt 7 SPACE         &lt 5 ENTER         &quick_hold_tap LSHFT BSPC           &sl 4
+     &kp C_PP           &kp Q          &kp W           &kp F          &kp P  &kp B               &kp J           &kp L           &kp U          &kp Y     &comma_semi   &lt 9 BSPC
+&grave_escape  &lh_hm LCTRL A  &lh_hm LALT R  &lh_hm LSHFT S  &lh_hm LCMD T  &kp G               &kp M   &rh_hm RCMD N  &rh_hm RSHFT E  &rh_hm RALT I  &rh_hm RCTRL O  &key_repeat
+        &mo 8           &kp Z          &kp X      &lh_lt 6 C          &kp D  &kp V               &kp K           &kp H         &kp SQT       &kp FSLH   &dot_ellipsis        &sl 4
+                                                   &lt 8 TAB    &lt 7 SPACE         &lt 5 ENTER         &mt LSHFT BSPC     &smart_shft
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -208,10 +224,10 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-     &kp C_PP           &kp F          &kp L           &kp H          &kp K  &kp Q               &kp Z                       &kp Y           &kp O          &kp U     &comma_semi   &lt 9 BSPC
-&grave_escape  &lh_hm LCTRL S  &lh_hm LALT R  &lh_hm LSHFT N  &lh_hm LCMD T  &kp M               &kp G               &rh_hm RCMD W  &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &key_repeat
-&mt LSHFT TAB           &kp J          &kp X      &lh_lt 6 B          &kp D  &kp V               &kp P                       &kp C         &kp SQT       &kp FSLH         &kp DOT  &smart_shft
-                                                   &lt 8 TAB    &lt 7 SPACE         &lt 5 ENTER         &quick_hold_tap LSHFT BSPC           &sl 4
+     &kp C_PP           &kp F          &kp L           &kp H          &kp K  &kp Q               &kp Z           &kp Y           &kp O          &kp U     &comma_semi   &lt 9 BSPC
+&grave_escape  &lh_hm LCTRL S  &lh_hm LALT R  &lh_hm LSHFT N  &lh_hm LCMD T  &kp M               &kp G   &rh_hm RCMD W  &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &key_repeat
+&mt LSHFT TAB           &kp J          &kp X      &lh_lt 6 B          &kp D  &kp V               &kp P           &kp C         &kp SQT       &kp FSLH   &dot_ellipsis        &sl 4
+                                                   &lt 8 TAB    &lt 7 SPACE         &lt 5 ENTER         &mt LSHFT BSPC     &smart_shft
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -225,10 +241,10 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-     &kp C_PP           &kp B          &kp L           &kp D          &kp C  &kp V               &kp Z                       &kp Y           &kp O          &kp U       &kp COMMA   &lt 8 BSPC
-&grave_escape  &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T  &lh_hm LCMD S  &kp G               &kp P               &rh_hm RCMD H  &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &key_repeat
-&mt LSHFT TAB           &kp Q          &kp X      &lh_lt 6 M          &kp W  &kp J               &kp K                       &kp F         &kp SQT       &kp FSLH         &kp DOT  &smart_shft
-                                                   &lt 8 TAB    &lt 7 SPACE         &lt 5 ENTER         &quick_hold_tap LSHFT BSPC           &sl 4
+     &kp C_PP           &kp B          &kp L           &kp D          &kp C  &kp V               &kp Z           &kp Y           &kp O          &kp U       &kp COMMA   &lt 8 BSPC
+&grave_escape  &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T  &lh_hm LCMD S  &kp G               &kp P   &rh_hm RCMD H  &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &key_repeat
+&mt LSHFT TAB           &kp Q          &kp X      &lh_lt 6 M          &kp W  &kp J               &kp K           &kp F         &kp SQT       &kp FSLH         &kp DOT        &sl 4
+                                                   &lt 8 TAB    &lt 7 SPACE         &lt 5 ENTER         &mt LSHFT BSPC     &smart_shft
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -242,10 +258,10 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-     &kp C_PP           &kp Q          &kp W           &kp E          &kp R  &kp T               &kp Y                       &kp U           &kp I          &kp O              &kp P   &lt 9 BSPC
-&grave_escape  &lh_hm LCTRL A  &lh_hm LALT S  &lh_hm LSHFT D  &lh_hm LCMD F  &kp G               &kp H               &rh_hm RCMD J  &rh_hm RSHFT K  &rh_hm RALT L  &rh_hm RCTRL SEMI      &kp SQT
-&mt LSHFT TAB           &kp Z          &kp X           &kp C          &kp V  &kp B               &kp N                       &kp M       &kp COMMA        &kp DOT           &kp FSLH  &smart_shft
-                                                   &lt 8 TAB    &lt 7 SPACE         &lt 5 ENTER         &quick_hold_tap LSHFT BSPC           &sl 4
+     &kp C_PP           &kp Q          &kp W           &kp E          &kp R  &kp T               &kp Y           &kp U           &kp I          &kp O              &kp P  &lt 9 BSPC
+&grave_escape  &lh_hm LCTRL A  &lh_hm LALT S  &lh_hm LSHFT D  &lh_hm LCMD F  &kp G               &kp H   &rh_hm RCMD J  &rh_hm RSHFT K  &rh_hm RALT L  &rh_hm RCTRL SEMI     &kp SQT
+&mt LSHFT TAB           &kp Z          &kp X           &kp C          &kp V  &kp B               &kp N           &kp M       &kp COMMA        &kp DOT           &kp FSLH       &sl 4
+                                                   &lt 8 TAB    &lt 7 SPACE         &lt 5 ENTER         &mt LSHFT BSPC     &smart_shft
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
