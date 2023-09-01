@@ -166,8 +166,8 @@
                 <&kp GRAVE>;
 
             #binding-cells = <0>;
-            keep-mods = <(MOD_LGUI|MOD_LCTL)>;
-            mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_LSFT|MOD_RALT|MOD_RSFT|MOD_LALT)>;
+            keep-mods = <(MOD_LGUI|MOD_LCTL|MOD_RCTL|MOD_LSFT|MOD_RSFT|MOD_RGUI)>;
+            mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_LSFT|MOD_RALT|MOD_RSFT|MOD_LALT|MOD_RCTL)>;
         };
         dot_ellipsis: dot_ellipsis {
             compatible = "zmk,behavior-mod-morph";
