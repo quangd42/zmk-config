@@ -20,3 +20,5 @@ include:
     shield: sofle_left
   - board: bluemicro840_v1
     shield: sofle_right
+  - board: bluemicro840_v1
+    shield: settings_reset
