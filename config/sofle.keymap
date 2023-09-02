@@ -173,7 +173,7 @@
             label = "DOT_ELLIPSIS";
             bindings =
                 <&kp DOT>,
-                <&ellipsis>;
+                <&kp LA(SEMI)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -186,12 +186,6 @@
             label = "UP_DIR";
             #binding-cells = <0>;
             bindings = <&kp DOT &kp DOT &kp FSLH>;
-        };
-        ellipsis: ellipsis {
-            compatible = "zmk,behavior-macro";
-            label = "ELLIPSIS";
-            #binding-cells = <0>;
-            bindings = <&kp DOT &kp DOT &kp DOT>;
         };
     };
 
@@ -279,11 +273,11 @@
             //                       |     |     | RET | ADJ |     |
 
             bindings = <
-     &none      &none      &none      &none     &none      &none                     &none     &none      &none     &none      &none  &none
-&none   &kp EXCL     &kp AT   &kp HASH  &kp DLLR  &kp PRCNT                     &none     &none      &none     &none      &none  &to 7
- &kp CARET   &kp AMPS  &kp COLON  &kp MINUS  &kp LPAR   &kp LBKT                     &none  &sk RCMD  &sk RSHFT  &sk RALT  &sk RCTRL  &none
-  &none  &none   &kp BSLH  &kp EQUAL  &kp RPAR   &kp RBKT  &none    &none     &none     &none      &none     &none      &none  &none
-                           &none      &none     &none  &kp SPACE  &none    &none  &kp BSPC     &none      &none     &none
+    &none     &none      &none      &none     &none      &none                     &none     &none      &none     &none      &none  &none
+    &none  &kp EXCL     &kp AT   &kp HASH  &kp DLLR  &kp PRCNT                     &none     &none      &none     &none      &none  &to 7
+&kp CARET  &kp AMPS  &kp COLON  &kp MINUS  &kp LPAR   &kp LBKT                     &none  &sk RCMD  &sk RSHFT  &sk RALT  &sk RCTRL  &none
+    &none     &none   &kp BSLH  &kp EQUAL  &kp RPAR   &kp RBKT  &none    &none     &none     &none      &none     &none      &none  &none
+                         &none      &none     &none  &kp SPACE  &none    &none  &kp BSPC     &none      &none     &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
@@ -291,11 +285,11 @@
 
         code_sym_layer {
             bindings = <
-&none      &none      &none      &none     &none      &none                     &none      &none      &none      &none      &none  &none
-&none     &kp AT   &kp PIPE   &kp DLLR  &kp LBRC   &kp RBRC                     &none     &kp LT  &kp UNDER     &kp GT   &kp SEMI  &none
-&kp GRAVE  &kp PRCNT   &kp AMPS  &kp COLON  &kp LPAR   &kp RPAR                  &kp HASH  &kp EQUAL  &kp MINUS   &kp PLUS   &kp EXCL  &kp CARET
-&none  &none  &kp TILDE  &kp CARET  &kp LBKT   &kp RBKT  &none    &none   &up_dir  &kp UNDER   &kp FSLH  &kp ASTRK  &none  &none
-                      &none      &none     &none  &kp SPACE  &none    &none  &kp BSPC      &none      &none      &none
+    &none      &none      &none      &none     &none      &none                     &none      &none      &none      &none     &none      &none
+    &none     &kp AT   &kp PIPE   &kp DLLR  &kp LBRC   &kp RBRC                     &none     &kp LT  &kp UNDER     &kp GT  &kp SEMI      &none
+&kp GRAVE  &kp PRCNT   &kp AMPS  &kp COLON  &kp LPAR   &kp RPAR                  &kp HASH  &kp EQUAL  &kp MINUS   &kp PLUS  &kp EXCL  &kp CARET
+    &none      &none  &kp TILDE  &kp CARET  &kp LBKT   &kp RBKT  &none    &none   &up_dir    &kp DQT   &kp FSLH  &kp ASTRK     &none      &none
+                          &none      &none     &none  &kp SPACE  &none    &none  &kp BSPC      &none      &none      &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
@@ -303,10 +297,10 @@
 
         num2_layer {
             bindings = <
-&none      &none     &none      &none      &none     &none                          &none   &none   &none   &none      &none     &none
-&none      &none     &none      &none      &none     &none                      &kp COLON  &kp N7  &kp N8  &kp N9  &kp ASTRK  &kp BSPC
-&to 0  &sk LCTRL  &sk LALT  &sk LSHFT   &sk LCMD     &none                         &kp N0  &kp N1  &kp N2  &kp N3   &kp FSLH     &kp EQUAL
-&none      &none     &none      &none      &none     &none  &none        &none    &kp DOT  &kp N4  &kp N5  &kp N6  &none     &none
+&none      &none     &none      &none      &none     &none                          &none   &none   &none   &none      &none      &none
+&none      &none     &none      &none      &none     &none                      &kp COLON  &kp N7  &kp N8  &kp N9  &kp ASTRK   &kp BSPC
+&to 0  &sk LCTRL  &sk LALT  &sk LSHFT   &sk LCMD     &none                         &kp N0  &kp N1  &kp N2  &kp N3   &kp FSLH  &kp EQUAL
+&none      &none     &none      &none      &none     &none  &none        &none    &kp DOT  &kp N4  &kp N5  &kp N6      &none      &none
                      &none      &none  &kp MINUS  &kp PLUS  &none    &kp ENTER   &kp BSPC   &none   &none   &none
             >;
         };
@@ -319,11 +313,11 @@
             //                       |     | ADJ | BKSP |    |     |
 
             bindings = <
-&none      &none      &none      &none           &none           &none                             &none         &none      &none          &none         &none  &none
-&none      &none      &none      &none  &kp LS(LG(N4))  &kp LS(LG(N5))                        &kp LA(UP)  &kp LA(LEFT)     &kp UP  &kp LA(RIGHT)  &kp LA(BSPC)  &to 7
+    &none      &none      &none      &none           &none           &none                             &none         &none      &none          &none         &none         &none
+    &none      &none      &none      &none  &kp LS(LG(N4))  &kp LS(LG(N5))                        &kp LA(UP)  &kp LA(LEFT)     &kp UP  &kp LA(RIGHT)  &kp LA(BSPC)         &to 7
 &kp LG(Z)  &sk LCTRL   &sk LALT  &sk LSHFT        &sk LCMD        &kp CAPS                      &kp LA(DOWN)      &kp LEFT   &kp DOWN      &kp RIGHT      &kp BSPC  &kp LG(BSPC)
-&none  &kp LG(Z)  &kp LG(X)  &kp LG(C)       &kp LG(V)   &kp LS(LG(Z))  &none        &none       &kp DEL  &kp LG(LEFT)  &kp LG(A)  &kp LG(RIGHT)  &none  &none
-                      &none      &none           &to 0           &none  &none    &kp ENTER      &kp BSPC         &none      &none          &none
+    &none  &kp LG(Z)  &kp LG(X)  &kp LG(C)       &kp LG(V)   &kp LS(LG(Z))  &none        &none       &kp DEL  &kp LG(LEFT)  &kp LG(A)  &kp LG(RIGHT)         &none         &none
+                          &none      &none           &to 0           &none  &none    &kp ENTER      &kp BSPC         &none      &none          &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
@@ -331,11 +325,11 @@
 
         fun_layer {
             bindings = <
-        &none        &none      &none      &none           &none           &none                    &none   &none   &none   &none         &none         &none
-        &none  &kp LG(TAB)  &kp LG(W)      &none  &kp LS(LG(N4))  &kp LS(LG(N5))                  &kp F12  &kp F7  &kp F8  &kp F9  &kp LG(LBKT)  &none
-&kp LG(Z)    &kp LG(A)      &none      &none           &none           &none                  &kp F11  &kp F4  &kp F5  &kp F6         &kp LG(RBKT)  &kp LG(BSLH)
-        &none    &none  &kp LG(X)  &kp LG(C)       &kp LG(V)   &kp LG(LS(Z))  &none    &none  &kp F10  &kp F1  &kp F2  &kp F3         &none         &none
-                                &none      &none           &none           &none  &none    &none    &none   &mo 9   &none   &none
+    &none        &none      &none      &none           &none           &none                    &none   &none   &none   &none         &none         &none
+    &none  &kp LG(TAB)  &kp LG(W)      &none  &kp LS(LG(N4))  &kp LS(LG(N5))                  &kp F12  &kp F7  &kp F8  &kp F9  &kp LG(LBKT)         &none
+&kp LG(Z)    &kp LG(A)      &none      &none           &none           &none                  &kp F11  &kp F4  &kp F5  &kp F6  &kp LG(RBKT)  &kp LG(BSLH)
+    &none        &none  &kp LG(X)  &kp LG(C)       &kp LG(V)   &kp LG(LS(Z))  &none    &none  &kp F10  &kp F1  &kp F2  &kp F3         &none         &none
+                            &none      &none           &none           &none  &none    &none    &none   &mo 9   &none   &none
             >;
         };
 
@@ -347,11 +341,11 @@
             //                                              |     |     |     |     |     |
 
             bindings = <
-&none            &none            &none            &none            &none            &none                         &none         &none         &none         &none       &none  &none
-&none  &none  &none  &none  &none  &none                  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR  &none
-&tog 1  &none  &none  &none  &none            &none                         &none         &none         &none         &none       &none  &none
-&none           &none           &tog 2           &tog 3     &out OUT_USB     &out OUT_BLE  &none    &none   &bootloader         &none         &none         &none       &none  &none
-                                  &none            &none            &to 0            &none  &none    &none         &none         &none         &none         &none
+ &none  &none   &none   &none         &none         &none                         &none         &none         &none         &none       &none  &none
+ &none  &none   &none   &none         &none         &none                  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR  &none
+&tog 1  &none   &none   &none         &none         &none                         &none         &none         &none         &none       &none  &none
+ &none  &none  &tog 2  &tog 3  &out OUT_USB  &out OUT_BLE  &none    &none   &bootloader         &none         &none         &none       &none  &none
+                &none   &none         &to 0         &none  &none    &none         &none         &none         &none         &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
