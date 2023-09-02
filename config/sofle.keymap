@@ -228,7 +228,9 @@
                                    &none           &none      &lt 8 ESC  &lt 7 SPACE   &lt 5 TAB    &lt 5 ENTER  &mt LSHFT BSPC    &key_repeat           &none          &none
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
+                        sensor-bindings =
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>,
+                <&inc_dec_kp C_BRI_DN C_BRI_UP>;
         };
 
         gallium_layer {
@@ -246,7 +248,9 @@
                                    &none           &none      &lt 8 ESC  &lt 7 SPACE   &lt 5 TAB    &lt 5 ENTER  &mt LSHFT BSPC    &smart_shft           &none          &none
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
+                        sensor-bindings =
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>,
+                <&inc_dec_kp C_BRI_DN C_BRI_UP>;
         };
 
         qwerty_layer {
@@ -264,7 +268,9 @@
                                    &none           &none      &lt 8 ESC  &lt 7 SPACE   &lt 5 TAB    &lt 5 ENTER  &mt LSHFT BSPC    &smart_shft           &none          &none
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
+                        sensor-bindings =
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>,
+                <&inc_dec_kp C_BRI_DN C_BRI_UP>;
         };
 
         sym_layer {
