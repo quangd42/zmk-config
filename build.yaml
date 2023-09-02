@@ -16,9 +16,9 @@ include:
   # - board: nrfmicro_13
   #   shield: reviung41
   # - board: preonic_rev3
-  - board: nicenano_v2
+  - board: nice_nano_v2
     shield: sofle_left
-  - board: nicenano_v2
+  - board: nice_nano_v2
     shield: sofle_right
-  # - board: nicenano_v2
+  # - board: nice_nano_v2
   #   shield: settings_reset
