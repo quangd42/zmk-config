@@ -335,7 +335,7 @@
             bindings = <
     &none      &none      &none      &none           &none           &none                             &none         &none      &none          &none         &none         &none
     &none      &none      &none      &none  &kp LS(LG(N4))  &kp LS(LG(N5))                        &kp LA(UP)  &kp LA(LEFT)     &kp UP  &kp LA(RIGHT)  &kp LA(BSPC)         &to 7
-&kp LG(Z)  &sk LCTRL   &sk LALT  &sk LSHFT        &sk LCMD        &kp CAPS                      &kp LA(DOWN)      &kp LEFT   &kp DOWN      &kp RIGHT      &kp BSPC  &kp LG(BSPC)
+&kp LG(Z)  &sk LCTRL   &sk LALT  &sk LSHFT        &sk LCMD      &caps_word                      &kp LA(DOWN)      &kp LEFT   &kp DOWN      &kp RIGHT      &kp BSPC  &kp LG(BSPC)
     &none  &kp LG(Z)  &kp LG(X)  &kp LG(C)       &kp LG(V)   &kp LS(LG(Z))  &none        &none       &kp DEL  &kp LG(LEFT)  &kp LG(A)  &kp LG(RIGHT)  &kp LG(BSPC)         &none
                           &none      &none           &to 0           &none  &none    &kp ENTER      &kp BSPC         &none      &none          &none
             >;
