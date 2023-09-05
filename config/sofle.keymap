@@ -24,9 +24,6 @@
     /delete-property/ quick-release;
 };
 
-&left_encoder {
-    resolution = <2>;
-};
 
 / {
     behaviors {
