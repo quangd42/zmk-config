@@ -24,6 +24,14 @@
     /delete-property/ quick-release;
 };
 
+&left_encoder {
+    resolution = <1>;
+};
+
+&right_encoder {
+    resolution = <1>;
+};
+
 / {
     behaviors {
         lh_hm: lh_hm {
