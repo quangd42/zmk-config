@@ -210,6 +210,26 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+        spc_end_sent: spc_end_sent {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SPC_END_SENT";
+            bindings =
+                <&lt 7 SPACE>,
+                <&end_sentence>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        semi_end_question: semi_end_question {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SEMI_END_QUESTION";
+            bindings =
+                <&kp SEMI>,
+                <&end_question>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     macros {

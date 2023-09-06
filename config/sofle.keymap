@@ -126,16 +126,6 @@
             keep-mods = <(MOD_LGUI|MOD_LCTL|MOD_RSFT)>;
             mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_LSFT|MOD_RALT|MOD_RSFT|MOD_LALT|MOD_RCTL)>;
         };
-        dot_end_sentence: dot_end_sentence {
-            compatible = "zmk,behavior-mod-morph";
-            label = "DOT_END_SENTENCE";
-            bindings =
-                <&kp DOT>,
-                <&end_sentence>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
         layer_gresc: layer_gresc {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_GRESC";
@@ -147,6 +137,16 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <150>;
             flavor = "tap-preferred";
+        };
+        dot_end_sentence: dot_end_sentence {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOT_END_SENTENCE";
+            bindings =
+                <&kp DOT>,
+                <&end_sentence>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         spc_end_sent: spc_end_sent {
             compatible = "zmk,behavior-mod-morph";
