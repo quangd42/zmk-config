@@ -214,7 +214,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "SPC_END_SENT";
             bindings =
-                <&lt 7 SPACE>,
+                <&lt 8 SPACE>,
                 <&end_sentence>;
 
             #binding-cells = <0>;
