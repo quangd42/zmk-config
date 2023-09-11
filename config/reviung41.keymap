@@ -26,18 +26,6 @@
 
 / {
     behaviors {
-        q_hold: q_hold {
-            compatible = "zmk,behavior-hold-tap";
-            label = "Q_HOLD";
-            bindings =
-                <&kp>,
-                <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <275>;
-            global-quick-tap;
-            flavor = "tap-preferred";
-        };
         lh_hm: lh_hm {
             compatible = "zmk,behavior-hold-tap";
             label = "left_hand_homerow_mods";
@@ -96,36 +84,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <120>;
             flavor = "balanced";
-        };
-        smart_shft_tap: smart_shft_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "SMART_SHFT_TAP";
-            bindings =
-                <&smart_shft>,
-                <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <90>;
-        };
-        comma_semi: comma_semi {
-            compatible = "zmk,behavior-mod-morph";
-            label = "COMMA_SEMI";
-            bindings =
-                <&kp COMMA>,
-                <&kp SEMI>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RSFT|MOD_LSFT)>;
-        };
-        bspc_smart_shft: bspc_smart_shft {
-            compatible = "zmk,behavior-mod-morph";
-            label = "BSPC_SMART_SHFT";
-            bindings =
-                <&quick_hold_tap RSHFT BSPC>,
-                <&caps_word>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
         };
         lh_lt: lh_lt {
             compatible = "zmk,behavior-hold-tap";
@@ -208,7 +166,19 @@
                 <&end_question>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT|MOD_LGUI|MOD_RGUI)>;
+            keep-mods = <(MOD_LGUI|MOD_RGUI)>;
+        };
+        m_question_comment: m_question_comment {
+            compatible = "zmk,behavior-mod-morph";
+            label = "M_QUESTION_COMMENT";
+            bindings =
+                <&end_question>,
+                <&kp FSLH>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
+            keep-mods = <(MOD_LGUI|MOD_RGUI)>;
         };
     };
 
@@ -250,7 +220,7 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-&kp C_PP  &kp Q           &kp W          &kp F             &kp P          &kp B               &kp J  &kp L           &kp U           &kp Y          &comma_semi        &lt 9 BSPC
+&kp C_PP  &kp Q           &kp W          &kp F             &kp P          &kp B               &kp J  &kp L           &kp U           &kp Y          &none              &lt 9 BSPC
 &kp TAB   &lh_hm LCTRL A  &lh_hm LALT R  &lh_hm LSHFT S    &lh_hm LCMD T  &kp G               &kp M  &rh_hm RCMD N   &rh_hm RSHFT E  &rh_hm RALT I  &rh_hm RCTRL O     &smart_shft
 &none     &kp Z           &kp X          &lh_lt 6 C        &kp D          &kp V               &kp K  &kp H           &kp SQT         &kp FSLH       &dot_end_sentence  &sl 4
                                          &layer_gresc 7 0  &spc_end_sent         &lt 5 ENTER         &mt LSHFT BSPC  &key_repeat
@@ -267,7 +237,7 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-&kp C_PP  &kp F           &kp L          &kp H             &kp K          &kp Q               &kp Z  &kp Y           &kp O           &kp U          &comma_semi        &lt 9 BSPC
+&kp C_PP  &kp F           &kp L          &kp H             &kp K          &kp Q               &kp Z  &kp Y           &kp O           &kp U          &none              &lt 9 BSPC
 &kp TAB   &lh_hm LCTRL S  &lh_hm LALT R  &lh_hm LSHFT N    &lh_hm LCMD T  &kp M               &kp G  &rh_hm RCMD W   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I     &smart_shft
 &none     &kp J           &kp X          &lh_lt 6 B        &kp D          &kp V               &kp P  &kp C           &kp SQT         &kp FSLH       &dot_end_sentence  &sl 4
                                          &layer_gresc 7 0  &spc_end_sent         &lt 5 ENTER         &mt LSHFT BSPC  &key_repeat
