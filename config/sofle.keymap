@@ -60,7 +60,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "SMART_SHFT";
             bindings =
-                <&quick_sticky_key LSHFT>,
+                <&quick_sk LSHFT>,
                 <&caps_word>;
 
             #binding-cells = <0>;
@@ -78,7 +78,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "QUICK_HOLD_TAP";
             bindings =
-                <&quick_sticky_key>,
+                <&quick_sk>,
                 <&kp>;
 
             #binding-cells = <2>;
@@ -204,7 +204,7 @@
             compatible = "zmk,behavior-macro";
             label = "END_SENTENCE";
             #binding-cells = <0>;
-            bindings = <&kp DOT &kp SPACE &quick_sticky_key LSHFT>;
+            bindings = <&kp DOT &kp SPACE &quick_sk LSHFT>;
             wait-ms = <0>;
             tap-ms = <5>;
         };
@@ -212,7 +212,7 @@
             compatible = "zmk,behavior-macro";
             label = "END_QUESTION";
             #binding-cells = <0>;
-            bindings = <&kp QMARK &kp SPACE &quick_sticky_key LSHFT>;
+            bindings = <&kp QMARK &kp SPACE &quick_sk LSHFT>;
             tap-ms = <3>;
         };
         code_assignment: code_assignment {
