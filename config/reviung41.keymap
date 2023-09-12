@@ -308,9 +308,9 @@
 
         code_sym_layer {
             bindings = <
-&none  &kp AT     &kp PIPE   &kp DLLR   &kp LBRC   &kp RBRC         &kp BSLH  &kp LT            &kp UNDER  &kp GT     &kp SEMI   &none
+&none  &kp AT     &kp PIPE   &kp DLLR   &kp LBRC   &kp RBRC         &kp BSLH  &kp LT            &kp UNDER  &kp GT     &kp DOT    &none
 &none  &kp QMARK  &kp AMPS   &kp COLON  &kp LPAR   &kp RPAR         &kp HASH  &kp EQUAL         &kp MINUS  &kp PLUS   &kp EXCL   &none
-&none  &kp PRCNT  &kp TILDE  &kp CARET  &kp LBKT   &kp RBKT         &up_dir   &code_assignment  &kp FSLH   &kp ASTRK  &kp CARET  &none
+&none  &kp PRCNT  &kp TILDE  &kp DQT    &kp LBKT   &kp RBKT         &up_dir   &code_assignment  &kp FSLH   &kp ASTRK  &kp CARET  &none
                              &none      &kp SPACE            &none            &kp BSPC          &none
             >;
         };
