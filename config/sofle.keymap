@@ -24,6 +24,10 @@
     /delete-property/ quick-release;
 };
 
+&gresc {
+    keep-mods = <(MOD_RSFT)>;
+};
+
 / {
     behaviors {
         lh_hm: lh_hm {
@@ -123,7 +127,7 @@
                 <&kp GRAVE>;
 
             #binding-cells = <0>;
-            keep-mods = <(MOD_LGUI|MOD_LCTL|MOD_RSFT)>;
+            keep-mods = <(MOD_RSFT)>;
             mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_LSFT|MOD_RALT|MOD_RSFT|MOD_LALT|MOD_RCTL)>;
         };
         layer_gresc: layer_gresc {
@@ -131,7 +135,7 @@
             label = "LAYER_GRESC";
             bindings =
                 <&mo>,
-                <&grave_escape>;
+                <&gresc>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
