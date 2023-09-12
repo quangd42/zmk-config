@@ -25,7 +25,8 @@
 };
 
 &gresc {
-    keep-mods = <(MOD_RSFT)>;
+    keep-mods = <(MOD_RSFT|MOD_LGUI|MOD_LCTL)>;
+    mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT|MOD_LCTL)>;
 };
 
 / {
