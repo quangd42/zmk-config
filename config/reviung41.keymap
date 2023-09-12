@@ -209,6 +209,15 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        one_hand_mode {
+            bindings = <&to 8>;
+            key-positions = <37 28>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -332,7 +341,7 @@
             //                       |     | ADJ | BKSP |    |     |
 
             bindings = <
-&none      &none      &none      &none      &kp LS(LG(N4))  &kp LS(LG(N5))             &kp LA(UP)    &kp LA(LEFT)  &kp UP     &kp LA(RIGHT)  &kp LA(BSPC)  &to 8
+&none      &kp LG(A)  &kp LG(W)  &none      &kp LS(LG(N4))  &kp LS(LG(N5))             &kp LA(UP)    &kp LA(LEFT)  &kp UP     &kp LA(RIGHT)  &kp LA(BSPC)  &to 8
 &kp LG(A)  &sk LCTRL  &sk LALT   &sk LSHFT  &sk LCMD        &kp CAPS                   &kp LA(DOWN)  &kp LEFT      &kp DOWN   &kp RIGHT      &kp BSPC      &none
 &none      &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)       &kp LS(LG(Z))              &kp DEL       &kp LG(LEFT)  &kp LG(A)  &kp LG(RIGHT)  &kp LG(BSPC)  &none
                                  &to 0      &none                           &kp ENTER                &kp BSPC      &none
