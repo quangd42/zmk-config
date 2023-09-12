@@ -128,15 +128,15 @@
                 <&kp GRAVE>;
 
             #binding-cells = <0>;
-            keep-mods = <(MOD_RSFT)>;
-            mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_LSFT|MOD_RALT|MOD_RSFT|MOD_LALT|MOD_RCTL)>;
+            keep-mods = <(MOD_RSFT|MOD_LCTL|MOD_LGUI)>;
+            mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_LSFT|MOD_RSFT|MOD_RCTL|MOD_LALT|MOD_RALT)>;
         };
         layer_gresc: layer_gresc {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_GRESC";
             bindings =
                 <&mo>,
-                <&gresc>;
+                <&grave_escape>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
