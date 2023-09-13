@@ -166,8 +166,8 @@
                 <&m_question_comment>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT|MOD_LGUI|MOD_RGUI)>;
-            keep-mods = <(MOD_LGUI|MOD_RGUI)>;
+            mods = <(MOD_RSFT|MOD_LGUI|MOD_RGUI)>;
+            keep-mods = <(MOD_LGUI|MOD_RGUI|MOD_RSFT)>;
         };
         m_question_comment: m_question_comment {
             compatible = "zmk,behavior-mod-morph";
@@ -232,7 +232,7 @@
 &kp C_PP  &kp Q           &kp W          &kp F             &kp P          &kp B               &kp J  &kp L           &kp U           &kp Y               &kp COMMA          &lt 9 BSPC
 &kp TAB   &lh_hm LCTRL A  &lh_hm LALT R  &lh_hm LSHFT S    &lh_hm LCMD T  &kp G               &kp M  &rh_hm RCMD N   &rh_hm RSHFT E  &rh_hm RALT I       &rh_hm RCTRL O     &smart_shft
 &none     &kp Z           &kp X          &lh_lt 6 C        &kp D          &kp V               &kp K  &kp H           &kp SQT         &semi_end_question  &dot_end_sentence  &sl 4
-                                         &layer_gresc 7 0  &spc_end_sent         &lt 5 ENTER         &mt LSHFT BSPC  &key_repeat
+                                         &layer_gresc 7 0  &spc_end_sent         &lt 5 ENTER         &mt RSHFT BSPC  &key_repeat
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -249,7 +249,7 @@
 &kp C_PP  &kp F           &kp L          &kp H             &kp K          &kp Q               &key_repeat  &kp Y           &kp O           &kp U               &kp COMMA          &lt 9 BSPC
 &kp TAB   &lh_hm LCTRL S  &lh_hm LALT R  &lh_hm LSHFT N    &lh_hm LCMD T  &kp M               &kp G        &rh_hm RCMD W   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I     &smart_shft
 &kp Z     &kp J           &kp X          &lh_lt 6 B        &kp D          &kp V               &kp P        &kp C           &kp SQT         &semi_end_question  &dot_end_sentence  &sl 4
-                                         &layer_gresc 7 0  &spc_end_sent         &lt 5 ENTER               &mt LSHFT BSPC  &lt 4 Z
+                                         &layer_gresc 7 0  &spc_end_sent         &lt 5 ENTER               &mt RSHFT BSPC  &lt 4 Z
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -283,7 +283,7 @@
 &kp C_PP  &kp Q           &kp W          &kp E             &kp R          &kp T               &kp Y  &kp U           &kp I           &kp O          &kp P              &lt 9 BSPC
 &kp TAB   &lh_hm LCTRL A  &lh_hm LALT S  &lh_hm LSHFT D    &lh_hm LCMD F  &kp G               &kp H  &rh_hm RCMD J   &rh_hm RSHFT K  &rh_hm RALT L  &rh_hm RCTRL SEMI  &kp SQT
 &none     &kp Z           &kp X          &kp C             &kp V          &kp B               &kp N  &kp M           &kp COMMA       &kp DOT        &kp FSLH           &sl 4
-                                         &layer_gresc 7 0  &spc_end_sent         &lt 5 ENTER         &mt LSHFT BSPC  &smart_shft
+                                         &layer_gresc 7 0  &spc_end_sent         &lt 5 ENTER         &mt RSHFT BSPC  &smart_shft
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
