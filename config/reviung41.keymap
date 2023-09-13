@@ -166,8 +166,8 @@
                 <&m_question_comment>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT|MOD_LGUI|MOD_RGUI)>;
-            keep-mods = <(MOD_LGUI|MOD_RGUI|MOD_RSFT)>;
+            mods = <(MOD_LGUI|MOD_RGUI|MOD_LSFT)>;
+            keep-mods = <(MOD_LGUI|MOD_RGUI)>;
         };
         m_question_comment: m_question_comment {
             compatible = "zmk,behavior-mod-morph";
