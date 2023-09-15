@@ -12,6 +12,19 @@
 #define LOWER   1
 #define RAISE   2
 
+&mt {
+    quick-tap-ms = <150>;
+};
+
+&sl {
+    /delete-property/ quick-release;
+};
+
+&gresc {
+    keep-mods = <(MOD_RSFT|MOD_LGUI|MOD_LCTL)>;
+    mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT|MOD_LCTL)>;
+};
+
 / {
     chosen {
         zmk,matrix_transform = &layout_grid_transform;
@@ -76,15 +89,155 @@
             #binding-cells = <2>;
             tapping-term-ms = <120>;
         };
-        smart_shft_tap: smart_shft_tap {
+        lh_lt: lh_lt {
             compatible = "zmk,behavior-hold-tap";
-            label = "SMART_SHFT_TAP";
+            label = "left_hand_layer_tap";
             bindings =
-                <&smart_shft>,
+                <&mo>,
                 <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <90>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 50 51 52 53 54 55 56 57 58 59 30 34 35 43 44 45 46 47 48 49 56 57 58 59>;
+            hold-trigger-on-release;
+            global-quick-tap;
+        };
+        rh_lt: rh_lt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "right_hand_layer_tap";
+            bindings =
+                <&mo>,
+                <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            global-quick-tap;
+            flavor = "balanced";
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 50 51 52 53 54 55 56 57 58 59 29 41 42>;
+            hold-trigger-on-release;
+        };
+        grave_escape: grave_escape {
+            compatible = "zmk,behavior-mod-morph";
+            label = "GRAVE_ESCAPE";
+            bindings =
+                <&kp ESC>,
+                <&kp GRAVE>;
+
+            #binding-cells = <0>;
+            keep-mods = <(MOD_RSFT|MOD_LCTL|MOD_LGUI)>;
+            mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_LSFT|MOD_RSFT|MOD_RCTL|MOD_LALT|MOD_RALT)>;
+        };
+        layer_gresc: layer_gresc {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_GRESC";
+            bindings =
+                <&mo>,
+                <&grave_escape>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+            flavor = "tap-preferred";
+        };
+        dot_end_sentence: dot_end_sentence {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOT_END_SENTENCE";
+            bindings =
+                <&kp DOT>,
+                <&end_sentence>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        spc_end_sent: spc_end_sent {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SPC_END_SENT";
+            bindings =
+                <&lt 8 SPACE>,
+                <&end_sentence>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        semi_end_question: semi_end_question {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SEMI_END_QUESTION";
+            bindings =
+                <&kp SEMI>,
+                <&m_question_comment>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_LGUI|MOD_RGUI)>;
+            keep-mods = <(MOD_LGUI|MOD_RGUI)>;
+        };
+        layer_repeat: layer_repeat {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_REPEAT";
+            bindings =
+                <&mo>,
+                <&key_repeat>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+        };
+        m_question_comment: m_question_comment {
+            compatible = "zmk,behavior-mod-morph";
+            label = "M_QUESTION_COMMENT";
+            bindings =
+                <&end_question>,
+                <&kp FSLH>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
+            keep-mods = <(MOD_LGUI|MOD_RGUI)>;
+        };
+    };
+
+    macros {
+        up_dir: up_dir {
+            compatible = "zmk,behavior-macro";
+            label = "UP_DIR";
+            #binding-cells = <0>;
+            bindings = <&kp DOT &kp DOT &kp FSLH>;
+        };
+        end_sentence: end_sentence {
+            compatible = "zmk,behavior-macro";
+            label = "END_SENTENCE";
+            #binding-cells = <0>;
+            bindings = <&kp DOT &kp SPACE &quick_sticky_key LSHFT>;
+            wait-ms = <0>;
+            tap-ms = <5>;
+        };
+        end_question: end_question {
+            compatible = "zmk,behavior-macro";
+            label = "END_QUESTION";
+            #binding-cells = <0>;
+            bindings = <&kp QMARK &kp SPACE &quick_sticky_key LSHFT>;
+            tap-ms = <3>;
+        };
+        code_assignment: code_assignment {
+            compatible = "zmk,behavior-macro";
+            label = "CODE_ASSIGNMENT";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp EQUAL &kp SPACE>;
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        one_hand_mode {
+            bindings = <&to 8>;
+            key-positions = <40 53>;
+        };
+
+        c_capsword {
+            bindings = <&caps_word>;
+            key-positions = <27 32>;
         };
     };
 
@@ -100,7 +253,7 @@
 &none           &none          &lt 6 ESC       &lt 4 SPACE    &lt 5 TAB  &lt 5 ENTER  &lt 5 ENTER  &lt 3 BSPC  &smart_shft    &lt 7 DEL       &none          &none
             >;
 
-            label = "colemakDH";
+            label = "CmDH";
         };
 
         whorfv_layer {
@@ -112,7 +265,7 @@
 &none           &none          &lt 6 ESC       &lt 4 SPACE    &kp TAB  &lt 5 ENTER  &lt 5 ENTER  &lt 3 BSPC  &smart_shft    &lt 3 DEL       &none          &none
             >;
 
-            label = "WhrfV";
+            label = "WrfV";
         };
 
         qwerty {
@@ -130,6 +283,7 @@
 &kp Z           &kp X          &kp C           &kp V          &kp B    &kp MINUS    &kp EQUAL    &kp N       &kp M          &kp COMMA       &kp DOT        &kp FSLH
 &none           &none          &lt 6 ESC       &lt 4 SPACE    &kp TAB  &lt 5 ENTER  &lt 5 ENTER  &lt 3 BSPC  &smart_shft    &lt 3 DEL       &none          &none
             >;
+            label = "Qwrt";
         };
 
         sym_layer {

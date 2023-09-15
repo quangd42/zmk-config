@@ -287,7 +287,7 @@
                 <&inc_dec_kp C_VOL_DN C_VOL_UP>,
                 <&inc_dec_kp C_BRI_DN C_BRI_UP>;
 
-            label = "WhorfV";
+            label = "WrfV";
         };
 
         gallium_layer {
@@ -309,7 +309,7 @@
                 <&inc_dec_kp C_VOL_DN C_VOL_UP>,
                 <&inc_dec_kp C_BRI_DN C_BRI_UP>;
 
-            label = "Gallium";
+            label = "Gllm";
         };
 
         qwerty_layer {
@@ -331,7 +331,7 @@
                 <&inc_dec_kp C_VOL_DN C_VOL_UP>,
                 <&inc_dec_kp C_BRI_DN C_BRI_UP>;
 
-            label = "Qwrty";
+            label = "Qwrt";
         };
 
         sym_layer {
