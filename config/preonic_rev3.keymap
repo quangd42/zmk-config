@@ -100,7 +100,7 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             flavor = "balanced";
-            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 50 51 52 53 54 55 56 57 58 59 30 34 35 43 44 45 46 47 48 49 56 57 58 59>;
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 50 51 52 53 54 55 56 57 58 59 30 34 35 43 44 45 46 47 48 49 56 57 58 59 42>;
             hold-trigger-on-release;
             global-quick-tap;
         };
@@ -116,7 +116,7 @@
             quick-tap-ms = <175>;
             global-quick-tap;
             flavor = "balanced";
-            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 50 51 52 53 54 55 56 57 58 59 29 41 42>;
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 51 52 53 54 55 56 57 58 59 29 41 49 48 50>;
             hold-trigger-on-release;
         };
         grave_escape: grave_escape {
@@ -156,7 +156,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "SPC_END_SENT";
             bindings =
-                <&lt 8 SPACE>,
+                <&lt 4 SPACE>,
                 <&end_sentence>;
 
             #binding-cells = <0>;
@@ -231,7 +231,7 @@
         compatible = "zmk,combos";
 
         one_hand_mode {
-            bindings = <&to 8>;
+            bindings = <&to 4>;
             key-positions = <40 53>;
         };
 
@@ -244,13 +244,13 @@
     keymap {
         compatible = "zmk,keymap";
 
-        colemakDH_hrm {
+        CmDH_layer {
             bindings = <
-&kp GRAVE       &kp N1         &kp N2          &kp N3         &kp N4     &kp N5       &kp N6       &kp N7      &kp N8         &kp N9          &kp N0         &kp BSPC
-&kp Q           &kp W          &kp F           &kp P          &kp B      &kp DOWN     &kp UP       &kp J       &kp L          &kp U           &kp Y          &kp COMMA
-&lh_hm LCTRL A  &lh_hm LALT R  &lh_hm LSHFT S  &lh_hm LCMD T  &kp G      &kp LEFT     &kp RIGHT    &kp M       &rh_hm RCMD N  &rh_hm RSHFT E  &rh_hm RALT I  &rh_hm RCTRL O
-&kp Z           &kp X          &kp C           &kp D          &kp V      &kp MINUS    &kp EQUAL    &kp K       &kp H          &kp SQT         &kp FSLH       &kp DOT
-&none           &none          &lt 6 ESC       &lt 4 SPACE    &lt 5 TAB  &lt 5 ENTER  &lt 5 ENTER  &lt 3 BSPC  &smart_shft    &lt 7 DEL       &none          &none
+&kp GRAVE       &kp N1         &kp N2          &kp N3         &kp N4     &kp N5       &kp N6       &kp N7      &kp N8         &kp N9          &kp N0              &kp BSPC
+&kp Q           &kp W          &kp F           &kp P          &kp B      &kp DOWN     &kp UP       &kp J       &kp L          &kp U           &kp Y               &kp COMMA
+&lh_hm LCTRL A  &lh_hm LALT R  &lh_hm LSHFT S  &lh_hm LCMD T  &kp G      &kp LEFT     &kp RIGHT    &kp M       &rh_hm RCMD N  &rh_hm RSHFT E  &rh_hm RALT I       &rh_hm RCTRL O
+&kp Z           &kp X          &lh_lt 5 C      &kp D          &kp V      &kp MINUS    &kp EQUAL    &kp K       &kp H          &kp SQT         &semi_end_question  &dot_end_sentence
+&none           &none          &lt 7 ESC       &lt 5 SPACE    &lt 6 TAB  &lt 6 ENTER  &lt 6 ENTER  &lt 3 BSPC  &smart_shft    &lt 8 DEL       &none               &none
             >;
 
             label = "CmDH";
@@ -258,11 +258,11 @@
 
         whorfv_layer {
             bindings = <
-&kp GRAVE       &kp N1         &kp N2          &kp N3         &kp N4   &kp N5       &kp N6       &kp N7      &kp N8         &kp N9          &kp N0         &kp BSPC
-&kp F           &kp L          &kp H           &kp K          &kp Q    &kp DOWN     &kp UP       &kp Z       &kp Y          &kp O           &kp U          &kp COMMA
-&lh_hm LCTRL S  &lh_hm LALT R  &lh_hm LSHFT N  &lh_hm LCMD T  &kp M    &kp LEFT     &kp RIGHT    &kp G       &rh_hm RCMD W  &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I
-&kp J           &kp X          &kp B           &kp D          &kp V    &kp MINUS    &kp EQUAL    &kp P       &kp C          &kp SQT         &kp FSLH       &kp DOT
-&none           &none          &lt 6 ESC       &lt 4 SPACE    &kp TAB  &lt 5 ENTER  &lt 5 ENTER  &lt 3 BSPC  &smart_shft    &lt 3 DEL       &none          &none
+&kp GRAVE       &kp N1         &kp N2          &kp N3         &kp N4   &kp N5       &kp N6       &kp N7      &kp N8         &kp N9          &kp N0              &kp BSPC
+&kp F           &kp L          &kp H           &kp K          &kp Q    &kp DOWN     &kp UP       &kp Z       &kp Y          &kp O           &kp U               &kp COMMA
+&lh_hm LCTRL S  &lh_hm LALT R  &lh_hm LSHFT N  &lh_hm LCMD T  &kp M    &kp LEFT     &kp RIGHT    &kp G       &rh_hm RCMD W  &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I
+&kp J           &kp X          &lh_lt 5 B      &kp D          &kp V    &kp MINUS    &kp EQUAL    &kp P       &kp C          &kp SQT         &semi_end_question  &dot_end_sentence
+&none           &none          &lt 7 ESC       &lt 5 SPACE    &kp TAB  &lt 6 ENTER  &lt 6 ENTER  &lt 3 BSPC  &smart_shft    &lt 3 DEL       &none               &none
             >;
 
             label = "WrfV";
@@ -281,8 +281,9 @@
 &kp Q           &kp W          &kp E           &kp R          &kp T    &kp DOWN     &kp UP       &kp Y       &kp U          &kp I           &kp O          &kp P
 &lh_hm LCTRL A  &lh_hm LALT S  &lh_hm LSHFT D  &lh_hm LCMD F  &kp G    &kp LEFT     &kp RIGHT    &kp H       &rh_hm RCMD J  &rh_hm RSHFT K  &rh_hm RALT L  &rh_hm RCTRL SEMI
 &kp Z           &kp X          &kp C           &kp V          &kp B    &kp MINUS    &kp EQUAL    &kp N       &kp M          &kp COMMA       &kp DOT        &kp FSLH
-&none           &none          &lt 6 ESC       &lt 4 SPACE    &kp TAB  &lt 5 ENTER  &lt 5 ENTER  &lt 3 BSPC  &smart_shft    &lt 3 DEL       &none          &none
+&none           &none          &lt 7 ESC       &lt 5 SPACE    &kp TAB  &lt 6 ENTER  &lt 6 ENTER  &lt 3 BSPC  &smart_shft    &lt 3 DEL       &none          &none
             >;
+
             label = "Qwrt";
         };
 
@@ -301,6 +302,18 @@
 &kp CARET  &kp UNDER  &kp RPAR   &kp RBRC  &kp RBKT   &kp BSLH  &none    &none   &none     &none      &none     &none
 &none      &none      &to 0      &none     &trans     &none     &none    &none   &none     &none      &none     &none
             >;
+        };
+
+        code_sym_layer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+
+            label = "code";
         };
 
         num_layer {
@@ -336,7 +349,7 @@
 &none      &none      &none      &kp LG(LS(NUMBER_4))  &kp LG(LS(NUMBER_5))  &kp C_VOL_DN  &kp C_VOL_UP  &kp F12  &kp F7  &kp F8  &kp F9  &none
 &sk LCTRL  &sk LALT   &sk LSHFT  &sk LCMD              &none                 &kp K_MUTE    &kp C_PP      &kp F11  &kp F1  &kp F2  &kp F3  &none
 &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)             &kp LG(LS(Z))         &kp C_BRI_DN  &kp C_BRI_UP  &kp F10  &kp F4  &kp F5  &kp F6  &none
-&none      &none      &none      &none                 &none                 &none         &none         &none    &none   &mo 7   &none   &none
+&none      &none      &none      &none                 &none                 &none         &none         &none    &none   &mo 8   &none   &none
             >;
 
             label = "Fun";
