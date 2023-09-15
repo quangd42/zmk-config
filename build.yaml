@@ -15,10 +15,10 @@
 include:
   # - board: nrfmicro_13
   #   shield: reviung41
-  # - board: preonic_rev3
-  - board: nice_nano_v2
-    shield: sofle_left
-  - board: nice_nano_v2
-    shield: sofle_right
+  # - board: preonic_rev3t
+  # - board: nice_nano_v2
+  #   shield: sofle_left
+  # - board: nice_nano_v2
+  #   shield: sofle_right
   # - board: nice_nano_v2
   #   shield: settings_reset
