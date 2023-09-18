@@ -71,7 +71,7 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
-        quick_sticky_key: quick_sticky_key {
+        quick_sk: quick_sk {
             compatible = "zmk,behavior-sticky-key";
             label = "QUICK_STICKY_KEY";
             bindings = <&kp>;
