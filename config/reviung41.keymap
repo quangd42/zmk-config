@@ -184,12 +184,16 @@
             label = "END_SENTENCE";
             #binding-cells = <0>;
             bindings = <&kp DOT &kp SPACE &quick_sk LSHFT>;
+            wait-ms = <30>;
+            tap-ms = <30>;
         };
         end_question: end_question {
             compatible = "zmk,behavior-macro";
             label = "END_QUESTION";
             #binding-cells = <0>;
             bindings = <&kp QMARK &kp SPACE &quick_sk LSHFT>;
+            wait-ms = <30>;
+            tap-ms = <30>;
         };
         code_assignment: code_assignment {
             compatible = "zmk,behavior-macro";
