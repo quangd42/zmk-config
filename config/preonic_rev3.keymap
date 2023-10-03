@@ -188,12 +188,12 @@
             compatible = "zmk,behavior-mod-morph";
             label = "M_QUESTION_COMMENT";
             bindings =
-                <&end_question>,
-                <&kp FSLH>;
+                <&kp FSLH>,
+                <&end_question>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LGUI|MOD_RGUI)>;
-            keep-mods = <(MOD_LGUI|MOD_RGUI)>;
+            mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_LSFT)>;
         };
     };
 
