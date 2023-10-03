@@ -220,9 +220,9 @@
 
             bindings = <
 &kp C_PP  &kp Q           &kp W          &lh_lt 6 F        &kp P          &kp B               &kp J  &kp L           &kp U           &kp Y               &kp COMMA          &lt 9 BSPC
-&kp TAB   &lh_hm LCTRL A  &lh_hm LALT R  &lh_hm LSHFT S    &lh_hm LCMD T  &kp G               &kp M  &rh_hm RCMD N   &rh_hm RSHFT E  &rh_hm RALT I       &rh_hm RCTRL O     &smart_shft
-&none     &kp Z           &kp X          &lh_lt 6 C        &kp D          &kp V               &kp K  &kp H           &kp SQT         &semi_end_question  &dot_end_sentence  &sl 4
-                                         &layer_gresc 7 0  &lt 8 SPACE           &lt 5 ENTER         &mt RSHFT BSPC  &key_repeat
+&kp TAB   &lh_hm LCTRL A  &lh_hm LALT R  &lh_hm LSHFT S    &lh_hm LCMD T  &kp G               &kp M  &rh_hm RCMD N   &rh_hm RSHFT E  &rh_hm RALT I       &rh_hm RCTRL O     &kp LBKT
+&none     &kp Z           &kp X          &lh_lt 6 C        &kp D          &kp V               &kp K  &kp H           &kp SQT         &semi_end_question  &dot_end_sentence  &kp RBKT
+                                         &layer_gresc 7 0  &lt 8 SPACE           &lt 5 ENTER         &mt RSHFT BSPC  &smart_shft
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -237,9 +237,9 @@
 
             bindings = <
 &kp C_PP  &kp F           &kp L          &lh_lt 6 H        &kp K          &kp Q               &kp Z  &kp Y           &kp O           &kp U               &kp COMMA          &lt 9 BSPC
-&kp TAB   &lh_hm LCTRL S  &lh_hm LALT R  &lh_hm LSHFT N    &lh_hm LCMD T  &kp M               &kp G  &rh_hm RCMD W   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I     &smart_shft
-&none     &kp J           &kp X          &lh_lt 6 B        &kp D          &kp V               &kp P  &kp C           &kp SQT         &semi_end_question  &dot_end_sentence  &sl 4
-                                         &layer_gresc 7 0  &lt 8 SPACE           &lt 5 ENTER         &mt RSHFT BSPC  &key_repeat
+&kp TAB   &lh_hm LCTRL S  &lh_hm LALT R  &lh_hm LSHFT N    &lh_hm LCMD T  &kp M               &kp G  &rh_hm RCMD W   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I     &kp LBKT
+&none     &kp J           &kp X          &lh_lt 6 B        &kp D          &kp V               &kp P  &kp C           &kp SQT         &semi_end_question  &dot_end_sentence  &kp RBKT
+                                         &layer_gresc 7 0  &lt 8 SPACE           &lt 5 ENTER         &mt RSHFT BSPC  &smart_shft
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -254,9 +254,9 @@
 
             bindings = <
 &kp C_PP  &kp B           &kp L          &kp D             &kp C          &kp V               &kp Z  &kp Y           &kp O           &kp U          &kp COMMA       &lt 7 BSPC
-&kp TAB   &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S  &kp G               &kp P  &rh_hm RCMD H   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &smart_shft
-&none     &kp Q           &kp X          &lh_lt 6 M        &kp W          &kp J               &kp K  &kp F           &kp SQT         &kp FSLH       &kp DOT         &sl 4
-                                         &layer_gresc 7 0  &lt 8 SPACE           &lt 5 ENTER         &mt LSHFT BSPC  &key_repeat
+&kp TAB   &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S  &kp G               &kp P  &rh_hm RCMD H   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &kp LBKT
+&none     &kp Q           &kp X          &lh_lt 6 M        &kp W          &kp J               &kp K  &kp F           &kp SQT         &kp FSLH       &kp DOT         &kp RBKT
+                                         &layer_gresc 7 0  &lt 8 SPACE           &lt 5 ENTER         &mt LSHFT BSPC  &smart_shft
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -298,10 +298,10 @@
 
         code_sym_layer {
             bindings = <
-&none  &kp AT     &kp PIPE   &kp DLLR   &kp LBRC   &kp RBRC         &kp BSLH  &kp LT            &kp UNDER  &kp GT     &kp DOT    &none
-&none  &kp QMARK  &kp AMPS   &kp COLON  &kp LPAR   &kp RPAR         &kp HASH  &kp EQUAL         &kp MINUS  &kp PLUS   &kp EXCL   &none
-&none  &kp PRCNT  &kp TILDE  &kp DQT    &kp LBKT   &kp RBKT         &up_dir   &code_assignment  &kp FSLH   &kp ASTRK  &kp CARET  &none
-                             &none      &kp SPACE            &none            &kp BSPC          &none
+&none  &kp AT     &kp PIPE   &kp DLLR   &kp LBRC   &kp RBRC         &kp BSLH  &kp LT     &kp UNDER  &kp GT     &kp DOT    &none
+&none  &kp QMARK  &kp AMPS   &kp COLON  &kp LPAR   &kp RPAR         &kp HASH  &kp EQUAL  &kp MINUS  &kp PLUS   &kp EXCL   &none
+&none  &kp PRCNT  &kp TILDE  &kp CARET  &kp LBKT   &kp RBKT         &up_dir   &kp DQT    &kp FSLH   &kp ASTRK  &kp GRAVE  &none
+                             &none      &kp SPACE            &none            &kp BSPC   &none
             >;
         };
 
