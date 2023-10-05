@@ -34,9 +34,7 @@
         lh_hm: lh_hm {
             compatible = "zmk,behavior-hold-tap";
             label = "left_hand_homerow_mods";
-            bindings =
-                <&sk>,
-                <&kp>;
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <280>;
@@ -49,9 +47,7 @@
         rh_hm: rh_hm {
             compatible = "zmk,behavior-hold-tap";
             label = "right_hand_homerow_mods";
-            bindings =
-                <&sk>,
-                <&kp>;
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <280>;
@@ -64,9 +60,7 @@
         smart_shft: smart_shft {
             compatible = "zmk,behavior-mod-morph";
             label = "SMART_SHFT";
-            bindings =
-                <&quick_sk RSHFT>,
-                <&caps_word>;
+            bindings = <&quick_sk RSHFT>, <&caps_word>;
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT)>;
@@ -82,9 +76,7 @@
         quick_hold_tap: quick_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "QUICK_HOLD_TAP";
-            bindings =
-                <&quick_sk>,
-                <&kp>;
+            bindings = <&quick_sk>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <120>;
@@ -92,9 +84,7 @@
         lh_lt: lh_lt {
             compatible = "zmk,behavior-hold-tap";
             label = "left_hand_layer_tap";
-            bindings =
-                <&mo>,
-                <&kp>;
+            bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <280>;
@@ -107,9 +97,7 @@
         rh_lt: rh_lt {
             compatible = "zmk,behavior-hold-tap";
             label = "right_hand_layer_tap";
-            bindings =
-                <&mo>,
-                <&kp>;
+            bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <280>;
@@ -122,9 +110,7 @@
         grave_escape: grave_escape {
             compatible = "zmk,behavior-mod-morph";
             label = "GRAVE_ESCAPE";
-            bindings =
-                <&kp ESC>,
-                <&kp GRAVE>;
+            bindings = <&kp ESC>, <&kp GRAVE>;
 
             #binding-cells = <0>;
             keep-mods = <(MOD_RSFT|MOD_LCTL|MOD_LGUI)>;
@@ -133,9 +119,7 @@
         layer_gresc: layer_gresc {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_GRESC";
-            bindings =
-                <&mo>,
-                <&grave_escape>;
+            bindings = <&mo>, <&grave_escape>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -145,9 +129,7 @@
         dot_end_sentence: dot_end_sentence {
             compatible = "zmk,behavior-mod-morph";
             label = "DOT_END_SENTENCE";
-            bindings =
-                <&kp DOT>,
-                <&end_sentence>;
+            bindings = <&kp DOT>, <&end_sentence>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -155,9 +137,7 @@
         spc_end_sent: spc_end_sent {
             compatible = "zmk,behavior-mod-morph";
             label = "SPC_END_SENT";
-            bindings =
-                <&lt 4 SPACE>,
-                <&end_sentence>;
+            bindings = <&lt 4 SPACE>, <&end_sentence>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -165,9 +145,7 @@
         semi_end_question: semi_end_question {
             compatible = "zmk,behavior-mod-morph";
             label = "SEMI_END_QUESTION";
-            bindings =
-                <&kp SEMI>,
-                <&m_question_comment>;
+            bindings = <&kp SEMI>, <&m_question_comment>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_LGUI|MOD_RGUI)>;
@@ -176,9 +154,7 @@
         layer_repeat: layer_repeat {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_REPEAT";
-            bindings =
-                <&mo>,
-                <&key_repeat>;
+            bindings = <&mo>, <&key_repeat>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -187,9 +163,7 @@
         m_question_comment: m_question_comment {
             compatible = "zmk,behavior-mod-morph";
             label = "M_QUESTION_COMMENT";
-            bindings =
-                <&kp FSLH>,
-                <&end_question>;
+            bindings = <&kp FSLH>, <&end_question>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
