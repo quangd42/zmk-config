@@ -236,6 +236,28 @@
     keymap {
         compatible = "zmk,keymap";
 
+        whorfv_layer {
+            // -------------------------------------------------------------------------------------
+            // |  TAB |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  :  |   BKSP    |
+            // | CTRL |  A  |  R  |  S  |  T  |  G  |   |  M  |  N   |  E  |  I  |  O  |    '      |
+            // | SHFT |  Z  |  X  |  C  |  D  |  V  |   |  K  |  H   |  ,  |  .  |  /  | SHFT(RET) |
+            //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
+
+            bindings = <
+&kp GRAVE  &kp N1          &kp N2         &kp N3          &kp N4            &kp N5                                &kp N6          &kp N7         &kp N8          &kp N9              &kp N0             &lt 9 BSPC
+&kp TAB    &kp F           &kp L          &lh_lt 6 H      &kp K             &kp Q                                 &kp Z           &kp Y          &kp O           &kp U               &kp COMMA          &lt 4 BSPC
+&kp J      &lh_hm LCTRL S  &lh_hm LALT R  &lh_hm LSHFT N  &lh_hm LCMD T     &kp M                                 &kp G           &rh_hm RCMD W  &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I     &dot_end_sentence
+&none      &kp J           &kp X          &lh_lt 6 B      &kp D             &kp V        &kp C_MUTE    &kp C_PP   &kp P           &kp C          &kp SQT         &semi_end_question  &dot_end_sentence  &none
+                           &none          &none           &layer_gresc 7 0  &lt 8 SPACE  &lt 5 TAB     &lt 5 RET  &mt RSHFT BSPC  &smart_shft    &none           &none
+            >;
+
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>,
+                <&inc_dec_kp C_BRI_DN C_BRI_UP>;
+
+            label = "WrfV";
+        };
+
         default_layer {
             // ------------------------------------------------------------------------------------------------------------
             // |  `    |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |       |
@@ -257,28 +279,6 @@
                 <&inc_dec_kp C_BRI_DN C_BRI_UP>;
 
             label = "CmDH";
-        };
-
-        whorfv_layer {
-            // -------------------------------------------------------------------------------------
-            // |  TAB |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  :  |   BKSP    |
-            // | CTRL |  A  |  R  |  S  |  T  |  G  |   |  M  |  N   |  E  |  I  |  O  |    '      |
-            // | SHFT |  Z  |  X  |  C  |  D  |  V  |   |  K  |  H   |  ,  |  .  |  /  | SHFT(RET) |
-            //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
-
-            bindings = <
-&kp GRAVE  &kp N1          &kp N2         &kp N3          &kp N4            &kp N5                                &kp N6          &kp N7         &kp N8          &kp N9              &kp N0             &lt 9 BSPC
-&kp TAB    &kp F           &kp L          &lh_lt 6 H      &kp K             &kp Q                                 &kp Z           &kp Y          &kp O           &kp U               &kp COMMA          &lt 4 BSPC
-&kp J      &lh_hm LCTRL S  &lh_hm LALT R  &lh_hm LSHFT N  &lh_hm LCMD T     &kp M                                 &kp G           &rh_hm RCMD W  &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I     &dot_end_sentence
-&none      &kp J           &kp X          &lh_lt 6 B      &kp D             &kp V        &kp C_MUTE    &kp C_PP   &kp P           &kp C          &kp SQT         &semi_end_question  &dot_end_sentence  &none
-                           &none          &none           &layer_gresc 7 0  &lt 8 SPACE  &lt 5 TAB     &lt 5 RET  &mt RSHFT BSPC  &smart_shft    &none           &none
-            >;
-
-            sensor-bindings =
-                <&inc_dec_kp C_VOL_DN C_VOL_UP>,
-                <&inc_dec_kp C_BRI_DN C_BRI_UP>;
-
-            label = "WrfV";
         };
 
         gallium_layer {
