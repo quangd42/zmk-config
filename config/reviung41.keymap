@@ -29,9 +29,7 @@
         lh_hm: lh_hm {
             compatible = "zmk,behavior-hold-tap";
             label = "left_hand_homerow_mods";
-            bindings =
-                <&kp>,
-                <&kp>;
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <280>;
@@ -44,9 +42,7 @@
         rh_hm: rh_hm {
             compatible = "zmk,behavior-hold-tap";
             label = "right_hand_homerow_mods";
-            bindings =
-                <&kp>,
-                <&kp>;
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <280>;
@@ -59,9 +55,7 @@
         smart_shft: smart_shft {
             compatible = "zmk,behavior-mod-morph";
             label = "SMART_SHFT";
-            bindings =
-                <&quick_sk LSHFT>,
-                <&caps_word>;
+            bindings = <&quick_sk LSHFT>, <&caps_word>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -77,9 +71,7 @@
         quick_hold_tap: quick_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "QUICK_HOLD_TAP";
-            bindings =
-                <&quick_sk>,
-                <&kp>;
+            bindings = <&quick_sk>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <120>;
@@ -88,9 +80,7 @@
         lh_lt: lh_lt {
             compatible = "zmk,behavior-hold-tap";
             label = "left_hand_layer_tap";
-            bindings =
-                <&mo>,
-                <&kp>;
+            bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <280>;
@@ -103,9 +93,7 @@
         rh_lt: rh_lt {
             compatible = "zmk,behavior-hold-tap";
             label = "right_hand_layer_tap";
-            bindings =
-                <&mo>,
-                <&kp>;
+            bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <280>;
@@ -118,9 +106,7 @@
         grave_escape: grave_escape {
             compatible = "zmk,behavior-mod-morph";
             label = "GRAVE_ESCAPE";
-            bindings =
-                <&kp ESC>,
-                <&kp GRAVE>;
+            bindings = <&kp ESC>, <&kp GRAVE>;
 
             #binding-cells = <0>;
             keep-mods = <(MOD_LGUI|MOD_LCTL|MOD_RSFT)>;
@@ -129,9 +115,7 @@
         layer_gresc: layer_gresc {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_GRESC";
-            bindings =
-                <&mo>,
-                <&grave_escape>;
+            bindings = <&mo>, <&grave_escape>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -141,9 +125,7 @@
         dot_end_sentence: dot_end_sentence {
             compatible = "zmk,behavior-mod-morph";
             label = "DOT_END_SENTENCE";
-            bindings =
-                <&kp DOT>,
-                <&end_sentence>;
+            bindings = <&kp DOT>, <&end_sentence>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -151,9 +133,7 @@
         semi_end_question: semi_end_question {
             compatible = "zmk,behavior-mod-morph";
             label = "SEMI_END_QUESTION";
-            bindings =
-                <&kp SEMI>,
-                <&m_question_comment>;
+            bindings = <&kp SEMI>, <&m_question_comment>;
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI|MOD_RGUI|MOD_LSFT)>;
@@ -162,9 +142,7 @@
         m_question_comment: m_question_comment {
             compatible = "zmk,behavior-mod-morph";
             label = "M_QUESTION_COMMENT";
-            bindings =
-                <&end_question>,
-                <&kp FSLH>;
+            bindings = <&end_question>, <&kp FSLH>;
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI|MOD_RGUI)>;
@@ -302,10 +280,10 @@
 
         code_sym_layer {
             bindings = <
-&none  &kp AT     &kp PIPE   &kp DLLR   &kp LBRC   &kp RBRC         &kp BSLH  &kp LT     &kp UNDER  &kp GT     &kp DOT    &none
-&none  &kp QMARK  &kp AMPS   &kp COLON  &kp LPAR   &kp RPAR         &kp HASH  &kp EQUAL  &kp MINUS  &kp PLUS   &kp EXCL   &none
-&none  &kp PRCNT  &kp TILDE  &kp CARET  &kp LBKT   &kp RBKT         &up_dir   &kp DQT    &kp FSLH   &kp ASTRK  &kp GRAVE  &none
-                             &none      &kp SPACE            &none            &kp BSPC   &none
+&none  &kp AT     &kp DLLR   &kp RBRC  &kp LBRC   &kp PIPE          &kp BSLH  &kp LT     &kp UNDER  &kp GT     &kp GRAVE  &none
+&none  &kp QMARK  &kp COLON  &kp RPAR  &kp LPAR   &kp AMPS          &kp HASH  &kp EQUAL  &kp MINUS  &kp PLUS   &kp EXCL   &none
+&none  &kp PRCNT  &kp CARET  &kp RBKT  &kp LBKT   &kp TILDE         &up_dir   &kp DQT    &kp FSLH   &kp ASTRK  &kp DOT    &none
+                             &none     &kp SPACE             &none            &kp BSPC   &none
             >;
         };
 
