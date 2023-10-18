@@ -152,6 +152,20 @@
             mods = <(MOD_LGUI|MOD_RGUI)>;
             keep-mods = <(MOD_LGUI|MOD_RGUI)>;
         };
+        lh_hm_shft: lh_hm_shft {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LH_HM_SHFT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <200>;
+            flavor = "balanced";
+            global-quick-tap;
+            hold-trigger-on-release;
+            require-prior-idle-ms = <200>;
+            hold-trigger-key-positions = <34 38 33 32>;
+        };
     };
 
     macros {
@@ -205,10 +219,10 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-&kp C_PP  &kp F           &kp L          &lh_lt 6 H        &kp K          &kp Q               &kp Z  &kp Y           &kp O           &kp U               &kp COMMA          &lt 9 BSPC
-&kp TAB   &lh_hm LCTRL S  &lh_hm LALT R  &lh_hm LSHFT N    &lh_hm LCMD T  &kp M               &kp G  &rh_hm RCMD W   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I     &kp LBKT
-&none     &kp J           &kp X          &lh_lt 6 B        &kp D          &kp V               &kp P  &kp C           &kp SQT         &semi_end_question  &dot_end_sentence  &kp RBKT
-                                         &layer_gresc 7 0  &lt 8 SPACE           &lt 5 ENTER         &mt RSHFT BSPC  &smart_shft
+&kp C_PP  &kp F           &kp L          &lh_lt 6 H           &kp K          &kp Q               &kp Z  &kp Y           &kp O           &kp U               &kp COMMA          &lt 9 BSPC
+&kp TAB   &lh_hm LCTRL S  &lh_hm LALT R  &lh_hm_shft LSHFT N  &lh_hm LCMD T  &kp M               &kp G  &rh_hm RCMD W   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I     &kp LBKT
+&none     &kp J           &kp X          &lh_lt 6 B           &kp D          &kp V               &kp P  &kp C           &kp SQT         &semi_end_question  &dot_end_sentence  &kp RBKT
+                                         &layer_gresc 7 0     &lt 8 SPACE           &lt 5 ENTER         &mt RSHFT BSPC  &smart_shft
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -222,10 +236,10 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-&kp C_PP  &kp Q           &kp W          &lh_lt 6 F        &kp P          &kp B               &kp J  &kp L           &kp U           &kp Y               &kp COMMA          &lt 9 BSPC
-&kp TAB   &lh_hm LCTRL A  &lh_hm LALT R  &lh_hm LSHFT S    &lh_hm LCMD T  &kp G               &kp M  &rh_hm RCMD N   &rh_hm RSHFT E  &rh_hm RALT I       &rh_hm RCTRL O     &kp LBKT
-&none     &kp Z           &kp X          &lh_lt 6 C        &kp D          &kp V               &kp K  &kp H           &kp SQT         &semi_end_question  &dot_end_sentence  &kp RBKT
-                                         &layer_gresc 7 0  &lt 8 SPACE           &lt 5 ENTER         &mt RSHFT BSPC  &smart_shft
+&kp C_PP  &kp Q           &kp W          &lh_lt 6 F           &kp P          &kp B               &kp J  &kp L           &kp U           &kp Y               &kp COMMA          &lt 9 BSPC
+&kp TAB   &lh_hm LCTRL A  &lh_hm LALT R  &lh_hm_shft LSHFT N  &lh_hm LCMD T  &kp G               &kp M  &rh_hm RCMD N   &rh_hm RSHFT E  &rh_hm RALT I       &rh_hm RCTRL O     &kp LBKT
+&none     &kp Z           &kp X          &lh_lt 6 C           &kp D          &kp V               &kp K  &kp H           &kp SQT         &semi_end_question  &dot_end_sentence  &kp RBKT
+                                         &layer_gresc 7 0     &lt 8 SPACE           &lt 5 ENTER         &mt RSHFT BSPC  &smart_shft
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
