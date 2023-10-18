@@ -161,9 +161,8 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <200>;
             flavor = "balanced";
-            global-quick-tap;
             hold-trigger-on-release;
-            require-prior-idle-ms = <200>;
+            require-prior-idle-ms = <0>;
             hold-trigger-key-positions = <34 38 33 32>;
         };
     };
