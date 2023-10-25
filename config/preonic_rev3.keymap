@@ -234,16 +234,16 @@
             label = "WrfV";
         };
 
-        stronk_layer {
+        stronkv_layer {
             bindings = <
 &kp N1          &kp N2         &kp N3                &kp N4               &kp N5     &kp GRAVE    &kp LG(LC(Q))  &kp N6     &kp N7          &kp N8          &kp N9              &kp N0
-&kp F           &kp D          &lh_lt 5 L            &kp B                &kp V      &kp DOWN     &kp UP         &kp Z      &kp G           &kp O           &kp U               &kp COMMA
-&lh_hm LCTRL S  &lh_hm LALT T  &lh_hm_quick LSHFT R  &lh_hm_quick LCMD N  &kp K      &kp LEFT     &kp RIGHT      &kp Y      &rh_hm RCMD M   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I
-&kp J           &kp Q          &lh_lt 5 X            &kp H                &kp P      &kp LBKT     &kp RBKT       &kp W      &kp C           &kp SQT         &semi_end_question  &dot_end_sentence
+&kp F           &kp D          &lh_lt 5 L            &kp B                &kp V      &kp DOWN     &kp UP         &kp Z      &kp Y           &kp O           &kp U               &kp COMMA
+&lh_hm LCTRL S  &lh_hm LALT T  &lh_hm_quick LSHFT R  &lh_hm_quick LCMD N  &kp K      &kp LEFT     &kp RIGHT      &kp G      &rh_hm RCMD W   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I
+&kp J           &kp Q          &lh_lt 5 X            &kp H                &kp P      &kp LBKT     &kp RBKT       &kp M      &kp C           &kp SQT         &semi_end_question  &dot_end_sentence
 &none           &none          &layer_gresc 6 0      &lt 7 SPACE          &lt 4 TAB  &lt 6 ENTER  &lt 6 ENTER    &lt 4 RET  &mt RSHFT BSPC  &smart_shft     &none               &none
             >;
 
-            label = "strnk";
+            label = "strnkv";
         };
 
         qwerty {
