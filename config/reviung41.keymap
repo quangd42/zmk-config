@@ -235,9 +235,9 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-&kp C_PP  &kp F           &kp L          &lh_lt 6 N           &kp K          &kp Q               &kp Z  &kp Y           &kp O           &kp U               &kp COMMA          &lt 9 BSPC
-&kp TAB   &lh_hm LCTRL S  &lh_hm LALT R  &lh_hm_shft LSHFT H  &lh_hm LCMD T  &kp M               &kp G  &rh_hm RCMD W   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I     &kp LBKT
-&none     &kp J           &kp X          &lh_lt 6 B           &kp D          &kp V               &kp P  &kp C           &kp SQT         &semi_end_question  &dot_end_sentence  &kp RBKT
+&kp C_PP  &kp E           &kp COMMA      &lh_lt 5 C            &kp B                &kp V               &kp Z      &kp F           &kp T           &kp U          &kp Y          &lt 9 BSPC
+&kp TAB   &lh_hm LCTRL A  &lh_hm LALT W  &lh_hm_quick LSHFT N  &lh_hm_quick LCMD H  &kp D               &kp J      &rh_hm RCMD R   &rh_hm RSHFT G  &rh_hm RALT I  &rh_hm RCTRL O     &kp LBKT
+&none     &kp SEMI        &kp DOT        &lh_lt 5 Q            &kp M                &kp L               &kp X      &kp S           &kp K           &kp SQT        &kp P  &kp RBKT
                                          &layer_gresc 7 0     &lt 8 SPACE           &lt 5 ENTER         &mt RSHFT BSPC  &smart_shft
             >;
 
