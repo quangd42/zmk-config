@@ -152,9 +152,9 @@
             mods = <(MOD_LGUI|MOD_RGUI)>;
             keep-mods = <(MOD_LGUI|MOD_RGUI)>;
         };
-        lh_hm_shft: lh_hm_shft {
+        lh_hm_quick: lh_hm_quick {
             compatible = "zmk,behavior-hold-tap";
-            label = "LH_HM_SHFT";
+            label = "LH_HM_QUICK";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
