@@ -219,7 +219,7 @@
 
             bindings = <
 &kp C_PP  &kp F           &kp L          &lh_lt 6 H           &kp K          &kp Q               &kp Z  &kp Y           &kp O           &kp U               &kp COMMA          &lt 9 BSPC
-&kp TAB   &lh_hm LCTRL S  &lh_hm LALT R  &lh_hm_shft LSHFT N  &lh_hm LCMD T  &kp M               &kp G  &rh_hm RCMD W   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I     &kp LBKT
+&kp TAB   &lh_hm LCTRL S  &lh_hm LALT R  &lh_hm_quick LSHFT N  &lh_hm_quick LCMD T  &kp M               &kp G  &rh_hm RCMD W   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I     &kp LBKT
 &none     &kp J           &kp X          &lh_lt 6 B           &kp D          &kp V               &kp P  &kp C           &kp SQT         &semi_end_question  &dot_end_sentence  &kp RBKT
                                          &layer_gresc 7 0     &lt 8 SPACE           &lt 5 ENTER         &mt RSHFT BSPC  &smart_shft
             >;
@@ -253,7 +253,7 @@
 
             bindings = <
 &kp C_PP  &kp B           &kp L          &kp D             &kp C          &kp V               &kp Z  &kp Y           &kp O           &kp U          &kp COMMA       &lt 7 BSPC
-&kp TAB   &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S  &kp G               &kp P  &rh_hm RCMD H   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &kp LBKT
+&kp TAB   &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm_quick LSHFT T    &lh_hm_quick LCMD S  &kp G               &kp P  &rh_hm RCMD H   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &kp LBKT
 &none     &kp Q           &kp X          &lh_lt 6 M        &kp W          &kp J               &kp K  &kp F           &kp SQT         &kp FSLH       &kp DOT         &kp RBKT
                                          &layer_gresc 7 0  &lt 8 SPACE           &lt 5 ENTER         &mt LSHFT BSPC  &smart_shft
             >;
