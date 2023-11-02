@@ -236,14 +236,14 @@
 
         vnmak_layer {
             bindings = <
-&kp N1          &kp N2         &kp N3                &kp N4               &kp N5     &kp GRAVE    &kp LG(LC(Q))  &kp N6     &kp N7          &kp N8          &kp N9         &kp N0
-&kp E           &kp COMMA      &lh_lt 5 C            &kp B                &kp V      &kp DOWN     &kp UP         &kp Z      &kp F           &kp T           &kp U          &kp Y
-&lh_hm LCTRL A  &lh_hm LALT W  &lh_hm_quick LSHFT N  &lh_hm_quick LCMD H  &kp D      &kp LEFT     &kp RIGHT      &kp J      &rh_hm RCMD R   &rh_hm RSHFT G  &rh_hm RALT I  &rh_hm RCTRL O
-&kp SEMI        &kp DOT        &lh_lt 5 Q            &kp M                &kp L      &kp LBKT     &kp RBKT       &kp X      &kp S           &kp K           &kp SQT        &kp P
-&none           &none          &layer_gresc 6 0      &lt 7 SPACE          &lt 4 TAB  &lt 6 ENTER  &lt 6 ENTER    &lt 4 RET  &mt RSHFT BSPC  &smart_shft     &none          &none
+&kp N1          &kp N2         &kp N3                &kp N4               &kp N5     &kp GRAVE    &kp LG(LC(Q))  &kp N6     &kp N7          &kp N8          &kp N9              &kp N0
+&kp Y           &kp P          &lh_lt 5 D            &kp X                &kp J      &kp DOWN     &kp UP         &kp K      &kp G           &kp U           &kp A               &kp COMMA
+&lh_hm LCTRL O  &lh_hm LALT N  &lh_hm_quick LSHFT H  &lh_hm_quick LCMD S  &kp R      &kp LEFT     &kp RIGHT      &kp C      &rh_hm RCMD T   &rh_hm RSHFT I  &rh_hm RALT E       &rh_hm RCTRL W
+&kp Z           &kp M          &lh_lt 5 B            &kp Q                &kp F      &kp LBKT     &kp RBKT       &kp L      &kp V           &kp SQT         &semi_end_question  &dot_end_sentence
+&none           &none          &layer_gresc 6 0      &lt 7 SPACE          &lt 4 TAB  &lt 6 ENTER  &lt 6 ENTER    &lt 4 RET  &mt RSHFT BSPC  &smart_shft     &none               &none
             >;
 
-            label = "vnmak3";
+            label = "vnmak2";
         };
 
         qwerty {
