@@ -237,7 +237,8 @@
         lang_switch: lang_switch {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog 2 &kp RA(SPACE)>;
+            bindings = <&tog 2>,
+                        <&kp RA(SPACE)>;
             label = "LANG_SWITCH";
             wait-ms = <40>;
             tap-ms = <40>;
