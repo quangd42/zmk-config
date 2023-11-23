@@ -237,7 +237,7 @@
         lang_switch: lang_switch {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog 1 &kp RA(SPACE)>;
+            bindings = <&tog 3 &kp RA(SPACE)>;
             label = "LANG_SWITCH";
             wait-ms = <40>;
             tap-ms = <40>;
@@ -268,18 +268,6 @@
             label = "WrfV";
         };
 
-        vnmak_layer {
-            bindings = <
-&kp N1          &kp N2         &kp N3                &kp N4               &kp N5     &kp GRAVE    &kp LG(LC(Q))  &kp N6     &kp N7          &kp N8          &kp N9              &kp N0
-&kp Y           &kp P          &lh_lt 5 D            &kp X                &kp J      &kp DOWN     &kp UP         &kp K      &kp G           &kp U           &kp A               &kp COMMA
-&lh_hm LCTRL O  &lh_hm LALT N  &lh_hm_quick LSHFT H  &lh_hm_quick LCMD S  &kp R      &kp LEFT     &kp RIGHT      &kp C      &rh_hm RCMD T   &rh_hm RSHFT I  &rh_hm RALT E       &rh_hm RCTRL W
-&kp Z           &kp M          &lh_lt 5 B            &kp Q                &kp F      &kp LBKT     &kp RBKT       &kp L      &kp V           &kp SQT         &semi_end_question  &dot_end_sentence
-&none           &none          &layer_gresc 6 0      &lt 7 SPACE          &lt 4 TAB  &lt 6 ENTER  &lt 6 ENTER    &lt 4 RET  &mt RSHFT BSPC  &smart_shft     &none               &none
-            >;
-
-            label = "vnmak2";
-        };
-
         stirred {
             //  -------------------------------------------------------------------------------------------------
             // |  GRAV |  1   |  2   |  3   |  4    |  5     |   6     |  7     |  8   |  9    |   0   | BSPC   |
@@ -297,6 +285,18 @@
             >;
 
             label = "stirred";
+        };
+
+        vnmak_layer {
+            bindings = <
+&kp N1          &kp N2         &kp N3                &kp N4               &kp N5     &lang_switch  &kp LG(LC(Q))  &kp N6     &kp N7          &kp N8          &kp N9              &kp N0
+&kp Y           &kp P          &lh_lt 5 D            &kp X                &kp J      &kp DOWN      &kp UP         &kp K      &kp G           &kp U           &kp A               &kp COMMA
+&lh_hm LCTRL O  &lh_hm LALT N  &lh_hm_quick LSHFT H  &lh_hm_quick LCMD S  &kp R      &kp LEFT      &kp RIGHT      &kp C      &rh_hm RCMD T   &rh_hm RSHFT I  &rh_hm RALT E       &rh_hm RCTRL W
+&kp Z           &kp M          &lh_lt 5 B            &kp Q                &kp F      &kp LBKT      &kp RBKT       &kp L      &kp V           &kp SQT         &semi_end_question  &dot_end_sentence
+&none           &none          &layer_gresc 6 0      &lt 7 SPACE          &lt 4 TAB  &lt 6 ENTER   &lt 6 ENTER    &lt 4 RET  &mt RSHFT BSPC  &smart_shft     &none               &none
+            >;
+
+            label = "vnmak2";
         };
 
         sym_layer {
@@ -372,7 +372,7 @@
 &trans  &trans  &trans  &trans  &trans           &trans           &trans           &trans       &trans      &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &rgb_ug RGB_TOG  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &trans       &trans      &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans           &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &trans       &trans      &trans  &trans  &trans
-&tog 1  &tog 2  &trans  &trans  &trans           &trans           &trans           &bootloader  &sys_reset  &trans  &trans  &trans
+&tog 3  &tog 1  &trans  &trans  &trans           &trans           &trans           &bootloader  &sys_reset  &trans  &trans  &trans
 &trans  &trans  &to 0   &trans  &trans           &trans           &trans           &trans       &trans      &trans  &trans  &trans
             >;
         };
