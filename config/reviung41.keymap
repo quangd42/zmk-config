@@ -211,6 +211,18 @@
             #binding-cells = <0>;
             bindings = <&kp SPACE &kp EQUAL &kp SPACE>;
         };
+
+        lang_switch: lang_switch {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp RIGHT_ALT &kp SPACE>,
+                <&macro_release>,
+                <&tog 1>;
+
+            label = "LANG_SWITCH";
+        };
     };
 
     combos {
@@ -267,9 +279,9 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-&kp C_PP  &kp V           &kp M          &lh_lt 6 L            &kp C                &kp P               &kp J  &kp F           &kp O           &kp U               &kp COMMA          &lt 7 BSPC
+&kp C_PP  &kp V           &kp M          &lh_lt 6 L            &kp C                &kp P               &kp Z  &kp F           &kp O           &kp U               &kp COMMA          &lt 7 BSPC
 &kp TAB   &lh_hm LCTRL S  &lh_hm LALT T  &lh_hm_quick LSHFT R  &lh_hm_quick LCMD D  &kp Y               &kp B  &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I     &kp LBKT
-&none     &kp Z           &kp K          &kp Q                 &kp G                &kp W               &kp X  &kp H           &kp SQT         &semi_end_question  &dot_end_sentence  &kp RBKT
+&none     &kp J           &kp K          &kp Q                 &kp G                &kp W               &kp X  &kp H           &kp SQT         &semi_end_question  &dot_end_sentence  &kp RBKT
                                          &layer_gresc 7 0      &lt 8 SPACE                 &lt 5 ENTER         &mt LSHFT BSPC  &smart_shft
             >;
 
