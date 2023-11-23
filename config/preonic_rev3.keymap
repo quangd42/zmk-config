@@ -147,7 +147,7 @@
         spc_end_sent: spc_end_sent {
             compatible = "zmk,behavior-mod-morph";
             label = "SPC_END_SENT";
-            bindings = <&lt 4 SPACE>, <&end_sentence>;
+            bindings = <&lt 3 SPACE>, <&end_sentence>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -192,16 +192,15 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             flavor = "balanced";
-            global-quick-tap;
             hold-trigger-on-release;
-            require-prior-idle-ms = <0>;
+            require-prior-idle-ms = <125>;
             hold-trigger-key-positions = <47 46 53 54 55 58 59>;
         };
 
         space_lang_switch: space_lang_switch {
             compatible = "zmk,behavior-mod-morph";
             label = "SPACE_LANG_SWITCH";
-            bindings = <&lt 7 SPACE>, <&lang_switch>;
+            bindings = <&lt 6 SPACE>, <&lang_switch>;
 
             #binding-cells = <0>;
             mods = <(MOD_RALT)>;
@@ -237,8 +236,7 @@
         lang_switch: lang_switch {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog 2>,
-                        <&kp RA(SPACE)>;
+            bindings = <&tog 2 &kp RA(SPACE)>;
             label = "LANG_SWITCH";
             wait-ms = <40>;
             tap-ms = <40>;
@@ -249,7 +247,7 @@
         compatible = "zmk,combos";
 
         one_hand_mode {
-            bindings = <&to 4>;
+            bindings = <&to 3>;
             key-positions = <40 53>;
         };
     };
@@ -260,10 +258,10 @@
         whorfv_layer {
             bindings = <
 &kp N1          &kp N2         &kp N3                &kp N4               &kp N5     &tog 2       &kp LG(LC(Q))  &kp N6     &kp N7          &kp N8          &kp N9              &kp N0
-&kp F           &kp L          &lh_lt 5 H            &kp K                &kp Q      &kp DOWN     &kp UP         &kp Z      &kp Y           &kp O           &kp U               &kp COMMA
+&kp F           &kp L          &lh_lt 4 H            &kp K                &kp Q      &kp DOWN     &kp UP         &kp Z      &kp Y           &kp O           &kp U               &kp COMMA
 &lh_hm LCTRL S  &lh_hm LALT R  &lh_hm_quick LSHFT N  &lh_hm_quick LCMD T  &kp M      &kp LEFT     &kp RIGHT      &kp G      &rh_hm RCMD W   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I
-&kp J           &kp X          &lh_lt 5 B            &kp D                &kp V      &kp LBKT     &kp RBKT       &kp P      &kp C           &kp SQT         &semi_end_question  &dot_end_sentence
-&none           &none          &layer_gresc 6 0      &space_lang_switch   &lt 4 TAB  &lt 6 ENTER  &lt 6 ENTER    &lt 4 RET  &mt RSHFT BSPC  &smart_shft     &kp MINUS           &kp EQUAL
+&kp J           &kp X          &lh_lt 4 B            &kp D                &kp V      &kp LBKT     &kp RBKT       &kp P      &kp C           &kp SQT         &semi_end_question  &dot_end_sentence
+&none           &none          &layer_gresc 5 0      &space_lang_switch   &lt 3 TAB  &lt 5 ENTER  &lt 5 ENTER    &lt 3 RET  &mt RSHFT BSPC  &smart_shft     &kp MINUS           &kp EQUAL
             >;
 
             label = "WrfV";
@@ -278,11 +276,11 @@
             // |       | LGUI | LALT | LCTL | LOWER | SPACE  |  SPACE  |  RAISE | LEFT |  DOWN |   UP  | RIGHT  |
 
             bindings = <
-&kp N1          &kp N2         &kp N3            &kp N4         &kp N5     &lang_switch  &kp LG(LC(Q))  &kp N6     &kp N7          &kp N8          &kp N9         &kp N0
-&kp V           &kp M          &lh_lt 5 L        &kp C          &kp P      &kp DOWN      &kp UP         &kp Z      &kp F           &kp O           &kp U          &kp COMMA
-&lh_hm LCTRL S  &lh_hm LALT T  &lh_hm LSHFT R    &lh_hm LCMD D  &kp Y      &kp LEFT      &kp RIGHT      &kp X      &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I
-&kp J           &kp K          &kp Q             &kp G          &kp W      &kp LBKT      &kp RBKT       &kp B      &kp H           &kp SQT         &kp SEMI       &kp DOT
-&none           &none          &layer_gresc 6 0  &lt 7 SPACE    &lt 4 TAB  &lt 6 ENTER   &lt 6 ENTER    &lt 4 RET  &mt RSHFT BSPC  &smart_shft     &none          &none
+&kp N1          &kp N2         &kp N3                &kp N4               &kp N5     &lang_switch  &kp LG(LC(Q))  &kp N6     &kp N7          &kp N8          &kp N9         &kp N0
+&kp V           &kp M          &lh_lt 4 L            &kp C                &kp P      &kp DOWN      &kp UP         &kp Z      &kp F           &kp O           &kp U          &kp COMMA
+&lh_hm LCTRL S  &lh_hm LALT T  &lh_hm_quick LSHFT R  &lh_hm_quick LCMD D  &kp Y      &kp LEFT      &kp RIGHT      &kp X      &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I
+&kp J           &kp K          &kp Q                 &kp G                &kp W      &kp LBKT      &kp RBKT       &kp B      &kp H           &kp SQT         &kp SEMI       &kp DOT
+&none           &none          &layer_gresc 5 0      &lt 6 SPACE          &lt 3 TAB  &lt 5 ENTER   &lt 5 ENTER    &lt 3 RET  &mt RSHFT BSPC  &smart_shft     &none          &none
             >;
 
             label = "stirred";
@@ -291,30 +289,13 @@
         vnmak_layer {
             bindings = <
 &kp N1          &kp N2         &kp N3                &kp N4               &kp N5     &tog 2       &kp LG(LC(Q))  &kp N6     &kp N7          &kp N8          &kp N9              &kp N0
-&kp Y           &kp P          &lh_lt 5 D            &kp X                &kp J      &kp DOWN     &kp UP         &kp K      &kp G           &kp U           &kp A               &kp COMMA
+&kp Y           &kp P          &lh_lt 4 D            &kp X                &kp J      &kp DOWN     &kp UP         &kp K      &kp G           &kp U           &kp A               &kp COMMA
 &lh_hm LCTRL O  &lh_hm LALT N  &lh_hm_quick LSHFT H  &lh_hm_quick LCMD S  &kp R      &kp LEFT     &kp RIGHT      &kp C      &rh_hm RCMD T   &rh_hm RSHFT I  &rh_hm RALT E       &rh_hm RCTRL W
-&kp Z           &kp M          &lh_lt 5 B            &kp Q                &kp F      &kp LBKT     &kp RBKT       &kp L      &kp V           &kp SQT         &semi_end_question  &dot_end_sentence
-&none           &none          &layer_gresc 6 0      &lt 7 SPACE          &lt 4 TAB  &lt 6 ENTER  &lt 6 ENTER    &lt 4 RET  &mt RSHFT BSPC  &smart_shft     &none               &none
+&kp Z           &kp M          &lh_lt 4 B            &kp Q                &kp F      &kp LBKT     &kp RBKT       &kp L      &kp V           &kp SQT         &semi_end_question  &dot_end_sentence
+&none           &none          &layer_gresc 5 0      &lt 6 SPACE          &lt 3 TAB  &lt 5 ENTER  &lt 5 ENTER    &lt 3 RET  &mt RSHFT BSPC  &smart_shft     &none               &none
             >;
 
             label = "vnmak2";
-        };
-
-        sym_layer {
-            // ------------------------------------------------------------------------------------------
-            // |   ~   |  !   |  @   |  #   |  $   |  %   |   ^   |   &   |   *  |  (   |   )   | BSPC  |
-            // |   ~   |  !   |  @   |  #   |  $   |  %   |   ^   |   &   |   *  |  (   |   )   | DEL   |
-            // |  DEL  |  F1  |  F2  |  F3  |  F4  |  F5  |  F6   |   -   |   +  |  [   |   ]   |  |    |
-            // |       |  F7  |  F8  |  F9  |  F10 |  F11 |  F12  |       | LCTL | HOME |  END  |       |
-            // | LALT  |      |      |      |      |      |       |       | NEXT | VOL- | VOL+  | PLAY  |
-
-            bindings = <
-&none      &none      &none      &none      &none      &none     &none    &none     &none     &none      &none     &none
-&kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT  &none     &none    &none     &none     &none      &none     &none
-&kp AMPS   &kp COLON  &kp MINUS  &kp LPAR   &kp LBKT   &kp PIPE  &none    &none     &sk RCMD  &sk RSHFT  &sk RALT  &sk RCTRL
-&kp CARET  &kp BSLH   &kp EQUAL  &kp RPAR   &kp RBKT   &kp BSLH  &none    &none     &none     &none      &none     &none
-&none      &none      &to 0      &kp SPACE  &none      &kp RET   &kp RET  &kp BSPC  &kp BSPC  &none      &none     &none
-            >;
         };
 
         code_sym_layer {
@@ -352,7 +333,7 @@
 &none      &kp LG(W)  &none      &kp LS(LG(N4))  &kp LS(LG(N5))  &kp C_VOL_DN  &kp C_VOL_UP  &kp F12  &kp F7  &kp F8  &kp F9  &none
 &kp LG(A)  &none      &none      &none           &kp LG(BSLH)    &kp K_MUTE    &kp C_PP      &kp F11  &kp F4  &kp F5  &kp F6  &none
 &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)       &kp LG(LS(Z))   &kp C_BRI_DN  &kp C_BRI_UP  &kp F10  &kp F1  &kp F2  &kp F3  &none
-&none      &none      &to 0      &lt 7 SPACE     &kp RET         &none         &none         &none    &none   &mo 8   &none   &none
+&none      &none      &to 0      &lt 6 SPACE     &kp RET         &none         &none         &none    &none   &mo 7   &none   &none
             >;
 
             label = "Fun";
@@ -373,7 +354,7 @@
 &trans  &trans  &trans  &trans  &trans           &trans           &trans           &trans       &trans      &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &rgb_ug RGB_TOG  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &trans       &trans      &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans           &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &trans       &trans      &trans  &trans  &trans
-&tog 3  &tog 1  &trans  &trans  &trans           &trans           &trans           &bootloader  &sys_reset  &trans  &trans  &trans
+&tog 0  &tog 1  &trans  &trans  &trans           &trans           &trans           &bootloader  &sys_reset  &trans  &trans  &trans
 &trans  &trans  &to 0   &trans  &trans           &trans           &trans           &trans       &trans      &trans  &trans  &trans
             >;
         };
