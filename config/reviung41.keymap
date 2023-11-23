@@ -213,14 +213,7 @@
         lang_switch: lang_switch {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp RALT>,
-                <&macro_tap>,
-                <&kp SPACE>,
-                <&macro_release>,
-                <&kp RALT &tog 2>;
-
+            bindings = <&tog 2 &kp RA(SPACE)>;
             label = "LANG_SWITCH";
         };
     };
@@ -245,10 +238,10 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-&kp C_PP  &kp F           &kp L          &lh_lt 5 H            &kp K                &kp Q               &kp Z  &kp Y           &kp O           &kp U               &kp COMMA          &lt 8 LG(LC(Q))
-&kp TAB   &lh_hm LCTRL S  &lh_hm LALT R  &lh_hm_quick LSHFT N  &lh_hm_quick LCMD T  &kp M               &kp G  &rh_hm RCMD W   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I     &kp LBKT
-&none     &kp J           &kp X          &lh_lt 5 B            &kp D                &kp V               &kp P  &kp C           &kp SQT         &semi_end_question  &dot_end_sentence  &kp RBKT
-                                         &layer_gresc 6 0      &lt 7 SPACE                 &lt 4 ENTER         &mt RSHFT BSPC  &smart_shft
+&kp C_PP      &kp F           &kp L          &lh_lt 5 H            &kp K                &kp Q               &kp Z  &kp Y           &kp O           &kp U               &kp COMMA          &lt 8 LG(LC(Q))
+&kp TAB       &lh_hm LCTRL S  &lh_hm LALT R  &lh_hm_quick LSHFT N  &lh_hm_quick LCMD T  &kp M               &kp G  &rh_hm RCMD W   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I     &kp LBKT
+&lang_switch  &kp J           &kp X          &lh_lt 5 B            &kp D                &kp V               &kp P  &kp C           &kp SQT         &semi_end_question  &dot_end_sentence  &kp RBKT
+                                             &layer_gresc 6 0      &lt 7 SPACE                 &lt 4 ENTER         &mt RSHFT BSPC  &smart_shft
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -264,7 +257,7 @@
             bindings = <
 &kp C_PP  &kp V           &kp M          &lh_lt 5 L            &kp C                &kp P               &kp Z  &kp F           &kp O           &kp U               &kp COMMA          &lt 6 BSPC
 &kp TAB   &lh_hm LCTRL S  &lh_hm LALT T  &lh_hm_quick LSHFT R  &lh_hm_quick LCMD D  &kp Y               &kp X  &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I     &kp LBKT
-&none     &kp J           &kp K          &kp Q                 &kp G                &kp W               &kp B  &kp H           &kp SQT         &semi_end_question  &dot_end_sentence  &kp RBKT
+&trans    &kp J           &kp K          &kp Q                 &kp G                &kp W               &kp B  &kp H           &kp SQT         &semi_end_question  &dot_end_sentence  &kp RBKT
                                          &layer_gresc 6 0      &lt 7 SPACE                 &lt 4 ENTER         &mt LSHFT BSPC  &smart_shft
             >;
 
@@ -281,7 +274,7 @@
             bindings = <
 &kp C_PP  &kp Y           &kp P          &lh_lt 4 D            &kp X                &kp J               &kp K  &kp G           &kp U           &kp A               &kp COMMA          &lt 8 BSPC
 &kp TAB   &lh_hm LCTRL O  &lh_hm LALT N  &lh_hm_quick LSHFT H  &lh_hm_quick LCMD S  &kp R               &kp C  &rh_hm RCMD T   &rh_hm RSHFT I  &rh_hm RALT E       &rh_hm RCTRL W     &kp LBKT
-&none     &kp Z           &kp M          &lh_lt 4 Q            &kp Q                &kp F               &kp L  &kp V           &kp SQT         &semi_end_question  &dot_end_sentence  &kp RBKT
+&trans    &kp Z           &kp M          &lh_lt 4 Q            &kp Q                &kp F               &kp L  &kp V           &kp SQT         &semi_end_question  &dot_end_sentence  &kp RBKT
                                          &layer_gresc 6 0      &lt 7 SPACE                 &lt 4 ENTER         &mt RSHFT BSPC  &smart_shft
             >;
 
@@ -359,7 +352,7 @@
             bindings = <
 &none  &none   &none   &none   &none         &none                &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR  &none
 &to 0  &none   &none   &none   &none         &none                &none         &none         &none         &none         &none       &none
-&none  &tog 2  &tog 1  &tog 3  &out OUT_USB  &out OUT_BLE         &bootloader   &none         &none         &none         &none       &none
+&none  &tog 1  &tog 2  &tog 3  &out OUT_USB  &out OUT_BLE         &bootloader   &none         &none         &none         &none       &none
                        &to 0   &none                       &none                &none         &none
             >;
 
