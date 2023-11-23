@@ -216,9 +216,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press>,
-                <&kp RIGHT_ALT &kp SPACE>,
-                <&macro_release>,
+                <&macro_press &kp RALT>,
+                <&macro_tap &kp SPACE>,
+                <&macro_release &kp RALT>,
                 <&tog 1>;
 
             label = "LANG_SWITCH";
