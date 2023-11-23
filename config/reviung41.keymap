@@ -172,7 +172,7 @@
             quick-tap-ms = <175>;
             flavor = "balanced";
             hold-trigger-on-release;
-            require-prior-idle-ms = <10>;
+            require-prior-idle-ms = <125>;
             hold-trigger-key-positions = <34 38 33 32>;
         };
     };
