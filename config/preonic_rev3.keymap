@@ -144,15 +144,6 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        spc_end_sent: spc_end_sent {
-            compatible = "zmk,behavior-mod-morph";
-            label = "SPC_END_SENT";
-            bindings = <&lt 4 SPACE>, <&end_sentence>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
         semi_end_question: semi_end_question {
             compatible = "zmk,behavior-mod-morph";
             label = "SEMI_END_QUESTION";
@@ -195,15 +186,6 @@
             hold-trigger-on-release;
             require-prior-idle-ms = <125>;
             hold-trigger-key-positions = <47 46 53 54 55 58 59>;
-        };
-
-        space_lang_switch: space_lang_switch {
-            compatible = "zmk,behavior-mod-morph";
-            label = "SPACE_LANG_SWITCH";
-            bindings = <&lt 7 SPACE>, <&lang_switch>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RALT)>;
         };
     };
 
