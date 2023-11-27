@@ -213,7 +213,7 @@
         lang_switch: lang_switch {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog 2 &kp RA(SPACE)>;
+            bindings = <&tog 1 &kp RA(SPACE)>;
             label = "LANG_SWITCH";
         };
     };
@@ -258,7 +258,7 @@
 &kp C_PP  &kp V           &kp M          &lh_lt 5 L            &kp C                &kp P               &kp Z  &kp F           &kp O           &kp U               &kp COMMA          &lt 6 BSPC
 &kp TAB   &lh_hm LCTRL S  &lh_hm LALT T  &lh_hm_quick LSHFT R  &lh_hm_quick LCMD D  &kp Y               &kp X  &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I     &kp LBKT
 &trans    &kp J           &kp K          &kp Q                 &kp G                &kp W               &kp B  &kp H           &kp SQT         &semi_end_question  &dot_end_sentence  &kp RBKT
-                                         &layer_gresc 6 0      &lt 7 SPACE                 &lt 4 ENTER         &mt LSHFT BSPC  &smart_shft
+                                         &layer_gresc 6 0      &lt 7 SPACE                 &lt 4 ENTER         &mt RSHFT BSPC  &smart_shft
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
