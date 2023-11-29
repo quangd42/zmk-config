@@ -32,9 +32,9 @@
     label = "ADAPTIVE_B";
     #binding-cells = <0>;
     defaults = <&kp B>;
-    bindings = <&kp Y>, <&kp Y>, <&kp U>, <&kp Y>, <&kp L>, <&kp K>, <&kp A>, <&kp Y>, <&kp L>, <&kp K>, <&kp E>, <&kp P>;
+    bindings = <&kp O>, <&kp Y>, <&kp Y>, <&kp U>, <&kp Y>, <&kp L>, <&kp K>, <&kp A>, <&kp Y>, <&kp L>, <&kp K>, <&kp M &kp E &kp N &kp T>, <&kp E>, <&kp P>;
     max-delay-ms = <250>;
-    antecedents = <C D E G K L O P R S U Y>;
+    antecedents = <A C D E G K L O P R S T U Y>;
     };
   };
 };
