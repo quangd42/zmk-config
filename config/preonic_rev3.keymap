@@ -27,11 +27,11 @@
 
 / {
   behaviors {
-    ad_z: adaptive_z {
+    ad_b: adaptive_b {
     compatible = "zmk,behavior-antecedent-morph";
-    label = "ADAPTIVE_Z";
+    label = "ADAPTIVE_B";
     #binding-cells = <0>;
-    defaults = <&kp Z>;
+    defaults = <&kp B>;
     bindings = <&kp K>, <&kp L>;
     max-delay-ms = <250>;
     antecedents = <L K>;
@@ -292,9 +292,9 @@
 
             bindings = <
 &kp N1          &kp N2         &kp N3                &kp N4               &kp N5     &trans       &kp LG(LC(Q))  &kp N6     &kp N7          &kp N8          &kp N9         &kp N0
-&kp V           &kp M          &lh_lt 5 L            &kp C                &kp P      &kp DOWN     &kp UP         &kp J      &kp F           &kp O           &kp U          &kp COMMA
-&lh_hm LCTRL S  &lh_hm LALT T  &lh_hm_quick LSHFT R  &lh_hm_quick LCMD D  &kp Y      &kp LEFT     &kp RIGHT      &ad_z      &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I
-&kp X           &kp K          &kp Q                 &kp G                &kp W      &kp LBKT     &kp RBKT       &kp B      &kp H           &kp SQT         &kp SEMI       &kp DOT
+&kp V           &kp M          &lh_lt 5 L            &kp Y                &kp w      &kp DOWN     &kp UP         &kp Z      &kp F           &kp O           &kp U          &kp COMMA
+&lh_hm LCTRL S  &lh_hm LALT T  &lh_hm_quick LSHFT R  &lh_hm_quick LCMD D  &kp G      &kp LEFT     &kp RIGHT      &ad_b      &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I
+&kp X           &kp K          &kp J                 &kp C                &kp P      &kp LBKT     &kp RBKT       &kp Q      &kp H           &kp SQT         &kp SEMI       &kp DOT
 &none           &none          &layer_gresc 6 0      &lt 7 SPACE          &lt 4 TAB  &lt 6 ENTER  &lt 6 ENTER    &lt 4 RET  &mt RSHFT BSPC  &smart_shft     &kp MINUS      &kp EQUAL
             >;
 
