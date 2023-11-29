@@ -258,11 +258,11 @@
             // |       | LGUI | LALT | LCTL | LOWER | SPACE  |  SPACE  |  RAISE | LEFT |  DOWN |   UP  | RIGHT  |
 
             bindings = <
-&kp N1          &kp N2         &kp N3                &kp N4               &kp N5     &trans       &kp LG(LC(Q))  &kp N6     &kp N7          &kp N8          &kp N9         &kp N0
-&kp V           &kp M          &lh_lt 5 L            &kp Y                &kp P      &kp DOWN     &kp UP         &kp J      &kp F           &kp O           &kp U          &kp COMMA
-&lh_hm LCTRL S  &lh_hm LALT T  &lh_hm_quick LSHFT R  &lh_hm_quick LCMD D  &kp G      &kp LEFT     &kp RIGHT      &kp K      &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I
-&kp K           &kp X          &kp Q                 &kp C                &kp W      &kp LBKT     &kp Z          &kp B      &kp H           &kp SQT         &kp SEMI       &kp DOT
-&none           &none          &layer_gresc 6 0      &lt 7 SPACE          &lt 4 TAB  &lt 6 ENTER  &lt 6 ENTER    &lt 4 RET  &mt RSHFT BSPC  &smart_shft     &kp MINUS      &kp EQUAL
+&kp N1          &kp N2         &kp N3                &kp N4               &kp N5     &trans       &kp LG(LC(Q))  &kp N6     &kp N7          &kp N8          &kp N9              &kp N0
+&kp V           &kp M          &lh_lt 5 L            &kp Y                &kp P      &kp DOWN     &kp UP         &kp J      &kp F           &kp O           &kp U               &kp COMMA
+&lh_hm LCTRL S  &lh_hm LALT T  &lh_hm_quick LSHFT R  &lh_hm_quick LCMD D  &kp G      &kp LEFT     &kp RIGHT      &kp K      &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I
+&kp K           &kp X          &kp Q                 &kp C                &kp W      &kp LBKT     &kp Z          &kp B      &kp H           &kp SQT         &semi_end_question  &dot_end_sentence
+&none           &none          &layer_gresc 6 0      &lt 7 SPACE          &lt 4 TAB  &lt 6 ENTER  &lt 6 ENTER    &lt 4 RET  &mt RSHFT BSPC  &smart_shft     &kp MINUS           &kp EQUAL
             >;
 
             label = "stirred";
