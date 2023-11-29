@@ -68,10 +68,10 @@
             label = "ADAPTIVE_J";
             #binding-cells = <0>;
             defaults = <&kp J>;
-            bindings = <&str_efore>, <&kp U>, <&kp O>;
+            bindings = <&kp O>, <&str_efore>, <&kp U>, <&kp F>;
 
             max-delay-ms = <250>;
-            antecedents = <B E A>;
+            antecedents = <A B E N>;
         };
     };
 };
