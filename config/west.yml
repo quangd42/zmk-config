@@ -9,7 +9,7 @@ manifest:
     #   remote: zmkfirmware
     #   revision: main
     #   import: app/west.yml
-    - name: vyw
+    - name: zmk
       remote: voidyourwarranty
       revision: devel-adaptive
       import: app/west.yml
