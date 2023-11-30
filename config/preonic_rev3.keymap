@@ -247,15 +247,6 @@
             require-prior-idle-ms = <125>;
             hold-trigger-key-positions = <47 46 53 54 55 58 59>;
         };
-
-        space_lang_switch: space_lang_switch {
-            compatible = "zmk,behavior-mod-morph";
-            label = "SPACE_LANG_SWITCH";
-            bindings = <&lt 7 SPACE>, <&lang_switch>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RALT)>;
-        };
     };
 
     macros {
@@ -264,6 +255,8 @@
             label = "UP_DIR";
             #binding-cells = <0>;
             bindings = <&kp DOT &kp DOT &kp FSLH>;
+            wait-ms = <40>;
+            tap-ms = <4>;
         };
 
         end_sentence: end_sentence {
@@ -298,7 +291,7 @@
             #binding-cells = <0>;
             bindings = <&kp T &kp H &kp E>;
             label = "STR_THE";
-            wait-ms = <40>;
+            wait-ms = <30>;
             tap-ms = <4>;
         };
 
@@ -307,7 +300,7 @@
             #binding-cells = <0>;
             bindings = <&kp M &kp E &kp N &kp T>;
             label = "STR_MENT";
-            wait-ms = <40>;
+            wait-ms = <30>;
             tap-ms = <4>;
         };
 
@@ -316,7 +309,7 @@
             #binding-cells = <0>;
             bindings = <&kp E &kp F &kp O &kp R &kp E>;
             label = "STR_EFORE";
-            wait-ms = <40>;
+            wait-ms = <30>;
             tap-ms = <4>;
         };
     };
@@ -333,18 +326,6 @@
     keymap {
         compatible = "zmk,keymap";
 
-        whorfv_layer {
-            bindings = <
-&kp N1          &kp N2         &kp N3                &kp N4               &kp N5     &lang_switch  &kp LG(LC(Q))  &kp N6     &kp N7          &kp N8          &kp N9              &kp N0
-&kp F           &kp L          &lh_lt 5 H            &kp K                &kp Q      &kp DOWN      &kp UP         &kp Z      &kp Y           &kp O           &kp U               &kp COMMA
-&lh_hm LCTRL S  &lh_hm LALT R  &lh_hm_quick LSHFT N  &lh_hm_quick LCMD T  &kp M      &kp LEFT      &kp RIGHT      &kp G      &rh_hm RCMD W   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I
-&kp J           &kp X          &lh_lt 5 B            &kp D                &kp V      &kp LBKT      &kp RBKT       &kp P      &kp C           &kp SQT         &semi_end_question  &dot_end_sentence
-&none           &none          &layer_gresc 6 0      &lt 7 SPACE          &lt 4 TAB  &lt 6 ENTER   &lt 6 ENTER    &lt 4 RET  &mt RSHFT BSPC  &smart_shft     &kp MINUS           &kp EQUAL
-            >;
-
-            label = "WrfV";
-        };
-
         stirred_layer {
             //  -------------------------------------------------------------------------------------------------
             // |  GRAV |  1   |  2   |  3   |  4    |  5     |   6     |  7     |  8   |  9    |   0   | BSPC   |
@@ -354,14 +335,26 @@
             // |       | LGUI | LALT | LCTL | LOWER | SPACE  |  SPACE  |  RAISE | LEFT |  DOWN |   UP  | RIGHT  |
 
             bindings = <
-&kp N1          &kp N2         &kp N3                &kp N4               &kp N5     &trans       &kp LG(LC(Q))  &kp N6     &kp N7          &kp N8          &kp N9              &kp N0
-&kp V           &ad_m          &lh_lt 5 L            &kp C                &kp P      &kp DOWN     &kp UP         &kp Q      &kp F           &kp O           &kp U               &kp COMMA
-&lh_hm LCTRL S  &lh_hm LALT T  &lh_hm_quick LSHFT R  &lh_hm_quick LCMD D  &kp Y      &kp LEFT     &kp RIGHT      &ad_z      &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I
-&kp X           &kp K          &ad_j                 &kp G                &kp W      &kp LBKT     &kp RBKT       &kp B      &kp H           &kp SQT         &semi_end_question  &dot_end_sentence
-&none           &none          &layer_gresc 6 0      &lt 7 SPACE          &lt 4 TAB  &lt 6 ENTER  &lt 6 ENTER    &lt 4 RET  &mt RSHFT BSPC  &smart_shft     &kp MINUS           &kp EQUAL
+&kp N1          &kp N2         &kp N3                &kp N4               &kp N5     &lang_switch  &kp LG(LC(Q))  &kp N6     &kp N7          &kp N8          &kp N9              &kp N0
+&kp V           &ad_m          &lh_lt 5 L            &kp C                &kp P      &kp DOWN      &kp UP         &kp Q      &kp F           &kp O           &kp U               &kp COMMA
+&lh_hm LCTRL S  &lh_hm LALT T  &lh_hm_quick LSHFT R  &lh_hm_quick LCMD D  &kp Y      &kp LEFT      &kp RIGHT      &ad_z      &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I
+&kp X           &kp K          &ad_j                 &kp G                &kp W      &kp LBKT      &kp RBKT       &kp B      &kp H           &kp SQT         &semi_end_question  &dot_end_sentence
+&none           &none          &layer_gresc 6 0      &lt 7 SPACE          &lt 4 TAB  &lt 6 ENTER   &lt 6 ENTER    &lt 4 RET  &mt RSHFT BSPC  &smart_shft     &kp MINUS           &kp EQUAL
             >;
 
             label = "stirred";
+        };
+
+        whorfv_layer {
+            bindings = <
+&kp N1          &kp N2         &kp N3                &kp N4               &kp N5     &trans       &kp LG(LC(Q))  &kp N6     &kp N7          &kp N8          &kp N9              &kp N0
+&kp F           &kp L          &lh_lt 5 H            &kp K                &kp Q      &kp DOWN     &kp UP         &kp Z      &kp Y           &kp O           &kp U               &kp COMMA
+&lh_hm LCTRL S  &lh_hm LALT R  &lh_hm_quick LSHFT N  &lh_hm_quick LCMD T  &kp M      &kp LEFT     &kp RIGHT      &kp G      &rh_hm RCMD W   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I
+&kp J           &kp X          &lh_lt 5 B            &kp D                &kp V      &kp LBKT     &kp RBKT       &kp P      &kp C           &kp SQT         &semi_end_question  &dot_end_sentence
+&none           &none          &layer_gresc 6 0      &lt 7 SPACE          &lt 4 TAB  &lt 6 ENTER  &lt 6 ENTER    &lt 4 RET  &mt RSHFT BSPC  &smart_shft     &kp MINUS           &kp EQUAL
+            >;
+
+            label = "WrfV";
         };
 
         vnmak_layer {
