@@ -175,6 +175,53 @@
             require-prior-idle-ms = <125>;
             hold-trigger-key-positions = <34 38 33 32>;
         };
+
+        ad_z: adaptive_z {
+            compatible = "zmk,behavior-antecedent-morph";
+            label = "ADAPTIVE_Z";
+            #binding-cells = <0>;
+            defaults = <&kp Z>;
+            bindings =
+                <&kp O>,
+                <&kp Y>,
+                <&kp Y>,
+                <&kp U>,
+                <&kp Y>,
+                <&kp L>,
+                <&kp K>,
+                <&kp A>,
+                <&kp Y>,
+                <&kp L>,
+                <&kp K>,
+                <&str_ment>,
+                <&kp E>,
+                <&kp P>,
+                <&str_the>;
+
+            max-delay-ms = <250>;
+            antecedents = <A C D E G K L O P R S T U Y SPACE>;
+        };
+
+        ad_m: adaptive_m {
+            compatible = "zmk,behavior-antecedent-morph";
+            label = "ADAPTIVE_M";
+            #binding-cells = <0>;
+            defaults = <&kp M>;
+            bindings = <&kp K>;
+            max-delay-ms = <250>;
+            antecedents = <C>;
+        };
+
+        ad_j: adaptive_j {
+            compatible = "zmk,behavior-antecedent-morph";
+            label = "ADAPTIVE_J";
+            #binding-cells = <0>;
+            defaults = <&kp J>;
+            bindings = <&kp O>, <&str_efore>, <&kp U>, <&kp F>;
+
+            max-delay-ms = <250>;
+            antecedents = <A B E N>;
+        };
     };
 
     macros {
@@ -183,6 +230,8 @@
             label = "UP_DIR";
             #binding-cells = <0>;
             bindings = <&kp DOT &kp DOT &kp FSLH>;
+            wait-ms = <30>;
+            tap-ms = <4>;
         };
 
         end_sentence: end_sentence {
@@ -213,8 +262,35 @@
         lang_switch: lang_switch {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog 2 &kp RA(SPACE)>;
+            bindings = <&tog 1 &kp RA(SPACE)>;
             label = "LANG_SWITCH";
+        };
+
+        str_the: str_the {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp T &kp H &kp E>;
+            label = "STR_THE";
+            wait-ms = <40>;
+            tap-ms = <4>;
+        };
+
+        str_ment: str_ment {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp M &kp E &kp N &kp T>;
+            label = "STR_MENT";
+            wait-ms = <40>;
+            tap-ms = <4>;
+        };
+
+        str_efore: str_efore {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp E &kp F &kp O &kp R &kp E>;
+            label = "STR_EFORE";
+            wait-ms = <40>;
+            tap-ms = <4>;
         };
     };
 
@@ -230,6 +306,23 @@
     keymap {
         compatible = "zmk,keymap";
 
+        stirred_layer {
+            // -------------------------------------------------------------------------------------
+            // |  TAB |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  :  |   BKSP    |
+            // | CTRL |  A  |  R  |  S  |  T  |  G  |   |  M  |  N   |  E  |  I  |  O  |    '      |
+            // | SHFT |  Z  |  X  |  C  |  D  |  V  |   |  K  |  H   |  ,  |  .  |  /  | SHFT(RET) |
+            //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
+
+            bindings = <
+&kp C_PP  &kp V           &ad_m          &lh_lt 5 L            &kp C                &kp P               &kp Q  &kp F           &kp O           &kp U               &kp COMMA          &lt 8 LG(LC(Q))
+&kp TAB   &lh_hm LCTRL S  &lh_hm LALT T  &lh_hm_quick LSHFT R  &lh_hm_quick LCMD D  &kp Y               &ad_z  &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I     &kp LBKT
+&lang_switch    &kp X           &kp K          &ad_j                 &kp G                &kp W               &kp B  &kp H           &kp SQT         &semi_end_question  &dot_end_sentence  &kp RBKT
+                                         &layer_gresc 6 0      &lt 7 SPACE                 &lt 4 ENTER         &mt RSHFT BSPC  &smart_shft
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
         whorfv_layer {
             // -------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  :  |   BKSP    |
@@ -240,25 +333,8 @@
             bindings = <
 &kp C_PP      &kp F           &kp L          &lh_lt 5 H            &kp K                &kp Q               &kp Z  &kp Y           &kp O           &kp U               &kp COMMA          &lt 8 LG(LC(Q))
 &kp TAB       &lh_hm LCTRL S  &lh_hm LALT R  &lh_hm_quick LSHFT N  &lh_hm_quick LCMD T  &kp M               &kp G  &rh_hm RCMD W   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I     &kp LBKT
-&lang_switch  &kp J           &kp X          &lh_lt 5 B            &kp D                &kp V               &kp P  &kp C           &kp SQT         &semi_end_question  &dot_end_sentence  &kp RBKT
+&trans  &kp J           &kp X          &lh_lt 5 B            &kp D                &kp V               &kp P  &kp C           &kp SQT         &semi_end_question  &dot_end_sentence  &kp RBKT
                                              &layer_gresc 6 0      &lt 7 SPACE                 &lt 4 ENTER         &mt RSHFT BSPC  &smart_shft
-            >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
-        };
-
-        stirred_layer {
-            // -------------------------------------------------------------------------------------
-            // |  TAB |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  :  |   BKSP    |
-            // | CTRL |  A  |  R  |  S  |  T  |  G  |   |  M  |  N   |  E  |  I  |  O  |    '      |
-            // | SHFT |  Z  |  X  |  C  |  D  |  V  |   |  K  |  H   |  ,  |  .  |  /  | SHFT(RET) |
-            //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
-
-            bindings = <
-&kp C_PP  &kp V           &kp M          &lh_lt 5 L            &kp C                &kp P               &kp Z  &kp F           &kp O           &kp U               &kp COMMA          &lt 6 BSPC
-&kp TAB   &lh_hm LCTRL S  &lh_hm LALT T  &lh_hm_quick LSHFT R  &lh_hm_quick LCMD D  &kp Y               &kp X  &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I     &kp LBKT
-&trans    &kp J           &kp K          &kp Q                 &kp G                &kp W               &kp B  &kp H           &kp SQT         &semi_end_question  &dot_end_sentence  &kp RBKT
-                                         &layer_gresc 6 0      &lt 7 SPACE                 &lt 4 ENTER         &mt LSHFT BSPC  &smart_shft
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
