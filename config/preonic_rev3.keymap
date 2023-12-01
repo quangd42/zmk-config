@@ -49,7 +49,7 @@
                 <&kp P>,
                 <&str_the>;
 
-            max-delay-ms = <250>;
+            max-delay-ms = <500>;
             antecedents = <A C D E G K L O P R S T U Y SPACE>;
         };
 
@@ -59,7 +59,7 @@
             #binding-cells = <0>;
             defaults = <&kp M>;
             bindings = <&kp K>;
-            max-delay-ms = <250>;
+            max-delay-ms = <500>;
             antecedents = <C>;
         };
 
@@ -70,7 +70,7 @@
             defaults = <&kp J>;
             bindings = <&kp O>, <&str_efore>, <&kp U>, <&kp F>;
 
-            max-delay-ms = <250>;
+            max-delay-ms = <500>;
             antecedents = <A B E N>;
         };
     };
