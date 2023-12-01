@@ -65,13 +65,14 @@
                 <&kp L>,
                 <&kp K>,
                 <&kp Y>,
+                <&kp K>,
                 <&str_ment>,
                 <&kp P>,
                 <&kp P>,
                 <&str_the>;
 
             max-delay-ms = <500>;
-            antecedents = <C D G K L P T X Y SPACE>;
+            antecedents = <C D G K L P S T X Y SPACE>;
         };
 
         ad_m: adaptive_m {
