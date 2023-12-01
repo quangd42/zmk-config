@@ -65,7 +65,7 @@
                 <&kp L>,
                 <&kp K>,
                 <&kp Y>,
-                <str_ue>,
+                <&str_ue>,
                 <&kp K>,
                 <&str_ment>,
                 <&kp P>;
