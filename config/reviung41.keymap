@@ -214,12 +214,13 @@
                 <&kp L>,
                 <&kp K>,
                 <&kp Y>,
+                <&str_ue>
                 <&kp K>,
                 <&str_ment>,
                 <&kp P>;
 
             max-delay-ms = <500>;
-            antecedents = <B C D G K L P S T Y>;
+            antecedents = <B C D G K L P Q S T Y>;
         };
 
         ad_m: adaptive_m {
@@ -301,6 +302,15 @@
             bindings = <&kp E &kp F &kp O &kp R &kp E>;
             label = "STR_EFORE";
             wait-ms = <40>;
+            tap-ms = <4>;
+        };
+
+        str_ue: str_ue {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp U &kp E>;
+            label = "STR_UE";
+            wait-ms = <30>;
             tap-ms = <4>;
         };
     };
