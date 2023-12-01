@@ -46,11 +46,10 @@
                 <&kp K>,
                 <&str_ment>,
                 <&kp E>,
-                <&kp P>,
-                <&str_the>;
+                <&kp P>;
 
             max-delay-ms = <500>;
-            antecedents = <A C D E G K L O P R S T U Y SPACE>;
+            antecedents = <A C D E G K L O P R S T U Y>;
         };
 
         ad_b: adaptive_b {
@@ -304,15 +303,6 @@
             label = "LANG_SWITCH";
             wait-ms = <40>;
             tap-ms = <40>;
-        };
-
-        str_the: str_the {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp T &kp H &kp E>;
-            label = "STR_THE";
-            wait-ms = <30>;
-            tap-ms = <4>;
         };
 
         str_ment: str_ment {
