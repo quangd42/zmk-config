@@ -53,13 +53,33 @@
             antecedents = <A C D E G K L O P R S T U Y SPACE>;
         };
 
+        ad_b: adaptive_b {
+            compatible = "zmk,behavior-antecedent-morph";
+            label = "ADAPTIVE_B";
+            #binding-cells = <0>;
+            defaults = <&kp B>;
+            bindings =
+                <&kp Y>,
+                <&kp Y>,
+                <&kp Y>,
+                <&kp L>,
+                <&kp K>,
+                <&kp Y>,
+                <&str_ment>,
+                <&kp P>,
+                <&str_the>;
+
+            max-delay-ms = <500>;
+            antecedents = <C D G K L P T Y SPACE>;
+        };
+
         ad_m: adaptive_m {
             compatible = "zmk,behavior-antecedent-morph";
             label = "ADAPTIVE_M";
             #binding-cells = <0>;
             defaults = <&kp M>;
             bindings = <&kp K>;
-            max-delay-ms = <500>;
+            max-delay-ms = <300>;
             antecedents = <C>;
         };
 
@@ -337,8 +357,8 @@
             bindings = <
 &kp N1          &kp N2         &kp N3                &kp N4               &kp N5     &lang_switch  &kp C_PWR    &kp N6     &kp N7          &kp N8          &kp N9              &kp N0
 &kp V           &ad_m          &lh_lt 5 L            &kp C                &kp P      &kp DOWN      &kp UP       &kp Q      &kp F           &kp O           &kp U               &kp COMMA
-&lh_hm LCTRL S  &lh_hm LALT T  &lh_hm_quick LSHFT R  &lh_hm_quick LCMD D  &kp Y      &kp LEFT      &kp RIGHT    &ad_z      &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I
-&kp X           &kp K          &ad_j                 &kp G                &kp W      &kp LBKT      &kp RBKT     &kp B      &kp H           &kp SQT         &semi_end_question  &dot_end_sentence
+&lh_hm LCTRL S  &lh_hm LALT T  &lh_hm_quick LSHFT R  &lh_hm_quick LCMD D  &kp Y      &kp LEFT      &kp RIGHT    &ad_b      &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I
+&kp X           &kp K          &ad_j                 &kp G                &kp W      &kp LBKT      &kp RBKT     &ad_z      &kp H           &kp SQT         &semi_end_question  &dot_end_sentence
 &none           &none          &layer_gresc 6 0      &lt 7 SPACE          &lt 4 TAB  &lt 6 ENTER   &lt 6 ENTER  &lt 4 RET  &mt RSHFT BSPC  &smart_shft     &kp MINUS           &kp EQUAL
             >;
 
