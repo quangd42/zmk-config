@@ -398,7 +398,7 @@
             bindings = <
 &none  &kp GRAVE  &kp LT     &kp GT    &kp DQT    &kp BSLH         &kp PIPE   &kp CARET  &kp LBKT  &kp RBKT  &kp AT     &none
 &none  &kp EXCL   &kp MINUS  &kp PLUS  &kp EQUAL  &kp HASH         &kp AMPS   &kp COLON  &kp LPAR  &kp RPAR  &kp QMARK  &none
-&none  &kp DOT    &kp FSLH   &kp STAR  &kp UNDER  &up_dir          &kp TILDE  &kp DLLR   &kp LBRC  &kp RBRC  &kp PRCNT  &none
+&none  &kp DOT    &kp STAR   &kp FSLH  &kp UNDER  &up_dir          &kp TILDE  &kp DLLR   &kp LBRC  &kp RBRC  &kp PRCNT  &none
                              &none     &kp SPACE            &none             &kp BSPC   &none
             >;
         };
