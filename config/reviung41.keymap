@@ -233,11 +233,11 @@
             antecedents = <C>;
         };
 
-        ad_j: adaptive_j {
+        ad_q: adaptive_q {
             compatible = "zmk,behavior-antecedent-morph";
-            label = "ADAPTIVE_J";
+            label = "ADAPTIVE_Q";
             #binding-cells = <0>;
-            defaults = <&kp J>;
+            defaults = <&kp Q>;
             bindings = <&kp O>, <&str_efore>, <&kp U>, <&kp F>, <&kp A>, <&kp E>;
 
             max-delay-ms = <500>;
@@ -335,9 +335,9 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-&kp C_PP      &kp V           &ad_m          &lh_lt 5 L            &kp C                &kp P               &kp Q  &kp F           &kp O           &kp U               &kp COMMA          &lt 8 C_PWR
+&kp C_PP      &kp V           &ad_m          &lh_lt 5 L            &kp C                &kp P               &kp X  &kp F           &kp O           &kp U               &kp COMMA          &lt 8 C_PWR
 &kp TAB       &lh_hm LCTRL S  &lh_hm LALT T  &lh_hm_quick LSHFT R  &lh_hm_quick LCMD D  &kp Y               &ad_b  &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I     &kp LBKT
-&lang_switch  &kp X           &kp K          &ad_j                 &kp G                &kp W               &ad_z  &kp H           &kp SQT         &semi_end_question  &dot_end_sentence  &kp RBKT
+&lang_switch  &kp J           &kp K          &ad_q                 &kp G                &kp W               &ad_z  &kp H           &kp SQT         &semi_end_question  &dot_end_sentence  &kp RBKT
                                              &layer_gresc 6 0      &lt 7 SPACE                 &lt 4 ENTER         &mt RSHFT BSPC  &smart_shft
             >;
 
