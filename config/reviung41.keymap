@@ -207,6 +207,7 @@
             #binding-cells = <0>;
             defaults = <&kp B>;
             bindings =
+                <&str_efore>,
                 <&kp Y>,
                 <&kp Y>,
                 <&kp Y>,
@@ -218,7 +219,7 @@
                 <&kp P>;
 
             max-delay-ms = <500>;
-            antecedents = <C D G K L P S T Y>;
+            antecedents = <B C D G K L P S T Y>;
         };
 
         ad_m: adaptive_m {
