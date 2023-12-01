@@ -198,8 +198,28 @@
                 <&kp P>,
                 <&str_the>;
 
-            max-delay-ms = <250>;
+            max-delay-ms = <500>;
             antecedents = <A C D E G K L O P R S T U Y SPACE>;
+        };
+
+        ad_b: adaptive_b {
+            compatible = "zmk,behavior-antecedent-morph";
+            label = "ADAPTIVE_B";
+            #binding-cells = <0>;
+            defaults = <&kp B>;
+            bindings =
+                <&kp Y>,
+                <&kp Y>,
+                <&kp Y>,
+                <&kp L>,
+                <&kp K>,
+                <&kp Y>,
+                <&str_ment>,
+                <&kp P>,
+                <&str_the>;
+
+            max-delay-ms = <500>;
+            antecedents = <C D G K L P T Y SPACE>;
         };
 
         ad_m: adaptive_m {
@@ -208,7 +228,7 @@
             #binding-cells = <0>;
             defaults = <&kp M>;
             bindings = <&kp K>;
-            max-delay-ms = <250>;
+            max-delay-ms = <300>;
             antecedents = <C>;
         };
 
@@ -219,7 +239,7 @@
             defaults = <&kp J>;
             bindings = <&kp O>, <&str_efore>, <&kp U>, <&kp F>;
 
-            max-delay-ms = <250>;
+            max-delay-ms = <500>;
             antecedents = <A B E N>;
         };
     };
@@ -315,8 +335,8 @@
 
             bindings = <
 &kp C_PP      &kp V           &ad_m          &lh_lt 5 L            &kp C                &kp P               &kp Q  &kp F           &kp O           &kp U               &kp COMMA          &lt 8 C_PWR
-&kp TAB       &lh_hm LCTRL S  &lh_hm LALT T  &lh_hm_quick LSHFT R  &lh_hm_quick LCMD D  &kp Y               &ad_z  &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I     &kp LBKT
-&lang_switch  &kp X           &kp K          &ad_j                 &kp G                &kp W               &kp B  &kp H           &kp SQT         &semi_end_question  &dot_end_sentence  &kp RBKT
+&kp TAB       &lh_hm LCTRL S  &lh_hm LALT T  &lh_hm_quick LSHFT R  &lh_hm_quick LCMD D  &kp Y               &ad_b  &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I     &kp LBKT
+&lang_switch  &kp X           &kp K          &ad_j                 &kp G                &kp W               &ad_z  &kp H           &kp SQT         &semi_end_question  &dot_end_sentence  &kp RBKT
                                              &layer_gresc 6 0      &lt 7 SPACE                 &lt 4 ENTER         &mt RSHFT BSPC  &smart_shft
             >;
 
