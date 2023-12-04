@@ -238,7 +238,13 @@
             label = "ADAPTIVE_Q";
             #binding-cells = <0>;
             defaults = <&kp Q>;
-            bindings = <&kp O>, <&str_efore>, <&kp U>, <&kp F>, <&kp A>, <&kp E>;
+            bindings =
+                <&kp O>,
+                <&str_efore>,
+                <&kp U>,
+                <&kp F>,
+                <&kp A>,
+                <&kp E>;
 
             max-delay-ms = <500>;
             antecedents = <A B E N O U>;
@@ -415,7 +421,7 @@
 
         fun_layer {
             bindings = <
-&none  &none      &kp LG(W)  &none      &kp LS(LG(N4))  &kp LS(LG(N5))         &kp F12  &kp F7  &kp F8  &kp F9  &kp LG(LBKT)  &none
+&none  &none      &kp LG(W)  &none      &kp LS(LG(N4))  &kp LS(LG(N5))         &kp F12  &kp F7  &kp F8  &kp F9  &kp LG(LBKT)  &kp C_POWER
 &none  &kp LG(A)  &none      &none      &none           &kp LG(BSLH)           &kp F11  &kp F4  &kp F5  &kp F6  &kp LG(RBKT)  &none
 &none  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)       &kp LG(LS(Z))          &kp F10  &kp F1  &kp F2  &kp F3  &kp LG(BSLH)  &none
                              &to 0      &none                           &none           &none   &mo 8
@@ -430,7 +436,7 @@
             //                       |     | ADJ | BKSP |    |     |
 
             bindings = <
-&none      &kp LG(A)  &kp LG(W)  &none      &kp LS(LG(N4))  &kp LG(LBKT)              &kp LA(UP)    &kp LA(LEFT)  &kp UP     &kp LA(RIGHT)  &kp LA(BSPC)  &to 7
+&none      &kp LG(A)  &kp LG(W)  &none      &kp LS(LG(N4))  &kp LG(LBKT)              &kp LA(UP)    &kp LA(LEFT)  &kp UP     &kp LA(RIGHT)  &kp LA(BSPC)  &kp C_PWR
 &kp LG(A)  &sk LCTRL  &sk LALT   &sk LSHFT  &sk LCMD        &kp LG(RBKT)              &kp LA(DOWN)  &kp LEFT      &kp DOWN   &kp RIGHT      &kp BSPC      &none
 &none      &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)       &kp LS(LG(Z))             &kp DEL       &kp LG(LEFT)  &kp LG(A)  &kp LG(RIGHT)  &kp LG(BSPC)  &none
                                  &to 0      &none                          &kp ENTER                &kp BSPC      &none
