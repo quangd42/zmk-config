@@ -42,6 +42,7 @@
                 <&kp K>,
                 <&kp A>,
                 <&kp Y>,
+                <&str_ue>,
                 <&kp L>,
                 <&kp K>,
                 <&str_ment>,
@@ -49,7 +50,7 @@
                 <&kp P>;
 
             max-delay-ms = <500>;
-            antecedents = <A C D E G K L O P R S T U Y>;
+            antecedents = <A C D E G K L O P Q R S T U Y>;
         };
 
         ad_b: adaptive_b {
@@ -58,7 +59,6 @@
             #binding-cells = <0>;
             defaults = <&kp B>;
             bindings =
-                <&str_efore>,
                 <&kp Y>,
                 <&kp Y>,
                 <&kp Y>,
@@ -71,7 +71,7 @@
                 <&kp P>;
 
             max-delay-ms = <500>;
-            antecedents = <B C D G K L P Q S T Y>;
+            antecedents = <C D G K L P Q S T Y>;
         };
 
         ad_m: adaptive_m {
@@ -84,15 +84,15 @@
             antecedents = <C>;
         };
 
-        ad_q: adaptive_j {
+        ad_q: adaptive_q {
             compatible = "zmk,behavior-antecedent-morph";
             label = "ADAPTIVE_Q";
             #binding-cells = <0>;
             defaults = <&kp Q>;
-            bindings = <&kp O>, <&str_efore>, <&kp U>, <&kp F>, <&kp A>, <&kp E>;
+            bindings = <&str_efore>;
 
             max-delay-ms = <500>;
-            antecedents = <A B E N O U>;
+            antecedents = <B>;
         };
     };
 };

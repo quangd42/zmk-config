@@ -208,7 +208,6 @@
             #binding-cells = <0>;
             defaults = <&kp B>;
             bindings =
-                <&str_efore>,
                 <&kp Y>,
                 <&kp Y>,
                 <&kp Y>,
@@ -221,7 +220,7 @@
                 <&kp P>;
 
             max-delay-ms = <500>;
-            antecedents = <B C D G K L P Q S T Y>;
+            antecedents = <C D G K L P Q S T Y>;
         };
 
         ad_m: adaptive_m {
@@ -239,10 +238,10 @@
             label = "ADAPTIVE_Q";
             #binding-cells = <0>;
             defaults = <&kp Q>;
-            bindings = <&str_efore>, <&kp F>;
+            bindings = <&str_efore>;
 
             max-delay-ms = <500>;
-            antecedents = <B N>;
+            antecedents = <B>;
         };
     };
 
@@ -313,13 +312,6 @@
             label = "STR_UE";
             wait-ms = <30>;
             tap-ms = <4>;
-        };
-
-        para_lang_switch: para_lang_switch {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none>;
-            label = "PARA_LANG_SWITCH";
         };
     };
 
