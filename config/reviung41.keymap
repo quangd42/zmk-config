@@ -376,9 +376,9 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-&kp C_PP  &kp Y           &kp P          &lh_lt 4 D            &kp X                &kp J               &kp K  &kp G           &kp U           &kp A               &kp COMMA          &lt 8 BSPC
+&kp C_PP  &kp Y           &kp P          &lh_lt 5 D            &kp X                &kp J               &kp K  &kp G           &kp U           &kp A               &kp COMMA          &lt 8 BSPC
 &kp TAB   &lh_hm LCTRL O  &lh_hm LALT N  &lh_hm_quick LSHFT H  &lh_hm_quick LCMD S  &kp R               &kp C  &rh_hm RCMD T   &rh_hm RSHFT I  &rh_hm RALT E       &rh_hm RCTRL W     &kp LBKT
-&trans    &kp Z           &kp M          &lh_lt 4 Q            &kp Q                &kp F               &kp L  &kp V           &kp SQT         &semi_end_question  &dot_end_sentence  &kp RBKT
+&trans    &kp Z           &kp M          &kp Q                 &kp Q                &kp F               &kp L  &kp V           &kp SQT         &semi_end_question  &dot_end_sentence  &kp RBKT
                                          &layer_gresc 6 0      &lt 7 SPACE                 &lt 4 ENTER         &mt RSHFT BSPC  &smart_shft
             >;
 
@@ -393,9 +393,9 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-&kp C_PP  &kp Q           &kp W          &kp E             &kp R          &kp T               &kp Y  &kp U           &kp I           &kp O          &kp P              &lt 8 BSPC
+&kp C_PP  &kp Q           &kp W          &lh_lt 5 E        &kp R          &kp T               &kp Y  &kp U           &kp I           &kp O          &kp P              &lt 8 BSPC
 &kp TAB   &lh_hm LCTRL A  &lh_hm LALT S  &lh_hm LSHFT D    &lh_hm LCMD F  &kp G               &kp H  &rh_hm RCMD J   &rh_hm RSHFT K  &rh_hm RALT L  &rh_hm RCTRL SEMI  &kp SQT
-&none     &kp Z           &kp X          &kp C             &kp V          &kp B               &kp N  &kp M           &kp COMMA       &kp DOT        &kp FSLH           &sl 0
+&trans    &kp Z           &kp X          &kp C             &kp V          &kp B               &kp N  &kp M           &kp COMMA       &kp DOT        &kp FSLH           &none
                                          &layer_gresc 6 0  &lt 7 SPACE           &lt 4 ENTER         &mt RSHFT BSPC  &smart_shft
             >;
 
