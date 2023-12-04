@@ -191,6 +191,7 @@
                 <&kp K>,
                 <&kp A>,
                 <&kp Y>,
+                <&str_ue>,
                 <&kp L>,
                 <&kp K>,
                 <&str_ment>,
@@ -198,7 +199,7 @@
                 <&kp P>;
 
             max-delay-ms = <500>;
-            antecedents = <A C D E G K L O P R S T U Y>;
+            antecedents = <A C D E G K L O P Q R S T U Y>;
         };
 
         ad_b: adaptive_b {
