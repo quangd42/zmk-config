@@ -239,7 +239,6 @@
             #binding-cells = <0>;
             defaults = <&kp Q>;
             bindings = <&str_efore>;
-
             max-delay-ms = <500>;
             antecedents = <B>;
         };
@@ -361,7 +360,7 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        vnmak2_layer {
+        vnmak3_layer {
             // -------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  :  |   BKSP    |
             // | CTRL |  A  |  R  |  S  |  T  |  G  |   |  M  |  N   |  E  |  I  |  O  |    '      |
@@ -369,10 +368,10 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-&kp C_PP  &kp Y           &kp P          &lh_lt 5 D            &kp X                &kp J               &kp K  &kp G           &kp U           &kp A               &kp COMMA          &lt 8 BSPC
-&kp TAB   &lh_hm LCTRL O  &lh_hm LALT N  &lh_hm_quick LSHFT H  &lh_hm_quick LCMD S  &kp R               &kp C  &rh_hm RCMD T   &rh_hm RSHFT I  &rh_hm RALT E       &rh_hm RCTRL W     &kp LBKT
-&trans    &kp Z           &kp M          &kp Q                 &kp Q                &kp F               &kp L  &kp V           &kp SQT         &semi_end_question  &dot_end_sentence  &kp RBKT
-                                         &layer_gresc 6 0      &lt 7 SPACE                 &lt 4 ENTER         &mt RSHFT BSPC  &smart_shft
+&kp C_PP  &kp T           &kp D          &lh_lt 5 C            &kp J                &kp Q               &kp DOT    &kp U           &kp E           &kp Y          &kp B           &lt 8 BSPC
+&kp TAB   &lh_hm LCTRL G  &lh_hm LALT H  &lh_hm_quick LSHFT N  &lh_hm_quick LCMD S  &kp R               &kp COMMA  &rh_hm RCMD I   &rh_hm RSHFT A  &rh_hm RALT O  &rh_hm RCTRL W  &kp LBKT
+&trans    &kp L           &kp M          &kp V                 &kp X                &kp F               &kp Z      &kp SEMI        &kp SQT         &kp P          &kp K           &kp RBKT
+                                         &layer_gresc 6 0      &lt 7 SPACE                 &lt 4 ENTER             &mt RSHFT BSPC  &smart_shft
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
