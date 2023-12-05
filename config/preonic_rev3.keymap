@@ -380,9 +380,9 @@
         vnmak_layer {
             bindings = <
 &kp N1          &kp N2         &kp N3                &kp N4               &kp N5     &trans       &kp C_PWR    &kp N6     &kp N7          &kp N8          &kp N9         &kp N0
-&kp T           &kp D          &lh_lt 5 C            &kp J                &kp Q      &kp DOWN     &kp UP       &kp DOT    &kp U           &kp E           &kp Y          &kp B
-&lh_hm LCTRL G  &lh_hm LALT H  &lh_hm_quick LSHFT N  &lh_hm_quick LCMD S  &kp R      &kp LEFT     &kp RIGHT    &kp COMMA  &rh_hm RCMD I   &rh_hm RSHFT A  &rh_hm RALT O  &rh_hm RCTRL W
-&kp L           &kp M          &kp V                 &kp X                &kp F      &kp LBKT     &kp RBKT     &kp Z      &kp SEMI        &kp SQT         &kp P          &kp K
+&kp G           &kp T          &lh_lt 5 D            &kp Q                &kp F      &kp DOWN     &kp UP       &kp DOT    &kp U           &kp E           &kp Y          &kp B
+&lh_hm LCTRL C  &lh_hm LALT N  &lh_hm_quick LSHFT H  &lh_hm_quick LCMD S  &kp R      &kp LEFT     &kp RIGHT    &kp COMMA  &rh_hm RCMD I   &rh_hm RSHFT A  &rh_hm RALT O  &rh_hm RCTRL W
+&kp V           &kp L          &kp M                 &kp X                &kp J      &kp LBKT     &kp RBKT     &kp Z      &kp SEMI        &kp SQT         &kp P          &kp K
 &none           &none          &layer_gresc 6 0      &lt 7 SPACE          &lt 4 TAB  &lt 6 ENTER  &lt 6 ENTER  &lt 4 RET  &mt RSHFT BSPC  &smart_shft     &kp MINUS      &kp EQUAL
             >;
 
