@@ -368,9 +368,9 @@
         whorfv_layer {
             bindings = <
 &kp N1          &kp N2         &kp N3                &kp N4               &kp N5     &trans       &kp C_PWR    &kp N6     &kp N7          &kp N8          &kp N9              &kp N0
-&kp F           &kp L          &lh_lt 5 H            &kp K                &kp Q      &kp DOWN     &kp UP       &kp Z      &kp Y           &kp O           &kp U               &kp COMMA
-&lh_hm LCTRL S  &lh_hm LALT R  &lh_hm_quick LSHFT N  &lh_hm_quick LCMD T  &kp M      &kp LEFT     &kp RIGHT    &kp G      &rh_hm RCMD W   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I
-&kp J           &kp X          &lh_lt 5 B            &kp D                &kp V      &kp LBKT     &kp RBKT     &kp P      &kp C           &kp SQT         &semi_end_question  &dot_end_sentence
+&kp C           &kp L          &lh_lt 5 H            &kp K                &kp Z      &kp DOWN     &kp UP       &kp X      &kp F           &kp O           &kp U               &kp COMMA
+&lh_hm LCTRL Y  &lh_hm LALT R  &lh_hm_quick LSHFT S  &lh_hm_quick LCMD T  &kp D      &kp LEFT     &kp RIGHT    &kp B      &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I
+&kp G           &kp Q          &lh_lt 5 B            &kp P                &kp V      &kp LBKT     &kp RBKT     &kp J      &kp H           &kp SQT         &semi_end_question  &dot_end_sentence
 &none           &none          &layer_gresc 6 0      &lt 7 SPACE          &lt 4 TAB  &lt 6 ENTER  &lt 6 ENTER  &lt 4 RET  &mt RSHFT BSPC  &smart_shft     &kp MINUS           &kp EQUAL
             >;
 
