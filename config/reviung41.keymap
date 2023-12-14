@@ -200,7 +200,7 @@
                 <&kp P>;
 
             max-delay-ms = <500>;
-            antecedents = <A C D E G I K L O P Q R S T U Y>;
+            antecedents = <A C D E G J K L O P Q R S T U Y>;
         };
 
         ad_b: adaptive_b {
