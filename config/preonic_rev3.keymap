@@ -38,6 +38,7 @@
                 <&kp Y>,
                 <&kp U>,
                 <&kp Y>,
+                <&kp S>,
                 <&kp L>,
                 <&kp K>,
                 <&kp A>,
@@ -50,7 +51,7 @@
                 <&kp P>;
 
             max-delay-ms = <500>;
-            antecedents = <A C D E G K L O P Q R S T U Y>;
+            antecedents = <A C D E G I K L O P Q R S T U Y>;
         };
 
         ad_b: adaptive_b {
@@ -67,11 +68,10 @@
                 <&kp Y>,
                 <&str_ue>,
                 <&kp K>,
-                <&str_ment>,
-                <&kp P>;
+                <&str_ment>;
 
             max-delay-ms = <500>;
-            antecedents = <C D G K L P Q S T Y>;
+            antecedents = <C D G K L P Q S T>;
         };
 
         ad_m: adaptive_m {
