@@ -355,7 +355,7 @@
             // |       | LGUI | LALT | LCTL | LOWER | SPACE  |  SPACE  |  RAISE | LEFT |  DOWN |   UP  | RIGHT  |
 
             bindings = <
-&kp N1          &kp N2         &kp N3                &kp N4               &kp N5     &lang_switch  &kp C_PWR    &kp N6     &kp N7          &kp N8          &kp N9              &kp N0
+&kp N1          &kp N2         &kp N3                &kp N4               &kp N5     &lang_switch  &kp LG(LC(Q))    &kp N6     &kp N7          &kp N8          &kp N9              &kp N0
 &kp V           &ad_m          &lh_lt 5 L            &kp C                &kp P      &kp DOWN      &kp UP       &kp X      &kp F           &kp O           &kp U               &kp COMMA
 &lh_hm LCTRL S  &lh_hm LALT T  &lh_hm_quick LSHFT R  &lh_hm_quick LCMD D  &kp Y      &kp LEFT      &kp RIGHT    &kp B      &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I
 &kp J           &kp K          &ad_q                 &kp G                &kp W      &kp LBKT      &kp RBKT     &ad_z      &kp H           &kp SQT         &semi_end_question  &dot_end_sentence
@@ -367,7 +367,7 @@
 
         glmpz_layer {
             bindings = <
-&kp N1          &kp N2         &kp N3                &kp N4               &kp N5     &trans       &kp C_PWR    &kp N6     &kp N7          &kp N8          &kp N9              &kp N0
+&kp N1          &kp N2         &kp N3                &kp N4               &kp N5     &trans       &kp LG(LC(Q))    &kp N6     &kp N7          &kp N8          &kp N9              &kp N0
 &kp M           &kp L          &lh_lt 5 Y            &kp P                &kp Q      &kp DOWN     &kp UP       &kp J      &kp F           &kp O           &kp U               &kp COMMA
 &lh_hm LCTRL C  &lh_hm LALT R  &lh_hm_quick LSHFT S  &lh_hm_quick LCMD T  &kp K      &kp LEFT     &kp RIGHT    &kp B      &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I
 &kp W           &kp X          &kp G                 &kp D                &kp V      &kp LBKT     &kp RBKT     &ad_z      &kp H           &kp SQT         &semi_end_question  &dot_end_sentence
@@ -377,7 +377,7 @@
 
         vnmak_layer {
             bindings = <
-&kp N1          &kp N2         &kp N3                &kp N4               &kp N5     &trans       &kp C_PWR    &kp N6     &kp N7          &kp N8          &kp N9         &kp N0
+&kp N1          &kp N2         &kp N3                &kp N4               &kp N5     &trans       &kp LG(LC(Q))    &kp N6     &kp N7          &kp N8          &kp N9         &kp N0
 &kp G           &kp T          &lh_lt 5 D            &kp Q                &kp F      &kp DOWN     &kp UP       &kp DOT    &kp U           &kp E           &kp Y          &kp B
 &lh_hm LCTRL C  &lh_hm LALT N  &lh_hm_quick LSHFT H  &lh_hm_quick LCMD S  &kp R      &kp LEFT     &kp RIGHT    &kp COMMA  &rh_hm RCMD I   &rh_hm RSHFT A  &rh_hm RALT O  &rh_hm RCTRL W
 &kp V           &kp L          &kp M                 &kp X                &kp J      &kp LBKT     &kp RBKT     &kp Z      &kp SEMI        &kp SQT         &kp P          &kp K
@@ -441,7 +441,7 @@
         nav_layer {
             bindings = <
 &none      &none      &none      &none           &none          &none    &none    &none         &none         &none      &none          &none
-&kp LG(A)  &kp LG(W)  &none      &kp LS(LG(N4))  &kp LG(LBKT)   &none    &none    &kp LA(UP)    &kp LA(LEFT)  &kp UP     &kp LA(RIGHT)  &kp LA(BSPC)
+&kp TAB  &kp GRAVE  &none      &kp LG(A)  &kp LG(LBKT)   &none    &none    &kp LA(UP)    &kp LA(LEFT)  &kp UP     &kp LA(RIGHT)  &kp LA(BSPC)
 &sk LCTRL  &sk LALT   &sk LSHFT  &sk LCMD        &kp LG(RBKT)   &none    &none    &kp LA(DOWN)  &kp LEFT      &kp DOWN   &kp RIGHT      &kp BSPC
 &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)       &kp LS(LG(Z))  &none    &none    &kp DEL       &kp LG(LEFT)  &kp LG(A)  &kp LG(RIGHT)  &kp LG(BSPC)
 &none      &none      &to 0      &kp SPACE       &none          &kp RET  &kp RET  &kp BSPC      &kp BSPC      &none      &none          &none
