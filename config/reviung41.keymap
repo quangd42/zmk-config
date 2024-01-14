@@ -16,13 +16,9 @@
 #define RAISE 4
 #define ADJUST 5
 
-&mt {
-    quick-tap-ms = <150>;
-};
+&mt { quick-tap-ms = <150>; };
 
-&sl {
-    /delete-property/ quick-release;
-};
+&sl { /delete-property/ quick-release; };
 
 / {
     behaviors {
@@ -343,7 +339,7 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        glimpz_layer {
+        drst_layer {
             // -------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  :  |   BKSP    |
             // | CTRL |  A  |  R  |  S  |  T  |  G  |   |  M  |  N   |  E  |  I  |  O  |    '      |
@@ -351,9 +347,9 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-&kp C_PP  &kp M           &kp L          &lh_lt 5 Y            &kp P                &kp Q               &kp X  &kp F           &kp O           &kp U               &kp COMMA          &lt 8 LG(LC(Q))
-&kp TAB   &lh_hm LCTRL C  &lh_hm LALT R  &lh_hm_quick LSHFT S  &lh_hm_quick LCMD T  &kp K               &kp B  &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I     &kp LBKT
-&trans    &kp W           &kp J          &kp G                 &kp D                &kp V               &kp Z  &kp H           &kp SQT         &semi_end_question  &dot_end_sentence  &kp RBKT
+&kp C_PP  &kp W           &kp L          &lh_lt 5 Y            &kp K                &kp Q               &kp X  &kp F           &kp O           &kp U               &kp COMMA          &kp LG(LC(Q))
+&kp TAB   &lh_hm LCTRL D  &lh_hm LALT R  &lh_hm_quick LSHFT S  &lh_hm_quick LCMD T  &kp G               &kp B  &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I     &kp LBKT
+&trans    &kp M           &kp J          &kp C                 &kp P                &kp V               &kp Z  &kp H           &kp SQT         &semi_end_question  &dot_end_sentence  &kp RBKT
                                          &layer_gresc 6 0      &lt 7 SPACE                 &lt 4 ENTER         &mt RSHFT BSPC  &smart_shft
             >;
 
@@ -385,7 +381,7 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-&kp C_PP  &kp Q           &kp W          &lh_lt 5 E        &kp R          &kp T               &kp Y  &kp U           &kp I           &kp O          &kp P              &lt 8 BSPC
+&kp C_PP  &kp Q           &kp W          &lh_lt 5 E        &kp R          &kp T               &kp Y  &kp U           &kp I           &kp O          &kp P              &kp LG(LC(Q))
 &kp TAB   &lh_hm LCTRL A  &lh_hm LALT S  &lh_hm LSHFT D    &lh_hm LCMD F  &kp G               &kp H  &rh_hm RCMD J   &rh_hm RSHFT K  &rh_hm RALT L  &rh_hm RCTRL SEMI  &kp SQT
 &trans    &kp Z           &kp X          &kp C             &kp V          &kp B               &kp N  &kp M           &kp COMMA       &kp DOT        &kp FSLH           &none
                                          &layer_gresc 6 0  &lt 7 SPACE           &lt 4 ENTER         &mt RSHFT BSPC  &smart_shft
@@ -429,10 +425,10 @@
             //                       |     | ADJ | BKSP |    |     |
 
             bindings = <
-&none      &kp TAB  &kp GRAVE  &none      &kp LG(A)  &kp LG(LBKT)              &kp LA(UP)    &kp LA(LEFT)  &kp UP     &kp LA(RIGHT)  &kp LA(BSPC)  &kp LG(LC(Q))
-&kp LG(A)  &sk LCTRL  &sk LALT   &sk LSHFT  &sk LCMD        &kp LG(RBKT)              &kp LA(DOWN)  &kp LEFT      &kp DOWN   &kp RIGHT      &kp BSPC      &none
-&none      &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)       &kp LS(LG(Z))             &kp DEL       &kp LG(LEFT)  &kp LG(A)  &kp LG(RIGHT)  &kp LG(BSPC)  &none
-                                 &to 0      &none                          &kp ENTER                &kp BSPC      &none
+&none      &kp TAB    &kp GRAVE  &none      &kp LG(A)  &kp LG(LBKT)              &kp LA(UP)    &kp LA(LEFT)  &kp UP     &kp LA(RIGHT)  &kp LA(BSPC)  &kp LG(LC(Q))
+&kp LG(A)  &sk LCTRL  &sk LALT   &sk LSHFT  &sk LCMD   &kp LG(RBKT)              &kp LA(DOWN)  &kp LEFT      &kp DOWN   &kp RIGHT      &kp BSPC      &none
+&none      &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LS(LG(Z))             &kp DEL       &kp LG(LEFT)  &kp LG(A)  &kp LG(RIGHT)  &kp LG(BSPC)  &none
+                                 &to 0      &none                     &kp ENTER                &kp BSPC      &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
