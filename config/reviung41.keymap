@@ -244,9 +244,10 @@
             label = "AD_J";
             #binding-cells = <0>;
             defaults = <&kp J>;
-            bindings = <&kp L>;
+            bindings = <&kp L>, <&kp C>;
+
             max-delay-ms = <300>;
-            antecedents = <C>;
+            antecedents = <C S>;
         };
 
         ad_p: ad_p {
@@ -264,10 +265,10 @@
             label = "AD_Z2";
             #binding-cells = <0>;
             defaults = <&kp Z>;
-            bindings = <&kp T>, <&kp C>, <&kp S>;
+            bindings = <&kp Y>, <&kp T>, <&kp Y>, <&kp S>;
 
             max-delay-ms = <300>;
-            antecedents = <P S Y>;
+            antecedents = <C P S Y>;
         };
     };
 
