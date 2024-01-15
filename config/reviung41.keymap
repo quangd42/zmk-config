@@ -264,7 +264,8 @@
             label = "AD_Z2";
             #binding-cells = <0>;
             defaults = <&kp Z>;
-            bindings = <&kp T C S>;
+            bindings = <&kp T>, <&kp C>, <&kp S>;
+
             max-delay-ms = <300>;
             antecedents = <P S Y>;
         };
