@@ -12,13 +12,9 @@
 #define LOWER   1
 #define RAISE   2
 
-&mt {
-    quick-tap-ms = <150>;
-};
+&mt { quick-tap-ms = <150>; };
 
-&sl {
-    /delete-property/ quick-release;
-};
+&sl { /delete-property/ quick-release; };
 
 &gresc {
     keep-mods = <(MOD_RSFT|MOD_LGUI|MOD_LCTL)>;
@@ -97,9 +93,7 @@
 };
 
 / {
-    chosen {
-        zmk,matrix_transform = &layout_grid_transform;
-    };
+    chosen { zmk,matrix_transform = &layout_grid_transform; };
 
     behaviors {
         lh_hm: lh_hm {
@@ -355,33 +349,33 @@
             // |       | LGUI | LALT | LCTL | LOWER | SPACE  |  SPACE  |  RAISE | LEFT |  DOWN |   UP  | RIGHT  |
 
             bindings = <
-&kp N1          &kp N2         &kp N3                &kp N4               &kp N5     &lang_switch  &kp LG(LC(Q))    &kp N6     &kp N7          &kp N8          &kp N9              &kp N0
-&kp V           &ad_m          &lh_lt 5 L            &kp C                &kp P      &kp DOWN      &kp UP       &kp X      &kp F           &kp O           &kp U               &kp COMMA
-&lh_hm LCTRL S  &lh_hm LALT T  &lh_hm_quick LSHFT R  &lh_hm_quick LCMD D  &kp Y      &kp LEFT      &kp RIGHT    &kp B      &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I
-&kp J           &kp K          &ad_q                 &kp G                &kp W      &kp LBKT      &kp RBKT     &ad_z      &kp H           &kp SQT         &semi_end_question  &dot_end_sentence
-&none           &none          &layer_gresc 6 0      &lt 7 SPACE          &lt 4 TAB  &lt 6 ENTER   &lt 6 ENTER  &lt 4 RET  &mt RSHFT BSPC  &smart_shft     &kp MINUS           &kp EQUAL
+&kp N1          &kp N2         &kp N3                &kp N4               &kp N5     &lang_switch  &kp LG(LC(Q))  &kp N6     &kp N7          &kp N8          &kp N9              &kp N0
+&kp V           &ad_m          &lh_lt 5 L            &kp C                &kp P      &kp DOWN      &kp UP         &kp X      &kp F           &kp O           &kp U               &kp COMMA
+&lh_hm LCTRL S  &lh_hm LALT T  &lh_hm_quick LSHFT R  &lh_hm_quick LCMD D  &kp Y      &kp LEFT      &kp RIGHT      &kp B      &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I
+&kp J           &kp K          &ad_q                 &kp G                &kp W      &kp LBKT      &kp RBKT       &ad_z      &kp H           &kp SQT         &semi_end_question  &dot_end_sentence
+&none           &none          &layer_gresc 6 0      &lt 7 SPACE          &lt 4 TAB  &lt 6 ENTER   &lt 6 ENTER    &lt 4 RET  &mt RSHFT BSPC  &smart_shft     &kp MINUS           &kp EQUAL
             >;
 
             label = "stirred";
         };
 
-        glmpz_layer {
+        galliumd_layer {
             bindings = <
-&kp N1          &kp N2         &kp N3                &kp N4               &kp N5     &trans       &kp LG(LC(Q))    &kp N6     &kp N7          &kp N8          &kp N9              &kp N0
-&kp M           &kp L          &lh_lt 5 Y            &kp P                &kp Q      &kp DOWN     &kp UP       &kp J      &kp F           &kp O           &kp U               &kp COMMA
-&lh_hm LCTRL C  &lh_hm LALT R  &lh_hm_quick LSHFT S  &lh_hm_quick LCMD T  &kp K      &kp LEFT     &kp RIGHT    &kp B      &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I
-&kp W           &kp X          &kp G                 &kp D                &kp V      &kp LBKT     &kp RBKT     &ad_z      &kp H           &kp SQT         &semi_end_question  &dot_end_sentence
-&none           &none          &layer_gresc 6 0      &lt 7 SPACE          &lt 4 TAB  &lt 6 ENTER  &lt 6 ENTER  &lt 4 RET  &mt RSHFT BSPC  &smart_shft     &kp MINUS           &kp EQUAL
+&kp N1          &kp N2         &kp N3                &kp N4               &kp N5     &trans       &kp LG(LC(Q))  &kp N6     &kp N7          &kp N8          &kp N9              &kp N0
+&kp P           &kp L          &lh_lt 5 M            &kp C                &kp Q      &kp DOWN     &kp UP         &kp X      &kp F           &kp O           &kp U               &dot_end_sentence
+&lh_hm LCTRL N  &lh_hm LALT R  &lh_hm_quick LSHFT T  &lh_hm_quick LCMD S  &kp W      &kp LEFT     &kp RIGHT      &kp Y      &rh_hm RCMD D   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I
+&kp B           &kp J          &kp V                 &kp G                &kp Z      &kp LBKT     &kp RBKT       &kp K      &kp H           &kp SQT         &semi_end_question  &kp COMMA
+&none           &none          &layer_gresc 6 0      &lt 7 SPACE          &lt 4 TAB  &lt 6 ENTER  &lt 6 ENTER    &lt 4 RET  &mt RSHFT BSPC  &smart_shft     &kp MINUS           &kp EQUAL
             >;
         };
 
         vnmak_layer {
             bindings = <
-&kp N1          &kp N2         &kp N3                &kp N4               &kp N5     &trans       &kp LG(LC(Q))    &kp N6     &kp N7          &kp N8          &kp N9         &kp N0
-&kp G           &kp T          &lh_lt 5 D            &kp Q                &kp F      &kp DOWN     &kp UP       &kp DOT    &kp U           &kp E           &kp Y          &kp B
-&lh_hm LCTRL C  &lh_hm LALT N  &lh_hm_quick LSHFT H  &lh_hm_quick LCMD S  &kp R      &kp LEFT     &kp RIGHT    &kp COMMA  &rh_hm RCMD I   &rh_hm RSHFT A  &rh_hm RALT O  &rh_hm RCTRL W
-&kp V           &kp L          &kp M                 &kp X                &kp J      &kp LBKT     &kp RBKT     &kp Z      &kp SEMI        &kp SQT         &kp P          &kp K
-&none           &none          &layer_gresc 6 0      &lt 7 SPACE          &lt 4 TAB  &lt 6 ENTER  &lt 6 ENTER  &lt 4 RET  &mt RSHFT BSPC  &smart_shft     &kp MINUS      &kp EQUAL
+&kp N1          &kp N2         &kp N3                &kp N4               &kp N5     &trans       &kp LG(LC(Q))  &kp N6     &kp N7          &kp N8          &kp N9         &kp N0
+&kp G           &kp T          &lh_lt 5 D            &kp Q                &kp F      &kp DOWN     &kp UP         &kp DOT    &kp U           &kp E           &kp Y          &kp B
+&lh_hm LCTRL C  &lh_hm LALT N  &lh_hm_quick LSHFT H  &lh_hm_quick LCMD S  &kp R      &kp LEFT     &kp RIGHT      &kp COMMA  &rh_hm RCMD I   &rh_hm RSHFT A  &rh_hm RALT O  &rh_hm RCTRL W
+&kp V           &kp L          &kp M                 &kp X                &kp J      &kp LBKT     &kp RBKT       &kp Z      &kp SEMI        &kp SQT         &kp P          &kp K
+&none           &none          &layer_gresc 6 0      &lt 7 SPACE          &lt 4 TAB  &lt 6 ENTER  &lt 6 ENTER    &lt 4 RET  &mt RSHFT BSPC  &smart_shft     &kp MINUS      &kp EQUAL
             >;
 
             label = "vnmak2";
@@ -440,11 +434,11 @@
 
         nav_layer {
             bindings = <
-&none      &none      &none      &none           &none          &none    &none    &none         &none         &none      &none          &none
-&kp TAB  &kp GRAVE  &none      &kp LG(A)  &kp LG(LBKT)   &none    &none    &kp LA(UP)    &kp LA(LEFT)  &kp UP     &kp LA(RIGHT)  &kp LA(BSPC)
-&sk LCTRL  &sk LALT   &sk LSHFT  &sk LCMD        &kp LG(RBKT)   &none    &none    &kp LA(DOWN)  &kp LEFT      &kp DOWN   &kp RIGHT      &kp BSPC
-&kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)       &kp LS(LG(Z))  &none    &none    &kp DEL       &kp LG(LEFT)  &kp LG(A)  &kp LG(RIGHT)  &kp LG(BSPC)
-&none      &none      &to 0      &kp SPACE       &none          &kp RET  &kp RET  &kp BSPC      &kp BSPC      &none      &none          &none
+&none      &none      &none      &none      &none          &none    &none    &none         &none         &none      &none          &none
+&kp TAB    &kp GRAVE  &none      &kp LG(A)  &kp LG(LBKT)   &none    &none    &kp LA(UP)    &kp LA(LEFT)  &kp UP     &kp LA(RIGHT)  &kp LA(BSPC)
+&sk LCTRL  &sk LALT   &sk LSHFT  &sk LCMD   &kp LG(RBKT)   &none    &none    &kp LA(DOWN)  &kp LEFT      &kp DOWN   &kp RIGHT      &kp BSPC
+&kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LS(LG(Z))  &none    &none    &kp DEL       &kp LG(LEFT)  &kp LG(A)  &kp LG(RIGHT)  &kp LG(BSPC)
+&none      &none      &to 0      &kp SPACE  &none          &kp RET  &kp RET  &kp BSPC      &kp BSPC      &none      &none          &none
             >;
         };
 
