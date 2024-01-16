@@ -393,11 +393,11 @@
 
         code_sym_layer {
             bindings = <
-&kp N1     &kp N2     &kp N3    &kp N4     &kp N5    &none  &none  &kp N6     &kp N7     &kp N8    &kp N9    &kp N0
-&kp GRAVE  &kp LT     &kp GT    &kp DQT    &kp BSLH  &none  &none  &kp PIPE   &kp CARET  &kp LBKT  &kp RBKT  &kp AT
-&kp EXCL   &kp MINUS  &kp PLUS  &kp EQUAL  &kp HASH  &none  &none  &kp AMPS   &kp COLON  &kp LPAR  &kp RPAR  &kp QMARK
-&kp DOT    &kp STAR   &kp FSLH  &kp UNDER  &up_dir   &none  &none  &kp TILDE  &kp DLLR   &kp LBRC  &kp RBRC  &kp PRCNT
-&none      &none      &to 0     &kp SPACE  &none     &none  &none  &none      &kp BSPC   &none     &none     &none
+&kp N1     &kp N2   &kp N3     &kp N4     &kp N5    &none  &none  &kp N6     &kp N7     &kp N8    &kp N9    &kp N0
+&kp GRAVE  &kp LT   &kp GT     &kp FSLH   &kp BSLH  &none  &none  &kp PIPE   &kp CARET  &kp LBKT  &kp RBKT  &kp AT
+&kp EXCL   &kp DQT  &kp PLUS   &kp EQUAL  &kp HASH  &none  &none  &kp AMPS   &kp COLON  &kp LPAR  &kp RPAR  &kp QMARK
+&kp DOT    &kp SQT  &kp UNDER  &kp MINUS  &kp STAR  &none  &none  &kp TILDE  &kp DLLR   &kp LBRC  &kp RBRC  &kp PRCNT
+&none      &none    &to 0      &kp SPACE  &none     &none  &none  &none      &kp BSPC   &none     &none     &none
             >;
 
             label = "code";
