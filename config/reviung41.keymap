@@ -270,6 +270,16 @@
             max-delay-ms = <300>;
             antecedents = <C P S Y>;
         };
+
+        ad_k: ad_k {
+            compatible = "zmk,behavior-antecedent-morph";
+            label = "AD_K";
+            #binding-cells = <0>;
+            defaults = <&kp K>;
+            bindings = <&kp S>;
+            max-delay-ms = <300>;
+            antecedents = <Y>;
+        };
     };
 
     macros {
@@ -355,7 +365,7 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        galliumd_layer {
+        drst_layer {
             // -------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  :  |   BKSP    |
             // | CTRL |  A  |  R  |  S  |  T  |  G  |   |  M  |  N   |  E  |  I  |  O  |    '      |
@@ -363,10 +373,10 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-&kp C_PP  &kp P           &kp L          &lh_lt 5 M            &kp C                &kp Q               &kp X  &kp F           &kp O           &kp U               &dot_end_sentence  &kp LG(LC(Q))
-&kp TAB   &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm_quick LSHFT T  &lh_hm_quick LCMD S  &kp W               &kp Y  &rh_hm RCMD D   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I     &kp LBKT
-&trans    &kp B           &kp J          &kp V                 &kp G                &kp Z               &kp K  &kp H           &kp SQT         &semi_end_question  &kp COMMA          &kp RBKT
-                                         &layer_gresc 6 0      &lt 7 SPACE                 &lt 4 ENTER         &mt RSHFT BSPC  &smart_shft
+&kp C_PP  &kp M           &kp L          &lh_lt 5 Y            &ad_k                &kp Q               &kp X   &kp F           &kp O           &kp U               &dot_end_sentence  &kp LG(LC(Q))
+&kp TAB   &lh_hm LCTRL D  &lh_hm LALT R  &lh_hm_quick LSHFT S  &lh_hm_quick LCMD T  &kp G               &kp B   &rh_hm RCMD D   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I     &kp LBKT
+&trans    &kp W           &ad_j          &kp C                 &ad_p                &kp V               &ad_z2  &kp H           &kp SQT         &semi_end_question  &kp COMMA          &kp RBKT
+                                         &layer_gresc 6 0      &lt 7 SPACE                 &lt 4 ENTER          &mt RSHFT BSPC  &smart_shft
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
