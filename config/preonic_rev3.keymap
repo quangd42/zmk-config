@@ -89,6 +89,48 @@
             max-delay-ms = <500>;
             antecedents = <B>;
         };
+
+        ad_j: ad_j {
+            compatible = "zmk,behavior-antecedent-morph";
+            label = "AD_J";
+            #binding-cells = <0>;
+            defaults = <&kp J>;
+            bindings = <&kp L>, <&kp C>;
+
+            max-delay-ms = <300>;
+            antecedents = <C S>;
+        };
+
+        ad_p: ad_p {
+            compatible = "zmk,behavior-antecedent-morph";
+            label = "AD_P";
+            #binding-cells = <0>;
+            defaults = <&kp P>;
+            bindings = <&kp K>;
+            max-delay-ms = <300>;
+            antecedents = <C>;
+        };
+
+        ad_z2: ad_z2 {
+            compatible = "zmk,behavior-antecedent-morph";
+            label = "AD_Z2";
+            #binding-cells = <0>;
+            defaults = <&kp Z>;
+            bindings = <&kp Y>, <&kp T>, <&kp Y>, <&kp S>;
+
+            max-delay-ms = <300>;
+            antecedents = <C P S Y>;
+        };
+
+        ad_k: ad_k {
+            compatible = "zmk,behavior-antecedent-morph";
+            label = "AD_K";
+            #binding-cells = <0>;
+            defaults = <&kp K>;
+            bindings = <&kp S>;
+            max-delay-ms = <300>;
+            antecedents = <Y>;
+        };
     };
 };
 
@@ -359,12 +401,12 @@
             label = "stirred";
         };
 
-        galliumd_layer {
+        drst_layer {
             bindings = <
 &kp N1          &kp N2         &kp N3                &kp N4               &kp N5     &trans       &kp LG(LC(Q))  &kp N6     &kp N7          &kp N8          &kp N9              &kp N0
-&kp P           &kp L          &lh_lt 5 M            &kp C                &kp Q      &kp DOWN     &kp UP         &kp X      &kp F           &kp O           &kp U               &dot_end_sentence
-&lh_hm LCTRL N  &lh_hm LALT R  &lh_hm_quick LSHFT T  &lh_hm_quick LCMD S  &kp W      &kp LEFT     &kp RIGHT      &kp Y      &rh_hm RCMD D   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I
-&kp B           &kp J          &kp V                 &kp G                &kp Z      &kp LBKT     &kp RBKT       &kp K      &kp H           &kp SQT         &semi_end_question  &kp COMMA
+&kp M           &kp L          &lh_lt 5 Y            &ad_k                &kp Q      &kp DOWN     &kp UP         &kp X      &kp F           &kp O           &kp U               &kp COMMA
+&lh_hm LCTRL D  &lh_hm LALT R  &lh_hm_quick LSHFT S  &lh_hm_quick LCMD T  &kp G      &kp LEFT     &kp RIGHT      &kp B      &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I
+&kp W           &ad_j          &kp C                 &ad_p                &kp V      &kp LBKT     &kp RBKT       &ad_z2      &kp H           &kp SQT         &semi_end_question  &dot_end_sentence
 &none           &none          &layer_gresc 6 0      &lt 7 SPACE          &lt 4 TAB  &lt 6 ENTER  &lt 6 ENTER    &lt 4 RET  &mt RSHFT BSPC  &smart_shft     &kp MINUS           &kp EQUAL
             >;
         };
