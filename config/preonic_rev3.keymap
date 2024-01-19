@@ -106,10 +106,18 @@
             label = "AD_Z2";
             #binding-cells = <0>;
             defaults = <&kp Z>;
-            bindings = <&kp Y>, <&kp T>, <&kp Y>, <&kp S>;
+            bindings =
+                <&kp Y>,
+                <&kp Y>,
+                <&kp Y>,
+                <&kp Y>,
+                <&kp T>,
+                <&kp Y>,
+                <&kp Y>,
+                <&kp S>;
 
             max-delay-ms = <300>;
-            antecedents = <C P S Y>;
+            antecedents = <C G L M P R S Y>;
         };
 
         ad_k: ad_k {
