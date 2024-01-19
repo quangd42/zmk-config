@@ -85,9 +85,10 @@
             label = "AD_Q";
             #binding-cells = <0>;
             defaults = <&kp Q>;
-            bindings = <&kp Y>;
+            bindings = <&kp Y>, <&kp Y>, <&kp Y>, <&kp Y>, <&kp Y>;
+
             max-delay-ms = <300>;
-            antecedents = <L>;
+            antecedents = <C G L M R>;
         };
 
         ad_p: ad_p {
