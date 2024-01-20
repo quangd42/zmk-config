@@ -85,10 +85,10 @@
             label = "AD_Q";
             #binding-cells = <0>;
             defaults = <&kp Q>;
-            bindings = <&kp Y>, <&kp Y>, <&kp Y>, <&kp Y>, <&kp Y>;
+            bindings = <&kp Y>, <&kp Y>, <&kp Y>;
 
-            max-delay-ms = <300>;
-            antecedents = <C G L M R>;
+            max-delay-ms = <500>;
+            antecedents = <G L M>;
         };
 
         ad_p: ad_p {
@@ -112,22 +112,21 @@
                 <&kp Y>,
                 <&kp Y>,
                 <&kp T>,
-                <&kp Y>,
-                <&kp Y>,
-                <&kp S>;
+                <&kp W>,
+                <&kp L>;
 
             max-delay-ms = <300>;
-            antecedents = <C G L M P R S Y>;
+            antecedents = <C G L M P S R>;
         };
 
-        ad_k: ad_k {
+        ad_x: ad_x {
             compatible = "zmk,behavior-antecedent-morph";
-            label = "AD_K";
+            label = "AD_X";
             #binding-cells = <0>;
-            defaults = <&kp K>;
-            bindings = <&kp S>;
+            defaults = <&kp X>;
+            bindings = <&kp M>;
             max-delay-ms = <300>;
-            antecedents = <Y>;
+            antecedents = <S>;
         };
     };
 };
@@ -402,7 +401,7 @@
         canary3b3_layer {
             bindings = <
 &kp N1          &kp N2         &kp N3                &kp N4               &kp N5     &trans       &kp LG(LC(Q))  &kp N6     &kp N7          &kp N8          &kp N9              &kp N0
-&kp G           &kp L          &lh_lt 5 M            &kp K                &ad_q      &kp DOWN     &kp UP         &kp X      &kp F           &kp O           &kp U               &kp COMMA
+&kp G           &kp L          &lh_lt 5 M            &kp K                &ad_q      &kp DOWN     &kp UP         &ad_x      &kp F           &kp O           &kp U               &kp COMMA
 &lh_hm LCTRL C  &lh_hm LALT R  &lh_hm_quick LSHFT S  &lh_hm_quick LCMD T  &kp P      &kp LEFT     &kp RIGHT      &kp B      &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I
 &kp Y           &kp J          &kp W                 &kp D                &kp V      &kp LBKT     &kp RBKT       &ad_z2     &kp H           &kp SQT         &semi_end_question  &dot_end_sentence
 &none           &none          &layer_gresc 6 0      &lt 7 SPACE          &lt 4 TAB  &lt 6 ENTER  &lt 6 ENTER    &lt 4 RET  &mt RSHFT BSPC  &smart_shft     &kp MINUS           &kp EQUAL
