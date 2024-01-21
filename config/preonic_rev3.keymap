@@ -300,6 +300,17 @@
             require-prior-idle-ms = <125>;
             hold-trigger-key-positions = <47 46 53 54 55 58 59>;
         };
+
+        ad_z3: ad_z3 {
+            compatible = "zmk,behavior-antecedent-morph";
+            label = "AD_Z3";
+            #binding-cells = <0>;
+            defaults = <&kp Z>;
+            bindings = <&kp Y>, <&kp S>, <&kp T>, <&kp L>, ,;
+
+            max-delay-ms = <300>;
+            antecedents = <S Y P R>;
+        };
     };
 
     macros {
@@ -403,7 +414,7 @@
 &kp N1          &kp N2         &kp N3            &kp N4         &kp N5     &trans       &kp LG(LC(Q))  &kp N6     &kp N7          &kp N8          &kp N9              &kp N0
 &kp Y           &kp P          &lh_lt 5 L        &kp G          &kp V      &kp DOWN     &kp UP         &kp X      &kp F           &kp O           &kp U               &kp COMMA
 &lh_hm LCTRL S  &lh_hm LALT T  &lh_hm LSHFT R    &lh_hm LCMD D  &kp W      &kp LEFT     &kp RIGHT      &kp B      &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I
-&kp Q           &kp K          &kp J             &kp C          &kp M      &kp LBKT     &kp RBKT       &ad_z      &kp H           &kp SQT         &semi_end_question  &dot_end_sentence
+&kp Q           &kp K          &kp J             &kp C          &kp M      &kp LBKT     &kp RBKT       &ad_z3     &kp H           &kp SQT         &semi_end_question  &dot_end_sentence
 &none           &none          &layer_gresc 6 0  &lt 7 SPACE    &lt 4 TAB  &lt 6 ENTER  &lt 6 ENTER    &lt 4 RET  &mt RSHFT BSPC  &smart_shft     &kp MINUS           &kp EQUAL
             >;
         };
