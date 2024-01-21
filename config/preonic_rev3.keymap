@@ -388,33 +388,33 @@
             // |       | LGUI | LALT | LCTL | LOWER | SPACE  |  SPACE  |  RAISE | LEFT |  DOWN |   UP  | RIGHT  |
 
             bindings = <
-&kp N1          &kp N2         &kp N3                &kp N4               &kp N5     &lang_switch  &kp LG(LC(Q))  &kp N6     &kp N7          &kp N8          &kp N9              &kp N0
-&kp V           &ad_m          &lh_lt 5 L            &kp C                &kp P      &kp DOWN      &kp UP         &kp X      &kp F           &kp O           &kp U               &kp COMMA
-&lh_hm LCTRL S  &lh_hm LALT T  &lh_hm LSHFT R  &lh_hm LCMD D  &kp Y      &kp LEFT      &kp RIGHT      &kp B      &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I
-&kp Q           &kp K          &kp J                 &kp G                &kp W      &kp LBKT      &kp RBKT       &ad_z      &kp H           &kp SQT         &semi_end_question  &dot_end_sentence
-&none           &none          &layer_gresc 6 0      &lt 7 SPACE          &lt 4 TAB  &lt 6 ENTER   &lt 6 ENTER    &lt 4 RET  &mt RSHFT BSPC  &smart_shft     &kp MINUS           &kp EQUAL
+&kp N1          &kp N2         &kp N3            &kp N4         &kp N5     &lang_switch  &kp LG(LC(Q))  &kp N6     &kp N7          &kp N8          &kp N9              &kp N0
+&kp V           &ad_m          &lh_lt 5 L        &kp C          &kp P      &kp DOWN      &kp UP         &kp X      &kp F           &kp O           &kp U               &kp COMMA
+&lh_hm LCTRL S  &lh_hm LALT T  &lh_hm LSHFT R    &lh_hm LCMD D  &kp Y      &kp LEFT      &kp RIGHT      &kp B      &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I
+&kp Q           &kp K          &kp J             &kp G          &kp W      &kp LBKT      &kp RBKT       &ad_z      &kp H           &kp SQT         &semi_end_question  &dot_end_sentence
+&none           &none          &layer_gresc 6 0  &lt 7 SPACE    &lt 4 TAB  &lt 6 ENTER   &lt 6 ENTER    &lt 4 RET  &mt RSHFT BSPC  &smart_shft     &kp MINUS           &kp EQUAL
             >;
 
             label = "stirred";
         };
 
-        canary3b3_layer {
+        strdw_layer {
             bindings = <
-&kp N1          &kp N2         &kp N3                &kp N4               &kp N5     &trans       &kp LG(LC(Q))  &kp N6     &kp N7          &kp N8          &kp N9              &kp N0
-&kp G           &kp L          &lh_lt 5 M            &kp K                &ad_q      &kp DOWN     &kp UP         &ad_x      &kp F           &kp O           &kp U               &kp COMMA
-&lh_hm LCTRL C  &lh_hm LALT R  &lh_hm LSHFT S  &lh_hm LCMD T  &kp P      &kp LEFT     &kp RIGHT      &kp B      &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I
-&kp Y           &kp J          &kp W                 &kp D                &kp V      &kp LBKT     &kp RBKT       &ad_z2     &kp H           &kp SQT         &semi_end_question  &dot_end_sentence
-&none           &none          &layer_gresc 6 0      &lt 7 SPACE          &lt 4 TAB  &lt 6 ENTER  &lt 6 ENTER    &lt 4 RET  &mt RSHFT BSPC  &smart_shft     &kp MINUS           &kp EQUAL
+&kp N1          &kp N2         &kp N3            &kp N4         &kp N5     &trans       &kp LG(LC(Q))  &kp N6     &kp N7          &kp N8          &kp N9              &kp N0
+&kp Y           &kp P          &lh_lt 5 L        &kp G          &kp V      &kp DOWN     &kp UP         &kp X      &kp F           &kp O           &kp U               &kp COMMA
+&lh_hm LCTRL S  &lh_hm LALT T  &lh_hm LSHFT R    &lh_hm LCMD D  &kp W      &kp LEFT     &kp RIGHT      &kp B      &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I
+&kp Q           &kp K          &kp J             &kp C          &kp M      &kp LBKT     &kp RBKT       &ad_z      &kp H           &kp SQT         &semi_end_question  &dot_end_sentence
+&none           &none          &layer_gresc 6 0  &lt 7 SPACE    &lt 4 TAB  &lt 6 ENTER  &lt 6 ENTER    &lt 4 RET  &mt RSHFT BSPC  &smart_shft     &kp MINUS           &kp EQUAL
             >;
         };
 
         vnmak_layer {
             bindings = <
-&kp N1          &kp N2         &kp N3                &kp N4               &kp N5     &trans       &kp LG(LC(Q))  &kp N6     &kp N7          &kp N8          &kp N9         &kp N0
-&kp G           &kp T          &lh_lt 5 D            &kp Q                &kp F      &kp DOWN     &kp UP         &kp DOT    &kp U           &kp E           &kp Y          &kp B
-&lh_hm LCTRL C  &lh_hm LALT N  &lh_hm LSHFT H  &lh_hm LCMD S  &kp R      &kp LEFT     &kp RIGHT      &kp COMMA  &rh_hm RCMD I   &rh_hm RSHFT A  &rh_hm RALT O  &rh_hm RCTRL W
-&kp V           &kp L          &kp M                 &kp X                &kp J      &kp LBKT     &kp RBKT       &kp Z      &kp SEMI        &kp SQT         &kp P          &kp K
-&none           &none          &layer_gresc 6 0      &lt 7 SPACE          &lt 4 TAB  &lt 6 ENTER  &lt 6 ENTER    &lt 4 RET  &mt RSHFT BSPC  &smart_shft     &kp MINUS      &kp EQUAL
+&kp N1          &kp N2         &kp N3            &kp N4         &kp N5     &trans       &kp LG(LC(Q))  &kp N6     &kp N7          &kp N8          &kp N9         &kp N0
+&kp G           &kp T          &lh_lt 5 D        &kp Q          &kp F      &kp DOWN     &kp UP         &kp DOT    &kp U           &kp E           &kp Y          &kp B
+&lh_hm LCTRL C  &lh_hm LALT N  &lh_hm LSHFT H    &lh_hm LCMD S  &kp R      &kp LEFT     &kp RIGHT      &kp COMMA  &rh_hm RCMD I   &rh_hm RSHFT A  &rh_hm RALT O  &rh_hm RCTRL W
+&kp V           &kp L          &kp M             &kp X          &kp J      &kp LBKT     &kp RBKT       &kp Z      &kp SEMI        &kp SQT         &kp P          &kp K
+&none           &none          &layer_gresc 6 0  &lt 7 SPACE    &lt 4 TAB  &lt 6 ENTER  &lt 6 ENTER    &lt 4 RET  &mt RSHFT BSPC  &smart_shft     &kp MINUS      &kp EQUAL
             >;
 
             label = "vnmak2";
@@ -422,11 +422,11 @@
 
         qwerty_layer {
             bindings = <
-&kp N1          &kp N2         &kp N3                &kp N4               &kp N5     &trans       &trans       &kp N6     &kp N7          &kp N8          &kp N9         &kp N0
-&kp Q           &kp W          &lh_lt 5 E            &kp R                &kp T      &kp DOWN     &kp UP       &kp Y      &kp U           &kp I           &kp O          &kp P
-&lh_hm LCTRL A  &lh_hm LALT S  &lh_hm LSHFT D  &lh_hm LCMD F  &kp G      &kp LEFT     &kp RIGHT    &kp H      &rh_hm RCMD J   &rh_hm RSHFT K  &rh_hm RALT L  &rh_hm RCTRL SEMI
-&kp Z           &kp X          &kp C                 &kp V                &kp B      &kp LBKT     &kp RBKT     &kp N      &kp M           &kp COMMA       &kp DOT        &kp FSLH
-&none           &none          &layer_gresc 6 0      &lt 7 SPACE          &lt 4 TAB  &lt 6 ENTER  &lt 6 ENTER  &lt 4 RET  &mt RSHFT BSPC  &smart_shft     &kp MINUS      &kp EQUAL
+&kp N1          &kp N2         &kp N3            &kp N4         &kp N5     &trans       &trans       &kp N6     &kp N7          &kp N8          &kp N9         &kp N0
+&kp Q           &kp W          &lh_lt 5 E        &kp R          &kp T      &kp DOWN     &kp UP       &kp Y      &kp U           &kp I           &kp O          &kp P
+&lh_hm LCTRL A  &lh_hm LALT S  &lh_hm LSHFT D    &lh_hm LCMD F  &kp G      &kp LEFT     &kp RIGHT    &kp H      &rh_hm RCMD J   &rh_hm RSHFT K  &rh_hm RALT L  &rh_hm RCTRL SEMI
+&kp Z           &kp X          &kp C             &kp V          &kp B      &kp LBKT     &kp RBKT     &kp N      &kp M           &kp COMMA       &kp DOT        &kp FSLH
+&none           &none          &layer_gresc 6 0  &lt 7 SPACE    &lt 4 TAB  &lt 6 ENTER  &lt 6 ENTER  &lt 4 RET  &mt RSHFT BSPC  &smart_shft     &kp MINUS      &kp EQUAL
             >;
         };
 
