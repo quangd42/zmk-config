@@ -278,6 +278,17 @@
             max-delay-ms = <300>;
             antecedents = <Y>;
         };
+
+        ad_z3: ad_z3 {
+            compatible = "zmk,behavior-antecedent-morph";
+            label = "AD_Z3";
+            #binding-cells = <0>;
+            defaults = <&kp Z>;
+            bindings = <&kp T>, <&kp L>, <&kp Y>, <&kp S>;
+
+            max-delay-ms = <300>;
+            antecedents = <P R S Y>;
+        };
     };
 
     macros {
@@ -354,16 +365,16 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-&kp C_PP      &kp V           &ad_m          &lh_lt 5 L            &kp C                &kp P               &kp X  &kp F           &kp O           &kp U               &kp COMMA          &kp LG(LC(Q))
-&kp TAB       &lh_hm LCTRL S  &lh_hm LALT T  &lh_hm LSHFT R  &lh_hm LCMD D  &kp Y               &kp B  &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I     &kp LBKT
-&lang_switch  &kp Q           &kp K          &kp J                 &kp G                &kp W               &ad_z  &kp H           &kp SQT         &semi_end_question  &dot_end_sentence  &kp RBKT
-                                             &layer_gresc 6 0      &lt 7 SPACE                 &lt 4 ENTER         &mt RSHFT BSPC  &smart_shft
+&kp C_PP      &kp V           &ad_m          &lh_lt 5 L        &kp C          &kp P               &kp X  &kp F           &kp O           &kp U               &kp COMMA          &kp LG(LC(Q))
+&kp TAB       &lh_hm LCTRL S  &lh_hm LALT T  &lh_hm LSHFT R    &lh_hm LCMD D  &kp Y               &kp B  &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I     &kp LBKT
+&lang_switch  &kp Q           &kp K          &kp J             &kp G          &kp W               &ad_z  &kp H           &kp SQT         &semi_end_question  &dot_end_sentence  &kp RBKT
+                                             &layer_gresc 6 0  &lt 7 SPACE           &lt 4 ENTER         &mt RSHFT BSPC  &smart_shft
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        drst_layer {
+        strdw_layer {
             // -------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  :  |   BKSP    |
             // | CTRL |  A  |  R  |  S  |  T  |  G  |   |  M  |  N   |  E  |  I  |  O  |    '      |
@@ -371,10 +382,10 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-&kp C_PP  &kp M           &kp L          &lh_lt 5 Y            &ad_k                &kp Q               &kp X   &kp F           &kp O           &kp U               &kp COMMA          &kp LG(LC(Q))
-&kp TAB   &lh_hm LCTRL D  &lh_hm LALT R  &lh_hm LSHFT S  &lh_hm LCMD T  &kp G               &kp B   &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I     &kp LBKT
-&trans    &kp W           &ad_j          &kp C                 &ad_p                &kp V               &ad_z2  &kp H           &kp SQT         &semi_end_question  &dot_end_sentence  &kp RBKT
-                                         &layer_gresc 6 0      &lt 7 SPACE                 &lt 4 ENTER          &mt RSHFT BSPC  &smart_shft
+&kp C_PP  &kp Y           &kp P          &lh_lt 5 L        &kp G          &kp V               &kp X   &kp F           &kp O           &kp U               &kp COMMA          &kp LG(LC(Q))
+&kp TAB   &lh_hm LCTRL S  &lh_hm LALT T  &lh_hm LSHFT R    &lh_hm LCMD D  &kp W               &kp B   &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I     &kp LBKT
+&trans    &kp X           &kp K          &kp J             &kp C          &kp M               &ad_z3  &kp H           &kp SQT         &semi_end_question  &dot_end_sentence  &kp RBKT
+                                         &layer_gresc 6 0  &lt 7 SPACE           &lt 4 ENTER          &mt RSHFT BSPC  &smart_shft
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -388,10 +399,10 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-&kp C_PP  &kp T           &kp D          &lh_lt 5 C            &kp J                &kp Q               &kp DOT    &kp U           &kp E           &kp Y          &kp B           &lt 8 BSPC
-&kp TAB   &lh_hm LCTRL G  &lh_hm LALT H  &lh_hm LSHFT N  &lh_hm LCMD S  &kp R               &kp COMMA  &rh_hm RCMD I   &rh_hm RSHFT A  &rh_hm RALT O  &rh_hm RCTRL W  &kp LBKT
-&trans    &kp L           &kp M          &kp V                 &kp X                &kp F               &kp Z      &kp SEMI        &kp SQT         &kp P          &kp K           &kp RBKT
-                                         &layer_gresc 6 0      &lt 7 SPACE                 &lt 4 ENTER             &mt RSHFT BSPC  &smart_shft
+&kp C_PP  &kp T           &kp D          &lh_lt 5 C        &kp J          &kp Q               &kp DOT    &kp U           &kp E           &kp Y          &kp B           &lt 8 BSPC
+&kp TAB   &lh_hm LCTRL G  &lh_hm LALT H  &lh_hm LSHFT N    &lh_hm LCMD S  &kp R               &kp COMMA  &rh_hm RCMD I   &rh_hm RSHFT A  &rh_hm RALT O  &rh_hm RCTRL W  &kp LBKT
+&trans    &kp L           &kp M          &kp V             &kp X          &kp F               &kp Z      &kp SEMI        &kp SQT         &kp P          &kp K           &kp RBKT
+                                         &layer_gresc 6 0  &lt 7 SPACE           &lt 4 ENTER             &mt RSHFT BSPC  &smart_shft
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
