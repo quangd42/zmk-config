@@ -98,7 +98,7 @@
             defaults = <&kp J>;
             bindings = <&kp P>, <&kp S>, <&kp Y>;
 
-            max-delay-ms = <300>;
+            max-delay-ms = <500>;
             antecedents = <M Y S>;
         };
 
@@ -126,7 +126,7 @@
             #binding-cells = <0>;
             defaults = <&kp K>;
             bindings = <&kp S>;
-            max-delay-ms = <300>;
+            max-delay-ms = <500>;
             antecedents = <Y>;
         };
     };
