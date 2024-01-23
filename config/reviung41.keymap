@@ -242,20 +242,10 @@
             label = "AD_J";
             #binding-cells = <0>;
             defaults = <&kp J>;
-            bindings = <&kp L>, <&kp C>;
+            bindings = <&kp P>, <&kp S>, <&kp Y>;
 
-            max-delay-ms = <300>;
-            antecedents = <C S>;
-        };
-
-        ad_p: ad_p {
-            compatible = "zmk,behavior-antecedent-morph";
-            label = "AD_P";
-            #binding-cells = <0>;
-            defaults = <&kp P>;
-            bindings = <&kp K>;
-            max-delay-ms = <300>;
-            antecedents = <C>;
+            max-delay-ms = <500>;
+            antecedents = <M Y S>;
         };
 
         ad_z2: ad_z2 {
@@ -275,7 +265,7 @@
             #binding-cells = <0>;
             defaults = <&kp K>;
             bindings = <&kp S>;
-            max-delay-ms = <300>;
+            max-delay-ms = <500>;
             antecedents = <Y>;
         };
 
@@ -284,10 +274,10 @@
             label = "AD_Z3";
             #binding-cells = <0>;
             defaults = <&kp Z>;
-            bindings = <&kp T>, <&kp L>, <&kp Y>, <&kp S>;
+            bindings = <&kp Y>, <&kp S>, <&kp P>, <&kp T>, <&kp L>;
 
-            max-delay-ms = <300>;
-            antecedents = <P R S Y>;
+            max-delay-ms = <400>;
+            antecedents = <S Y M P R>;
         };
     };
 
@@ -374,7 +364,7 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        strdm_layer {
+        srtdc_layer {
             // -------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  :  |   BKSP    |
             // | CTRL |  A  |  R  |  S  |  T  |  G  |   |  M  |  N   |  E  |  I  |  O  |    '      |
@@ -382,9 +372,9 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-&kp C_PP  &kp Y           &kp P          &lh_lt 5 L        &kp C          &kp V               &kp Q   &kp F           &kp O           &kp U               &kp COMMA          &kp LG(LC(Q))
-&kp TAB   &lh_hm LCTRL S  &lh_hm LALT T  &lh_hm LSHFT R    &lh_hm LCMD D  &kp M               &kp B   &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I     &kp LBKT
-&trans    &kp X           &kp K          &kp J             &kp G          &kp W               &ad_z3  &kp H           &kp SQT         &semi_end_question  &dot_end_sentence  &kp RBKT
+&kp C_PP  &kp Y           &kp L          &lh_lt 5 D        &kp W          &kp V               &kp X   &kp F           &kp O           &kp U               &kp COMMA          &kp LG(LC(Q))
+&kp TAB   &lh_hm LCTRL S  &lh_hm LALT R  &lh_hm LSHFT D    &lh_hm LCMD C  &kp G               &kp B   &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I     &kp LBKT
+&trans    &kp Q           &ad_j          &ad_k             &kp M          &kp P               &ad_z3  &kp H           &kp SQT         &semi_end_question  &dot_end_sentence  &kp RBKT
                                          &layer_gresc 6 0  &lt 7 SPACE           &lt 4 ENTER          &mt RSHFT BSPC  &smart_shft
             >;
 

@@ -22,117 +22,6 @@
 };
 
 / {
-    behaviors {
-        ad_z: adaptive_z {
-            compatible = "zmk,behavior-antecedent-morph";
-            label = "ADAPTIVE_Z";
-            #binding-cells = <0>;
-            defaults = <&kp Z>;
-            bindings =
-                <&kp O>,
-                <&kp Y>,
-                <&kp Y>,
-                <&kp U>,
-                <&kp Y>,
-                <&kp S>,
-                <&kp L>,
-                <&kp K>,
-                <&kp A>,
-                <&kp Y>,
-                <&str_ue>,
-                <&kp L>,
-                <&kp K>,
-                <&str_ment>,
-                <&kp E>,
-                <&kp P>;
-
-            max-delay-ms = <500>;
-            antecedents = <A C D E G J K L O P Q R S T U Y>;
-        };
-
-        ad_b: adaptive_b {
-            compatible = "zmk,behavior-antecedent-morph";
-            label = "ADAPTIVE_B";
-            #binding-cells = <0>;
-            defaults = <&kp B>;
-            bindings =
-                <&kp Y>,
-                <&kp Y>,
-                <&kp Y>,
-                <&kp L>,
-                <&kp K>,
-                <&kp Y>,
-                <&str_ue>,
-                <&kp K>,
-                <&str_ment>;
-
-            max-delay-ms = <500>;
-            antecedents = <C D G K L P Q S T>;
-        };
-
-        ad_m: adaptive_m {
-            compatible = "zmk,behavior-antecedent-morph";
-            label = "ADAPTIVE_M";
-            #binding-cells = <0>;
-            defaults = <&kp M>;
-            bindings = <&kp K>;
-            max-delay-ms = <300>;
-            antecedents = <C>;
-        };
-
-        ad_q: ad_q {
-            compatible = "zmk,behavior-antecedent-morph";
-            label = "AD_Q";
-            #binding-cells = <0>;
-            defaults = <&kp Q>;
-            bindings = <&kp Y>, <&kp Y>, <&kp Y>;
-
-            max-delay-ms = <500>;
-            antecedents = <G L M>;
-        };
-
-        ad_j: ad_j {
-            compatible = "zmk,behavior-antecedent-morph";
-            label = "AD_J";
-            #binding-cells = <0>;
-            defaults = <&kp J>;
-            bindings = <&kp P>, <&kp S>, <&kp Y>;
-
-            max-delay-ms = <500>;
-            antecedents = <M Y S>;
-        };
-
-        ad_z2: ad_z2 {
-            compatible = "zmk,behavior-antecedent-morph";
-            label = "AD_Z2";
-            #binding-cells = <0>;
-            defaults = <&kp Z>;
-            bindings =
-                <&kp Y>,
-                <&kp Y>,
-                <&kp Y>,
-                <&kp Y>,
-                <&kp T>,
-                <&kp W>,
-                <&kp L>;
-
-            max-delay-ms = <300>;
-            antecedents = <C G L M P S R>;
-        };
-
-        ad_k: ad_k {
-            compatible = "zmk,behavior-antecedent-morph";
-            label = "AD_K";
-            #binding-cells = <0>;
-            defaults = <&kp K>;
-            bindings = <&kp S>;
-            max-delay-ms = <500>;
-            antecedents = <Y>;
-        };
-    };
-};
-
-/ {
     chosen { zmk,matrix_transform = &layout_grid_transform; };
 
     behaviors {
@@ -302,6 +191,113 @@
             hold-trigger-key-positions = <47 46 53 54 55 58 59>;
         };
 
+        ad_z: adaptive_z {
+            compatible = "zmk,behavior-antecedent-morph";
+            label = "ADAPTIVE_Z";
+            #binding-cells = <0>;
+            defaults = <&kp Z>;
+            bindings =
+                <&kp O>,
+                <&kp Y>,
+                <&kp Y>,
+                <&kp U>,
+                <&kp Y>,
+                <&kp S>,
+                <&kp L>,
+                <&kp K>,
+                <&kp A>,
+                <&kp Y>,
+                <&str_ue>,
+                <&kp L>,
+                <&kp K>,
+                <&str_ment>,
+                <&kp E>,
+                <&kp P>;
+
+            max-delay-ms = <500>;
+            antecedents = <A C D E G J K L O P Q R S T U Y>;
+        };
+
+        ad_b: adaptive_b {
+            compatible = "zmk,behavior-antecedent-morph";
+            label = "ADAPTIVE_B";
+            #binding-cells = <0>;
+            defaults = <&kp B>;
+            bindings =
+                <&kp Y>,
+                <&kp Y>,
+                <&kp Y>,
+                <&kp L>,
+                <&kp K>,
+                <&kp Y>,
+                <&str_ue>,
+                <&kp K>,
+                <&str_ment>;
+
+            max-delay-ms = <500>;
+            antecedents = <C D G K L P Q S T>;
+        };
+
+        ad_m: adaptive_m {
+            compatible = "zmk,behavior-antecedent-morph";
+            label = "ADAPTIVE_M";
+            #binding-cells = <0>;
+            defaults = <&kp M>;
+            bindings = <&kp K>;
+            max-delay-ms = <300>;
+            antecedents = <C>;
+        };
+
+        ad_q: ad_q {
+            compatible = "zmk,behavior-antecedent-morph";
+            label = "AD_Q";
+            #binding-cells = <0>;
+            defaults = <&kp Q>;
+            bindings = <&kp Y>, <&kp Y>, <&kp Y>;
+
+            max-delay-ms = <500>;
+            antecedents = <G L M>;
+        };
+
+        ad_j: ad_j {
+            compatible = "zmk,behavior-antecedent-morph";
+            label = "AD_J";
+            #binding-cells = <0>;
+            defaults = <&kp J>;
+            bindings = <&kp P>, <&kp S>, <&kp Y>;
+
+            max-delay-ms = <500>;
+            antecedents = <M Y S>;
+        };
+
+        ad_z2: ad_z2 {
+            compatible = "zmk,behavior-antecedent-morph";
+            label = "AD_Z2";
+            #binding-cells = <0>;
+            defaults = <&kp Z>;
+            bindings =
+                <&kp Y>,
+                <&kp Y>,
+                <&kp Y>,
+                <&kp Y>,
+                <&kp T>,
+                <&kp W>,
+                <&kp L>;
+
+            max-delay-ms = <300>;
+            antecedents = <C G L M P S R>;
+        };
+
+        ad_k: ad_k {
+            compatible = "zmk,behavior-antecedent-morph";
+            label = "AD_K";
+            #binding-cells = <0>;
+            defaults = <&kp K>;
+            bindings = <&kp S>;
+            max-delay-ms = <500>;
+            antecedents = <Y>;
+        };
+
         ad_z3: ad_z3 {
             compatible = "zmk,behavior-antecedent-morph";
             label = "AD_Z3";
@@ -309,7 +305,7 @@
             defaults = <&kp Z>;
             bindings = <&kp Y>, <&kp S>, <&kp P>, <&kp T>, <&kp L>;
 
-            max-delay-ms = <300>;
+            max-delay-ms = <400>;
             antecedents = <S Y M P R>;
         };
     };
