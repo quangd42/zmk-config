@@ -91,14 +91,15 @@
             antecedents = <G L M>;
         };
 
-        ad_p: ad_p {
+        ad_j: ad_j {
             compatible = "zmk,behavior-antecedent-morph";
-            label = "AD_P";
+            label = "AD_J";
             #binding-cells = <0>;
-            defaults = <&kp P>;
-            bindings = <&kp K>;
+            defaults = <&kp J>;
+            bindings = <&kp P>, <&kp S>, <&kp Y>;
+
             max-delay-ms = <300>;
-            antecedents = <C>;
+            antecedents = <M Y S>;
         };
 
         ad_z2: ad_z2 {
@@ -119,14 +120,14 @@
             antecedents = <C G L M P S R>;
         };
 
-        ad_x: ad_x {
+        ad_k: ad_k {
             compatible = "zmk,behavior-antecedent-morph";
-            label = "AD_X";
+            label = "AD_K";
             #binding-cells = <0>;
-            defaults = <&kp X>;
-            bindings = <&kp M>;
+            defaults = <&kp K>;
+            bindings = <&kp S>;
             max-delay-ms = <300>;
-            antecedents = <S>;
+            antecedents = <Y>;
         };
     };
 };
@@ -414,7 +415,7 @@
 &kp N1          &kp N2         &kp N3            &kp N4         &kp N5     &trans       &kp LG(LC(Q))  &kp N6     &kp N7          &kp N8          &kp N9              &kp N0
 &kp Y           &kp L          &lh_lt 5 D        &kp W          &kp V      &kp DOWN     &kp UP         &kp X      &kp F           &kp O           &kp U               &kp COMMA
 &lh_hm LCTRL S  &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD C  &kp G      &kp LEFT     &kp RIGHT      &kp B      &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I
-&kp Q           &kp J          &kp K             &kp M          &kp P      &kp LBKT     &kp RBKT       &ad_z3     &kp H           &kp SQT         &semi_end_question  &dot_end_sentence
+&kp Q           &ad_j          &ad_k             &kp M          &kp P      &kp LBKT     &kp RBKT       &ad_z3     &kp H           &kp SQT         &semi_end_question  &dot_end_sentence
 &none           &none          &layer_gresc 6 0  &lt 7 SPACE    &lt 4 TAB  &lt 6 ENTER  &lt 6 ENTER    &lt 4 RET  &mt RSHFT BSPC  &smart_shft     &kp MINUS           &kp EQUAL
             >;
         };
