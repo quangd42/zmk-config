@@ -303,10 +303,17 @@
             label = "AD_Z3";
             #binding-cells = <0>;
             defaults = <&kp Z>;
-            bindings = <&kp Y>, <&kp S>, <&kp P>, <&kp T>, <&kp L>;
+            bindings =
+                <&kp K>,
+                <&kp K>,
+                <&kp Y>,
+                <&kp S>,
+                <&kp P>,
+                <&kp T>,
+                <&kp L>;
 
             max-delay-ms = <400>;
-            antecedents = <S Y M P R>;
+            antecedents = <C L S Y M P R>;
         };
     };
 
