@@ -285,10 +285,17 @@
             label = "AD_Z_CAN2B2";
             #binding-cells = <0>;
             defaults = <&kp Z>;
-            bindings = <&kp Y>, <&kp L>, <&kp K>;
+            bindings =
+                <&kp Y>,
+                <&kp L>,
+                <&kp K>,
+                <&kp S>,
+                <&kp S>,
+                <&kp S>,
+                <&kp M>;
 
-            max-delay-ms = <300>;
-            antecedents = <C R L>;
+            max-delay-ms = <400>;
+            antecedents = <C R L G W M S>;
         };
     };
 
