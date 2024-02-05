@@ -321,10 +321,17 @@
             label = "AD_Z_CAN2B2";
             #binding-cells = <0>;
             defaults = <&kp Z>;
-            bindings = <&kp Y>, <&kp L>, <&kp K>;
+            bindings =
+                <&kp Y>,
+                <&kp L>,
+                <&kp K>,
+                <&kp S>,
+                <&kp S>,
+                <&kp S>,
+                <&kp M>;
 
-            max-delay-ms = <300>;
-            antecedents = <C R L>;
+            max-delay-ms = <400>;
+            antecedents = <C R L G W M S>;
         };
     };
 
@@ -499,11 +506,11 @@
 
         nav_layer {
             bindings = <
-&none      &none      &none      &none      &none          &none    &none    &none         &none         &none      &none          &none
-&kp TAB    &kp GRAVE  &none      &kp LG(A)  &kp LG(LBKT)   &none    &none    &kp LA(UP)    &kp LA(LEFT)  &kp UP     &kp LA(RIGHT)  &kp LA(BSPC)
-&sk LCTRL  &sk LALT   &sk LSHFT  &sk LCMD   &kp LG(RBKT)   &none    &none    &kp LA(DOWN)  &kp LEFT      &kp DOWN   &kp RIGHT      &kp BSPC
-&kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LS(LG(Z))  &none    &none    &kp DEL       &kp LG(LEFT)  &kp LG(A)  &kp LG(RIGHT)  &kp LG(BSPC)
-&none      &none      &to 0      &kp SPACE  &none          &kp RET  &kp RET  &kp BSPC      &kp BSPC      &none      &none          &none
+&none      &none      &none      &none      &none          &none    &none    &none         &none         &none     &none          &none
+&kp TAB    &kp GRAVE  &none      &kp LG(A)  &kp LG(LBKT)   &none    &none    &kp LA(UP)    &kp LA(LEFT)  &kp UP    &kp LA(RIGHT)  &none
+&sk LCTRL  &sk LALT   &sk LSHFT  &sk LCMD   &kp LG(RBKT)   &none    &none    &kp LA(DOWN)  &kp LEFT      &kp DOWN  &kp RIGHT      &none
+&kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LS(LG(Z))  &none    &none    &kp H         &kp J         &kp K     &kp L          &none
+&none      &none      &to 0      &kp SPACE  &none          &kp RET  &kp RET  &kp ENTER     &kp BSPC      &kp DEL   &none          &none
             >;
         };
 
