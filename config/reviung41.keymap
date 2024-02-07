@@ -468,7 +468,7 @@
             //                       |     | ADJ | BKSP |    |     |
 
             bindings = <
-&none      &kp RC(RA(RS(RGUI)))  &kp LC(W)  &none      &kp LG(A)  &kp LG(LBKT)              &kp LA(UP)    &kp LA(LEFT)  &kp UP    &kp LA(RIGHT)  &none  &kp LG(LC(Q))
+&none      &sk RC(RA(RS(RGUI)))  &kp LC(W)  &none      &kp LG(A)  &kp LG(LBKT)              &kp LA(UP)    &kp LA(LEFT)  &kp UP    &kp LA(RIGHT)  &none  &kp LG(LC(Q))
 &kp LG(A)  &sk LCTRL             &sk LALT   &sk LSHFT  &sk LCMD   &kp LG(RBKT)              &kp LA(DOWN)  &kp LEFT      &kp DOWN  &kp RIGHT      &none  &none
 &none      &kp LG(Z)             &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LS(LG(Z))             &kp H         &kp J         &kp K     &kp L          &none  &none
                                             &to 0      &none                     &kp ENTER                &kp BSPC      &kp DEL
