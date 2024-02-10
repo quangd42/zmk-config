@@ -453,7 +453,7 @@
 
         fun_layer {
             bindings = <
-&none  &none      &kp LG(W)  &none      &kp LS(LG(N4))  &kp LS(LG(N5))         &kp F12  &kp F7  &kp F8  &kp F9  &kp LG(LBKT)  &tog 7
+&none  &none      &kp LC(W)  &none      &kp LS(LG(N4))  &kp LS(LG(N5))         &kp F12  &kp F7  &kp F8  &kp F9  &kp LG(LBKT)  &tog 7
 &none  &kp LG(A)  &none      &none      &none           &kp LG(BSLH)           &kp F11  &kp F1  &kp F2  &kp F3  &kp LG(RBKT)  &none
 &none  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)       &kp LG(LS(Z))          &kp F10  &kp F4  &kp F5  &kp F6  &kp LG(BSLH)  &none
                              &to 0      &none                           &none           &none   &mo 8
@@ -468,10 +468,10 @@
             //                       |     | ADJ | BKSP |    |     |
 
             bindings = <
-&none      &sk RC(RA(RS(RGUI)))  &kp LC(W)  &none      &kp LG(A)  &kp LG(LBKT)              &kp LA(LEFT)  &kp PG_DN  &kp PG_UP  &kp LA(RIGHT)  &none  &tog 7
-&kp LG(A)  &sk LCTRL             &sk LALT   &sk LSHFT  &sk LCMD   &kp LG(RBKT)              &kp LEFT      &kp DOWN   &kp UP     &kp RIGHT      &none  &none
-&none      &kp LG(Z)             &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LS(LG(Z))             &kp H         &kp J      &kp K      &kp L          &none  &none
-                                            &to 0      &none                     &kp ENTER                &kp BSPC   &kp DEL
+&none    &sk RC(RA(RS(RGUI)))  &kp LC(W)  &none      &kp LG(A)  &kp LG(LBKT)              &kp LA(LEFT)  &kp PG_DN  &kp PG_UP  &kp LA(RIGHT)  &none  &tog 7
+&kp TAB  &sk LCTRL             &sk LALT   &sk LSHFT  &sk LCMD   &kp LG(RBKT)              &kp LEFT      &kp DOWN   &kp UP     &kp RIGHT      &none  &none
+&none    &kp LG(Z)             &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LS(LG(Z))             &kp H         &kp J      &kp K      &kp L          &none  &none
+                                          &kp ESC    &kp SPACE                 &kp ENTER                &kp BSPC   &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
