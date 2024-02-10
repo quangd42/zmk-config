@@ -297,6 +297,16 @@
             max-delay-ms = <400>;
             antecedents = <C R L G W M S>;
         };
+
+        layer_switcher: layer_switcher {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_SWITCHER";
+            bindings = <&mo>, <&tog>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+        };
     };
 
     macros {
@@ -394,10 +404,10 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-&kp C_PP      &kp V           &ad_m          &lh_lt 5 L        &kp C          &kp P               &kp Q  &kp F           &kp O           &kp U               &kp COMMA          &tog 7
-&kp TAB       &lh_hm LCTRL S  &lh_hm LALT T  &lh_hm LSHFT R    &lh_hm LCMD D  &kp Y               &kp B  &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I     &kp LBKT
-&lang_switch  &kp X           &kp K          &kp J             &kp G          &kp W               &ad_z  &kp H           &kp SQT         &semi_end_question  &dot_end_sentence  &kp RBKT
-                                             &layer_gresc 6 0  &lt 7 SPACE           &lt 4 ENTER         &mt RSHFT BSPC  &smart_shft
+&kp C_PP             &kp V           &ad_m          &lh_lt 5 L        &kp C          &kp P               &kp Q  &kp F           &kp O           &kp U               &kp COMMA          &lang_switch
+&kp TAB              &lh_hm LCTRL S  &lh_hm LALT T  &lh_hm LSHFT R    &lh_hm LCMD D  &kp Y               &kp B  &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I     &kp LBKT
+&layer_switcher 7 7  &kp X           &kp K          &kp J             &kp G          &kp W               &ad_z  &kp H           &kp SQT         &semi_end_question  &dot_end_sentence  &kp RBKT
+                                                    &layer_gresc 6 0  &lt 7 SPACE           &lt 4 ENTER         &mt RSHFT BSPC  &smart_shft
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -456,28 +466,28 @@
 
         code_sym_layer {
             bindings = <
-&none  &kp GRAVE  &kp LT   &kp GT     &kp FSLH   &kp BSLH         &kp PIPE   &kp CARET  &kp LBKT  &kp RBKT  &kp AT     &trans
-&none  &kp EXCL   &kp DQT  &kp PLUS   &kp EQUAL  &kp HASH         &kp AMPS   &kp COLON  &kp LPAR  &kp RPAR  &kp QMARK  &none
-&none  &kp DOT    &kp SQT  &kp UNDER  &kp MINUS  &kp STAR         &kp TILDE  &kp DLLR   &kp LBRC  &kp RBRC  &kp PRCNT  &none
-                           &none      &kp SPACE            &none             &kp BSPC   &none
+&none   &kp GRAVE  &kp LT   &kp GT     &kp FSLH   &kp BSLH         &kp PIPE   &kp CARET  &kp LBKT  &kp RBKT  &kp AT     &trans
+&none   &kp EXCL   &kp DQT  &kp PLUS   &kp EQUAL  &kp HASH         &kp AMPS   &kp COLON  &kp LPAR  &kp RPAR  &kp QMARK  &none
+&trans  &kp DOT    &kp SQT  &kp UNDER  &kp MINUS  &kp STAR         &kp TILDE  &kp DLLR   &kp LBRC  &kp RBRC  &kp PRCNT  &none
+                            &none      &kp SPACE            &none             &kp BSPC   &none
             >;
         };
 
         num_layer {
             bindings = <
-&none  &none      &kp LPAR  &none      &kp RPAR   &none            &kp COLON  &kp N7    &kp N8  &kp N9  &kp ASTRK  &kp PLUS
-&to 0  &sk LCTRL  &sk LALT  &sk LSHFT  &sk LCMD   &none            &kp N0     &kp N1    &kp N2  &kp N3  &kp FSLH   &kp MINUS
-&none  &none      &none     &none      &none      &none            &kp EQUAL  &kp N4    &kp N5  &kp N6  &kp DOT    &none
-                            &kp MINUS  &kp SPACE         &kp PLUS             &kp BSPC  &none
+&none   &none      &kp LPAR  &none      &kp RPAR   &none            &kp COLON  &kp N7    &kp N8  &kp N9  &kp ASTRK  &kp PLUS
+&to 0   &sk LCTRL  &sk LALT  &sk LSHFT  &sk LCMD   &none            &kp N0     &kp N1    &kp N2  &kp N3  &kp FSLH   &kp MINUS
+&trans  &none      &none     &none      &none      &none            &kp EQUAL  &kp N4    &kp N5  &kp N6  &kp DOT    &none
+                             &kp MINUS  &kp SPACE         &kp PLUS             &kp BSPC  &none
             >;
         };
 
         fun_layer {
             bindings = <
-&none  &none      &kp LC(W)  &none      &kp LS(LG(N4))  &kp LS(LG(N5))         &kp F12  &kp F7  &kp F8  &kp F9  &kp LG(LBKT)  &tog 7
-&none  &kp LG(A)  &none      &none      &none           &kp LG(BSLH)           &kp F11  &kp F1  &kp F2  &kp F3  &kp LG(RBKT)  &none
-&none  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)       &kp LG(LS(Z))          &kp F10  &kp F4  &kp F5  &kp F6  &kp LG(BSLH)  &none
-                             &to 0      &none                           &none           &none   &mo 8
+&none   &none      &kp LC(W)  &none      &kp LS(LG(N4))  &kp LS(LG(N5))         &kp F12  &kp F7  &kp F8  &kp F9  &kp LG(LBKT)  &kp LC(LG(Q))
+&none   &kp LG(A)  &none      &none      &none           &kp LG(BSLH)           &kp F11  &kp F1  &kp F2  &kp F3  &kp LG(RBKT)  &none
+&trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)       &kp LG(LS(Z))          &kp F10  &kp F4  &kp F5  &kp F6  &kp LG(BSLH)  &none
+                              &to 0      &none                           &none           &none   &mo 8
             >;
         };
 
@@ -489,9 +499,9 @@
             //                       |     | ADJ | BKSP |    |     |
 
             bindings = <
-&none    &sk RC(RA(RS(RGUI)))  &kp LC(W)  &none      &kp LG(A)  &kp LG(LBKT)              &kp LA(LEFT)  &kp PG_DN  &kp PG_UP  &kp LA(RIGHT)  &vim_nav_o  &tog 7
+&none    &sk RC(RA(RS(RGUI)))  &kp LC(W)  &none      &kp LG(A)  &kp LG(LBKT)              &kp LA(LEFT)  &kp PG_DN  &kp PG_UP  &kp LA(RIGHT)  &vim_nav_o  &trans
 &kp TAB  &sk LCTRL             &sk LALT   &sk LSHFT  &sk LCMD   &kp LG(RBKT)              &kp LEFT      &kp DOWN   &kp UP     &kp RIGHT      &vim_nav_i  &none
-&none    &kp LG(Z)             &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LS(LG(Z))             &kp H         &kp J      &kp K      &kp L          &vim_nav_a  &none
+&trans   &kp LG(Z)             &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LS(LG(Z))             &kp H         &kp J      &kp K      &kp L          &vim_nav_a  &none
                                           &kp ESC    &kp SPACE                 &kp ENTER                &kp BSPC   &kp DEL
             >;
 
