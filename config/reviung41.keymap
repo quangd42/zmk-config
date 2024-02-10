@@ -358,6 +358,20 @@
             bindings = <&tog 7 &kp I>;
             label = "VIM_NAV_I";
         };
+
+        vim_nav_o: vim_nav_o {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&tog 7 &kp O>;
+            label = "VIM_NAV_O";
+        };
+
+        vim_nav_a: vim_nav_a {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&tog 7 &kp A>;
+            label = "VIM_NAV_A";
+        };
     };
 
     combos {
@@ -475,9 +489,9 @@
             //                       |     | ADJ | BKSP |    |     |
 
             bindings = <
-&none    &sk RC(RA(RS(RGUI)))  &kp LC(W)  &none      &kp LG(A)  &kp LG(LBKT)              &kp LA(LEFT)  &kp PG_DN  &kp PG_UP  &kp LA(RIGHT)  &none       &tog 7
+&none    &sk RC(RA(RS(RGUI)))  &kp LC(W)  &none      &kp LG(A)  &kp LG(LBKT)              &kp LA(LEFT)  &kp PG_DN  &kp PG_UP  &kp LA(RIGHT)  &vim_nav_o  &tog 7
 &kp TAB  &sk LCTRL             &sk LALT   &sk LSHFT  &sk LCMD   &kp LG(RBKT)              &kp LEFT      &kp DOWN   &kp UP     &kp RIGHT      &vim_nav_i  &none
-&none    &kp LG(Z)             &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LS(LG(Z))             &kp H         &kp J      &kp K      &kp L          &none       &none
+&none    &kp LG(Z)             &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LS(LG(Z))             &kp H         &kp J      &kp K      &kp L          &vim_nav_a  &none
                                           &kp ESC    &kp SPACE                 &kp ENTER                &kp BSPC   &kp DEL
             >;
 
