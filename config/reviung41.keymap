@@ -334,7 +334,7 @@
             bindings = <&kp SQT>, <&kp MINUS>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_LGUI)>;
+            mods = <(MOD_LSFT|MOD_LGUI|MOD_LALT)>;
             keep-mods = <(MOD_LSFT|MOD_LGUI)>;
         };
 
