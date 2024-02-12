@@ -142,18 +142,18 @@
             bindings = <&kp SEMI>, <&m_question_comment>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LGUI|MOD_RGUI|MOD_LSFT)>;
-            keep-mods = <(MOD_LGUI|MOD_RGUI)>;
+            mods = <(MOD_LGUI|MOD_RGUI|MOD_LSFT|MOD_LCTL|MOD_LALT)>;
+            keep-mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL)>;
         };
 
         m_question_comment: m_question_comment {
             compatible = "zmk,behavior-mod-morph";
             label = "M_QUESTION_COMMENT";
-            bindings = <&end_question>, <&kp FSLH>;
+            bindings = <&kp FSLH>, <&end_question>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LGUI|MOD_RGUI)>;
-            keep-mods = <(MOD_LGUI|MOD_RGUI)>;
+            mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_LSFT)>;
         };
 
         lh_hm_quick: lh_hm_quick {
