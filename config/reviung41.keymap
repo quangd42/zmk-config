@@ -136,14 +136,14 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        semi_end_question: semi_end_question {
+        m_semi_fslh: m_semi_fslh {
             compatible = "zmk,behavior-mod-morph";
-            label = "SEMI_END_QUESTION";
-            bindings = <&kp SEMI>, <&m_question_comment>;
+            label = "M_SEMI_FSLH";
+            bindings = <&kp SEMI>, <&kp FSLH>;
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI|MOD_RGUI|MOD_LSFT|MOD_LCTL|MOD_LALT)>;
-            keep-mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL)>;
+            keep-mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_LSFT)>;
         };
 
         m_question_comment: m_question_comment {
@@ -307,6 +307,54 @@
             tapping-term-ms = <200>;
             flavor = "balanced";
         };
+
+        m_lbkt_minus: m_lbkt_minus {
+            compatible = "zmk,behavior-mod-morph";
+            label = "M_LBKT_MINUS";
+            bindings = <&kp LBKT>, <&kp MINUS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RGUI)>;
+            keep-mods = <(MOD_RGUI)>;
+        };
+
+        m_rbkt_equal: m_rbkt_equal {
+            compatible = "zmk,behavior-mod-morph";
+            label = "M_RBKT_EQUAL";
+            bindings = <&kp RBKT>, <&kp EQUAL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RGUI)>;
+            keep-mods = <(MOD_RGUI)>;
+        };
+
+        m_sqt_minus: m_sqt_minus {
+            compatible = "zmk,behavior-mod-morph";
+            label = "M_SQT_MINUS";
+            bindings = <&kp SQT>, <&kp MINUS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_LGUI)>;
+            keep-mods = <(MOD_LSFT|MOD_LGUI)>;
+        };
+
+        m_comma_lt: m_comma_lt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "M_COMMA_LT";
+            bindings = <&kp COMMA>, <&kp LT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+        };
+
+        m_dot_gt: m_dot_gt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "M_DOT_GT";
+            bindings = <&kp DOT>, <&kp GT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+        };
     };
 
     macros {
@@ -404,9 +452,9 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-&kp C_PP             &kp V           &ad_m          &lh_lt 5 L        &kp C          &kp P               &kp Q  &kp F           &kp O           &kp U               &kp COMMA          &lang_switch
-&kp TAB              &lh_hm LCTRL S  &lh_hm LALT T  &lh_hm LSHFT R    &lh_hm LCMD D  &kp Y               &kp B  &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I     &kp LBKT
-&layer_switcher 7 7  &kp X           &kp K          &kp J             &kp G          &kp W               &ad_z  &kp H           &kp SQT         &semi_end_question  &dot_end_sentence  &kp RBKT
+&kp C_PP             &kp V           &ad_m          &lh_lt 5 L        &kp C          &kp P               &kp Q  &kp F           &kp O           &kp U          &m_comma_lt     &lang_switch
+&kp TAB              &lh_hm LCTRL S  &lh_hm LALT T  &lh_hm LSHFT R    &lh_hm LCMD D  &kp Y               &kp B  &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &m_lbkt_minus
+&layer_switcher 7 7  &kp X           &kp K          &kp J             &kp G          &kp W               &ad_z  &kp H           &m_sqt_minus    &m_semi_fslh   &m_dot_gt       &m_rbkt_equal
                                                     &layer_gresc 6 0  &lt 7 SPACE           &lt 4 ENTER         &mt RSHFT BSPC  &smart_shft
             >;
 
@@ -421,9 +469,9 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-&kp C_PP  &kp Y           &kp L          &lh_lt 5 D        &kp W          &kp V               &kp X         &kp B           &kp O           &kp U               &kp COMMA          &trans
-&kp TAB   &lh_hm LCTRL C  &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S  &kp G               &kp P         &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I     &kp LBKT
-&trans    &kp Q           &ad_j          &ad_k             &kp M          &kp F               &ad_z_can2b2  &kp H           &kp SQT         &semi_end_question  &dot_end_sentence  &kp RBKT
+&kp C_PP  &kp Y           &kp L          &lh_lt 5 D        &kp W          &kp V               &kp X         &kp B           &kp O           &kp U          &m_comma_lt     &trans
+&kp TAB   &lh_hm LCTRL C  &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S  &kp G               &kp P         &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &trans
+&trans    &kp Q           &ad_j          &ad_k             &kp M          &kp F               &ad_z_can2b2  &kp H           &m_sqt_minus    &m_semi_fslh   &m_dot_gt       &trans
                                          &layer_gresc 6 0  &lt 7 SPACE           &lt 4 ENTER                &mt RSHFT BSPC  &smart_shft
             >;
 
@@ -439,8 +487,8 @@
 
             bindings = <
 &kp C_PP  &kp T           &kp D          &lh_lt 5 C        &kp J          &kp Q               &kp DOT    &kp U           &kp E           &kp Y          &kp B           &trans
-&kp TAB   &lh_hm LCTRL G  &lh_hm LALT H  &lh_hm LSHFT N    &lh_hm LCMD S  &kp R               &kp COMMA  &rh_hm RCMD I   &rh_hm RSHFT A  &rh_hm RALT O  &rh_hm RCTRL W  &kp LBKT
-&trans    &kp L           &kp M          &kp V             &kp X          &kp F               &kp Z      &kp SEMI        &kp SQT         &kp P          &kp K           &kp RBKT
+&kp TAB   &lh_hm LCTRL G  &lh_hm LALT H  &lh_hm LSHFT N    &lh_hm LCMD S  &kp R               &kp COMMA  &rh_hm RCMD I   &rh_hm RSHFT A  &rh_hm RALT O  &rh_hm RCTRL W  &trans
+&trans    &kp L           &kp M          &kp V             &kp X          &kp F               &kp Z      &kp SEMI        &kp SQT         &kp P          &kp K           &trans
                                          &layer_gresc 6 0  &lt 7 SPACE           &lt 4 ENTER             &mt RSHFT BSPC  &smart_shft
             >;
 
@@ -475,10 +523,10 @@
 
         num_layer {
             bindings = <
-&none   &none      &kp LPAR  &none      &kp RPAR   &none            &kp COLON  &kp N7    &kp N8  &kp N9  &kp ASTRK  &kp PLUS
-&to 0   &sk LCTRL  &sk LALT  &sk LSHFT  &sk LCMD   &none            &kp N0     &kp N1    &kp N2  &kp N3  &kp FSLH   &kp MINUS
-&trans  &none      &none     &none      &none      &none            &kp EQUAL  &kp N4    &kp N5  &kp N6  &kp DOT    &none
-                             &kp MINUS  &kp SPACE         &kp PLUS             &kp BSPC  &none
+&none   &kp LT     &kp LPAR  &none      &kp RPAR   &kp GT            &kp COLON  &kp N7    &kp N8  &kp N9  &kp ASTRK  &kp PLUS
+&to 0   &sk LCTRL  &sk LALT  &sk LSHFT  &sk LCMD   &none             &kp N0     &kp N1    &kp N2  &kp N3  &kp FSLH   &kp MINUS
+&trans  &none      &none     &none      &none      &none             &kp EQUAL  &kp N4    &kp N5  &kp N6  &kp DOT    &none
+                             &kp MINUS  &kp SPACE          &kp PLUS             &kp BSPC  &none
             >;
         };
 
@@ -499,7 +547,7 @@
             //                       |     | ADJ | BKSP |    |     |
 
             bindings = <
-&none    &sk RC(RA(RS(RGUI)))  &kp LC(W)  &none      &kp LG(A)  &kp LG(LBKT)              &kp LA(LEFT)  &kp PG_DN  &kp PG_UP  &kp LA(RIGHT)  &vim_nav_o  &trans
+&none    &sk RC(RA(RS(RGUI)))  &kp LC(W)  &none      &kp LG(A)  &kp LG(LBKT)              &kp LA(LEFT)  &kp LC(Y)  &kp LC(E)  &kp LA(RIGHT)  &vim_nav_o  &trans
 &kp TAB  &sk LCTRL             &sk LALT   &sk LSHFT  &sk LCMD   &kp LG(RBKT)              &kp LEFT      &kp DOWN   &kp UP     &kp RIGHT      &vim_nav_i  &none
 &trans   &kp LG(Z)             &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LS(LG(Z))             &kp H         &kp J      &kp K      &kp L          &vim_nav_a  &none
                                           &kp ESC    &kp SPACE                 &kp ENTER                &kp BSPC   &kp DEL
