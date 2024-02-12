@@ -342,6 +342,34 @@
             tapping-term-ms = <200>;
             flavor = "balanced";
         };
+
+        m_sqt_minus: m_sqt_minus {
+            compatible = "zmk,behavior-mod-morph";
+            label = "M_SQT_MINUS";
+            bindings = <&kp SQT>, <&kp MINUS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_LGUI)>;
+            keep-mods = <(MOD_LSFT|MOD_LGUI)>;
+        };
+
+        m_comma_lt: m_comma_lt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "M_COMMA_LT";
+            bindings = <&kp COMMA>, <&kp LT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+        };
+
+        m_dot_gt: m_dot_gt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "M_DOT_GT";
+            bindings = <&kp DOT>, <&kp GT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+        };
     };
 
     macros {
