@@ -565,7 +565,7 @@
         nav_layer {
             bindings = <
 &none                 &none      &none      &none      &none          &none    &none    &none      &none      &none      &none      &none
-&sk RA(RC(RS(RGUI)))  &kp LC(W)  &none      &kp LG(A)  &kp LG(LBKT)   &none    &none    &kp PG_DN  &kp LC(Y)  &kp LC(E)  &kp PG_UP  &vim_nav_o
+&sk RA(RC(RS(RGUI)))  &kp LC(W)  &none      &kp LG(A)  &kp LG(LBKT)   &none    &none    &kp PG_DN  &kp LC(E)  &kp LC(Y)  &kp PG_UP  &vim_nav_o
 &sk LCTRL             &sk LALT   &sk LSHFT  &sk LCMD   &kp LG(RBKT)   &none    &none    &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &vim_nav_i
 &kp LG(Z)             &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LS(LG(Z))  &none    &none    &kp H      &kp J      &kp K      &kp L      &vim_nav_a
 &none                 &none      &kp ESC    &kp SPACE  &kp TAB        &kp RET  &kp RET  &kp ENTER  &kp BSPC   &kp DEL    &none      &none
