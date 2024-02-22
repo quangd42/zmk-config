@@ -327,10 +327,11 @@
                 <&kp S>,
                 <&kp S>,
                 <&kp S>,
-                <&kp M>;
+                <&kp M>,
+                <&str_px>;
 
             max-delay-ms = <400>;
-            antecedents = <C R L G W M S>;
+            antecedents = <C R L G W M S N>;
         };
 
         layer_switcher: layer_switcher {
@@ -467,6 +468,15 @@
             bindings = <&tog 7 &kp A>;
             label = "VIM_NAV_A";
         };
+
+        str_px: str_px {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp P &kp X>;
+            label = "STR_PX";
+            wait-ms = <30>;
+            tap-ms = <4>;
+        };
     };
 
     combos {
@@ -480,6 +490,16 @@
 
     keymap {
         compatible = "zmk,keymap";
+
+        canary2b2 {
+            bindings = <
+&kp N1               &kp N2         &kp N3            &kp N4         &kp N5     &lang_switch  &kp LG(LC(Q))  &kp N6        &kp N7          &kp N8          &kp N9         &kp N0
+&kp Y                &kp L          &lh_lt 5 D        &kp W          &kp V      &kp DOWN      &kp UP         &kp X         &kp P           &kp O           &kp U          &m_comma_lt
+&lh_hm LCTRL C       &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S  &kp G      &kp LEFT      &kp RIGHT      &kp B         &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I
+&ad_q_can2b2         &kp J          &kp K             &kp M          &kp F      &kp LBKT      &kp RBKT       &ad_z_can2b2  &kp H           &m_sqt_minus    &m_semi_flsh   &m_dot_gt
+&layer_switcher 7 7  &none          &layer_gresc 6 0  &lt 7 SPACE    &lt 4 TAB  &lt 6 ENTER   &lt 6 ENTER    &lt 4 RET     &mt RSHFT BSPC  &smart_shft     &kp MINUS      &kp EQUAL
+            >;
+        };
 
         stirred_layer {
             //  -------------------------------------------------------------------------------------------------
@@ -498,16 +518,6 @@
             >;
 
             label = "stirred";
-        };
-
-        canary2b2 {
-            bindings = <
-&kp N1          &kp N2         &kp N3            &kp N4         &kp N5     &trans       &trans       &kp N6        &kp N7          &kp N8          &kp N9         &kp N0
-&kp Y           &kp L          &lh_lt 5 D        &kp W          &kp V      &kp DOWN     &kp UP       &kp X         &kp B           &kp O           &kp U          &m_comma_lt
-&lh_hm LCTRL C  &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S  &kp G      &kp LEFT     &kp RIGHT    &kp P         &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I
-&ad_q_can2b2    &kp J          &kp K             &kp M          &kp F      &kp LBKT     &kp RBKT     &ad_z_can2b2  &kp H           &m_sqt_minus    &m_semi_flsh   &m_dot_gt
-&trans          &none          &layer_gresc 6 0  &lt 7 SPACE    &lt 4 TAB  &lt 6 ENTER  &lt 6 ENTER  &lt 4 RET     &mt RSHFT BSPC  &smart_shft     &kp MINUS      &kp EQUAL
-            >;
         };
 
         vnmak_layer {
