@@ -91,7 +91,7 @@
             flavor = "balanced";
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 50 51 52 53 54 55 56 57 58 59 30 34 35 43 44 45 46 47 48 49 56 57 58 59 42>;
             hold-trigger-on-release;
-            require-prior-idle-ms = <125>;
+            require-prior-idle-ms = <75>;
         };
 
         rh_lt: rh_lt {
@@ -105,7 +105,7 @@
             flavor = "balanced";
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 51 52 53 54 55 56 57 58 59 29 41 49 48 50>;
             hold-trigger-on-release;
-            require-prior-idle-ms = <125>;
+            require-prior-idle-ms = <75>;
         };
 
         grave_escape: grave_escape {
@@ -494,7 +494,7 @@
         canary2b2 {
             bindings = <
 &kp N1               &kp N2         &kp N3            &kp N4         &kp N5     &lang_switch  &kp LG(LC(Q))  &kp N6        &kp N7          &kp N8          &kp N9         &kp N0
-&kp Y                &kp L          &lh_lt 5 D        &kp W          &kp V      &kp DOWN      &kp UP         &kp X         &kp P           &kp O           &kp U          &m_comma_lt
+&kp Y                &lh_lt 4 L     &lh_lt 5 D        &kp W          &kp V      &kp DOWN      &kp UP         &kp X         &kp P           &kp O           &rh_lt 4 U     &m_comma_lt
 &lh_hm LCTRL C       &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S  &kp G      &kp LEFT      &kp RIGHT      &kp B         &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I
 &ad_q_can2b2         &kp J          &kp K             &kp M          &kp F      &kp LBKT      &kp RBKT       &ad_z_can2b2  &kp H           &m_sqt_minus    &m_semi_flsh   &m_dot_gt
 &layer_switcher 7 7  &none          &layer_gresc 6 0  &lt 7 SPACE    &lt 4 TAB  &lt 6 ENTER   &lt 6 ENTER    &lt 4 RET     &mt RSHFT BSPC  &smart_shft     &kp MINUS      &kp EQUAL
