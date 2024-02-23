@@ -356,6 +356,17 @@
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
         };
+
+        ad_q_can2b2: ad_q_can2b2 {
+            compatible = "zmk,behavior-antecedent-morph";
+            label = "AD_Q_CAN2B2";
+            #binding-cells = <0>;
+            defaults = <&kp Q>;
+            bindings = <&kp P>, <&kp H>;
+
+            max-delay-ms = <500>;
+            antecedents = <X P>;
+        };
     };
 
     macros {
@@ -462,9 +473,9 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-&kp C_PP             &kp Y           &kp L          &lh_lt 5 D        &kp W          &kp V               &kp X         &kp P           &kp O           &kp U          &m_comma_lt     &trans
-&kp TAB              &lh_hm LCTRL C  &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S  &kp G               &kp B         &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &trans
-&layer_switcher 7 7  &kp Q           &ad_j          &ad_k             &kp M          &kp F               &ad_z_can2b2  &kp H           &m_sqt_minus    &m_semi_fslh   &m_dot_gt       &trans
+&kp C_PP             &kp Y           &lh_lt 4 L     &lh_lt 5 D        &kp W          &kp V               &kp X         &kp P           &kp O           &rh_lt 4 U     &m_comma_lt     &lang_switch
+&kp TAB              &lh_hm LCTRL C  &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S  &kp G               &kp B         &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &m_lbkt_minus
+&layer_switcher 7 7  &ad_q_can2b2    &kp J          &kp K             &kp M          &kp F               &ad_z_can2b2  &kp H           &m_sqt_minus    &m_semi_fslh   &m_dot_gt       &m_rbkt_equal
                                                     &layer_gresc 6 0  &lt 7 SPACE           &lt 4 ENTER                &mt RSHFT BSPC  &smart_shft
             >;
 
@@ -527,16 +538,16 @@
 &none   &kp GRAVE  &kp LT   &kp GT     &kp FSLH   &kp BSLH         &kp PIPE   &kp CARET  &kp LBKT  &kp RBKT  &kp AT     &trans
 &none   &kp EXCL   &kp DQT  &kp PLUS   &kp EQUAL  &kp HASH         &kp AMPS   &kp COLON  &kp LPAR  &kp RPAR  &kp QMARK  &none
 &trans  &kp DOT    &kp SQT  &kp UNDER  &kp MINUS  &kp STAR         &kp TILDE  &kp DLLR   &kp LBRC  &kp RBRC  &kp PRCNT  &none
-                            &none      &kp SPACE            &mo 4             &kp BSPC   &none
+                            &none      &kp SPACE            &mo 4             &kp BSPC   &kp DEL
             >;
         };
 
         num_layer {
             bindings = <
-&none   &kp LT     &kp LPAR  &none      &kp RPAR   &kp GT            &kp COLON  &kp N7    &kp N8  &kp N9  &kp ASTRK  &kp PLUS
-&to 0   &sk LCTRL  &sk LALT  &sk LSHFT  &sk LCMD   &none             &kp N0     &kp N1    &kp N2  &kp N3  &kp FSLH   &kp MINUS
-&trans  &none      &none     &none      &none      &none             &kp EQUAL  &kp N4    &kp N5  &kp N6  &kp DOT    &none
-                             &kp MINUS  &kp SPACE          &kp PLUS             &kp BSPC  &none
+&none   &kp LT     &kp LPAR  &none      &kp RPAR   &kp GT            &kp COLON  &kp N7    &kp N8   &kp N9  &kp ASTRK  &kp PLUS
+&to 0   &sk LCTRL  &sk LALT  &sk LSHFT  &sk LCMD   &none             &kp N0     &kp N1    &kp N2   &kp N3  &kp FSLH   &kp MINUS
+&trans  &none      &none     &none      &none      &none             &kp EQUAL  &kp N4    &kp N5   &kp N6  &kp DOT    &none
+                             &kp MINUS  &kp SPACE          &kp PLUS             &kp BSPC  &kp DEL
             >;
         };
 
