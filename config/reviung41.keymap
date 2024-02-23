@@ -544,10 +544,10 @@
 
         num_layer {
             bindings = <
-&none   &kp LT     &kp LPAR  &none      &kp RPAR   &kp GT            &kp COLON  &kp N7    &kp N8   &kp N9  &kp ASTRK  &kp PLUS
-&to 0   &sk LCTRL  &sk LALT  &sk LSHFT  &sk LCMD   &none             &kp N0     &kp N1    &kp N2   &kp N3  &kp FSLH   &kp MINUS
-&trans  &none      &none     &none      &none      &none             &kp EQUAL  &kp N4    &kp N5   &kp N6  &kp DOT    &none
-                             &kp MINUS  &kp SPACE          &kp PLUS             &kp BSPC  &kp DEL
+&none   &kp LT     &kp MINUS  &none      &kp PLUS   &kp GT            &kp COLON  &kp N7    &kp N8   &kp N9  &kp ASTRK  &kp PLUS
+&to 0   &sk LCTRL  &sk LALT   &sk LSHFT  &sk LCMD   &none             &kp N0     &kp N1    &kp N2   &kp N3  &kp FSLH   &kp MINUS
+&trans  &none      &none      &none      &none      &none             &kp EQUAL  &kp N4    &kp N5   &kp N6  &kp DOT    &none
+                              &kp MINUS  &kp SPACE          &kp PLUS             &kp BSPC  &kp DEL
             >;
         };
 
