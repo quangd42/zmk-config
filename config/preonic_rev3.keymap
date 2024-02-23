@@ -548,7 +548,7 @@
 &kp GRAVE  &kp LT   &kp GT     &kp FSLH   &kp BSLH  &none  &none  &kp PIPE   &kp CARET  &kp LBKT  &kp RBKT  &kp AT
 &kp EXCL   &kp DQT  &kp PLUS   &kp EQUAL  &kp HASH  &none  &none  &kp AMPS   &kp COLON  &kp LPAR  &kp RPAR  &kp QMARK
 &kp DOT    &kp SQT  &kp UNDER  &kp MINUS  &kp STAR  &none  &none  &kp TILDE  &kp DLLR   &kp LBRC  &kp RBRC  &kp PRCNT
-&none      &none    &to 0      &kp SPACE  &none     &none  &none  &none      &kp BSPC   &none     &none     &none
+&trans     &none    &to 0      &kp SPACE  &mo 4     &none  &none  &mo 4      &kp BSPC   &kp DEL   &none     &none
             >;
 
             label = "code";
@@ -563,11 +563,11 @@
             // | LALT  |      |      |      |      |      |       |       | NEXT | VOL- | VOL+  | PLAY  |
 
             bindings = <
-&none      &none     &none      &none      &none     &none     &none      &none      &none     &none   &none   &none
-&kp LT     &kp LPAR  &none      &kp RPAR   &kp GT    &none     &none      &kp COLON  &kp N7    &kp N8  &kp N9  &kp ASTRK
-&sk LCTRL  &sk LALT  &sk LSHFT  &sk LCMD   &none     &none     &none      &kp N0     &kp N1    &kp N2  &kp N3  &kp FSLH
-&none      &none     &none      &none      &none     &none     &kp COMMA  &kp EQUAL  &kp N4    &kp N5  &kp N6  &kp DOT
-&none      &none     &kp MINUS  &kp SPACE  &kp PLUS  &kp PLUS  &kp PLUS   &kp BSPC   &kp BSPC  &none   &none   &kp COMMA
+&none      &none     &none      &none      &none     &none     &none      &none      &none     &none    &none   &none
+&kp LT     &kp LPAR  &none      &kp RPAR   &kp GT    &none     &none      &kp COLON  &kp N7    &kp N8   &kp N9  &kp ASTRK
+&sk LCTRL  &sk LALT  &sk LSHFT  &sk LCMD   &none     &none     &none      &kp N0     &kp N1    &kp N2   &kp N3  &kp FSLH
+&none      &none     &none      &none      &none     &none     &kp COMMA  &kp EQUAL  &kp N4    &kp N5   &kp N6  &kp DOT
+&trans     &none     &kp MINUS  &kp SPACE  &kp PLUS  &kp PLUS  &kp PLUS   &kp RET    &kp BSPC  &kp DEL  &none   &kp COMMA
             >;
         };
 
@@ -577,7 +577,7 @@
 &none      &kp LG(W)  &none      &kp LS(LG(N4))  &kp LS(LG(N5))  &kp C_VOL_DN  &kp C_VOL_UP  &kp F12  &kp F7  &kp F8  &kp F9  &none
 &kp LG(A)  &none      &none      &none           &kp LG(BSLH)    &kp K_MUTE    &kp C_PP      &kp F11  &kp F1  &kp F2  &kp F3  &none
 &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)       &kp LG(LS(Z))   &kp C_BRI_DN  &kp C_BRI_UP  &kp F10  &kp F4  &kp F5  &kp F6  &none
-&none      &none      &to 0      &lt 7 SPACE     &kp RET         &none         &none         &none    &none   &mo 8   &none   &none
+&trans     &none      &to 0      &lt 7 SPACE     &kp RET         &none         &none         &none    &none   &mo 8   &none   &none
             >;
 
             label = "Fun";
@@ -589,7 +589,7 @@
 &sk RA(RC(RS(RGUI)))  &kp LC(W)  &none      &kp LG(A)  &kp LG(LBKT)   &none    &none    &kp PG_DN  &kp LC(E)  &kp LC(Y)  &kp PG_UP  &vim_nav_o
 &sk LCTRL             &sk LALT   &sk LSHFT  &sk LCMD   &kp LG(RBKT)   &none    &none    &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &vim_nav_i
 &kp LG(Z)             &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LS(LG(Z))  &none    &none    &kp H      &kp J      &kp K      &kp L      &vim_nav_a
-&none                 &none      &kp ESC    &kp SPACE  &kp TAB        &kp RET  &kp RET  &kp ENTER  &kp BSPC   &kp DEL    &none      &none
+&trans                &none      &kp ESC    &kp SPACE  &kp TAB        &kp RET  &kp RET  &kp RET    &kp BSPC   &kp DEL    &none      &none
             >;
         };
 
@@ -599,7 +599,7 @@
 &none   &none   &none   &none  &rgb_ug RGB_TOG  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &none        &none       &none  &none  &none
 &none   &none   &none   &none  &none            &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &none        &none       &none  &none  &none
 &tog 1  &tog 2  &tog 3  &none  &none            &none            &none            &bootloader  &sys_reset  &none  &none  &none
-&none   &none   &to 0   &none  &none            &none            &none            &none        &none       &none  &none  &none
+&trans  &none   &to 0   &none  &none            &none            &none            &none        &none       &none  &none  &none
             >;
         };
     };
