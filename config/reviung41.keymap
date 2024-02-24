@@ -553,10 +553,10 @@
 
         fun_layer {
             bindings = <
-&none   &none      &kp LC(W)  &none      &kp LS(LG(N4))  &kp LS(LG(N5))         &kp F12  &kp F7  &kp F8  &kp F9  &kp LG(LBKT)  &kp LC(LG(Q))
-&none   &kp LG(A)  &none      &none      &none           &kp LG(BSLH)           &kp F11  &kp F1  &kp F2  &kp F3  &kp LG(RBKT)  &none
-&trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)       &kp LG(LS(Z))          &kp F10  &kp F4  &kp F5  &kp F6  &kp LG(BSLH)  &none
-                              &to 0      &none                           &none           &none   &mo 8
+&none   &none      &none      &kp LG(BSLH)  &kp LS(LG(N4))  &kp LS(LG(N5))         &kp F12  &kp F7  &kp F8  &kp F9  &kp LG(LBKT)  &kp LC(LG(Q))
+&none   &kp LG(A)  &none      &none         &none           &kp LG(BSLH)           &kp F11  &kp F1  &kp F2  &kp F3  &kp LG(RBKT)  &none
+&trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)     &kp LG(V)       &kp LG(LS(Z))          &kp F10  &kp F4  &kp F5  &kp F6  &kp LG(BSLH)  &none
+                              &to 0         &none                           &none           &none   &mo 8
             >;
         };
 
@@ -568,7 +568,7 @@
             //                       |     | ADJ | BKSP |    |     |
 
             bindings = <
-&none    &sk RC(RA(RS(RGUI)))  &kp LC(W)  &none      &kp LG(A)  &kp LG(LBKT)              &kp LS(HOME)  &kp LC(E)  &kp LC(Y)  &kp LS(END)  &vim_nav_o  &trans
+&none    &sk RC(RA(RS(RGUI)))  &none      &none      &kp LG(A)  &kp LG(LBKT)              &kp LS(HOME)  &kp LC(E)  &kp LC(Y)  &kp LS(END)  &vim_nav_o  &trans
 &kp TAB  &sk LCTRL             &sk LALT   &sk LSHFT  &sk LCMD   &kp LG(RBKT)              &kp LEFT      &kp DOWN   &kp UP     &kp RIGHT    &vim_nav_i  &none
 &trans   &kp LG(Z)             &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LS(LG(Z))             &kp HOME      &kp PG_DN  &kp PG_UP  &kp END      &vim_nav_a  &none
                                           &kp ESC    &kp SPACE                 &kp ENTER                &kp BSPC   &kp DEL
