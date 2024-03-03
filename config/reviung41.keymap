@@ -487,10 +487,10 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-&kp C_PP             &kp Y           &lh_lt 4 L     &lh_lt 5 D        &kp W          &kp V               &kp X         &kp B           &kp O           &rh_lt 4 U     &kp COMMA       &lang_switch
+&kp C_PP             &kp Y           &lh_lt 5 L     &lh_lt 6 D        &kp W          &kp V               &kp X         &kp B           &kp O           &rh_lt 5 U     &kp COMMA       &lang_switch
 &kp TAB              &lh_hm LCTRL C  &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S  &kp G               &kp P         &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &m_lbkt_minus
-&layer_switcher 7 7  &ad_q_can2b2    &kp J          &kp K             &kp M          &kp F               &ad_z_can2b2  &kp H           &kp SQT         &kp SEMI       &kp DOT         &m_rbkt_equal
-                                                    &layer_gresc 6 0  &lt 8 SPACE           &lt 4 ENTER                &mt RSHFT BSPC  &smart_shft
+&layer_switcher 4 4  &ad_q_can2b2    &kp J          &kp K             &kp M          &kp F               &ad_z_can2b2  &kp H           &kp SQT         &kp SEMI       &kp DOT         &m_rbkt_equal
+                                                    &layer_gresc 7 0  &lt 8 SPACE           &lt 5 ENTER                &mt RSHFT BSPC  &smart_shft
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -504,10 +504,10 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-&kp C_PP             &kp V           &ad_m          &lh_lt 5 L        &kp C          &kp P               &kp Q  &kp F           &kp O           &kp U          &m_comma_lt     &lang_switch
+&kp C_PP             &kp V           &ad_m          &lh_lt 6 L        &kp C          &kp P               &kp Q  &kp F           &kp O           &kp U          &m_comma_lt     &lang_switch
 &kp TAB              &lh_hm LCTRL S  &lh_hm LALT T  &lh_hm LSHFT R    &lh_hm LCMD D  &kp Y               &kp B  &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &m_lbkt_minus
-&layer_switcher 7 7  &kp X           &kp K          &kp J             &kp G          &kp W               &ad_z  &kp H           &m_sqt_minus    &m_semi_fslh   &m_dot_gt       &m_rbkt_equal
-                                                    &layer_gresc 6 0  &lt 8 SPACE           &lt 4 ENTER         &mt RSHFT BSPC  &smart_shft
+&layer_switcher 4 4  &kp X           &kp K          &kp J             &kp G          &kp W               &ad_z  &kp H           &m_sqt_minus    &m_semi_fslh   &m_dot_gt       &m_rbkt_equal
+                                                    &layer_gresc 7 0  &lt 8 SPACE           &lt 5 ENTER         &mt RSHFT BSPC  &smart_shft
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -521,10 +521,10 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-&kp C_PP  &kp T           &kp D          &lh_lt 5 C        &kp J          &kp Q               &kp DOT    &kp U           &kp E           &kp Y          &kp B           &trans
+&kp C_PP  &kp T           &kp D          &lh_lt 6 C        &kp J          &kp Q               &kp DOT    &kp U           &kp E           &kp Y          &kp B           &trans
 &kp TAB   &lh_hm LCTRL G  &lh_hm LALT H  &lh_hm LSHFT N    &lh_hm LCMD S  &kp R               &kp COMMA  &rh_hm RCMD I   &rh_hm RSHFT A  &rh_hm RALT O  &rh_hm RCTRL W  &trans
 &trans    &kp L           &kp M          &kp V             &kp X          &kp F               &kp Z      &kp SEMI        &kp SQT         &kp P          &kp K           &trans
-                                         &layer_gresc 6 0  &lt 8 SPACE           &lt 4 ENTER             &mt RSHFT BSPC  &smart_shft
+                                         &layer_gresc 7 0  &lt 8 SPACE           &lt 5 ENTER             &mt RSHFT BSPC  &smart_shft
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -538,13 +538,22 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-&kp C_PP  &kp Q  &kp W  &lh_lt 5 E        &kp R        &kp T               &kp Y  &kp U           &kp I        &kp O    &kp P     &trans
+&kp C_PP  &kp Q  &kp W  &lh_lt 6 E        &kp R        &kp T               &kp Y  &kp U           &kp I        &kp O    &kp P     &trans
 &kp TAB   &kp A  &kp S  &kp D             &kp F        &kp G               &kp H  &kp J           &kp K        &kp L    &kp SEMI  &kp SQT
 &trans    &kp Z  &kp X  &kp C             &kp V        &kp B               &kp N  &kp M           &kp COMMA    &kp DOT  &kp FSLH  &none
-                        &layer_gresc 6 0  &lt 8 SPACE         &lt 4 ENTER         &mt RSHFT BSPC  &smart_shft
+                        &layer_gresc 7 0  &lt 8 SPACE         &lt 5 ENTER         &mt RSHFT BSPC  &smart_shft
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        vim_nav_layer {
+            bindings = <
+&none   &none      &none     &mo 6      &none      &kp V           &none      &vim_nav_5Ce    &vim_nav_5Cy  &none     &none  &none
+&none   &sk LCTRL  &sk LALT  &sk LSHFT  &sk LCMD   &none           &kp H      &kp J           &kp K         &kp L     &none  &none
+&trans  &none      &none     &none      &none      &none           &kp CARET  &kp LC(D)       &kp LC(U)     &kp DLLR  &none  &none
+                             &kp ESC    &kp SPACE         &kp RET             &mt RSHFT BSPC  &kp DEL
+            >;
         };
 
         code_sym_layer {
@@ -552,7 +561,7 @@
 &none   &kp GRAVE          &kp LT           &kp GT             &kp FSLH           &kp DOT          &kp PIPE   &kp TILDE          &kp LBKT           &kp RBKT          &kp AT              &trans
 &none   &lh_hm LCTRL EXCL  &lh_hm LALT DQT  &lh_hm LSHFT PLUS  &lh_hm LCMD EQUAL  &kp HASH         &kp AMPS   &rh_hm RCMD COLON  &rh_hm RSHFT LPAR  &rh_hm RALT RPAR  &rh_hm RCTRL QMARK  &none
 &trans  &kp BSLH           &kp SQT          &kp UNDER          &kp MINUS          &kp STAR         &kp CARET  &kp DLLR           &kp LBRC           &kp RBRC          &kp PRCNT           &none
-                                            &none              &kp SPACE                    &mo 4             &kp BSPC           &kp DEL
+                                            &none              &kp SPACE                    &mo 5             &kp BSPC           &kp DEL
             >;
         };
 
@@ -571,15 +580,6 @@
 &none   &kp LG(A)  &none      &none         &none           &kp LG(BSLH)           &kp F11  &kp F1  &kp F2  &kp F3  &kp LG(RBKT)  &none
 &trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)     &kp LG(V)       &kp LG(LS(Z))          &kp F10  &kp F4  &kp F5  &kp F6  &kp LG(BSLH)  &none
                               &to 0         &none                           &none           &none   &mo 9
-            >;
-        };
-
-        vim_nav_layer {
-            bindings = <
-&none   &none      &none     &none      &none      &kp V           &none      &vim_nav_5Ce  &vim_nav_5Cy  &none     &none  &none
-&none   &sk LCTRL  &sk LALT  &sk LSHFT  &sk LCMD   &none           &kp H      &kp J         &kp K         &kp L     &none  &none
-&trans  &none      &none     &none      &none      &none           &kp CARET  &kp LC(D)     &kp LC(U)     &kp DLLR  &none  &none
-                             &kp ESC    &kp SPACE         &kp RET             &kp BSPC      &kp DEL
             >;
         };
 
