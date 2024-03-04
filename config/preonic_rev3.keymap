@@ -141,7 +141,7 @@
         spc_end_sent: spc_end_sent {
             compatible = "zmk,behavior-mod-morph";
             label = "SPC_END_SENT";
-            bindings = <&lt 4 SPACE>, <&end_sentence>;
+            bindings = <&lt 5 SPACE>, <&end_sentence>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -451,21 +451,21 @@
         vim_nav_i: vim_nav_i {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog 7 &kp I>;
+            bindings = <&tog 8 &kp I>;
             label = "VIM_NAV_I";
         };
 
         vim_nav_o: vim_nav_o {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog 7 &kp O>;
+            bindings = <&tog 8 &kp O>;
             label = "VIM_NAV_O";
         };
 
         vim_nav_a: vim_nav_a {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog 7 &kp A>;
+            bindings = <&tog 8 &kp A>;
             label = "VIM_NAV_A";
         };
 
@@ -483,7 +483,7 @@
         compatible = "zmk,combos";
 
         one_hand_mode {
-            bindings = <&to 4>;
+            bindings = <&to 5>;
             key-positions = <40 53>;
         };
     };
@@ -494,10 +494,10 @@
         canary2b2 {
             bindings = <
 &kp N1               &kp N2         &kp N3            &kp N4         &kp N5     &lang_switch  &kp LG(LC(Q))  &kp N6        &kp N7          &kp N8          &kp N9         &kp N0
-&kp Y                &lh_lt 4 L     &lh_lt 5 D        &kp W          &kp V      &kp DOWN      &kp UP         &kp X         &kp B           &kp O           &rh_lt 4 U     &kp COMMA
+&kp Y                &lh_lt 5 L     &lh_lt 6 D        &kp W          &kp V      &kp DOWN      &kp UP         &kp X         &kp B           &kp O           &rh_lt 5 U     &kp COMMA
 &lh_hm LCTRL C       &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S  &kp G      &kp LEFT      &kp RIGHT      &kp P         &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I
 &ad_q_can2b2         &kp J          &kp K             &kp M          &kp F      &kp LBKT      &kp RBKT       &ad_z_can2b2  &kp H           &kp SQT         &kp SEMI       &kp DOT
-&layer_switcher 7 7  &none          &layer_gresc 6 0  &lt 7 SPACE    &lt 4 TAB  &lt 6 ENTER   &lt 6 ENTER    &lt 4 RET     &mt RSHFT BSPC  &smart_shft     &kp MINUS      &kp EQUAL
+&layer_switcher 4 4  &none          &layer_gresc 7 0  &lt 8 SPACE    &lt 5 TAB  &lt 7 ENTER   &lt 7 ENTER    &lt 5 RET     &mt RSHFT BSPC  &smart_shft     &kp MINUS      &kp EQUAL
             >;
         };
 
@@ -511,10 +511,10 @@
 
             bindings = <
 &kp N1               &kp N2         &kp N3            &kp N4         &kp N5     &lang_switch  &kp LG(LC(Q))  &kp N6     &kp N7          &kp N8          &kp N9         &kp N0
-&kp V                &ad_m          &lh_lt 5 L        &kp C          &kp P      &kp DOWN      &kp UP         &kp X      &kp F           &kp O           &kp U          &kp COMMA
+&kp V                &ad_m          &lh_lt 6 L        &kp C          &kp P      &kp DOWN      &kp UP         &kp X      &kp F           &kp O           &kp U          &kp COMMA
 &lh_hm LCTRL S       &lh_hm LALT T  &lh_hm LSHFT R    &lh_hm LCMD D  &kp Y      &kp LEFT      &kp RIGHT      &kp B      &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I
 &kp Q                &kp K          &kp J             &kp G          &kp W      &kp LBKT      &kp RBKT       &ad_z      &kp H           &kp SQT         &m_semi_flsh   &dot_end_sentence
-&layer_switcher 7 7  &none          &layer_gresc 6 0  &lt 7 SPACE    &lt 4 TAB  &lt 6 ENTER   &lt 6 ENTER    &lt 4 RET  &mt RSHFT BSPC  &smart_shft     &kp MINUS      &kp EQUAL
+&layer_switcher 4 4  &none          &layer_gresc 7 0  &lt 8 SPACE    &lt 5 TAB  &lt 7 ENTER   &lt 7 ENTER    &lt 5 RET  &mt RSHFT BSPC  &smart_shft     &kp MINUS      &kp EQUAL
             >;
 
             label = "stirred";
@@ -523,10 +523,10 @@
         vnmak_layer {
             bindings = <
 &kp N1          &kp N2         &kp N3            &kp N4         &kp N5     &trans       &trans       &kp N6     &kp N7          &kp N8          &kp N9         &kp N0
-&kp G           &kp T          &lh_lt 5 D        &kp Q          &kp F      &kp DOWN     &kp UP       &kp DOT    &kp U           &kp E           &kp Y          &kp B
+&kp G           &kp T          &lh_lt 6 D        &kp Q          &kp F      &kp DOWN     &kp UP       &kp DOT    &kp U           &kp E           &kp Y          &kp B
 &lh_hm LCTRL C  &lh_hm LALT N  &lh_hm LSHFT H    &lh_hm LCMD S  &kp R      &kp LEFT     &kp RIGHT    &kp COMMA  &rh_hm RCMD I   &rh_hm RSHFT A  &rh_hm RALT O  &rh_hm RCTRL W
 &kp V           &kp L          &kp M             &kp X          &kp J      &kp LBKT     &kp RBKT     &kp Z      &kp SEMI        &kp SQT         &kp P          &kp K
-&trans          &none          &layer_gresc 6 0  &lt 7 SPACE    &lt 4 TAB  &lt 6 ENTER  &lt 6 ENTER  &lt 4 RET  &mt RSHFT BSPC  &smart_shft     &kp MINUS      &kp EQUAL
+&trans          &none          &layer_gresc 7 0  &lt 8 SPACE    &lt 5 TAB  &lt 7 ENTER  &lt 7 ENTER  &lt 5 RET  &mt RSHFT BSPC  &smart_shft     &kp MINUS      &kp EQUAL
             >;
 
             label = "vnmak2";
@@ -535,10 +535,20 @@
         qwerty_layer {
             bindings = <
 &kp N1  &kp N2  &kp N3            &kp N4       &kp N5     &trans       &trans       &kp N6     &kp N7          &kp N8       &kp N9     &kp N0
-&kp Q   &kp W   &lh_lt 5 E        &kp R        &kp T      &kp DOWN     &kp UP       &kp Y      &kp U           &kp I        &kp O      &kp P
+&kp Q   &kp W   &lh_lt 6 E        &kp R        &kp T      &kp DOWN     &kp UP       &kp Y      &kp U           &kp I        &kp O      &kp P
 &kp A   &kp S   &kp D             &kp F        &kp G      &kp LEFT     &kp RIGHT    &kp H      &kp J           &kp K        &kp L      &kp SEMI
 &kp Z   &kp X   &kp C             &kp V        &kp B      &kp LBKT     &kp RBKT     &kp N      &kp M           &kp COMMA    &kp DOT    &kp FSLH
-&trans  &none   &layer_gresc 6 0  &lt 7 SPACE  &lt 4 TAB  &lt 6 ENTER  &lt 6 ENTER  &lt 4 RET  &mt RSHFT BSPC  &smart_shft  &kp MINUS  &kp EQUAL
+&trans  &none   &layer_gresc 7 0  &lt 8 SPACE  &lt 5 TAB  &lt 7 ENTER  &lt 7 ENTER  &lt 5 RET  &mt RSHFT BSPC  &smart_shft  &kp MINUS  &kp EQUAL
+            >;
+        };
+
+        vim_nav_layer {
+            bindings = <
+&kp N1     &kp N2    &kp N3     &kp N4     &kp N5   &none      &none      &kp N6     &kp N7          &kp N8     &kp N9  &kp N0
+&none      &none     &mo 6      &none      &kp V    &none      &none      &none      &kp LC(D)       &kp LC(U)  &none   &none
+&sk LCTRL  &sk LALT  &sk LSHFT  &sk LGUI   &none    &none      &none      &kp H      &kp J           &kp K      &kp L   &none
+&none      &none     &none      &none      &none    &none      &none      &none      &kp LC(E)       &kp LC(Y)  &none   &none
+&trans     &none     &kp ESC    &kp SPACE  &kp TAB  &kp ENTER  &kp ENTER  &kp ENTER  &mt RSHFT BSPC  &kp DEL    &none   &none
             >;
         };
 
@@ -548,7 +558,7 @@
 &kp GRAVE  &kp LT   &kp GT     &kp FSLH   &kp DOT   &none  &none  &kp PIPE   &kp TILDE  &kp LBKT  &kp RBKT  &kp AT
 &kp EXCL   &kp DQT  &kp PLUS   &kp EQUAL  &kp HASH  &none  &none  &kp AMPS   &kp COLON  &kp LPAR  &kp RPAR  &kp QMARK
 &kp BSLH   &kp SQT  &kp UNDER  &kp MINUS  &kp STAR  &none  &none  &kp CARET  &kp DLLR   &kp LBRC  &kp RBRC  &kp PRCNT
-&trans     &none    &to 0      &kp SPACE  &mo 4     &none  &none  &mo 4      &kp BSPC   &kp DEL   &none     &none
+&trans     &none    &to 0      &kp SPACE  &mo 5     &none  &none  &mo 5      &kp BSPC   &kp DEL   &none     &none
             >;
 
             label = "code";
@@ -577,7 +587,7 @@
 &none      &kp LG(W)  &kp LG(BSLH)  &kp LS(LG(N4))  &kp LS(LG(N5))  &kp C_VOL_DN  &kp C_VOL_UP  &kp F12  &kp F7  &kp F8  &kp F9  &none
 &kp LG(A)  &none      &none         &none           &kp LG(BSLH)    &kp K_MUTE    &kp C_PP      &kp F11  &kp F1  &kp F2  &kp F3  &none
 &kp LG(Z)  &kp LG(X)  &kp LG(C)     &kp LG(V)       &kp LG(LS(Z))   &kp C_BRI_DN  &kp C_BRI_UP  &kp F10  &kp F4  &kp F5  &kp F6  &none
-&trans     &none      &to 0         &lt 7 SPACE     &kp RET         &none         &none         &none    &none   &mo 8   &none   &none
+&trans     &none      &to 0         &lt 8 SPACE     &kp RET         &none         &none         &none    &none   &mo 9   &none   &none
             >;
 
             label = "Fun";
