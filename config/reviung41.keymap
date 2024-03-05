@@ -549,10 +549,10 @@
 
         vim_nav_layer {
             bindings = <
-&none   &none      &none     &mo 6      &none      &kp V           &none      &vim_nav_5Ce    &vim_nav_5Cy  &none     &none  &none
-&none   &sk LCTRL  &sk LALT  &sk LSHFT  &sk LCMD   &none           &kp H      &kp J           &kp K         &kp L     &none  &none
-&trans  &none      &none     &none      &none      &none           &kp CARET  &kp LC(D)       &kp LC(U)     &kp DLLR  &none  &none
-                             &kp ESC    &kp SPACE         &kp RET             &mt RSHFT BSPC  &kp DEL
+&none   &kp LS(LA(LC(LCMD)))  &none     &mo 6      &none      &kp V           &none      &vim_nav_5Ce    &vim_nav_5Cy  &none     &none  &none
+&none   &sk LCTRL             &sk LALT  &sk LSHFT  &sk LCMD   &none           &kp H      &kp J           &kp K         &kp L     &none  &none
+&trans  &none                 &none     &none      &none      &none           &kp CARET  &kp LC(D)       &kp LC(U)     &kp DLLR  &none  &none
+                                        &kp ESC    &kp SPACE         &kp RET             &mt RSHFT BSPC  &kp DEL
             >;
         };
 
