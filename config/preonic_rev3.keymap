@@ -554,11 +554,11 @@
 
         code_sym_layer {
             bindings = <
-&kp N1     &kp N2   &kp N3     &kp N4     &kp N5    &none  &none  &kp N6     &kp N7     &kp N8    &kp N9    &kp N0
-&kp GRAVE  &kp LT   &kp GT     &kp FSLH   &kp DOT   &none  &none  &kp PIPE   &kp TILDE  &kp LBKT  &kp RBKT  &kp AT
-&kp EXCL   &kp DQT  &kp PLUS   &kp EQUAL  &kp HASH  &none  &none  &kp AMPS   &kp COLON  &kp LPAR  &kp RPAR  &kp QMARK
-&kp BSLH   &kp SQT  &kp UNDER  &kp MINUS  &kp STAR  &none  &none  &kp CARET  &kp DLLR   &kp LBRC  &kp RBRC  &kp PRCNT
-&trans     &none    &to 0      &kp SPACE  &mo 5     &none  &none  &mo 5      &kp BSPC   &kp DEL   &none     &none
+&kp N1          &kp N2        &kp N3          &kp N4          &kp N5    &none  &none  &kp N6     &kp N7          &kp N8          &kp N9         &kp N0
+&kp GRAVE       &kp LT        &kp GT          &kp FSLH        &kp DOT   &none  &none  &kp PIPE   &kp TILDE       &kp LBKT        &kp RBKT       &kp AT
+&lh_hm LCTRL EXCL  &lh_hm LALT DQT  &lh_hm LSHFT PLUS  &lh_hm LCMD EQUAL  &kp HASH  &none  &none  &kp AMPS   &rh_hm RCMD COLON  &rh_hm RSHFT LPAR  &rh_hm RALT RPAR  &rh_hm RCTRL QMARK
+&kp BSLH        &kp SQT       &kp UNDER       &kp MINUS       &kp STAR  &none  &none  &kp CARET  &kp DLLR        &kp LBRC        &kp RBRC       &kp PRCNT
+&trans          &none         &to 0           &kp SPACE       &mo 5     &none  &none  &mo 5      &kp BSPC        &kp DEL         &none          &none
             >;
 
             label = "code";
