@@ -269,15 +269,15 @@
             antecedents = <Y>;
         };
 
-        ad_z3: ad_z3 {
+        ad_z_maya: ad_z_maya {
             compatible = "zmk,behavior-antecedent-morph";
-            label = "AD_Z3";
+            label = "AD_Z_MAYA";
             #binding-cells = <0>;
             defaults = <&kp Z>;
-            bindings = <&kp Y>, <&kp S>, <&kp P>, <&kp T>, <&kp L>;
+            bindings = <&kp C>, <&kp E>, <&kp A>, <&kp S>, <&kp L>, <&kp Y>;
 
-            max-delay-ms = <400>;
-            antecedents = <S Y M P R>;
+            max-delay-ms = <500>;
+            antecedents = <S U O G R H>;
         };
 
         ad_z_can2b2: ad_z_can2b2 {
@@ -504,9 +504,9 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-&kp C_PP             &kp B           &lh_lt 5 L     &lh_lt 6 D        &kp W          &kp Q               &kp J  &kp F           &kp O           &rh_lt 5 U     &kp COMMA       &lang_switch
-&kp TAB              &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S  &kp G               &kp K  &rh_hm RCMD H   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &m_lbkt_minus
-&layer_switcher 4 4  &kp Z           &kp X          &kp M             &kp C          &kp V               &kp P  &kp Y           &kp SQT         &kp SEMI       &kp DOT         &m_rbkt_equal
+&kp C_PP             &kp B           &lh_lt 5 L     &lh_lt 6 D        &kp W          &kp Q               &kp J  &kp K           &kp O           &rh_lt 5 U     &kp COMMA       &lang_switch
+&kp TAB              &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S  &kp G               &kp F  &rh_hm RCMD H   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &m_lbkt_minus
+&layer_switcher 4 4  &ad_z_maya      &kp X          &kp M             &kp C          &kp V               &kp P  &kp Y           &kp SQT         &kp SEMI       &kp DOT         &m_rbkt_equal
                                                     &layer_gresc 7 0  &lt 8 SPACE           &lt 5 ENTER         &mt RSHFT BSPC  &smart_shft
             >;
 
