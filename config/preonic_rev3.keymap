@@ -511,9 +511,9 @@
 
             bindings = <
 &kp N1               &kp N2         &kp N3            &kp N4         &kp N5     &lang_switch  &kp LG(LC(Q))  &kp N6     &kp N7          &kp N8          &kp N9         &kp N0
-&kp V                &ad_m          &lh_lt 6 L        &kp C          &kp P      &kp DOWN      &kp UP         &kp X      &kp F           &kp O           &kp U          &kp COMMA
-&lh_hm LCTRL S       &lh_hm LALT T  &lh_hm LSHFT R    &lh_hm LCMD D  &kp Y      &kp LEFT      &kp RIGHT      &kp B      &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I
-&kp Q                &kp K          &kp J             &kp G          &kp W      &kp LBKT      &kp RBKT       &ad_z      &kp H           &kp SQT         &m_semi_flsh   &dot_end_sentence
+&kp B                &lh_lt 5 L     &lh_lt 6 D        &kp W          &kp Z      &kp DOWN      &kp UP         &kp J      &kp K           &kp O           &rh_lt 5 U     &kp COMMA
+&lh_hm LCTRL N       &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S  &kp G      &kp LEFT      &kp RIGHT      &kp F      &rh_hm RCMD H   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I
+&kp Q                &kp X          &kp M             &kp C          &kp V      &kp LBKT      &kp RBKT       &kp P      &kp Y           &kp SQT         &kp SEMI       &kp DOT
 &layer_switcher 4 4  &none          &layer_gresc 7 0  &lt 8 SPACE    &lt 5 TAB  &lt 7 ENTER   &lt 7 ENTER    &lt 5 RET  &mt RSHFT BSPC  &smart_shft     &kp MINUS      &kp EQUAL
             >;
 
@@ -554,11 +554,11 @@
 
         code_sym_layer {
             bindings = <
-&kp N1          &kp N2        &kp N3          &kp N4          &kp N5    &none  &none  &kp N6     &kp N7          &kp N8          &kp N9         &kp N0
-&kp GRAVE       &kp LT        &kp GT          &kp FSLH        &kp DOT   &none  &none  &kp PIPE   &kp TILDE       &kp LBKT        &kp RBKT       &kp AT
+&kp N1             &kp N2           &kp N3             &kp N4             &kp N5    &none  &none  &kp N6     &kp N7             &kp N8             &kp N9            &kp N0
+&kp GRAVE          &kp LT           &kp GT             &kp FSLH           &kp DOT   &none  &none  &kp PIPE   &kp TILDE          &kp LBKT           &kp RBKT          &kp AT
 &lh_hm LCTRL EXCL  &lh_hm LALT DQT  &lh_hm LSHFT PLUS  &lh_hm LCMD EQUAL  &kp HASH  &none  &none  &kp AMPS   &rh_hm RCMD COLON  &rh_hm RSHFT LPAR  &rh_hm RALT RPAR  &rh_hm RCTRL QMARK
-&kp BSLH        &kp SQT       &kp UNDER       &kp MINUS       &kp STAR  &none  &none  &kp CARET  &kp DLLR        &kp LBRC        &kp RBRC       &kp PRCNT
-&trans          &none         &to 0           &kp SPACE       &mo 5     &none  &none  &mo 5      &kp BSPC        &kp DEL         &none          &none
+&kp BSLH           &kp SQT          &kp UNDER          &kp MINUS          &kp STAR  &none  &none  &kp CARET  &kp DLLR           &kp LBRC           &kp RBRC          &kp PRCNT
+&trans             &none            &to 0              &kp SPACE          &mo 5     &none  &none  &mo 5      &kp BSPC           &kp DEL            &none             &none
             >;
 
             label = "code";
