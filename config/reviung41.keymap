@@ -488,23 +488,6 @@
     keymap {
         compatible = "zmk,keymap";
 
-        maya_layer {
-            // -------------------------------------------------------------------------------------
-            // |  TAB |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  :  |   BKSP    |
-            // | CTRL |  A  |  R  |  S  |  T  |  G  |   |  M  |  N   |  E  |  I  |  O  |    '      |
-            // | SHFT |  Z  |  X  |  C  |  D  |  V  |   |  K  |  H   |  ,  |  .  |  /  | SHFT(RET) |
-            //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
-
-            bindings = <
-&kp C_PP             &kp B           &lh_lt 5 L     &lh_lt 6 D        &kp W          &kp Q               &kp J  &kp F           &kp O           &rh_lt 5 U     &kp COMMA       &lang_switch
-&kp TAB              &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S  &kp G               &kp P  &rh_hm RCMD H   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &m_lbkt_minus
-&layer_switcher 4 4  &ad_z_maya      &kp X          &kp M             &kp C          &kp V               &kp K  &kp Y           &kp SQT         &kp SEMI       &kp DOT         &m_rbkt_equal
-                                                    &layer_gresc 7 0  &lt 8 SPACE           &lt 5 ENTER         &mt RSHFT BSPC  &smart_shft
-            >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
-        };
-
         canary2b2_layer {
             // -------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  :  |   BKSP    |
@@ -517,6 +500,23 @@
 &kp TAB              &lh_hm LCTRL C  &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S  &kp G               &kp P         &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &m_lbkt_minus
 &layer_switcher 4 4  &ad_q_can2b2    &kp J          &kp K             &kp M          &kp F               &ad_z_can2b2  &kp H           &kp SQT         &kp SEMI       &kp DOT         &m_rbkt_equal
                                                     &layer_gresc 7 0  &lt 8 SPACE           &lt 5 ENTER                &mt RSHFT BSPC  &smart_shft
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        maya_layer {
+            // -------------------------------------------------------------------------------------
+            // |  TAB |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  :  |   BKSP    |
+            // | CTRL |  A  |  R  |  S  |  T  |  G  |   |  M  |  N   |  E  |  I  |  O  |    '      |
+            // | SHFT |  Z  |  X  |  C  |  D  |  V  |   |  K  |  H   |  ,  |  .  |  /  | SHFT(RET) |
+            //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
+
+            bindings = <
+&kp C_PP             &kp B           &lh_lt 5 L     &lh_lt 6 D        &kp W          &kp Q               &kp J  &kp F           &kp O           &rh_lt 5 U     &kp COMMA       &lang_switch
+&kp TAB              &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S  &kp G               &kp P  &rh_hm RCMD H   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &m_lbkt_minus
+&layer_switcher 4 4  &ad_z_maya      &kp X          &kp M             &kp C          &kp V               &kp K  &kp Y           &kp SQT         &kp SEMI       &kp DOT         &m_rbkt_equal
+                                                    &layer_gresc 7 0  &lt 8 SPACE           &lt 5 ENTER         &mt RSHFT BSPC  &smart_shft
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -577,7 +577,7 @@
         num_layer {
             bindings = <
 &none   &kp LT     &kp MINUS  &none      &kp PLUS   &kp GT            &kp COLON  &kp N7    &kp N8   &kp N9  &kp ASTRK  &kp PLUS
-&to 1   &sk LCTRL  &sk LALT   &sk LSHFT  &sk LCMD   &none             &kp N0     &kp N1    &kp N2   &kp N3  &kp FSLH   &kp MINUS
+&to 0   &sk LCTRL  &sk LALT   &sk LSHFT  &sk LCMD   &none             &kp N0     &kp N1    &kp N2   &kp N3  &kp FSLH   &kp MINUS
 &trans  &none      &none      &none      &none      &none             &kp EQUAL  &kp N4    &kp N5   &kp N6  &kp DOT    &none
                               &kp MINUS  &kp SPACE          &kp PLUS             &kp BSPC  &kp DEL
             >;
@@ -588,7 +588,7 @@
 &none   &none      &none      &kp LG(BSLH)  &kp LS(LG(N4))  &kp LS(LG(N5))         &kp F12  &kp F7  &kp F8  &kp F9  &kp LG(LBKT)  &kp LC(LG(Q))
 &none   &kp LG(A)  &none      &none         &none           &kp LG(BSLH)           &kp F11  &kp F1  &kp F2  &kp F3  &kp LG(RBKT)  &none
 &trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)     &kp LG(V)       &kp LG(LS(Z))          &kp F10  &kp F4  &kp F5  &kp F6  &kp LG(BSLH)  &none
-                              &to 1         &none                           &none           &none   &mo 9
+                              &to 0         &none                           &none           &none   &mo 9
             >;
         };
 
@@ -618,9 +618,9 @@
 
             bindings = <
 &none  &none   &none   &none   &none         &none                &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR  &kp LG(LC(Q))
-&to 1  &none   &none   &none   &none         &none                &none         &none         &none         &none         &none       &none
-&none  &tog 0  &tog 2  &tog 3  &out OUT_USB  &out OUT_BLE         &bootloader   &none         &none         &none         &none       &none
-                       &to 1   &none                       &none                &none         &none
+&to 0  &none   &none   &none   &none         &none                &none         &none         &none         &none         &none       &none
+&none  &tog 1  &tog 2  &tog 3  &out OUT_USB  &out OUT_BLE         &bootloader   &none         &none         &none         &none       &none
+                       &to 0   &none                       &none                &none         &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN>;
