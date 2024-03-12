@@ -328,10 +328,11 @@
                 <&kp S>,
                 <&kp S>,
                 <&kp M>,
-                <&str_px>;
+                <&str_px>,
+                <&kp H>;
 
-            max-delay-ms = <400>;
-            antecedents = <C R L G W M S N>;
+            max-delay-ms = <500>;
+            antecedents = <C R L G W M S N P>;
         };
 
         layer_switcher: layer_switcher {
@@ -377,10 +378,10 @@
             label = "AD_Q_CAN2B2";
             #binding-cells = <0>;
             defaults = <&kp Q>;
-            bindings = <&kp P>, <&kp H>;
+            bindings = <&kp L>, <&str_returns_q>;
 
             max-delay-ms = <500>;
-            antecedents = <X P>;
+            antecedents = <R L>;
         };
     };
 
@@ -477,6 +478,13 @@
             wait-ms = <30>;
             tap-ms = <4>;
         };
+
+        str_returns_q: str_return_q {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp BSPC &kp Q>;
+            label = "STR_RETURN_Q";
+        };
     };
 
     combos {
@@ -496,7 +504,7 @@
 &kp N1               &kp N2         &kp N3            &kp N4         &kp N5     &lang_switch  &kp LG(LC(Q))  &kp N6        &kp N7          &kp N8          &kp N9         &kp N0
 &kp Y                &lh_lt 5 L     &lh_lt 6 D        &kp W          &kp V      &kp DOWN      &kp UP         &kp X         &kp B           &kp O           &rh_lt 5 U     &kp COMMA
 &lh_hm LCTRL C       &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S  &kp G      &kp LEFT      &kp RIGHT      &kp P         &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I
-&ad_q_can2b2         &kp J          &kp K             &kp M          &kp F      &kp LBKT      &kp RBKT       &ad_z_can2b2  &kp H           &kp SQT         &kp SEMI       &kp DOT
+&ad_z_can2b2         &kp J          &kp K             &kp M          &kp F      &kp LBKT      &kp RBKT       &ad_q_can2b2  &kp H           &kp SQT         &kp SEMI       &kp DOT
 &layer_switcher 4 4  &none          &layer_gresc 7 0  &lt 8 SPACE    &lt 5 TAB  &lt 7 ENTER   &lt 7 ENTER    &lt 5 RET     &mt RSHFT BSPC  &smart_shft     &kp MINUS      &kp EQUAL
             >;
         };
