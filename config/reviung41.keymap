@@ -303,10 +303,13 @@
                 <&kp S>,
                 <&kp M>,
                 <&str_px>,
-                <&kp H>;
+                <&kp H>,
+                <&kp A>,
+                <&kp E>,
+                <&kp P>;
 
             max-delay-ms = <500>;
-            antecedents = <C R L G W M S N P>;
+            antecedents = <C R L G W M S N P O U X>;
         };
 
         layer_switcher: layer_switcher {
