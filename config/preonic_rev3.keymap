@@ -556,10 +556,10 @@
         vim_nav_layer {
             bindings = <
 &kp N1                &kp N2    &kp N3     &kp N4     &kp N5   &none      &none      &kp N6     &kp N7          &kp N8     &kp N9  &kp N0
-&kp LS(LA(LC(LCMD)))  &none     &mo 6      &none      &kp V    &none      &none      &none      &kp LC(D)       &kp LC(U)  &none   &none
+&kp LS(LA(LC(LCMD)))  &none     &mo 6      &none      &kp V    &none      &none      &none       &kp LC(E)       &kp LC(Y) &none   &none
 &sk LCTRL             &sk LALT  &sk LSHFT  &sk LGUI   &none    &none      &none      &kp H      &kp J           &kp K      &kp L   &none
-&none                 &none     &none      &none      &none    &none      &none      &none      &kp LC(E)       &kp LC(Y)  &none   &none
-&trans                &none     &kp ESC    &kp SPACE  &kp TAB  &kp ENTER  &kp ENTER  &kp ENTER  &mt RSHFT BSPC  &kp DEL    &none   &none
+&none                 &none     &none      &none      &none    &none      &none      &none      &kp LC(D)       &kp LC(U)  &none   &none
+&trans                &none     &kp ESC    &kp SPACE  &kp TAB  &kp ENTER  &kp ENTER  &kp ENTER  &kp BSPC  &kp DEL    &none   &none
             >;
         };
 
