@@ -241,7 +241,7 @@
 
             bindings = <
 &kp GRAVE  &kp N1          &kp N2         &kp N3                &kp N4               &kp N5                                &kp N6          &kp N7         &kp N8          &kp N9              &kp N0             &lt 9 BSPC
-&kp TAB    &kp F           &kp L          &lh_lt 6 H            &kp K                &kp Q                                 &kp Z           &kp Y          &kp O           &kp U               &kp COMMA          &lt 4 BSPC
+&kp TAB    &kp F           &kp L          &lh_lt 6 H            &kp K                &kp Q                                 &kp Z           &kp Y          &kp O           &kp U               &kp COMMA          &lt 0 BSPC
 &kp J      &lh_hm LCTRL S  &lh_hm LALT R  &lh_hm_quick LSHFT N  &lh_hm_quick LCMD T  &kp M                                 &kp G           &rh_hm RCMD W  &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I     &dot_end_sentence
 &none      &kp J           &kp X          &lh_lt 6 B            &kp D                &kp V        &kp C_MUTE    &kp C_PP   &kp P           &kp C          &kp SQT         &semi_end_question  &dot_end_sentence  &none
                            &none          &none                 &layer_gresc 7 0     &lt 8 SPACE  &lt 5 TAB     &lt 5 RET  &mt RSHFT BSPC  &smart_shft    &none           &none
@@ -264,7 +264,7 @@
 
             bindings = <
 &kp GRAVE  &kp N1          &kp N2         &kp N3                &kp N4               &kp N5                                  &kp N6          &kp N7         &kp N8          &kp N9              &kp N0             &lt 9 BSPC
-&kp TAB    &kp Q           &kp W          &lh_lt 6 F            &kp P                &kp B                                   &kp J           &kp L          &kp U           &kp Y               &kp COMMA          &lt 4 BSPC
+&kp TAB    &kp Q           &kp W          &lh_lt 6 F            &kp P                &kp B                                   &kp J           &kp L          &kp U           &kp Y               &kp COMMA          &lt 0 BSPC
 &kp Z      &lh_hm LCTRL A  &lh_hm LALT R  &lh_hm_quick LSHFT S  &lh_hm_quick LCMD T  &kp G                                   &kp M           &rh_hm RCMD N  &rh_hm RSHFT E  &rh_hm RALT I       &rh_hm RCTRL O     &dot_end_sentence
 &none      &kp Z           &kp X          &lh_lt 6 C            &kp D                &kp V        &kp C_MUTE    &kp C_PP     &kp K           &kp H          &kp SQT         &semi_end_question  &dot_end_sentence  &none
                            &none          &none                 &layer_gresc 7 0     &lt 8 SPACE  &lt 5 TAB     &lt 5 ENTER  &mt RSHFT BSPC  &smart_shft    &none           &none
@@ -286,7 +286,7 @@
 
             bindings = <
 &kp GRAVE  &kp N1          &kp N2         &kp N3                &kp N4               &kp N5                                  &kp N6          &kp N7         &kp N8          &kp N9              &kp N0             &lt 9 BSPC
-&kp TAB    &kp B           &kp L          &kp D                 &kp C                &kp V                                   &kp Z           &kp Y          &kp O           &kp U               &kp COMMA          &lt 4 BSPC
+&kp TAB    &kp B           &kp L          &kp D                 &kp C                &kp V                                   &kp Z           &kp Y          &kp O           &kp U               &kp COMMA          &lt 0 BSPC
 &kp Q      &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm_quick LSHFT T  &lh_hm_quick LCMD S  &kp G                                   &kp P           &rh_hm RCMD H  &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I     &dot_end_sentence
 &none      &kp Q           &kp X          &lh_lt 6 M            &kp W                &kp J        &kp C_MUTE    &kp C_PP     &kp K           &kp F          &kp SQT         &semi_end_question  &dot_end_sentence  &none
                            &none          &none                 &layer_gresc 7 0     &lt 8 SPACE  &lt 5 TAB     &lt 5 ENTER  &mt RSHFT BSPC  &smart_shft    &none           &none
@@ -321,23 +321,16 @@
             label = "Qwrt";
         };
 
-        sym_layer {
-            // ----------------------------------------------------------------------------------
-            // |    |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |    DEL    |
-            // |    |  =  |  +  |  {  |  }  | "|" |   | LFT | DWN |  UP | RGT |  `  |     ~     |
-            // |    | ESC | GUI | ALT | CAPS|  "  |   | HOME| END | PGUP| PGDN| PRSC| SHFT(RET) |
-            //                       |     |     | RET | ADJ |     |
-
+        vim_nav_layer {
             bindings = <
-&none      &none      &none      &none      &none     &none                      &none     &none     &none      &none     &none      &none
-&none      &kp EXCL   &kp AT     &kp HASH   &kp DLLR  &kp PRCNT                  &none     &none     &none      &none     &none      &to 8
-&kp CARET  &kp AMPS   &kp COLON  &kp MINUS  &kp LPAR  &kp LBKT                   &none     &sk RCMD  &sk RSHFT  &sk RALT  &sk RCTRL  &none
-&none      &kp CARET  &kp BSLH   &kp EQUAL  &kp RPAR  &kp RBKT   &none    &none  &none     &none     &none      &none     &none      &none
-                      &none      &none      &none     &kp SPACE  &none    &none  &kp BSPC  &none     &none      &none
+&none  &kp N1                &kp N2    &kp N3     &kp N4    &kp N5                         &kp N6    &kp N7     &kp N8     &kp N9  &kp N0  &none
+&none  &kp LS(LA(LC(LCMD)))  &none     &mo 6      &none     &none                          &none     &kp LC(E)  &kp LC(Y)  &none   &none   &none
+&none  &sk LCTRL             &sk LALT  &sk LSHFT  &sk LCMD  &none                          &kp H     &kp J      &kp K      &kp L   &none   &none
+&none  &none                 &none     &none      &none     &none      &none      &none    &none     &kp LC(D)  &kp LC(U)  &none   &none   &none
+                             &none     &none      &kp ESC   &kp SPACE  &kp TAB    &kp RET  &kp BSPC  &kp DEL    &none      &none
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
-            label = "Sym";
+            label = "Vim";
         };
 
         code_sym_layer {
@@ -369,8 +362,8 @@
             bindings = <
 &none  &none      &none      &none      &none           &none                             &none    &none   &none   &none   &none  &none
 &none  &none      &kp LG(W)  &none      &kp LS(LG(N4))  &kp LS(LG(N5))                    &kp F12  &kp F7  &kp F8  &kp F9  &none  &none
-&none  &kp LG(A)  &none      &none      &none           &kp LG(BSLH)                      &kp F11  &kp F4  &kp F5  &kp F6  &none  &none
-&none  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)       &kp LG(LS(Z))   &none      &none  &kp F10  &kp F1  &kp F2  &kp F3  &none  &none
+&none  &kp LG(A)  &none      &none      &none           &kp LG(BSLH)                      &kp F11  &kp F1  &kp F2  &kp F3  &none  &none
+&none  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)       &kp LG(LS(Z))   &none      &none  &kp F10  &kp F4  &kp F5  &kp F6  &none  &none
                   &none      &none      &to 0           &lt 8 SPACE     &kp RET    &none  &none    &mo 9   &none   &none
             >;
 
@@ -385,11 +378,11 @@
             //                       |     | ADJ | BKSP |    |     |
 
             bindings = <
-&none      &none      &none      &none      &none           &none                              &none         &none         &none      &none          &none         &none
-&none      &kp LG(A)  &kp LG(W)  &none      &kp LS(LG(N4))  &kp LG(LBKT)                       &kp LA(UP)    &kp LA(LEFT)  &kp UP     &kp LA(RIGHT)  &kp LA(BSPC)  &to 8
-&kp LG(Z)  &sk LCTRL  &sk LALT   &sk LSHFT  &sk LCMD        &kp LG(RBKT)                       &kp LA(DOWN)  &kp LEFT      &kp DOWN   &kp RIGHT      &kp BSPC      &kp LG(BSPC)
-&none      &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)       &kp LS(LG(Z))  &none      &none    &kp DEL       &kp LG(LEFT)  &kp LG(A)  &kp LG(RIGHT)  &kp LG(BSPC)  &none
-                      &none      &none      &to 0           &kp SPACE      &kp RET    &kp RET  &kp BSPC      &none         &none      &none
+&none      &none                 &none      &none      &none      &none                              &none     &none      &none      &none      &none  &none
+&none      &kp LS(LA(LC(LCMD)))  &none      &none      &kp LG(A)  &kp LG(LBKT)                       &none     &none      &none      &none      &none  &none
+&kp LG(Z)  &sk LCTRL             &sk LALT   &sk LSHFT  &sk LCMD   &kp LG(RBKT)                       &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &none  &none
+&none      &kp LG(Z)             &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LS(LG(Z))  &none      &none    &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &none  &none
+                                 &none      &none      &to 0      &kp SPACE      &kp TAB    &kp RET  &kp BSPC  &kp DEL    &none      &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
