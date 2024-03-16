@@ -300,11 +300,11 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-&kp EQUAL            &kp N1          &kp N2               &kp N3                &kp N4               &kp N5                                &kp N6          &kp N7         &kp N8          &kp N9         &kp N0          &kp MINUS
-&kp LBKT             &kp Y           &lh_lt 5 L           &lh_lt 6 D            &kp W                &kp V                                 &kp X           &kp B          &kp O           &rh_lt 5 U     &kp COMMA       &kp RBKT
-&none                &lh_hm LCTRL C  &lh_hm LALT R        &lh_hm_quick LSHFT T  &lh_hm_quick LCMD S  &kp G                                 &kp P           &rh_hm RCMD N  &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &kp FSLH
-&layer_switcher 4 4  &ad_z_can2b2    &kp J                &kp K                 &kp M                &kp F        &kp C_MUTE    &kp C_PP   &ad_q_can2b2    &kp H          &kp SQT         &kp SEMI       &kp DOT         &lang_switch
-                                     &layer_switcher 4 4  &none                 &layer_gresc 7 0     &lt 8 SPACE  &lt 5 TAB     &lt 5 RET  &mt RSHFT BSPC  &smart_shft    &none           &none
+&kp EQUAL            &kp N1          &kp N2               &kp N3            &kp N4         &kp N5                              &kp N6        &kp N7          &kp N8          &kp N9         &kp N0          &kp MINUS
+&kp LBKT             &kp Y           &lh_lt 5 L           &lh_lt 6 D        &kp W          &kp V                               &kp X         &kp B           &kp O           &rh_lt 5 U     &kp COMMA       &kp RBKT
+&none                &lh_hm LCTRL C  &lh_hm LALT R        &lh_hm LSHFT T    &lh_hm LCMD S  &kp G                               &kp P         &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &kp FSLH
+&layer_switcher 4 4  &ad_z_can2b2    &kp J                &kp K             &kp M          &kp F      &kp C_MUTE    &kp C_PP   &ad_q_can2b2  &kp H           &kp SQT         &kp SEMI       &kp DOT         &lang_switch
+                                     &layer_switcher 4 4  &layer_gresc 7 0  &lt 8 SPACE    &lt 5 TAB  &lt 5 TAB     &lt 5 RET  &lt 5 RET     &mt RSHFT BSPC  &smart_shft     &none
             >;
 
             sensor-bindings =
