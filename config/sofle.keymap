@@ -228,6 +228,20 @@
             max-delay-ms = <500>;
             antecedents = <R L>;
         };
+
+        layer_ad_z: layer_ad_z {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_AD_Z";
+            bindings = <&mo>, <&ad_z_can2b2>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <75>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 43 44 45 46 47 48 49 55 56 57 58 59 50 51 52 53 54 42>;
+            hold-trigger-on-release;
+        };
     };
 
     macros {
@@ -300,11 +314,11 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-&kp EQUAL            &kp N1          &kp N2               &kp N3            &kp N4            &kp N5                                &kp N6          &kp N7         &kp N8          &kp N9         &kp N0          &kp MINUS
-&kp LBKT             &kp Y           &lh_lt 5 L           &lh_lt 6 D        &kp W             &kp V                                 &kp X           &kp B          &kp O           &rh_lt 5 U     &kp COMMA       &kp RBKT
-&none                &lh_hm LCTRL C  &lh_hm LALT R        &lh_hm LSHFT T    &lh_hm LCMD S     &kp G                                 &kp P           &rh_hm RCMD N  &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &kp FSLH
-&layer_switcher 4 4  &ad_z_can2b2    &kp J                &kp K             &kp M             &kp F        &kp C_MUTE    &kp C_PP   &ad_q_can2b2    &kp H          &kp SQT         &kp SEMI       &kp DOT         &lang_switch
-                                     &layer_switcher 4 4  &layer_gresc 7 0  &layer_gresc 7 0  &lt 8 SPACE  &lt 5 TAB     &lt 5 RET  &mt RSHFT BSPC  &smart_shft    &smart_shft     &none
+&kp EQUAL            &kp N1           &kp N2               &kp N3            &kp N4            &kp N5                                &kp N6          &kp N7         &kp N8          &kp N9         &kp N0          &kp MINUS
+&kp LBKT             &kp Y            &lh_lt 5 L           &lh_lt 6 D        &kp W             &kp V                                 &kp X           &kp B          &kp O           &rh_lt 5 U     &kp COMMA       &kp RBKT
+&none                &lh_hm LCTRL C   &lh_hm LALT R        &lh_hm LSHFT T    &lh_hm LCMD S     &kp G                                 &kp P           &rh_hm RCMD N  &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &kp FSLH
+&layer_switcher 4 4  &layer_ad_z 4 0  &kp J                &kp K             &kp M             &kp F        &kp C_MUTE    &kp C_PP   &ad_q_can2b2    &kp H          &kp SQT         &kp SEMI       &kp DOT         &lang_switch
+                                      &layer_switcher 4 4  &layer_gresc 7 0  &layer_gresc 7 0  &lt 8 SPACE  &lt 5 TAB     &lt 5 RET  &mt RSHFT BSPC  &smart_shft    &smart_shft     &none
             >;
 
             sensor-bindings =
