@@ -397,11 +397,11 @@
 
         vim_nav_layer {
             bindings = <
-&none   &kp N1                &kp N2    &kp N3     &kp N4    &kp N5                         &kp N6     &kp N7     &kp N8     &kp N9     &kp N0  &none
-&none   &kp LS(LA(LC(LCMD)))  &none     &mo 6      &none     &none                          &kp LC(E)  &kp LC(D)  &kp LC(U)  &kp LC(Y)  &none   &none
-&none   &sk LCTRL             &sk LALT  &sk LSHFT  &sk LCMD  &none                          &kp H      &kp J      &kp K      &kp L      &none   &none
-&tog 4  &none                 &none     &none      &none     &none      &none      &none    &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &none   &none
-                              &tog 4    &none      &kp ESC   &kp SPACE  &kp TAB    &kp RET  &kp BSPC   &kp DEL    &none      &none
+&none   &kp N1                &kp N2        &kp N3     &kp N4    &kp N5                         &kp N6     &kp N7     &kp N8     &kp N9     &kp N0  &none
+&none   &kp LS(LA(LC(LCMD)))  &kp LC(LCMD)  &mo 6      &none     &none                          &kp LC(E)  &kp LC(D)  &kp LC(U)  &kp LC(Y)  &none   &none
+&none   &sk LCTRL             &sk LALT      &sk LSHFT  &sk LCMD  &none                          &kp H      &kp J      &kp K      &kp L      &none   &none
+&tog 4  &none                 &none         &none      &none     &none      &none      &none    &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &none   &none
+                              &tog 4        &none      &kp ESC   &kp SPACE  &kp TAB    &kp RET  &kp BSPC   &kp DEL    &none      &none
             >;
 
             label = "Vim";
@@ -452,11 +452,11 @@
             //                       |     | ADJ | BKSP |    |     |
 
             bindings = <
-&none      &none                 &none      &none      &none      &none                              &none     &none      &none      &none      &none  &none
-&none      &kp LS(LA(LC(LCMD)))  &none      &none      &kp LG(A)  &kp LG(LBKT)                       &none     &none      &none      &none      &none  &none
-&kp LG(Z)  &sk LCTRL             &sk LALT   &sk LSHFT  &sk LCMD   &kp LG(RBKT)                       &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &none  &none
-&none      &kp LG(Z)             &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LS(LG(Z))  &none      &none    &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &none  &none
-                                 &none      &none      &to 0      &kp SPACE      &kp TAB    &kp RET  &kp BSPC  &kp DEL    &none      &none
+&none      &none                 &none         &none      &none      &none                              &none     &none      &none      &none      &none  &none
+&none      &kp LS(LA(LC(LCMD)))  &kp LC(LCMD)  &none      &kp LG(A)  &kp LG(LBKT)                       &none     &none      &none      &none      &none  &none
+&kp LG(Z)  &sk LCTRL             &sk LALT      &sk LSHFT  &sk LCMD   &kp LG(RBKT)                       &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &none  &none
+&none      &kp LG(Z)             &kp LG(X)     &kp LG(C)  &kp LG(V)  &kp LS(LG(Z))  &none      &none    &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &none  &none
+                                 &none         &none      &to 0      &kp SPACE      &kp TAB    &kp RET  &kp BSPC  &kp DEL    &none      &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
