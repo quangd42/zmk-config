@@ -569,10 +569,10 @@
 
         vim_nav_layer {
             bindings = <
-&none   &kp LS(LA(LC(LCMD)))  &none     &mo 6      &none      &none           &none      &vim_nav_5Ce  &vim_nav_5Cy  &none     &none  &none
-&none   &sk LCTRL             &sk LALT  &sk LSHFT  &sk LCMD   &none           &kp H      &kp J         &kp K         &kp L     &none  &none
-&trans  &none                 &none     &none      &none      &none           &kp CARET  &kp LC(D)     &kp LC(U)     &kp DLLR  &none  &none
-                                        &kp ESC    &kp SPACE         &kp RET             &kp BSPC      &kp DEL
+&none   &sk LS(LA(LC(LCMD)))  &sk LC(LCMD)  &mo 6      &none      &none           &vim_nav_5Ce  &kp LC(D)  &kp LC(U)  &vim_nav_5Cy  &none  &none
+&none   &sk LCTRL             &sk LALT      &sk LSHFT  &sk LCMD   &none           &kp H         &kp J      &kp K      &kp L         &none  &none
+&trans  &none                 &none         &none      &none      &none           &kp LEFT      &kp DOWN   &kp UP     &kp RIGHT     &none  &none
+                                            &kp ESC    &kp SPACE         &kp RET                &kp BSPC   &kp DEL
             >;
         };
 
@@ -611,10 +611,10 @@
             //                       |     | ADJ | BKSP |    |     |
 
             bindings = <
-&none    &sk RC(RA(RS(RGUI)))  &none      &none      &kp LG(A)  &kp LG(LBKT)              &kp LS(HOME)  &vim_nav_5Ce  &vim_nav_5Cy  &kp LS(END)  &vim_nav_o  &trans
-&kp TAB  &sk LCTRL             &sk LALT   &sk LSHFT  &sk LCMD   &kp LG(RBKT)              &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT    &vim_nav_i  &none
-&trans   &kp LG(Z)             &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LS(LG(Z))             &kp HOME      &kp PG_DN     &kp PG_UP     &kp END      &vim_nav_a  &none
-                                          &kp ESC    &kp SPACE                 &kp ENTER                &kp BSPC      &kp DEL
+&none    &sk RC(RA(RS(RGUI)))  &sk LC(LCMD)  &none      &kp LG(A)  &kp LG(LBKT)              &kp LS(HOME)  &vim_nav_5Ce  &vim_nav_5Cy  &kp LS(END)  &vim_nav_o  &trans
+&kp TAB  &sk LCTRL             &sk LALT      &sk LSHFT  &sk LCMD   &kp LG(RBKT)              &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT    &vim_nav_i  &none
+&trans   &kp LG(Z)             &kp LG(X)     &kp LG(C)  &kp LG(V)  &kp LS(LG(Z))             &kp HOME      &kp PG_DN     &kp PG_UP     &kp END      &vim_nav_a  &none
+                                             &kp ESC    &kp SPACE                 &kp ENTER                &kp BSPC      &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
