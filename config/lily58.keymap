@@ -315,42 +315,120 @@
                      &none            &layer_switcher 4 4  &layer_gresc 7 0  &layer_gresc 7 0  &lt 8 SPACE  &lt 5 TAB     &lt 5 RET  &mt RSHFT BSPC  &smart_shft    &smart_shft     &none          &none
             >;
 
+          label = "Can2";
         };
 
-        lower_layer {
-// ------------------------------------------------------------------------------------------------------------
-// | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |
-// |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |
-// |   `   |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |   ~   |
-// |       |     |     |      |      |      |        |  |       |      |  _    |  +    |  {   |   }   |  "|"  |
-//                     |      |      |      |        |  |       |      |       |       |
+        default_layer {
+
             bindings = <
-&bt BT_CLR &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_SEL 2      &bt BT_SEL 3 &bt BT_SEL 4                 &trans    &trans    &trans    &trans    &trans    &trans
-&kp F1     &kp F2           &kp F3            &kp F4            &kp F5       &kp F6                       &kp F7    &kp F8    &kp F9    &kp F10   &kp F11   &kp F12
-&kp GRAVE  &kp EXCL         &kp AT            &kp HASH          &kp DOLLAR   &kp PRCNT                    &kp CARET &kp AMPS  &kp ASTRK &kp LPAR  &kp RPAR  &kp TILDE
-&trans     &ext_power EP_ON &ext_power EP_OFF &ext_power EP_TOG &trans       &trans    &trans   &trans    &trans    &kp MINUS &kp PLUS  &kp LBRC  &kp RBRC  &kp PIPE
-                                              &trans            &trans       &trans    &trans   &trans    &trans    &trans    &trans
+&kp GRAVE  &kp N1          &kp N2         &kp N3                &kp N4               &kp N5                                  &kp N6          &kp N7         &kp N8          &kp N9              &kp N0             &lt 9 BSPC
+&kp TAB    &kp Q           &kp W          &lh_lt 6 F            &kp P                &kp B                                   &kp J           &kp L          &kp U           &kp Y               &kp COMMA          &lt 0 BSPC
+&kp Z      &lh_hm LCTRL A  &lh_hm LALT R  &lh_hm_quick LSHFT S  &lh_hm_quick LCMD T  &kp G                                   &kp M           &rh_hm RCMD N  &rh_hm RSHFT E  &rh_hm RALT I       &rh_hm RCTRL O     &dot_end_sentence
+&trans     &kp Z           &kp X          &lh_lt 6 C            &kp D                &kp V        &kp C_MUTE    &kp C_PP     &kp K           &kp H          &kp SQT         &semi_end_question  &dot_end_sentence  &trans
+                           &none &trans         &none                 &layer_gresc 7 0     &lt 8 SPACE  &lt 5 TAB     &lt 5 ENTER  &mt RSHFT BSPC  &smart_shft    &none           &none &none
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            label = "CmDH";
         };
 
-        raise_layer {
-// ------------------------------------------------------------------------------------------------------------
-// |       |     |     |      |      |      |                   |      |       |       |      |       |       |
-// |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |   7   |   8   |  9   |   0   |       |
-// |   F1  |  F2 |  F3 |  F4  |  F5  |  F6  |                   |      |   <-  |   v   |  ^   |  ->   |       |
-// |   F7  |  F8 |  F9 |  F10 |  F11 |  F12 |        |  |       |  +   |   -   |   =   |  [   |   ]   |   \   |
-//                     |      |      |      |        |  |       |      |       |       |
+        gallium_layer {
+
             bindings = <
-&trans    &trans &trans &trans  &trans  &trans                       &trans      &trans    &trans    &trans   &trans    &trans
-&kp GRAVE &kp N1 &kp N2 &kp N3  &kp N4  &kp N5                       &kp N6      &kp N7    &kp N8    &kp N9   &kp N0    &trans
-&kp F1    &kp F2 &kp F3 &kp F4  &kp F5  &kp F6                       &trans      &kp LEFT  &kp DOWN  &kp UP   &kp RIGHT &trans
-&kp F7    &kp F8 &kp F9 &kp F10 &kp F11 &kp F12   &trans   &trans    &kp KP_PLUS &kp MINUS &kp EQUAL &kp LBKT &kp RBKT  &kp BSLH
-                        &trans  &trans  &trans    &trans   &trans    &trans      &trans    &trans
+&kp GRAVE  &kp N1          &kp N2         &kp N3                &kp N4               &kp N5                                  &kp N6          &kp N7         &kp N8          &kp N9              &kp N0             &lt 9 BSPC
+&kp TAB    &kp B           &kp L          &kp D                 &kp C                &kp V                                   &kp Z           &kp Y          &kp O           &kp U               &kp COMMA          &lt 0 BSPC
+&kp Q      &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm_quick LSHFT T  &lh_hm_quick LCMD S  &kp G                                   &kp P           &rh_hm RCMD H  &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I     &dot_end_sentence
+&trans     &kp Q           &kp X          &lh_lt 6 M            &kp W                &kp J        &kp C_MUTE    &kp C_PP     &kp K           &kp F          &kp SQT         &semi_end_question  &dot_end_sentence  &trans
+                           &none &trans         &none                 &layer_gresc 7 0     &lt 8 SPACE  &lt 5 TAB     &lt 5 ENTER  &mt RSHFT BSPC  &smart_shft    &none           &none &none
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            label = "Gllm";
+        };
+
+        qwerty_layer {
+
+            bindings = <
+&kp GRAVE  &kp N1  &kp N2  &kp N3      &kp N4            &kp N5                                  &kp N6          &kp N7       &kp N8     &kp N9   &kp N0    &lt 9 BSPC
+&kp TAB    &kp Q   &kp W   &lh_lt 6 E  &kp R             &kp T                                   &kp Y           &kp U        &kp I      &kp O    &kp P     &lt 9 BSPC
+&kp Z      &kp A   &kp S   &kp D       &kp F             &kp G                                   &kp H           &kp J        &kp K      &kp L    &kp SEMI  &kp APOS
+&trans     &kp Z   &kp X   &kp C       &kp V             &kp B        &kp C_MUTE    &kp C_PP     &kp N           &kp M        &kp COMMA  &kp DOT  &kp FSLH  &trans
+                   &none &trans  &none       &layer_gresc 7 0  &lt 8 SPACE  &lt 5 TAB     &lt 5 ENTER  &mt RSHFT BSPC  &smart_shft  &none      &none &none
+            >;
+
+            label = "Qwrt";
+        };
+
+        vim_nav_layer {
+            bindings = <
+&none   &kp N1                &kp N2        &kp N3     &kp N4    &kp N5                         &kp N6     &kp N7     &kp N8     &kp N9     &kp N0  &none
+&none   &sk LS(LA(LC(LCMD)))  &sk LC(LCMD)  &mo 6      &none     &none                          &kp LC(E)  &kp LC(D)  &kp LC(U)  &kp LC(Y)  &none   &none
+&none   &sk LCTRL             &sk LALT      &sk LSHFT  &sk LCMD  &none                          &kp H      &kp J      &kp K      &kp L      &none   &none
+&tog 4  &none                 &none         &none      &none     &none      &none      &none    &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &none   &none
+                              &none &tog 4        &none      &kp ESC   &kp SPACE  &kp TAB    &kp RET  &kp BSPC   &kp DEL    &none      &none &none
+            >;
+
+            label = "Vim";
+        };
+
+        code_sym_layer {
+            bindings = <
+&none  &none              &none            &none              &none              &none                      &none      &none              &none              &none             &none               &none
+&none  &kp GRAVE          &kp LT           &kp GT             &kp FSLH           &kp DOT                    &kp PIPE   &kp TILDE          &kp LBKT           &kp RBKT          &kp AT              &none
+&none  &lh_hm LCTRL EXCL  &lh_hm LALT DQT  &lh_hm LSHFT PLUS  &lh_hm LCMD EQUAL  &kp HASH                   &kp AMPS   &rh_hm RCMD COLON  &rh_hm RSHFT LPAR  &rh_hm RALT RPAR  &rh_hm RCTRL QMARK  &none
+&none  &kp BSLH           &kp SQT          &kp UNDER          &kp MINUS          &kp STAR   &none    &none  &kp CARET  &kp DLLR           &kp LBRC           &kp RBRC          &kp PRCNT           &none
+                          &none &none            &none              &none              &kp SPACE  &mo 5    &mo 5  &kp BSPC   &none              &none              &none &none
+            >;
+
+            label = "Code";
+        };
+
+        num_layer {
+            bindings = <
+&none  &none      &none      &none      &none      &none                           &none      &none    &none   &none   &none      &none
+&none  &kp LPAR   &kp MINUS  &none      &kp PLUS   &kp RPAR                        &kp COLON  &kp N7   &kp N8  &kp N9  &kp ASTRK  &kp BSPC
+&to 0  &sk LCTRL  &sk LALT   &sk LSHFT  &sk LCMD   &none                           &kp N0     &kp N1   &kp N2  &kp N3  &kp FSLH   &none
+&none  &none      &none      &none      &none      &none      &none       &none    &kp EQUAL  &kp N4   &kp N5  &kp N6  &kp DOT    &none
+&none                   &none      &none      &kp MINUS  &kp SPACE  &kp PLUS    &kp RET  &kp BSPC   &kp DEL  &none   &none &none
+            >;
+
+            label = "Num";
+        };
+
+        fun_layer {
+            bindings = <
+&none  &none      &none      &none      &none           &none                             &none    &none   &none   &none   &none  &none
+&none  &none      &kp LG(W)  &none      &kp LS(LG(N4))  &kp LS(LG(N5))                    &kp F12  &kp F7  &kp F8  &kp F9  &none  &none
+&none  &kp LG(A)  &none      &none      &none           &kp LG(BSLH)                      &kp F11  &kp F1  &kp F2  &kp F3  &none  &none
+&none  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)       &kp LG(LS(Z))   &none      &none  &kp F10  &kp F4  &kp F5  &kp F6  &none  &none
+                  &none &none      &none      &to 0           &lt 8 SPACE     &kp RET    &none  &none    &mo 9   &none   &none &none
+            >;
+
+            label = "Fun";
+        };
+
+        nav_layer {
+
+            bindings = <
+&none      &none                 &none         &none      &none      &none                              &none     &none      &none      &none      &none  &none
+&none      &sk LS(LA(LC(LCMD)))  &sk LC(LCMD)  &none      &kp LG(A)  &kp LG(LBKT)                       &none     &none      &none      &none      &none  &none
+&kp LG(Z)  &sk LCTRL             &sk LALT      &sk LSHFT  &sk LCMD   &kp LG(RBKT)                       &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &none  &none
+&none      &kp LG(Z)             &kp LG(X)     &kp LG(C)  &kp LG(V)  &kp LS(LG(Z))  &none      &none    &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &none  &none
+                                 &none &none         &none      &to 0      &kp SPACE      &kp TAB    &kp RET  &kp BSPC  &kp DEL    &none      &none &none
+            >;
+
+            label = "Nav";
+        };
+
+        sys_layer {
+
+            bindings = <
+&none   &none   &none   &none   &none         &none                         &none         &none         &none         &none         &none       &none
+&none   &none   &none   &none   &none         &none                         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR  &none
+&tog 1  &none   &none   &none   &none         &none                         &none         &none         &none         &none         &none       &none
+&none   &tog 1  &tog 2  &tog 3  &out OUT_USB  &out OUT_BLE  &none    &none  &bootloader   &none         &none         &none         &none       &none
+            &none     &none   &none   &to 0         &none         &none    &none  &none         &none         &none         &none &none
+            >;
+
+            label = "Sys";
         };
     };
 };
