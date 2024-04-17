@@ -332,11 +332,11 @@
 
         vim_nav_layer {
             bindings = <
-&none   &kp N1                &kp N2        &kp N3     &kp N4    &kp N5                             &kp N6     &kp N7     &kp N8     &kp N9     &kp N0  &none
-&none   &sk LS(LA(LC(LCMD)))  &sk LC(LCMD)  &mo 6      &none     &none                              &kp LC(E)  &kp LC(D)  &kp LC(U)  &kp LC(Y)  &none   &none
-&trans  &sk LCTRL             &sk LALT      &sk LSHFT  &sk LCMD  &none                              &kp H      &kp J      &kp K      &kp L      &none   &none
-&tog 4  &none                 &none         &none      &none     &none      &kp K_MUTE    &kp K_PP  &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &none   &kp LC(LG(Q))
-                                            &none      &kp ESC   &kp SPACE  &kp TAB       &kp RET   &kp BSPC   &kp DEL    &none
+&none   &kp N1                &kp N2        &kp N3     &kp N4    &kp N5                                     &kp N6     &kp N7     &kp N8     &kp N9     &kp N0  &none
+&none   &sk LS(LA(LC(LCMD)))  &sk LC(LCMD)  &mo 6      &none     &none                                      &kp LC(E)  &kp LC(D)  &kp LC(U)  &kp LC(Y)  &none   &none
+&trans  &sk LCTRL             &sk LALT      &sk LSHFT  &sk LCMD  &none                                      &kp H      &kp J      &kp K      &kp L      &none   &none
+&tog 4  &none                 &none         &none      &none     &none      &kp K_MUTE    &kp C_PLAY_PAUSE  &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &none   &kp LC(LG(Q))
+                                            &none      &kp ESC   &kp SPACE  &kp TAB       &kp RET           &kp BSPC   &kp DEL    &none
             >;
 
             label = "Vim";
@@ -344,11 +344,11 @@
 
         code_sym_layer {
             bindings = <
-&none  &none              &none            &none              &none              &none                        &none      &none              &none              &none             &none               &none
-&none  &kp GRAVE          &kp LT           &kp GT             &kp FSLH           &kp DOT                      &kp PIPE   &kp TILDE          &kp LBKT           &kp RBKT          &kp AT              &none
-&none  &lh_hm LCTRL EXCL  &lh_hm LALT DQT  &lh_hm LSHFT PLUS  &lh_hm LCMD EQUAL  &kp HASH                     &kp AMPS   &rh_hm RCMD COLON  &rh_hm RSHFT LPAR  &rh_hm RALT RPAR  &rh_hm RCTRL QMARK  &none
-&none  &kp BSLH           &kp SQT          &kp UNDER          &kp MINUS          &kp STAR   &trans    &trans  &kp CARET  &kp DLLR           &kp LBRC           &kp RBRC          &kp PRCNT           &trans
-                                           &none              &none              &kp SPACE  &mo 5     &mo 5   &kp BSPC   &none              &none
+&none  &none              &none            &none              &none              &none                              &none      &none              &none              &none             &none               &none
+&none  &kp GRAVE          &kp LT           &kp GT             &kp FSLH           &kp DOT                            &kp PIPE   &kp TILDE          &kp LBKT           &kp RBKT          &kp AT              &none
+&none  &lh_hm LCTRL EXCL  &lh_hm LALT DQT  &lh_hm LSHFT PLUS  &lh_hm LCMD EQUAL  &kp HASH                           &kp AMPS   &rh_hm RCMD COLON  &rh_hm RSHFT LPAR  &rh_hm RALT RPAR  &rh_hm RCTRL QMARK  &none
+&none  &kp BSLH           &kp SQT          &kp UNDER          &kp MINUS          &kp STAR   &kp K_MUTE    &kp C_PP  &kp CARET  &kp DLLR           &kp LBRC           &kp RBRC          &kp PRCNT           &trans
+                                           &none              &none              &kp SPACE  &mo 5         &mo 5     &kp BSPC   &none              &none
             >;
 
             label = "Code";
