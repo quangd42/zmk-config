@@ -312,20 +312,20 @@
 &kp LBKT             &kp Y            &lh_lt 5 L           &lh_lt 6 D        &kp W             &kp V                                 &kp X           &kp B          &kp O           &rh_lt 5 U     &kp COMMA       &kp RBKT
 &none                &lh_hm LCTRL C   &lh_hm LALT R        &lh_hm LSHFT T    &lh_hm LCMD S     &kp G                                 &kp P           &rh_hm RCMD N  &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &kp FSLH
 &layer_switcher 4 4  &layer_ad_z 4 0  &kp J                &kp K             &kp M             &kp F        &kp C_MUTE    &kp C_PP   &ad_q_can2b2    &kp H          &kp SQT         &kp SEMI       &kp DOT         &lang_switch
-                     &none            &layer_switcher 4 4  &layer_gresc 7 0  &layer_gresc 7 0  &lt 8 SPACE  &lt 5 TAB     &lt 5 RET  &mt RSHFT BSPC  &smart_shft    &smart_shft     &none          &none
+                     &layer_gresc 7 0  &layer_gresc 7 0  &lt 8 SPACE  &lt 5 TAB     &lt 5 RET  &mt RSHFT BSPC  &smart_shft    &smart_shft
             >;
 
           label = "Can2";
         };
 
-        default_layer {
+        colemak_layer {
 
             bindings = <
 &kp GRAVE  &kp N1          &kp N2         &kp N3                &kp N4               &kp N5                                  &kp N6          &kp N7         &kp N8          &kp N9              &kp N0             &lt 9 BSPC
 &kp TAB    &kp Q           &kp W          &lh_lt 6 F            &kp P                &kp B                                   &kp J           &kp L          &kp U           &kp Y               &kp COMMA          &lt 0 BSPC
 &kp Z      &lh_hm LCTRL A  &lh_hm LALT R  &lh_hm_quick LSHFT S  &lh_hm_quick LCMD T  &kp G                                   &kp M           &rh_hm RCMD N  &rh_hm RSHFT E  &rh_hm RALT I       &rh_hm RCTRL O     &dot_end_sentence
 &trans     &kp Z           &kp X          &lh_lt 6 C            &kp D                &kp V        &kp C_MUTE    &kp C_PP     &kp K           &kp H          &kp SQT         &semi_end_question  &dot_end_sentence  &trans
-                           &none &trans         &none                 &layer_gresc 7 0     &lt 8 SPACE  &lt 5 TAB     &lt 5 ENTER  &mt RSHFT BSPC  &smart_shft    &none           &none &none
+                           &none                 &layer_gresc 7 0     &lt 8 SPACE  &lt 5 TAB     &lt 5 ENTER  &mt RSHFT BSPC  &smart_shft    &none
             >;
 
             label = "CmDH";
@@ -338,7 +338,7 @@
 &kp TAB    &kp B           &kp L          &kp D                 &kp C                &kp V                                   &kp Z           &kp Y          &kp O           &kp U               &kp COMMA          &lt 0 BSPC
 &kp Q      &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm_quick LSHFT T  &lh_hm_quick LCMD S  &kp G                                   &kp P           &rh_hm RCMD H  &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I     &dot_end_sentence
 &trans     &kp Q           &kp X          &lh_lt 6 M            &kp W                &kp J        &kp C_MUTE    &kp C_PP     &kp K           &kp F          &kp SQT         &semi_end_question  &dot_end_sentence  &trans
-                           &none &trans         &none                 &layer_gresc 7 0     &lt 8 SPACE  &lt 5 TAB     &lt 5 ENTER  &mt RSHFT BSPC  &smart_shft    &none           &none &none
+                           &none                 &layer_gresc 7 0     &lt 8 SPACE  &lt 5 TAB     &lt 5 ENTER  &mt RSHFT BSPC  &smart_shft    &none
             >;
 
             label = "Gllm";
@@ -351,7 +351,7 @@
 &kp TAB    &kp Q   &kp W   &lh_lt 6 E  &kp R             &kp T                                   &kp Y           &kp U        &kp I      &kp O    &kp P     &lt 9 BSPC
 &kp Z      &kp A   &kp S   &kp D       &kp F             &kp G                                   &kp H           &kp J        &kp K      &kp L    &kp SEMI  &kp APOS
 &trans     &kp Z   &kp X   &kp C       &kp V             &kp B        &kp C_MUTE    &kp C_PP     &kp N           &kp M        &kp COMMA  &kp DOT  &kp FSLH  &trans
-                   &none &trans  &none       &layer_gresc 7 0  &lt 8 SPACE  &lt 5 TAB     &lt 5 ENTER  &mt RSHFT BSPC  &smart_shft  &none      &none &none
+                   &none       &layer_gresc 7 0  &lt 8 SPACE  &lt 5 TAB     &lt 5 ENTER  &mt RSHFT BSPC  &smart_shft  &none
             >;
 
             label = "Qwrt";
@@ -363,7 +363,7 @@
 &none   &sk LS(LA(LC(LCMD)))  &sk LC(LCMD)  &mo 6      &none     &none                          &kp LC(E)  &kp LC(D)  &kp LC(U)  &kp LC(Y)  &none   &none
 &none   &sk LCTRL             &sk LALT      &sk LSHFT  &sk LCMD  &none                          &kp H      &kp J      &kp K      &kp L      &none   &none
 &tog 4  &none                 &none         &none      &none     &none      &none      &none    &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &none   &none
-                              &none &tog 4        &none      &kp ESC   &kp SPACE  &kp TAB    &kp RET  &kp BSPC   &kp DEL    &none      &none &none
+                              &none      &kp ESC   &kp SPACE  &kp TAB    &kp RET  &kp BSPC   &kp DEL    &none
             >;
 
             label = "Vim";
@@ -375,7 +375,7 @@
 &none  &kp GRAVE          &kp LT           &kp GT             &kp FSLH           &kp DOT                    &kp PIPE   &kp TILDE          &kp LBKT           &kp RBKT          &kp AT              &none
 &none  &lh_hm LCTRL EXCL  &lh_hm LALT DQT  &lh_hm LSHFT PLUS  &lh_hm LCMD EQUAL  &kp HASH                   &kp AMPS   &rh_hm RCMD COLON  &rh_hm RSHFT LPAR  &rh_hm RALT RPAR  &rh_hm RCTRL QMARK  &none
 &none  &kp BSLH           &kp SQT          &kp UNDER          &kp MINUS          &kp STAR   &none    &none  &kp CARET  &kp DLLR           &kp LBRC           &kp RBRC          &kp PRCNT           &none
-                          &none &none            &none              &none              &kp SPACE  &mo 5    &mo 5  &kp BSPC   &none              &none              &none &none
+                          &none              &none              &kp SPACE  &mo 5    &mo 5  &kp BSPC   &none              &none
             >;
 
             label = "Code";
@@ -387,7 +387,7 @@
 &none  &kp LPAR   &kp MINUS  &none      &kp PLUS   &kp RPAR                        &kp COLON  &kp N7   &kp N8  &kp N9  &kp ASTRK  &kp BSPC
 &to 0  &sk LCTRL  &sk LALT   &sk LSHFT  &sk LCMD   &none                           &kp N0     &kp N1   &kp N2  &kp N3  &kp FSLH   &none
 &none  &none      &none      &none      &none      &none      &none       &none    &kp EQUAL  &kp N4   &kp N5  &kp N6  &kp DOT    &none
-&none                   &none      &none      &kp MINUS  &kp SPACE  &kp PLUS    &kp RET  &kp BSPC   &kp DEL  &none   &none &none
+&none      &kp MINUS  &kp SPACE  &kp PLUS    &kp RET  &kp BSPC   &kp DEL  &none
             >;
 
             label = "Num";
@@ -399,7 +399,7 @@
 &none  &none      &kp LG(W)  &none      &kp LS(LG(N4))  &kp LS(LG(N5))                    &kp F12  &kp F7  &kp F8  &kp F9  &none  &none
 &none  &kp LG(A)  &none      &none      &none           &kp LG(BSLH)                      &kp F11  &kp F1  &kp F2  &kp F3  &none  &none
 &none  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)       &kp LG(LS(Z))   &none      &none  &kp F10  &kp F4  &kp F5  &kp F6  &none  &none
-                  &none &none      &none      &to 0           &lt 8 SPACE     &kp RET    &none  &none    &mo 9   &none   &none &none
+                  &none      &to 0           &lt 8 SPACE     &kp RET    &none  &none    &mo 9   &none
             >;
 
             label = "Fun";
@@ -412,7 +412,7 @@
 &none      &sk LS(LA(LC(LCMD)))  &sk LC(LCMD)  &none      &kp LG(A)  &kp LG(LBKT)                       &none     &none      &none      &none      &none  &none
 &kp LG(Z)  &sk LCTRL             &sk LALT      &sk LSHFT  &sk LCMD   &kp LG(RBKT)                       &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &none  &none
 &none      &kp LG(Z)             &kp LG(X)     &kp LG(C)  &kp LG(V)  &kp LS(LG(Z))  &none      &none    &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &none  &none
-                                 &none &none         &none      &to 0      &kp SPACE      &kp TAB    &kp RET  &kp BSPC  &kp DEL    &none      &none &none
+                                 &none      &to 0      &kp SPACE      &kp TAB    &kp RET  &kp BSPC  &kp DEL    &none
             >;
 
             label = "Nav";
@@ -425,7 +425,7 @@
 &none   &none   &none   &none   &none         &none                         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR  &none
 &tog 1  &none   &none   &none   &none         &none                         &none         &none         &none         &none         &none       &none
 &none   &tog 1  &tog 2  &tog 3  &out OUT_USB  &out OUT_BLE  &none    &none  &bootloader   &none         &none         &none         &none       &none
-            &none     &none   &none   &to 0         &none         &none    &none  &none         &none         &none         &none &none
+            &none   &to 0         &none         &none    &none  &none         &none         &none
             >;
 
             label = "Sys";
