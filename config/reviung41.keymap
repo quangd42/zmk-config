@@ -596,9 +596,9 @@
 
         fun_layer {
             bindings = <
-&none   &none      &none      &kp LG(BSLH)  &kp LS(LG(N4))  &kp LS(LG(N5))         &kp F12  &kp F7  &kp F8  &kp F9  &kp LG(LBKT)  &kp LC(LG(Q))
+&none   &none      &none      &kp LG(BSLH)  &kp LS(LG(N4))  &kp LS(LG(N5))         &kp F12  &kp F7  &kp F8  &kp F9  &kp LG(LBKT)  &none
 &none   &kp LG(A)  &none      &none         &none           &kp LG(BSLH)           &kp F11  &kp F1  &kp F2  &kp F3  &kp LG(RBKT)  &none
-&trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)     &kp LG(V)       &kp LG(LS(Z))          &kp F10  &kp F4  &kp F5  &kp F6  &kp LG(BSLH)  &none
+&trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)     &kp LG(V)       &kp LG(LS(Z))          &kp F10  &kp F4  &kp F5  &kp F6  &kp LG(BSLH)  &kp LC(LG(Q))
                               &to 0         &none                           &none           &none   &mo 9
             >;
         };
@@ -611,9 +611,9 @@
             //                       |     | ADJ | BKSP |    |     |
 
             bindings = <
-&none    &sk RC(RA(RS(RGUI)))  &sk LC(LCMD)  &none      &kp LG(A)  &kp LG(LBKT)              &kp LS(HOME)  &vim_nav_5Ce  &vim_nav_5Cy  &kp LS(END)  &vim_nav_o  &trans
+&none    &sk RC(RA(RS(RGUI)))  &sk LC(LCMD)  &none      &kp LG(A)  &kp LG(LBKT)              &kp LS(HOME)  &vim_nav_5Ce  &vim_nav_5Cy  &kp LS(END)  &vim_nav_o  &none
 &kp TAB  &sk LCTRL             &sk LALT      &sk LSHFT  &sk LCMD   &kp LG(RBKT)              &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT    &vim_nav_i  &none
-&trans   &kp LG(Z)             &kp LG(X)     &kp LG(C)  &kp LG(V)  &kp LS(LG(Z))             &kp HOME      &kp PG_DN     &kp PG_UP     &kp END      &vim_nav_a  &none
+&trans   &kp LG(Z)             &kp LG(X)     &kp LG(C)  &kp LG(V)  &kp LS(LG(Z))             &kp HOME      &kp PG_DN     &kp PG_UP     &kp END      &vim_nav_a  &trans
                                              &kp ESC    &kp SPACE                 &kp ENTER                &kp BSPC      &kp DEL
             >;
 
@@ -630,7 +630,7 @@
             bindings = <
 &none  &none   &none   &none   &none         &none                &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR  &kp LG(LC(Q))
 &to 0  &none   &none   &none   &none         &none                &none         &none         &none         &none         &none       &none
-&none  &tog 1  &tog 2  &tog 3  &out OUT_USB  &out OUT_BLE         &bootloader   &none         &none         &none         &none       &none
+&none  &tog 1  &tog 2  &tog 3  &out OUT_USB  &out OUT_BLE         &bootloader   &none         &none         &none         &none       &kp LC(LG(Q))
                        &to 0   &none                       &none                &none         &none
             >;
 
