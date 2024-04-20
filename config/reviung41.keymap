@@ -524,10 +524,10 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-&kp C_PP             &kp B           &lh_lt 5 L     &lh_lt 6 D        &kp W          &ad_z_maya               &kp J  &kp F           &kp O           &rh_lt 5 U     &kp COMMA       &m_rbkt_equal
-&kp TAB              &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S  &kp G                    &kp P  &rh_hm RCMD H   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &m_lbkt_minus
-&layer_switcher 4 4  &kp Q           &kp X          &kp M             &kp C          &kp V                    &kp K  &kp Y           &kp SQT         &kp SEMI       &kp DOT         &lang_switch
-                                                    &layer_gresc 7 0  &lt 8 SPACE                &lt 5 ENTER         &mt RSHFT BSPC  &smart_shft
+&kp C_PP             &kp B           &lh_lt 5 L     &lh_lt 6 D        &kp W          &kp Q               &kp J  &kp F           &kp O           &rh_lt 5 U     &kp COMMA       &m_rbkt_equal
+&kp TAB              &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S  &kp G               &kp P  &rh_hm RCMD H   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &m_lbkt_minus
+&layer_switcher 4 4  &ad_z_maya      &kp X          &kp M             &kp C          &kp V               &kp K  &kp Y           &kp SQT         &kp SEMI       &kp DOT         &lang_switch
+                                                    &layer_gresc 7 0  &lt 8 SPACE           &lt 5 ENTER         &mt RSHFT BSPC  &smart_shft
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
