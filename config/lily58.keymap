@@ -211,6 +211,26 @@
             max-delay-ms = <500>;
             antecedents = <R L>;
         };
+
+        ad_z_maya: ad_z_maya {
+            compatible = "zmk,behavior-antecedent-morph";
+            label = "AD_Z_MAYA";
+            #binding-cells = <0>;
+            defaults = <&kp Z>;
+            bindings =
+                <&kp C>,
+                <&kp E>,
+                <&kp A>,
+                <&kp S>,
+                <&kp L>,
+                <&kp Y>,
+                <&kp Y>,
+                <&kp Y>,
+                <&kp P>;
+
+            max-delay-ms = <500>;
+            antecedents = <S U O G R F P H Y>;
+        };
     };
 
     macros {
@@ -296,11 +316,11 @@
 
         maya_layer {
             bindings = <
-&kp GRAVE  &kp N1          &kp N2         &kp N3                &kp N4               &kp N5                                     &kp N6          &kp N7         &kp N8          &kp N9              &kp N0             &lt 9 BSPC
-&kp TAB    &kp B           &kp L          &kp D                 &kp W                &kp V                                      &kp Z           &kp F          &kp O           &kp U               &kp COMMA          &lt 0 BSPC
-&trans     &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm_quick LSHFT T  &lh_hm_quick LCMD S  &kp G                                      &kp P           &rh_hm RCMD H  &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I     &dot_end_sentence
-&trans     &kp Q           &kp X          &lh_lt 6 M            &kp C                &kp J        &kp C_VOL_DN    &kp C_VOL_UP  &kp K           &kp Y          &kp SQT         &semi_end_question  &dot_end_sentence  &trans
-                                          &none                 &layer_gresc 7 0     &lt 8 SPACE  &lt 5 TAB       &lt 5 ENTER   &mt RSHFT BSPC  &smart_shft    &none
+&kp EQUAL            &kp N1          &kp N2         &kp N3          &kp N4            &kp N5                                     &kp N6          &kp N7         &kp N8          &kp N9         &kp N0          &kp MINUS
+&kp LBKT             &kp B           &kp L          &kp D           &kp W             &kp Q                                      &kp J           &kp F          &kp O           &kp U          &kp COMMA       &kp RBKT
+&kp BSLH             &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T  &lh_hm LCMD S     &kp G                                      &kp P           &rh_hm RCMD H  &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &kp FSLH
+&layer_switcher 4 4  &ad_z_maya      &kp X          &lh_lt 6 M      &kp C             &kp V        &kp C_VOL_DN    &kp C_VOL_UP  &kp K           &kp Y          &kp SQT         &kp SEMI       &kp DOT         &lang_switch
+                                                    &none           &layer_gresc 7 0  &lt 8 SPACE  &lt 5 TAB       &lt 5 ENTER   &mt RSHFT BSPC  &smart_shft    &none
             >;
 
             label = "Maya";
