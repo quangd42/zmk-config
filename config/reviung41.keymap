@@ -325,7 +325,7 @@
         m_lbkt_minus: m_lbkt_minus {
             compatible = "zmk,behavior-mod-morph";
             label = "M_LBKT_MINUS";
-            bindings = <&kp LBKT>, <&kp MINUS>;
+            bindings = <&m_rbkt_lbkt>, <&kp MINUS>;
 
             #binding-cells = <0>;
             mods = <(MOD_RGUI)>;
@@ -379,6 +379,26 @@
 
             max-delay-ms = <500>;
             antecedents = <R L>;
+        };
+
+        m_rbkt_lbkt: m_rbkt_lbkt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "M_RBKT_LBKT";
+            bindings = <&kp RBKT>, <&kp LBKT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        m_flsh_equal: m_flsh_equal {
+            compatible = "zmk,behavior-mod-morph";
+            label = "M_FLSH_EQUAL";
+            bindings = <&kp FSLH>, <&kp EQUAL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RGUI)>;
+            keep-mods = <(MOD_RGUI)>;
         };
     };
 
@@ -525,7 +545,7 @@
 
             bindings = <
 &kp C_PP             &kp B           &lh_lt 5 L     &lh_lt 6 D        &kp W          &kp Q               &kp J  &kp F           &kp O           &rh_lt 5 U     &kp COMMA       &m_rbkt_equal
-&kp TAB              &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S  &kp G               &kp P  &rh_hm RCMD H   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &m_lbkt_minus
+&kp TAB              &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S  &kp G               &kp P  &rh_hm RCMD H   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &m_flsh_equal
 &layer_switcher 4 4  &ad_z_maya      &kp X          &kp M             &kp C          &kp V               &kp K  &kp Y           &kp SQT         &kp SEMI       &kp DOT         &lang_switch
                                                     &layer_gresc 7 0  &lt 8 SPACE           &lt 5 ENTER         &mt RSHFT BSPC  &smart_shft
             >;
