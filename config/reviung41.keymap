@@ -378,13 +378,6 @@
             key-positions = <37 28>;
         };
 
-        c_capsword {
-            bindings = <&caps_word>;
-            key-positions = <15 20>;
-            timeout-ms = <1000>;
-            require-prior-idle-ms = <75>;
-            layers = <0 1>;
-        };
     };
 
     keymap {
@@ -495,7 +488,7 @@
 
             bindings = <
 &trans   &sk RC(RA(RS(RGUI)))  &sk LC(LCMD)  &none      &kp LG(A)  &kp LG(LBKT)              &kp LS(HOME)  &vim_nav_5Ce  &vim_nav_5Cy  &kp LS(END)  &vim_nav_o  &trans
-&kp TAB  &sk LCTRL             &sk LALT      &sk LSHFT  &sk LCMD   &kp LG(RBKT)              &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT    &vim_nav_i  &none
+&kp TAB  &sk LCTRL             &sk LALT      &smart_shft &sk LCMD   &kp LG(RBKT)              &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT    &vim_nav_i  &none
 &trans   &kp LG(Z)             &kp LG(X)     &kp LG(C)  &kp LG(V)  &kp LS(LG(Z))             &kp HOME      &kp PG_DN     &kp PG_UP     &kp END      &vim_nav_a  &trans
                                              &kp ESC    &kp SPACE                 &kp ENTER                &kp BSPC      &kp DEL
             >;
