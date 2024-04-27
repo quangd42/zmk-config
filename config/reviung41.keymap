@@ -377,7 +377,6 @@
             bindings = <&to 8>;
             key-positions = <37 28>;
         };
-
     };
 
     keymap {
@@ -394,7 +393,7 @@
 &m_lbkt_minus        &kp B           &lh_lt 5 L     &lh_lt 6 D        &kp W          &kp Q             &kp J  &kp F           &kp O           &rh_lt 5 U     &kp COMMA       &m_rbkt_equal
 &kp TAB              &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S  &kp G             &kp P  &rh_hm RCMD H   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &kp FSLH
 &layer_switcher 4 4  &ad_z_maya      &kp X          &kp M             &kp C          &kp V             &kp K  &kp Y           &kp SQT         &kp SEMI       &kp DOT         &lang_switch
-                                                    &layer_gresc 7 0  &lt 8 SPACE           &lt 9 RET         &mt RSHFT BSPC  &smart_shft
+                                                    &layer_gresc 7 0  &lt 8 SPACE           &lt 9 RET         &mt RSHFT BSPC  &kp TAB
             >;
         };
 
@@ -487,10 +486,10 @@
             //                       |     | ADJ | BKSP |    |     |
 
             bindings = <
-&trans   &sk RC(RA(RS(RGUI)))  &sk LC(LCMD)  &none      &kp LG(A)  &kp LG(LBKT)              &kp LS(HOME)  &vim_nav_5Ce  &vim_nav_5Cy  &kp LS(END)  &vim_nav_o  &trans
-&kp TAB  &sk LCTRL             &sk LALT      &smart_shft &sk LCMD   &kp LG(RBKT)              &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT    &vim_nav_i  &none
-&trans   &kp LG(Z)             &kp LG(X)     &kp LG(C)  &kp LG(V)  &kp LS(LG(Z))             &kp HOME      &kp PG_DN     &kp PG_UP     &kp END      &vim_nav_a  &trans
-                                             &kp ESC    &kp SPACE                 &kp ENTER                &kp BSPC      &kp DEL
+&trans   &sk RC(RA(RS(RGUI)))  &sk LC(LCMD)  &none        &kp LG(A)  &kp LG(LBKT)              &kp LS(HOME)  &vim_nav_5Ce  &vim_nav_5Cy  &kp LS(END)  &vim_nav_o  &trans
+&kp TAB  &sk LCTRL             &sk LALT      &smart_shft  &sk LCMD   &kp LG(RBKT)              &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT    &vim_nav_i  &none
+&trans   &kp LG(Z)             &kp LG(X)     &kp LG(C)    &kp LG(V)  &kp LS(LG(Z))             &kp HOME      &kp PG_DN     &kp PG_UP     &kp END      &vim_nav_a  &trans
+                                             &kp ESC      &kp SPACE                 &kp ENTER                &kp BSPC      &kp DEL
             >;
         };
 
