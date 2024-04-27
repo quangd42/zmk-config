@@ -226,7 +226,7 @@
         m_lbkt_minus: m_lbkt_minus {
             compatible = "zmk,behavior-mod-morph";
             label = "M_LBKT_MINUS";
-            bindings = <&m_rbkt_lbkt>, <&kp MINUS>;
+            bindings = <&kp LBKT>, <&kp MINUS>;
 
             #binding-cells = <0>;
             mods = <(MOD_RGUI)>;
