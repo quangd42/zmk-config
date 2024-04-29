@@ -524,11 +524,11 @@
 
         default_layer {
             bindings = <
-&kp N1               &kp N2         &kp N3            &kp N4         &kp N5  &kp EQUAL   &kp MINUS &kp N6     &kp N7          &kp N8          &kp N9         &kp N0   
-&kp LBKT      &kp B                &lh_lt 5 L     &lh_lt 6 D        &kp W          &kp Q      &kp J      &kp F           &kp O           &rh_lt 5 U     &kp COMMA &kp RBKT         
-&kp BSLH      &lh_hm LCTRL N       &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S  &kp G      &kp P      &rh_hm RCMD H   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I &kp FSLH      
-&kp LG(LC(Q))  &ad_z_maya           &kp X          &kp M             &kp C          &kp V      &kp K      &kp Y           &kp SQT         &kp SEMI       &kp DOT &lang_switch 
-&layer_switcher 4 4  &none   &mo 9          &layer_gresc 7 0  &lt 8 SPACE    &lt 5 TAB  &lt 5 RET  &mt RSHFT BSPC  &kp LEFT     &kp DOWN &kp UP      &kp RIGHT
+&kp N1               &kp N2          &kp N3         &kp N4            &kp N5         &kp EQUAL  &kp MINUS  &kp N6          &kp N7          &kp N8         &kp N9          &kp N0
+&kp LBKT             &kp B           &lh_lt 5 L     &lh_lt 6 D        &kp W          &kp Q      &kp J      &kp F           &kp O           &rh_lt 5 U     &kp COMMA       &kp RBKT
+&kp BSLH             &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S  &kp G      &kp P      &rh_hm RCMD H   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &kp FSLH
+&kp LG(LC(Q))        &ad_z_maya      &kp X          &kp M             &kp C          &kp V      &kp K      &kp Y           &kp SQT         &kp SEMI       &kp DOT         &lang_switch
+&layer_switcher 4 4  &none           &mo 9          &layer_gresc 7 0  &lt 8 SPACE    &lt 5 TAB  &lt 5 RET  &mt RSHFT BSPC  &kp LEFT        &kp DOWN       &kp UP          &kp RIGHT
             >;
         };
 
@@ -541,11 +541,11 @@
             // |       | LGUI | LALT | LCTL | LOWER | SPACE  |  SPACE  |  RAISE | LEFT |  DOWN |   UP  | RIGHT  |
 
             bindings = <
-&kp N1               &kp N2         &kp N3            &kp N4         &kp N5     &lang_switch  &kp LG(LC(Q))  &kp N6     &kp N7          &kp N8          &kp N9         &kp N0
-&none    &kp B                &lh_lt 5 L     &lh_lt 6 D        &kp W          &kp Q      &kp DOWN      &kp F           &kp O           &rh_lt 5 U     &kp COMMA &none
-&none    &lh_hm LCTRL N       &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S  &kp G      &kp LEFT      &rh_hm RCMD H   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I &none
-&none    &ad_z_maya           &kp X          &kp M             &kp C          &kp V      &kp LBKT      &kp Y           &kp SQT         &kp SEMI       &kp DOT &none
-&none    &layer_switcher 4 4  &none          &layer_gresc 7 0  &lt 8 SPACE    &lt 5 TAB  &lt 7 ENTER   &mt RSHFT BSPC  &smart_shft     &kp MINUS      &kp EQUAL &none
+&kp N1  &kp N2               &kp N3         &kp N4            &kp N5         &lang_switch  &kp LG(LC(Q))  &kp N6          &kp N7          &kp N8         &kp N9          &kp N0
+&none   &kp B                &lh_lt 5 L     &lh_lt 6 D        &kp W          &kp Q         &kp DOWN       &kp F           &kp O           &rh_lt 5 U     &kp COMMA       &none
+&none   &lh_hm LCTRL N       &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S  &kp G         &kp LEFT       &rh_hm RCMD H   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &none
+&none   &ad_z_maya           &kp X          &kp M             &kp C          &kp V         &kp LBKT       &kp Y           &kp SQT         &kp SEMI       &kp DOT         &none
+&none   &layer_switcher 4 4  &none          &layer_gresc 7 0  &lt 8 SPACE    &lt 5 TAB     &lt 7 ENTER    &mt RSHFT BSPC  &smart_shft     &kp MINUS      &kp EQUAL       &none
             >;
 
             label = "maya";
@@ -575,21 +575,21 @@
 
         vim_nav_layer {
             bindings = <
-&kp N1                &kp N2        &kp N3     &kp N4     &kp N5   &none      &none      &kp N6     &kp N7     &kp N8     &kp N9     &kp N0
-&none      &kp LS(LA(LC(LCMD)))  &sk LC(LCMD)  &mo 6      &none      &none      &none      &kp LC(D)  &kp LC(U)  &none      &none    &none
-&none      &sk LCTRL             &sk LALT      &sk LSHFT  &sk LGUI   &none      &kp H      &kp J      &kp K      &kp L      &none    &none
-&none      &none                 &none         &none      &none      &none      &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &none    &none
-&none    &trans                &none         &kp ESC    &kp SPACE  &kp TAB  &kp ENTER  &kp BSPC   &kp DEL    &none      &none &none
+&kp N1  &kp N2                &kp N3        &kp N4     &kp N5     &none    &none      &kp N6     &kp N7     &kp N8     &kp N9  &kp N0
+&none   &kp LS(LA(LC(LCMD)))  &sk LC(LCMD)  &mo 6      &none      &none    &none      &kp LC(D)  &kp LC(U)  &none      &none   &none
+&none   &sk LCTRL             &sk LALT      &sk LSHFT  &sk LGUI   &none    &kp H      &kp J      &kp K      &kp L      &none   &none
+&none   &none                 &none         &none      &none      &none    &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &none   &none
+&none   &trans                &none         &kp ESC    &kp SPACE  &kp TAB  &kp ENTER  &kp BSPC   &kp DEL    &none      &none   &none
             >;
         };
 
         code_sym_layer {
             bindings = <
-&kp N1             &kp N2           &kp N3             &kp N4             &kp N5  &none &none  &kp N6     &kp N7             &kp N8             &kp N9            &kp N0 
-&none  &kp GRAVE          &kp LT           &kp GT             &kp FSLH           &kp DOT   &kp PIPE   &kp TILDE          &kp LBKT           &kp RBKT          &kp AT &none  
-&none  &lh_hm LCTRL EXCL  &lh_hm LALT DQT  &lh_hm LSHFT PLUS  &lh_hm LCMD EQUAL  &kp HASH  &kp AMPS   &rh_hm RCMD COLON  &rh_hm RSHFT LPAR  &rh_hm RALT RPAR  &rh_hm RCTRL QMARK &none  
-&none  &kp BSLH           &kp SQT          &kp UNDER          &kp MINUS          &kp STAR  &kp CARET  &kp DLLR           &kp LBRC           &kp RBRC          &kp PRCNT &none  
-&none  &trans             &none            &to 0              &kp SPACE          &mo 5     &mo 5      &kp BSPC           &kp DEL            &none             &none &none  
+&kp N1  &kp N2             &kp N3           &kp N4             &kp N5             &none     &none      &kp N6             &kp N7             &kp N8            &kp N9              &kp N0
+&none   &kp GRAVE          &kp LT           &kp GT             &kp FSLH           &kp DOT   &kp PIPE   &kp TILDE          &kp LBKT           &kp RBKT          &kp AT              &none
+&none   &lh_hm LCTRL EXCL  &lh_hm LALT DQT  &lh_hm LSHFT PLUS  &lh_hm LCMD EQUAL  &kp HASH  &kp AMPS   &rh_hm RCMD COLON  &rh_hm RSHFT LPAR  &rh_hm RALT RPAR  &rh_hm RCTRL QMARK  &none
+&none   &kp BSLH           &kp SQT          &kp UNDER          &kp MINUS          &kp STAR  &kp CARET  &kp DLLR           &kp LBRC           &kp RBRC          &kp PRCNT           &none
+&none   &trans             &none            &to 0              &kp SPACE          &mo 5     &mo 5      &kp BSPC           &kp DEL            &none             &none               &none
             >;
 
             label = "code";
@@ -604,21 +604,21 @@
             // | LALT  |      |      |      |      |      |       |       | NEXT | VOL- | VOL+  | PLAY  |
 
             bindings = <
-&none      &none      &none      &none      &none      &none     &none      &none     &none    &none   &none &none     
-&none      &kp LPAR   &kp MINUS  &none      &kp PLUS   &kp RPAR  &kp COLON  &kp N7    &kp N8   &kp N9  &kp ASTRK &none     
-&none      &sk LCTRL  &sk LALT   &sk LSHFT  &sk LCMD   &none     &kp N0     &kp N4    &kp N5   &kp N6  &kp FSLH &none     
-&none      &none      &none      &none      &none      &none     &kp EQUAL  &kp N1    &kp N2   &kp N3  &kp DOT &kp COMMA  
-&none      &trans     &none      &kp MINUS  &kp SPACE  &kp PLUS  &kp RET    &kp BSPC  &kp DEL  &none   &kp COMMA &none
+&none  &none      &none      &none      &none      &none     &none      &none     &none    &none   &none      &none
+&none  &kp LPAR   &kp MINUS  &none      &kp PLUS   &kp RPAR  &kp COLON  &kp N7    &kp N8   &kp N9  &kp ASTRK  &none
+&none  &sk LCTRL  &sk LALT   &sk LSHFT  &sk LCMD   &none     &kp N0     &kp N4    &kp N5   &kp N6  &kp FSLH   &none
+&none  &none      &none      &none      &none      &none     &kp EQUAL  &kp N1    &kp N2   &kp N3  &kp DOT    &kp COMMA
+&none  &trans     &none      &kp MINUS  &kp SPACE  &kp PLUS  &kp RET    &kp BSPC  &kp DEL  &none   &kp COMMA  &none
             >;
         };
 
         fun_layer {
             bindings = <
-&none      &none      &none         &none           &none           &none         &none         &none    &none   &none   &none   &none
-&none    &none      &kp LG(W)  &kp LG(BSLH)  &kp LS(LG(N4))  &kp LS(LG(N5))  &kp C_VOL_DN  &kp F7  &kp F8  &kp F9  &none &none
-&none    &kp LG(A)  &none      &none         &none           &kp LG(BSLH)    &kp K_MUTE    &kp F4  &kp F5  &kp F6  &none &none
-&none    &kp LG(Z)  &kp LG(X)  &kp LG(C)     &kp LG(V)       &kp LG(LS(Z))   &kp C_BRI_DN  &kp F1  &kp F2  &kp F3  &none &none
-&none         &trans     &none      &to 0         &lt 8 SPACE     &kp RET         &none    &none   &kp K_MUTE   &kp C_VOL_DN   &kp C_VOL_UP         &kp C_PP
+&none  &none      &none      &none         &none           &none           &none         &none   &none       &none         &none         &none
+&none  &none      &kp LG(W)  &kp LG(BSLH)  &kp LS(LG(N4))  &kp LS(LG(N5))  &kp C_VOL_DN  &kp F7  &kp F8      &kp F9        &none         &none
+&none  &kp LG(A)  &none      &none         &none           &kp LG(BSLH)    &kp K_MUTE    &kp F4  &kp F5      &kp F6        &none         &none
+&none  &kp LG(Z)  &kp LG(X)  &kp LG(C)     &kp LG(V)       &kp LG(LS(Z))   &kp C_BRI_DN  &kp F1  &kp F2      &kp F3        &none         &none
+&none  &trans     &none      &to 0         &lt 8 SPACE     &kp RET         &none         &none   &kp K_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PP
             >;
 
             label = "Fun";
@@ -626,21 +626,21 @@
 
         nav_layer {
             bindings = <
-&none                 &none         &none      &none      &none          &none    &none    &none         &none      &none      &none        &none
-&none    &sk RA(RC(RS(RGUI)))  &sk LC(LCMD)  &none      &kp LG(A)  &kp LG(LBKT)    &kp LS(HOME)  &kp LC(E)  &kp LC(Y)  &kp LS(END)  &vim_nav_o   &none
-&none    &sk LCTRL             &sk LALT      &sk LSHFT  &sk LCMD   &kp LG(RBKT)    &kp LEFT      &kp DOWN   &kp UP     &kp RIGHT    &vim_nav_i   &none
-&none    &kp LG(Z)             &kp LG(X)     &kp LG(C)  &kp LG(V)  &kp LS(LG(Z))    &kp HOME      &kp PG_DN  &kp PG_UP  &kp END      &vim_nav_a  &none
-&none    &trans                &none         &kp ESC    &kp SPACE  &kp TAB        &kp RET  &kp BSPC   &kp DEL    &none        &none &none
+&none  &none                 &none         &none        &none      &none          &none         &none      &none      &none        &none       &none
+&none  &sk RA(RC(RS(RGUI)))  &sk LC(LCMD)  &none        &kp LG(A)  &kp LG(LBKT)   &kp LS(HOME)  &kp LC(E)  &kp LC(Y)  &kp LS(END)  &vim_nav_o  &none
+&none  &sk LCTRL             &sk LALT      &smart_shft  &sk LCMD   &kp LG(RBKT)   &kp LEFT      &kp DOWN   &kp UP     &kp RIGHT    &vim_nav_i  &none
+&none  &kp LG(Z)             &kp LG(X)     &kp LG(C)    &kp LG(V)  &kp LS(LG(Z))  &kp HOME      &kp PG_DN  &kp PG_UP  &kp END      &vim_nav_a  &none
+&none  &trans                &none         &kp ESC      &kp SPACE  &kp TAB        &kp RET       &kp BSPC   &kp DEL    &none        &none       &none
             >;
         };
 
         sys_layer {
             bindings = <
-&none   &none   &none   &none  &none            &none            &none            &none        &none       &none  &none  &none
-&none   &none   &none   &none  &rgb_ug RGB_TOG  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &none        &none       &none  &none  &none
-&none   &none   &none   &none  &none            &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &none        &none       &none  &none  &none
-&none            &tog 1  &tog 2  &tog 3  &none  &none            &bootloader  &sys_reset  &none  &none  &none            &none
-&none    &trans  &none   &to 0   &none  &none            &none            &none       &none  &none  &none &none
+&none  &none   &none   &none   &none            &none            &none            &none       &none  &none  &none  &none
+&none  &none   &none   &none   &rgb_ug RGB_TOG  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &none       &none  &none  &none  &none
+&none  &none   &none   &none   &none            &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &none       &none  &none  &none  &none
+&none  &tog 1  &tog 2  &tog 3  &none            &none            &bootloader      &sys_reset  &none  &none  &none  &none
+&none  &trans  &none   &to 0   &none            &none            &none            &none       &none  &none  &none  &none
             >;
         };
     };
