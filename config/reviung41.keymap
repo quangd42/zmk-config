@@ -348,20 +348,6 @@
             tap-ms = <4>;
         };
 
-        vim_nav_5Cy: vim_nav_5Cy {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp N5 &kp LC(Y)>;
-            label = "VIM_NAV_5CY";
-        };
-
-        vim_nav_5Ce: vim_nav_5Ce {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp N5 &kp LC(E)>;
-            label = "VIM_NAV_5CE";
-        };
-
         str_returns_q: str_returns_q {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -444,7 +430,7 @@
 
         vim_nav_layer {
             bindings = <
-&kp C_VOL_DN  &sk LS(LA(LC(LCMD)))  &sk LC(LCMD)  &mo 6        &none      &none              &vim_nav_5Ce  &kp LC(D)  &kp LC(U)  &vim_nav_5Cy  &none  &kp C_VOL_UP
+&kp C_VOL_DN  &sk LS(LA(LC(LCMD)))  &sk LC(LCMD)  &mo 6        &none      &none              &kp LC(E)     &kp LC(D)  &kp LC(U)  &kp LC(Y)  &none  &kp C_VOL_UP
 &none         &sk LCTRL             &sk LALT      &smart_shft  &sk LCMD   &kp CAPS           &kp H         &kp J      &kp K      &kp L         &none  &none
 &trans        &none                 &none         &none        &none      &none              &kp LEFT      &kp DOWN   &kp UP     &kp RIGHT     &none  &kp LC(LG(Q))
                                                   &kp ESC      &kp SPACE            &kp RET                &kp BSPC   &kp DEL
@@ -486,7 +472,7 @@
             //                       |     | ADJ | BKSP |    |     |
 
             bindings = <
-&trans   &sk RC(RA(RS(RGUI)))  &sk LC(LCMD)  &none        &kp LG(A)  &kp LG(LBKT)              &kp LS(HOME)  &vim_nav_5Ce  &vim_nav_5Cy  &kp LS(END)  &vim_nav_o  &trans
+&trans   &sk RC(RA(RS(RGUI)))  &sk LC(LCMD)  &none        &kp LG(A)  &kp LG(LBKT)              &kp LS(HOME)  &kp LC(E)  &kp LC(Y)  &kp LS(END)  &vim_nav_o  &trans
 &kp TAB  &sk LCTRL             &sk LALT      &smart_shft  &sk LCMD   &kp LG(RBKT)              &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT    &vim_nav_i  &none
 &trans   &kp LG(Z)             &kp LG(X)     &kp LG(C)    &kp LG(V)  &kp LS(LG(Z))             &kp HOME      &kp PG_DN     &kp PG_UP     &kp END      &vim_nav_a  &trans
                                              &kp ESC      &kp SPACE                 &kp ENTER                &kp BSPC      &kp DEL
