@@ -321,7 +321,7 @@
 &ad_lbkt_maya        &kp B           &lh_lt 5 L     &lh_lt 6 D           &kp W             &kp Q                                      &kp J           &kp F          &kp O           &rh_lt 5 U     &kp COMMA       &kp RBKT
 &kp BSLH             &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T       &lh_hm LCMD S     &kp G                                      &kp P           &rh_hm RCMD H  &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &kp FSLH
 &layer_switcher 4 4  &ad_z_maya      &kp X          &lh_lt 6 M           &kp C             &kp V        &kp C_VOL_DN    &kp C_VOL_UP  &kp K           &kp Y          &kp SQT         &kp SEMI       &kp DOT         &lang_switch
-                                                    &layer_switcher 4 4  &layer_gresc 7 0  &lt 8 SPACE  &kp TAB       &lt 5 ENTER   &mt RSHFT BSPC  &kp TAB       &none
+                                                    &layer_switcher 4 4  &layer_gresc 7 0  &lt 8 SPACE  &kp TAB         &lt 5 ENTER   &mt RSHFT BSPC  &kp TAB        &none
             >;
 
             label = "Maya";
@@ -340,7 +340,7 @@
 &kp LBKT             &kp Y           &lh_lt 5 L     &lh_lt 6 D           &kp W             &kp V                                      &kp X           &kp B          &kp O           &rh_lt 5 U     &kp COMMA       &kp RBKT
 &kp BSLH             &lh_hm LCTRL C  &lh_hm LALT R  &lh_hm LSHFT T       &lh_hm LCMD S     &kp G                                      &kp P           &rh_hm RCMD N  &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &kp FSLH
 &layer_switcher 4 4  &ad_z_can2b2    &kp J          &kp K                &kp M             &kp F        &kp C_VOL_DN    &kp C_VOL_UP  &ad_q_can2b2    &kp H          &kp SQT         &kp SEMI       &kp DOT         &lang_switch
-                                                    &layer_switcher 4 4  &layer_gresc 7 0  &lt 8 SPACE  &kp TAB       &lt 5 RET     &mt RSHFT BSPC  &smart_shft    &smart_shft
+                                                    &layer_switcher 4 4  &layer_gresc 7 0  &lt 8 SPACE  &kp TAB         &lt 5 RET     &mt RSHFT BSPC  &smart_shft    &smart_shft
             >;
 
             label = "Can2";
@@ -352,7 +352,7 @@
 &kp TAB    &kp Q           &kp W          &lh_lt 6 F            &kp P                &kp B                                      &kp J           &kp L          &kp U           &kp Y               &kp COMMA          &lt 0 BSPC
 &trans     &lh_hm LCTRL A  &lh_hm LALT R  &lh_hm_quick LSHFT S  &lh_hm_quick LCMD T  &kp G                                      &kp M           &rh_hm RCMD N  &rh_hm RSHFT E  &rh_hm RALT I       &rh_hm RCTRL O     &dot_end_sentence
 &trans     &kp Z           &kp X          &lh_lt 6 C            &kp D                &kp V        &kp C_VOL_DN    &kp C_VOL_UP  &kp K           &kp H          &kp SQT         &semi_end_question  &dot_end_sentence  &trans
-                                          &trans                &layer_gresc 7 0     &lt 8 SPACE  &kp TAB       &lt 5 ENTER   &mt RSHFT BSPC  &smart_shft    &none
+                                          &trans                &layer_gresc 7 0     &lt 8 SPACE  &kp TAB         &lt 5 ENTER   &mt RSHFT BSPC  &smart_shft    &none
             >;
 
             label = "CmDH";
@@ -360,11 +360,11 @@
 
         qwerty_layer {
             bindings = <
-&kp N1    &kp N2  &kp N3  &kp N4      &kp N5            &kp EQUAL                                  &kp MINUS       &kp N6    &kp N7     &kp N8   &kp N9    &kp N0
-&kp LBKT  &kp Q   &lh_lt 5 W   &lh_lt 6 E  &kp R             &kp T                                      &kp Y           &kp U     &kp I      &rh_lt 5 O    &kp P     &kp RBKT
-&trans    &kp A   &kp S   &kp D       &kp F             &kp G                                      &kp H           &kp J     &kp K      &kp L    &kp SEMI  &kp APOS
-&trans    &kp Z   &kp X   &kp C       &kp V             &kp B        &kp C_VOL_DN    &kp C_VOL_UP  &kp N           &kp M     &kp COMMA  &kp DOT  &kp FSLH  &trans
-                          &trans      &layer_gresc 7 0  &lt 8 SPACE  &kp TAB       &lt 5 ENTER   &mt RSHFT BSPC  &kp BSLH  &none
+&kp N1    &kp N2  &kp N3      &kp N4      &kp N5            &kp EQUAL                                  &kp MINUS       &kp N6   &kp N7     &kp N8      &kp N9    &kp N0
+&kp LBKT  &kp Q   &lh_lt 5 W  &lh_lt 6 E  &kp R             &kp T                                      &kp Y           &kp U    &kp I      &rh_lt 5 O  &kp P     &kp RBKT
+&trans    &kp A   &kp S       &kp D       &kp F             &kp G                                      &kp H           &kp J    &kp K      &kp L       &kp SEMI  &kp APOS
+&trans    &kp Z   &kp X       &kp C       &kp V             &kp B        &kp C_VOL_DN    &kp C_VOL_UP  &kp N           &kp M    &kp COMMA  &kp DOT     &kp FSLH  &trans
+                              &trans      &layer_gresc 7 0  &lt 8 SPACE  &kp TAB         &lt 5 ENTER   &mt RSHFT BSPC  &kp TAB  &none
             >;
 
             label = "Qwrt";
