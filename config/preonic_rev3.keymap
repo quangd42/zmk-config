@@ -587,7 +587,7 @@
 &ad_lbkt_maya        &kp Q   &lh_lt 5 W   &lh_lt 6 E        &kp R        &kp T      &kp Y      &kp U           &kp I        &rh_hm 5 O      &kp P          &kp RBKT    
 &kp BSLH             &kp A   &kp S   &kp D             &kp F        &kp G      &kp H      &kp J           &kp K        &kp L      &kp SEMI                 &kp FSLH    
 &kp LG(LC(Q))        &kp Z   &kp X   &kp C             &kp V        &kp B      &kp N      &kp M           &kp COMMA    &kp DOT    &kp FSLH                 &lang_switch
-&layer_switcher 4 4  &none   &layer_gresc 7 0  &lt 8 SPACE  &lt 5 TAB  &lt 5 RET  &mt RSHFT BSPC  &kp LEFT  &kp DOWN  &kp UP                        &kp RIGHT   
+&layer_switcher 4 4  &mo 9   &none   &layer_gresc 7 0  &lt 8 SPACE  &lt 5 TAB  &lt 5 RET  &mt RSHFT BSPC  &kp LEFT  &kp DOWN  &kp UP                        &kp RIGHT   
             >;
         };
 
