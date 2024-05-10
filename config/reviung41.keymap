@@ -226,7 +226,7 @@
         m_lbkt_minus: m_lbkt_minus {
             compatible = "zmk,behavior-mod-morph";
             label = "M_LBKT_MINUS";
-            bindings = <&kp LBKT>, <&kp MINUS>;
+            bindings = <&ad_lbkt_maya>, <&kp MINUS>;
 
             #binding-cells = <0>;
             mods = <(MOD_RGUI)>;
@@ -243,16 +243,6 @@
             keep-mods = <(MOD_RGUI)>;
         };
 
-        m_sqt_minus: m_sqt_minus {
-            compatible = "zmk,behavior-mod-morph";
-            label = "M_SQT_MINUS";
-            bindings = <&kp SQT>, <&kp MINUS>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_LGUI|MOD_LALT)>;
-            keep-mods = <(MOD_LSFT|MOD_LGUI)>;
-        };
-
         ad_q_can2b2: ad_q_can2b2 {
             compatible = "zmk,behavior-antecedent-morph";
             label = "AD_Q_CAN2B2";
@@ -262,6 +252,26 @@
 
             max-delay-ms = <500>;
             antecedents = <R L>;
+        };
+
+        ad_lbkt_maya: ad_lbkt_maya {
+            compatible = "zmk,behavior-antecedent-morph";
+            label = "AD_LBKT_MAYA";
+            #binding-cells = <0>;
+            defaults = <&kp LBKT>;
+            bindings =
+                <&kp C>,
+                <&kp E>,
+                <&kp A>,
+                <&kp S>,
+                <&kp L>,
+                <&kp Y>,
+                <&kp Y>,
+                <&kp Y>,
+                <&kp P>;
+
+            max-delay-ms = <500>;
+            antecedents = <S U O G R F P H Y>;
         };
     };
 
@@ -438,15 +448,15 @@
 &trans   &kp Q  &lh_lt 5 W  &lh_lt 6 E        &kp R        &kp T             &kp Y  &kp U           &kp I        &rh_lt 5 O  &kp P     &trans
 &kp TAB  &kp A  &kp S       &kp D             &kp F        &kp G             &kp H  &kp J           &kp K        &kp L       &kp SEMI  &kp SQT
 &trans   &kp Z  &kp X       &kp C             &kp V        &kp B             &kp N  &kp M           &kp COMMA    &kp DOT     &kp FSLH  &trans
-                            &layer_gresc 7 0  &lt 8 SPACE         &lt 9 RET         &mt RSHFT BSPC  &smart_shft
+                            &layer_gresc 7 0  &lt 8 SPACE         &lt 9 RET         &mt RSHFT BSPC  &kp TAB
             >;
         };
 
         vim_nav_layer {
             bindings = <
 &kp C_VOL_DN  &sk LS(LA(LC(LCMD)))  &sk LC(LCMD)  &mo 6      &none      &none           &vim_nav_5Ce  &kp LC(D)  &kp LC(U)  &vim_nav_5Cy  &none  &kp C_VOL_UP
-&none         &sk LCTRL             &sk LALT      &sk LSHFT  &sk LCMD   &none           &kp H         &kp J      &kp K      &kp L         &none  &none
-&trans        &none                 &none         &none      &none      &none           &kp LEFT      &kp DOWN   &kp UP     &kp RIGHT     &none  &none
+&none         &sk LCTRL             &sk LALT      &smart_shft  &sk LCMD   &none           &kp H         &kp J      &kp K      &kp L         &none  &none
+&trans        &none                 &none         &none      &none      &none           &kp LEFT      &kp DOWN   &kp UP     &kp RIGHT     &none  &kp LC(LG(Q))
                                                   &kp ESC    &kp SPACE         &kp RET                &kp BSPC   &kp DEL
             >;
         };
