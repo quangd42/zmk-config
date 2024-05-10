@@ -136,16 +136,6 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        m_semi_fslh: m_semi_fslh {
-            compatible = "zmk,behavior-mod-morph";
-            label = "M_SEMI_FSLH";
-            bindings = <&kp SEMI>, <&kp FSLH>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LGUI|MOD_RGUI|MOD_LSFT|MOD_LCTL|MOD_LALT)>;
-            keep-mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_LSFT)>;
-        };
-
         m_question_comment: m_question_comment {
             compatible = "zmk,behavior-mod-morph";
             label = "M_QUESTION_COMMENT";
@@ -445,19 +435,19 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-&trans   &kp Q  &lh_lt 5 W  &lh_lt 6 E        &kp R        &kp T             &kp Y  &kp U           &kp I        &rh_lt 5 O  &kp P     &trans
-&kp TAB  &kp A  &kp S       &kp D             &kp F        &kp G             &kp H  &kp J           &kp K        &kp L       &kp SEMI  &kp SQT
-&trans   &kp Z  &kp X       &kp C             &kp V        &kp B             &kp N  &kp M           &kp COMMA    &kp DOT     &kp FSLH  &trans
+&trans   &kp Q  &lh_lt 5 W  &lh_lt 6 E        &kp R        &kp T             &kp Y  &kp U           &kp I      &rh_lt 5 O  &kp P     &trans
+&kp TAB  &kp A  &kp S       &kp D             &kp F        &kp G             &kp H  &kp J           &kp K      &kp L       &kp SEMI  &kp SQT
+&trans   &kp Z  &kp X       &kp C             &kp V        &kp B             &kp N  &kp M           &kp COMMA  &kp DOT     &kp FSLH  &trans
                             &layer_gresc 7 0  &lt 8 SPACE         &lt 9 RET         &mt RSHFT BSPC  &kp TAB
             >;
         };
 
         vim_nav_layer {
             bindings = <
-&kp C_VOL_DN  &sk LS(LA(LC(LCMD)))  &sk LC(LCMD)  &mo 6      &none      &none           &vim_nav_5Ce  &kp LC(D)  &kp LC(U)  &vim_nav_5Cy  &none  &kp C_VOL_UP
-&none         &sk LCTRL             &sk LALT      &smart_shft  &sk LCMD   &none           &kp H         &kp J      &kp K      &kp L         &none  &none
-&trans        &none                 &none         &none      &none      &none           &kp LEFT      &kp DOWN   &kp UP     &kp RIGHT     &none  &kp LC(LG(Q))
-                                                  &kp ESC    &kp SPACE         &kp RET                &kp BSPC   &kp DEL
+&kp C_VOL_DN  &sk LS(LA(LC(LCMD)))  &sk LC(LCMD)  &mo 6        &none      &none              &vim_nav_5Ce  &kp LC(D)  &kp LC(U)  &vim_nav_5Cy  &none  &kp C_VOL_UP
+&none         &sk LCTRL             &sk LALT      &smart_shft  &sk LCMD   &kp CAPS           &kp H         &kp J      &kp K      &kp L         &none  &none
+&trans        &none                 &none         &none        &none      &none              &kp LEFT      &kp DOWN   &kp UP     &kp RIGHT     &none  &kp LC(LG(Q))
+                                                  &kp ESC      &kp SPACE            &kp RET                &kp BSPC   &kp DEL
             >;
         };
 
