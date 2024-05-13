@@ -317,7 +317,7 @@
 
         maya_layer {
             bindings = <
-&kp N1               &kp N2          &kp N3         &kp N4               &kp N5            &kp EQUAL                                  &kp MINUS       &kp N6         &kp N7          &kp N8         &kp N9          &kp N0
+&kp N1               &kp N2          &kp N3         &kp N4               &kp N5            &kp N6                                     &kp N7          &kp N8         &kp N9          &kp N0         &kp MINUS       &kp EQUAL
 &ad_lbkt_maya        &kp B           &lh_lt 5 L     &lh_lt 6 D           &kp W             &kp Q                                      &kp J           &kp F          &kp O           &rh_lt 5 U     &kp COMMA       &kp RBKT
 &kp BSLH             &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T       &lh_hm LCMD S     &kp G                                      &kp P           &rh_hm RCMD H  &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &kp FSLH
 &layer_switcher 4 4  &ad_z_maya      &kp X          &lh_lt 6 M           &kp C             &kp V        &kp C_VOL_DN    &kp C_VOL_UP  &kp K           &kp Y          &kp SQT         &kp SEMI       &kp DOT         &lang_switch
@@ -360,10 +360,10 @@
 
         qwerty_layer {
             bindings = <
-&kp N1    &kp N2  &kp N3      &kp N4      &kp N5            &kp EQUAL                                  &kp MINUS       &kp N6   &kp N7     &kp N8      &kp N9    &kp N0
-&kp LBKT  &kp Q   &lh_lt 5 W  &lh_lt 6 E  &kp R             &kp T                                      &kp Y           &kp U    &kp I      &rh_lt 5 O  &kp P     &kp RBKT
-&trans    &kp A   &kp S       &kp D       &kp F             &kp G                                      &kp H           &kp J    &kp K      &kp L       &kp SEMI  &kp APOS
-&trans    &kp Z   &kp X       &kp C       &kp V             &kp B        &kp C_VOL_DN    &kp C_VOL_UP  &kp N           &kp M    &kp COMMA  &kp DOT     &kp FSLH  &trans
+&kp N1    &kp N2  &kp N3      &kp N4      &kp N5            &kp N6                                     &kp N7          &kp N8   &kp N9     &kp N0      &kp MINUS  &kp EQUAL
+&kp LBKT  &kp Q   &lh_lt 5 W  &lh_lt 6 E  &kp R             &kp T                                      &kp Y           &kp U    &kp I      &rh_lt 5 O  &kp P      &kp RBKT
+&trans    &kp A   &kp S       &kp D       &kp F             &kp G                                      &kp H           &kp J    &kp K      &kp L       &kp SEMI   &kp APOS
+&trans    &kp Z   &kp X       &kp C       &kp V             &kp B        &kp C_VOL_DN    &kp C_VOL_UP  &kp N           &kp M    &kp COMMA  &kp DOT     &kp FSLH   &trans
                               &trans      &layer_gresc 7 0  &lt 8 SPACE  &kp TAB         &lt 5 ENTER   &mt RSHFT BSPC  &kp TAB  &none
             >;
 
@@ -372,10 +372,10 @@
 
         vim_nav_layer {
             bindings = <
-&kp N1  &kp N2                &kp N3        &kp N4       &kp N5    &kp EQUAL                                  &kp MINUS  &kp N6     &kp N7     &kp N8     &kp N9  &kp N0
-&none   &sk LS(LA(LC(LCMD)))  &sk LC(LCMD)  &mo 6        &none     &none                                      &kp LC(E)  &kp LC(D)  &kp LC(U)  &kp LC(Y)  &none   &none
-&trans  &sk LCTRL             &sk LALT      &smart_shft  &sk LCMD  &kp CLCK                                   &kp H      &kp J      &kp K      &kp L      &none   &none
-&tog 4  &none                 &none         &none        &none     &none      &kp K_MUTE    &kp C_PLAY_PAUSE  &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &none   &kp LC(LG(Q))
+&kp N1  &kp N2                &kp N3        &kp N4       &kp N5    &kp N6                                     &kp N7     &kp N8     &kp N9     &kp N0     &kp MINUS  &kp EQUAL
+&none   &sk LS(LA(LC(LCMD)))  &sk LC(LCMD)  &mo 6        &none     &none                                      &kp LC(E)  &kp LC(D)  &kp LC(U)  &kp LC(Y)  &none      &none
+&trans  &sk LCTRL             &sk LALT      &smart_shft  &sk LCMD  &kp CLCK                                   &kp H      &kp J      &kp K      &kp L      &none      &none
+&tog 4  &none                 &none         &none        &none     &none      &kp K_MUTE    &kp C_PLAY_PAUSE  &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &none      &kp LC(LG(Q))
                                             &none        &kp ESC   &kp SPACE  &kp TAB       &kp RET           &kp BSPC   &kp DEL    &none
             >;
 
