@@ -87,7 +87,7 @@
             flavor = "balanced";
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 50 51 52 53 54 55 56 57 58 59 30 34 35 43 44 45 46 47 48 49 56 57 58 59>;
             hold-trigger-on-release;
-            require-prior-idle-ms = <75>;
+            require-prior-idle-ms = <20>;
         };
 
         rh_lt: rh_lt {
@@ -101,7 +101,7 @@
             flavor = "balanced";
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 50 51 52 53 54 55 56 57 58 59 29 41 42>;
             hold-trigger-on-release;
-            require-prior-idle-ms = <75>;
+            require-prior-idle-ms = <20>;
         };
 
         grave_escape: grave_escape {
