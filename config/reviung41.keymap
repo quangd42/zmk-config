@@ -321,21 +321,21 @@
         vim_nav_i: vim_nav_i {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog 8 &kp I>;
+            bindings = <&tog 9 &kp I>;
             label = "VIM_NAV_I";
         };
 
         vim_nav_o: vim_nav_o {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog 8 &kp O>;
+            bindings = <&tog 9 &kp O>;
             label = "VIM_NAV_O";
         };
 
         vim_nav_a: vim_nav_a {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog 8 &kp A>;
+            bindings = <&tog 9 &kp A>;
             label = "VIM_NAV_A";
         };
 
@@ -381,10 +381,10 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-&m_lbkt_minus        &kp B           &lh_lt 5 L     &lh_lt 6 D        &kp W          &kp Q             &kp J  &kp F           &kp O           &rh_lt 5 U     &kp COMMA       &m_rbkt_equal
-&kp MINUS            &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S  &kp G             &kp P  &rh_hm RCMD H   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &kp BSLH
-&layer_switcher 4 4  &ad_z_maya      &kp X          &kp M             &kp C          &kp V             &kp K  &kp Y           &kp SQT         &kp FSLH       &kp DOT         &lang_switch
-                                                    &layer_gresc 7 0  &lt 8 SPACE           &lt 9 RET         &mt RSHFT BSPC  &kp TAB
+&m_lbkt_minus        &kp B           &lh_lt 6 L     &lh_lt 5 D        &kp W          &kp Q              &kp J  &kp F           &kp O           &rh_lt 6 U     &kp COMMA       &m_rbkt_equal
+&kp MINUS            &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S  &kp G              &kp P  &rh_hm RCMD H   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &kp BSLH
+&layer_switcher 4 4  &ad_z_maya      &kp X          &kp M             &kp C          &kp V              &kp K  &kp Y           &kp SQT         &kp FSLH       &kp DOT         &lang_switch
+                                                    &layer_gresc 8 0  &lt 9 SPACE           &lt 10 RET         &mt RSHFT BSPC  &kp TAB
             >;
         };
 
@@ -396,10 +396,10 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-&m_lbkt_minus        &kp Y           &lh_lt 5 L     &lh_lt 6 D        &kp W          &kp V             &kp X         &kp B           &kp O           &rh_lt 5 U     &kp COMMA       &m_rbkt_equal
-&kp TAB              &lh_hm LCTRL C  &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S  &kp G             &kp P         &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &kp FSLH
-&layer_switcher 4 4  &ad_z_can2b2    &kp J          &kp K             &kp M          &kp F             &ad_q_can2b2  &kp H           &kp SQT         &kp SEMI       &kp DOT         &lang_switch
-                                                    &layer_gresc 7 0  &lt 8 SPACE           &lt 9 RET                &mt RSHFT BSPC  &smart_shft
+&m_lbkt_minus        &kp Y           &lh_lt 6 L     &lh_lt 5 D        &kp W          &kp V              &kp X         &kp B           &kp O           &rh_lt 6 U     &kp COMMA       &m_rbkt_equal
+&kp TAB              &lh_hm LCTRL C  &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S  &kp G              &kp P         &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &kp FSLH
+&layer_switcher 4 4  &ad_z_can2b2    &kp J          &kp K             &kp M          &kp F              &ad_q_can2b2  &kp H           &kp SQT         &kp SEMI       &kp DOT         &lang_switch
+                                                    &layer_gresc 8 0  &lt 9 SPACE           &lt 10 RET                &mt RSHFT BSPC  &smart_shft
             >;
         };
 
@@ -411,10 +411,10 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-&trans   &kp T           &kp D          &lh_lt 6 C        &kp J          &kp Q             &kp DOT    &kp U           &kp E           &kp Y          &kp B           &trans
-&kp TAB  &lh_hm LCTRL G  &lh_hm LALT H  &lh_hm LSHFT N    &lh_hm LCMD S  &kp R             &kp COMMA  &rh_hm RCMD I   &rh_hm RSHFT A  &rh_hm RALT O  &rh_hm RCTRL W  &trans
-&trans   &kp L           &kp M          &kp V             &kp X          &kp F             &kp Z      &kp SEMI        &kp SQT         &kp P          &kp K           &trans
-                                        &layer_gresc 7 0  &lt 8 SPACE           &lt 9 RET             &mt RSHFT BSPC  &smart_shft
+&trans   &kp T           &kp D          &lh_lt 5 C        &kp J          &kp Q              &kp DOT    &kp U           &kp E           &kp Y          &kp B           &trans
+&kp TAB  &lh_hm LCTRL G  &lh_hm LALT H  &lh_hm LSHFT N    &lh_hm LCMD S  &kp R              &kp COMMA  &rh_hm RCMD I   &rh_hm RSHFT A  &rh_hm RALT O  &rh_hm RCTRL W  &trans
+&trans   &kp L           &kp M          &kp V             &kp X          &kp F              &kp Z      &kp SEMI        &kp SQT         &kp P          &kp K           &trans
+                                        &layer_gresc 8 0  &lt 9 SPACE           &lt 10 RET             &mt RSHFT BSPC  &smart_shft
             >;
         };
 
@@ -426,37 +426,46 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-&trans   &kp Q  &lh_lt 5 W  &lh_lt 6 E        &kp R        &kp T             &kp Y  &kp U           &kp I      &rh_lt 5 O  &kp P     &trans
-&kp TAB  &kp A  &kp S       &kp D             &kp F        &kp G             &kp H  &kp J           &kp K      &kp L       &kp SEMI  &kp SQT
-&trans   &kp Z  &kp X       &kp C             &kp V        &kp B             &kp N  &kp M           &kp COMMA  &kp DOT     &kp FSLH  &trans
-                            &layer_gresc 7 0  &lt 8 SPACE         &lt 9 RET         &mt RSHFT BSPC  &kp TAB
+&trans   &kp Q  &lh_lt 6 W  &lh_lt 5 E        &kp R        &kp T              &kp Y  &kp U           &kp I      &rh_lt 6 O  &kp P     &trans
+&kp TAB  &kp A  &kp S       &kp D             &kp F        &kp G              &kp H  &kp J           &kp K      &kp L       &kp SEMI  &kp SQT
+&trans   &kp Z  &kp X       &kp C             &kp V        &kp B              &kp N  &kp M           &kp COMMA  &kp DOT     &kp FSLH  &trans
+                            &layer_gresc 8 0  &lt 9 SPACE         &lt 10 RET         &mt RSHFT BSPC  &kp TAB
             >;
         };
 
         vim_nav_layer {
             bindings = <
-&kp C_VOL_DN  &sk LS(LA(LC(LCMD)))  &sk LC(LCMD)  &mo 6        &none      &none              &kp LC(E)  &kp LC(D)  &kp LC(U)  &kp LC(Y)  &none  &kp C_VOL_UP
-&none         &sk LCTRL             &sk LALT      &smart_shft  &sk LCMD   &kp CAPS           &kp H      &kp J      &kp K      &kp L      &none  &none
-&trans        &none                 &none         &none        &none      &none              &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &none  &kp LC(LG(Q))
-                                                  &kp ESC      &kp SPACE            &kp RET             &kp BSPC   &kp DEL
-            >;
-        };
-
-        code_sym_layer {
-            bindings = <
-&trans  &kp GRAVE          &kp LT           &kp GT             &kp FSLH           &kp DOT          &kp PIPE   &kp TILDE          &kp LBKT           &kp RBKT          &kp AT              &trans
-&none   &lh_hm LCTRL EXCL  &lh_hm LALT DQT  &lh_hm LSHFT PLUS  &lh_hm LCMD EQUAL  &kp HASH         &kp AMPS   &rh_hm RCMD COLON  &rh_hm RSHFT LPAR  &rh_hm RALT RPAR  &rh_hm RCTRL PRCNT  &none
-&trans  &kp COMMA          &kp SEMI         &kp UNDER          &kp MINUS          &kp STAR         &kp CARET  &kp DLLR           &kp LBRC           &kp RBRC          &kp QMARK           &none
-                                            &none              &kp SPACE                    &mo 5             &kp BSPC           &kp DEL
+&none   &sk LS(LA(LC(LCMD)))  &sk LC(LCMD)  &mo 5        &none      &none              &kp LC(E)  &kp LC(D)  &kp LC(U)  &kp LC(Y)  &none  &none
+&none   &sk LCTRL             &sk LALT      &smart_shft  &sk LCMD   &kp CAPS           &kp H      &kp J      &kp K      &kp L      &none  &none
+&trans  &none                 &none         &none        &none      &none              &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &none  &kp LC(LG(Q))
+                                            &kp ESC      &kp SPACE            &kp RET             &kp BSPC   &kp DEL
             >;
         };
 
         num_layer {
             bindings = <
-&trans  &kp LT     &kp MINUS  &none      &kp PLUS   &kp GT            &kp COLON  &kp N7    &kp N8   &kp N9  &kp ASTRK  &kp PLUS
-&to 0   &sk LCTRL  &sk LALT   &sk LSHFT  &sk LCMD   &none             &kp N0     &kp N4    &kp N5   &kp N6  &kp FSLH   &kp MINUS
-&trans  &none      &none      &none      &none      &none             &kp EQUAL  &kp N1    &kp N2   &kp N3  &kp DOT    &none
-                              &kp MINUS  &kp SPACE          &kp PLUS             &kp BSPC  &kp DEL
+&trans  &kp LT     &mo 6     &none      &kp GT     &none           &kp FSLH  &kp N7    &kp N8   &kp N9  &kp MINUS  &kp FSLH
+&to 0   &sk LCTRL  &sk LALT  &sk LSHFT  &sk LCMD   &none           &kp STAR  &kp N4    &kp N5   &kp N6  &kp PLUS   &kp STAR
+&trans  &none      &none     &none      &none      &none           &kp N0    &kp N1    &kp N2   &kp N3  &kp DOT    &none
+                             &kp ESC    &kp SPACE         &kp RET            &kp BSPC  &kp DEL
+            >;
+        };
+
+        code_sym_layer {
+            bindings = <
+&trans  &kp GRAVE          &kp LT           &lt 7 GT           &kp FSLH           &kp DOT          &kp PIPE   &kp TILDE          &kp LBKT           &kp RBKT          &kp AT              &trans
+&none   &lh_hm LCTRL EXCL  &lh_hm LALT DQT  &lh_hm LSHFT PLUS  &lh_hm LCMD EQUAL  &kp HASH         &kp AMPS   &rh_hm RCMD COLON  &rh_hm RSHFT LPAR  &rh_hm RALT RPAR  &rh_hm RCTRL PRCNT  &none
+&trans  &kp COMMA          &kp SEMI         &kp UNDER          &kp MINUS          &kp STAR         &kp CARET  &kp DLLR           &kp LBRC           &kp RBRC          &kp QMARK           &none
+                                            &none              &kp SPACE                    &mo 6             &kp BSPC           &kp DEL
+            >;
+        };
+
+        light_num {
+            bindings = <
+&none  &none  &none  &none  &none  &none         &none   &kp N7  &kp N8  &kp N9  &none  &none
+&none  &none  &none  &none  &none  &none         &none   &kp N4  &kp N5  &kp N6  &none  &none
+&none  &none  &none  &none  &none  &none         &kp N0  &kp N1  &kp N2  &kp N3  &none  &none
+                     &none  &none         &none          &none   &none
             >;
         };
 
@@ -465,7 +474,7 @@
 &trans  &none      &none      &kp LG(BSLH)  &kp LS(LG(N4))  &kp LS(LG(N5))         &kp F12  &kp F7  &kp F8  &kp F9  &kp LG(LBKT)  &trans
 &none   &kp LG(A)  &none      &none         &none           &kp LG(BSLH)           &kp F11  &kp F4  &kp F5  &kp F6  &kp LG(RBKT)  &none
 &trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)     &kp LG(V)       &kp LG(LS(Z))          &kp F10  &kp F1  &kp F2  &kp F3  &kp LG(BSLH)  &kp LC(LG(Q))
-                              &to 0         &none                           &none           &none   &mo 9
+                              &to 0         &none                           &none           &none   &mo 10
             >;
         };
 
