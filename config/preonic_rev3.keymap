@@ -546,8 +546,8 @@
             bindings = <
 &kp N1               &kp N2          &kp N3         &kp N4            &kp N5         &kp EQUAL  &kp MINUS  &kp N6          &kp N7          &kp N8         &kp N9          &kp N0
 &ad_lbkt_maya        &kp B           &lh_lt 5 L     &lh_lt 6 D        &kp W          &kp Q      &kp J      &kp F           &kp O           &rh_lt 5 U     &kp COMMA       &kp RBKT
-&kp BSLH             &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S  &kp G      &kp P      &rh_hm RCMD H   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &kp FSLH
-&kp LG(LC(Q))        &ad_z_maya      &kp X          &kp M             &kp C          &kp V      &kp K      &kp Y           &kp SQT         &kp SEMI       &kp DOT         &lang_switch
+&kp BSLH             &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S  &kp G      &kp P      &rh_hm RCMD H   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &kp SEMI
+&kp LG(LC(Q))        &ad_z_maya      &kp X          &kp M             &kp C          &kp V      &kp K      &kp Y           &kp SQT         &kp FSLH       &kp DOT         &lang_switch
 &layer_switcher 4 4  &none           &mo 9          &layer_gresc 7 0  &lt 8 SPACE    &kp TAB    &lt 9 RET  &mt RSHFT BSPC  &mt TAB LEFT    &kp DOWN       &kp UP          &kp RIGHT
             >;
         };
@@ -599,12 +599,12 @@
             >;
         };
 
-        code_sym_layer {
+        sym_layer {
             bindings = <
 &kp N1  &kp N2             &kp N3           &kp N4             &kp N5             &none     &none      &kp N6             &kp N7             &kp N8            &kp N9              &kp N0
-&none   &kp GRAVE          &kp LT           &kp GT             &kp FSLH           &kp DOT   &kp PIPE   &kp TILDE          &kp LBKT           &kp RBKT          &kp AT              &none
-&none   &lh_hm LCTRL EXCL  &lh_hm LALT DQT  &lh_hm LSHFT PLUS  &lh_hm LCMD EQUAL  &kp HASH  &kp AMPS   &rh_hm RCMD COLON  &rh_hm RSHFT LPAR  &rh_hm RALT RPAR  &rh_hm RCTRL QMARK  &none
-&none   &kp BSLH           &kp SQT          &kp UNDER          &kp MINUS          &kp STAR  &kp CARET  &kp DLLR           &kp LBRC           &kp RBRC          &kp PRCNT           &none
+&none   &kp GRAVE          &kp LT           &kp GT             &kp FSLH           &kp BSLH   &kp PIPE   &kp TILDE          &kp LBKT           &kp RBKT          &kp AT              &none
+&none   &lh_hm LCTRL EXCL  &lh_hm LALT DQT  &lh_hm LSHFT PLUS  &lh_hm LCMD EQUAL  &kp HASH  &kp AMPS   &rh_hm RCMD COLON  &rh_hm RSHFT LPAR  &rh_hm RALT RPAR  &rh_hm RCTRL PRCNT  &none
+&none   &kp BSLH           &kp BSLH          &kp UNDER          &kp MINUS          &kp STAR  &kp CARET  &kp DLLR           &kp LBRC           &kp RBRC          &kp QMARK           &none
 &none   &trans             &none            &to 0              &kp SPACE          &mo 5     &mo 5      &kp BSPC           &kp DEL            &none             &none               &none
             >;
         };

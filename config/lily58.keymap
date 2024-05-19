@@ -280,7 +280,7 @@
             bindings = <
 &kp N1               &kp N2          &kp N3         &kp N4               &kp N5            &kp EQUAL                                  &kp SEMI        &kp N6         &kp N7          &kp N8         &kp N9          &kp N0
 &ad_lbkt_maya        &kp B           &lh_lt 6 L     &lh_lt 5 D           &kp W             &kp Q                                      &kp J           &kp F          &kp O           &rh_lt 6 U     &kp COMMA       &kp RBKT
-&kp MINUS            &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T       &lh_hm LCMD S     &kp G                                      &kp P           &rh_hm RCMD H  &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &kp BSLH
+&kp MINUS            &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T       &lh_hm LCMD S     &kp G                                      &kp P           &rh_hm RCMD H  &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &kp SEMI
 &layer_switcher 4 4  &ad_z_maya      &kp X          &lh_lt 5 M           &kp C             &kp V        &kp C_VOL_DN    &kp C_VOL_UP  &kp K           &kp Y          &kp SQT         &kp FSLH       &kp DOT         &lang_switch
                                                     &layer_switcher 4 4  &layer_gresc 8 0  &lt 9 SPACE  &kp TAB         &lt 6 ENTER   &mt RSHFT BSPC  &kp TAB        &none
             >;
@@ -355,12 +355,12 @@
             label = "Num";
         };
 
-        code_sym_layer {
+        sym_layer {
             bindings = <
 &kp N1  &kp N2             &kp N3           &kp N4             &kp N5             &none                              &none      &kp N6             &kp N7             &kp N8            &kp N9              &kp N0
-&none   &kp GRAVE          &kp LT           &lt 7 GT           &kp FSLH           &kp DOT                            &kp PIPE   &kp TILDE          &kp LBKT           &kp RBKT          &kp AT              &none
+&none   &kp GRAVE          &kp LT           &lt 7 GT           &kp FSLH           &kp BSLH                            &kp PIPE   &kp TILDE          &kp LBKT           &kp RBKT          &kp AT              &none
 &none   &lh_hm LCTRL EXCL  &lh_hm LALT DQT  &lh_hm LSHFT PLUS  &lh_hm LCMD EQUAL  &kp HASH                           &kp AMPS   &rh_hm RCMD COLON  &rh_hm RSHFT LPAR  &rh_hm RALT RPAR  &rh_hm RCTRL PRCNT  &none
-&none   &kp COMMA          &kp SEMI         &kp UNDER          &kp MINUS          &kp STAR   &kp K_MUTE    &kp C_PP  &kp CARET  &kp DLLR           &kp LBRC           &kp RBRC          &kp QMARK           &trans
+&none   &kp BSLH          &kp BSLH         &kp UNDER          &kp MINUS          &kp STAR   &kp K_MUTE    &kp C_PP  &kp CARET  &kp DLLR           &kp LBRC           &kp RBRC          &kp QMARK           &trans
                                             &none              &none              &kp SPACE  &mo 6         &mo 6     &kp BSPC   &none              &none
             >;
 
