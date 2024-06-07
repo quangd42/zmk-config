@@ -435,10 +435,10 @@
 
         vim_nav_layer {
             bindings = <
-&none   &sk LS(LA(LC(LCMD)))  &sk LC(LCMD)  &mo 5        &none      &none              &kp LC(E)  &kp LC(D)  &kp LC(U)  &kp LC(Y)  &none  &none
-&none   &sk LCTRL             &sk LALT      &smart_shft  &sk LCMD   &kp CAPS           &kp H      &kp J      &kp K      &kp L      &none  &none
-&trans  &none                 &none         &none        &none      &none              &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &none  &kp LC(LG(Q))
-                                            &kp ESC      &kp SPACE            &kp RET             &kp BSPC   &kp DEL
+&none   &sk LG(LCTRL)  &sk LG(LALT)  &mo 5        &none      &none              &kp LC(E)  &kp LC(D)  &kp LC(U)  &kp LC(Y)  &none  &none
+&none   &sk LCTRL      &sk LALT      &smart_shft  &sk LCMD   &kp CAPS           &kp H      &kp J      &kp K      &kp L      &none  &none
+&trans  &none          &none         &none        &none      &none              &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &none  &kp LC(LG(Q))
+                                     &kp ESC      &kp SPACE            &kp RET             &kp BSPC   &kp DEL
             >;
         };
 
@@ -453,9 +453,9 @@
 
         sym_layer {
             bindings = <
-&trans  &kp GRAVE          &kp LT           &lt 7 GT           &kp FSLH           &kp BSLH          &kp PIPE   &kp TILDE          &kp LBKT           &kp RBKT          &kp AT              &trans
+&trans  &kp GRAVE          &kp LT           &lt 7 GT           &kp FSLH           &kp BSLH         &kp PIPE   &kp TILDE          &kp LBKT           &kp RBKT          &kp AT              &trans
 &none   &lh_hm LCTRL EXCL  &lh_hm LALT DQT  &lh_hm LSHFT PLUS  &lh_hm LCMD EQUAL  &kp HASH         &kp AMPS   &rh_hm RCMD COLON  &rh_hm RSHFT LPAR  &rh_hm RALT RPAR  &rh_hm RCTRL PRCNT  &none
-&trans  &kp BSLH          &kp BSLH         &kp UNDER          &kp MINUS          &kp STAR         &kp CARET  &kp DLLR           &kp LBRC           &kp RBRC          &kp QMARK           &none
+&trans  &kp BSLH           &kp BSLH         &kp UNDER          &kp MINUS          &kp STAR         &kp CARET  &kp DLLR           &kp LBRC           &kp RBRC          &kp QMARK           &none
                                             &none              &kp SPACE                    &mo 6             &kp BSPC           &kp DEL
             >;
         };
