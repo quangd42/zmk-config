@@ -282,7 +282,7 @@
 &ad_lbkt_maya        &kp B           &lh_lt 6 L     &lh_lt 5 D           &kp W             &kp Q                                      &kp J           &kp F          &kp O           &rh_lt 6 U     &kp COMMA       &kp RBKT
 &kp MINUS            &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T       &lh_hm LCMD S     &kp G                                      &kp P           &rh_hm RCMD H  &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &kp SEMI
 &layer_switcher 4 4  &ad_z_maya      &kp X          &lh_lt 5 M           &kp C             &kp V        &kp C_VOL_DN    &kp C_VOL_UP  &kp K           &kp Y          &kp SQT         &kp FSLH       &kp DOT         &lang_switch
-                                                    &layer_switcher 4 4  &layer_gresc 8 0  &lt 4 SPACE  &lt 9 TAB       &lt 6 ENTER   &mt RSHFT BSPC  &kp TAB        &none
+                                                    &layer_switcher 4 4  &layer_gresc 8 0  &lt 9 SPACE  &kp TAB         &kp RET       &mt RSHFT BSPC  &kp TAB        &none
             >;
 
             label = "Maya";
@@ -392,7 +392,7 @@
         nav_layer {
             bindings = <
 &none      &none         &none         &none        &none      &none                                  &none     &none      &none      &none      &none  &none
-&none      &sk LC(LCMD)  &sk LA(LCMD)  &none        &kp LG(A)  &none                                  &none     &kp LC(E)  &kp LC(Y)  &none      &none  &none
+&none      &sk LC(LCMD)  &sk LA(LCMD)  &none        &kp LG(A)  &none                                  &none     &kp LC(L)  &kp LC(Y)  &none      &none  &none
 &kp LG(A)  &sk LCTRL     &sk LALT      &smart_shft  &sk LCMD   &kp CLCK                               &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &none  &none
 &none      &kp LG(Z)     &kp LG(X)     &kp LG(C)    &kp LG(V)  &kp LS(LG(Z))  &kp K_MUTE    &kp C_PP  &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &none  &none
                                        &none        &to 0      &kp SPACE      &kp TAB       &kp RET   &kp BSPC  &kp DEL    &none
