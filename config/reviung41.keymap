@@ -127,25 +127,6 @@
             flavor = "tap-preferred";
         };
 
-        dot_end_sentence: dot_end_sentence {
-            compatible = "zmk,behavior-mod-morph";
-            label = "DOT_END_SENTENCE";
-            bindings = <&kp DOT>, <&end_sentence>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        m_question_comment: m_question_comment {
-            compatible = "zmk,behavior-mod-morph";
-            label = "M_QUESTION_COMMENT";
-            bindings = <&kp FSLH>, <&end_question>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-            keep-mods = <(MOD_LSFT)>;
-        };
-
         lh_hm_quick: lh_hm_quick {
             compatible = "zmk,behavior-hold-tap";
             label = "LH_HM_QUICK";
