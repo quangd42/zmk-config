@@ -160,49 +160,6 @@
             hold-trigger-key-positions = <34 38 33 32>;
         };
 
-        ad_z_maya: ad_z_maya {
-            compatible = "zmk,behavior-antecedent-morph";
-            label = "AD_Z_MAYA";
-            #binding-cells = <0>;
-            defaults = <&kp Z>;
-            bindings =
-                <&kp C>,
-                <&kp E>,
-                <&kp A>,
-                <&kp S>,
-                <&kp L>,
-                <&kp Y>,
-                <&kp Y>,
-                <&kp Y>,
-                <&kp P>;
-
-            max-delay-ms = <500>;
-            antecedents = <S U O G R F P H Y>;
-        };
-
-        ad_z_can2b2: ad_z_can2b2 {
-            compatible = "zmk,behavior-antecedent-morph";
-            label = "AD_Z_CAN2B2";
-            #binding-cells = <0>;
-            defaults = <&kp Z>;
-            bindings =
-                <&kp Y>,
-                <&kp L>,
-                <&kp K>,
-                <&kp S>,
-                <&kp S>,
-                <&kp S>,
-                <&kp M>,
-                <&str_px>,
-                <&kp H>,
-                <&kp A>,
-                <&kp E>,
-                <&kp P>;
-
-            max-delay-ms = <500>;
-            antecedents = <C R L G W M S N P O U X>;
-        };
-
         layer_switcher: layer_switcher {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_SWITCHER";
@@ -216,7 +173,7 @@
         m_lbkt_minus: m_lbkt_minus {
             compatible = "zmk,behavior-mod-morph";
             label = "M_LBKT_MINUS";
-            bindings = <&ad_lbkt_maya>, <&kp MINUS>;
+            bindings = <&kp LBKT>, <&kp MINUS>;
 
             #binding-cells = <0>;
             mods = <(MOD_RGUI)>;
@@ -233,57 +190,9 @@
             keep-mods = <(MOD_RGUI)>;
         };
 
-        ad_q_can2b2: ad_q_can2b2 {
-            compatible = "zmk,behavior-antecedent-morph";
-            label = "AD_Q_CAN2B2";
-            #binding-cells = <0>;
-            defaults = <&kp Q>;
-            bindings = <&kp L>, <&str_returns_q>;
-
-            max-delay-ms = <500>;
-            antecedents = <R L>;
-        };
-
-        ad_lbkt_maya: ad_lbkt_maya {
-            compatible = "zmk,behavior-antecedent-morph";
-            label = "AD_LBKT_MAYA";
-            #binding-cells = <0>;
-            defaults = <&kp LBKT>;
-            bindings =
-                <&kp C>,
-                <&kp E>,
-                <&kp A>,
-                <&kp S>,
-                <&kp L>,
-                <&kp Y>,
-                <&kp Y>,
-                <&kp Y>,
-                <&kp P>;
-
-            max-delay-ms = <500>;
-            antecedents = <S U O G R F P H Y>;
-        };
     };
 
     macros {
-        end_sentence: end_sentence {
-            compatible = "zmk,behavior-macro";
-            label = "END_SENTENCE";
-            #binding-cells = <0>;
-            bindings = <&kp DOT &kp SPACE &quick_sk LSHFT>;
-            wait-ms = <30>;
-            tap-ms = <30>;
-        };
-
-        end_question: end_question {
-            compatible = "zmk,behavior-macro";
-            label = "END_QUESTION";
-            #binding-cells = <0>;
-            bindings = <&kp QMARK &kp SPACE &quick_sk LSHFT>;
-            wait-ms = <30>;
-            tap-ms = <30>;
-        };
-
         lang_switch: lang_switch {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -291,69 +200,6 @@
             label = "LANG_SWITCH";
         };
 
-        str_ment: str_ment {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp M &kp E &kp N &kp T>;
-            label = "STR_MENT";
-            wait-ms = <40>;
-            tap-ms = <4>;
-        };
-
-        str_efore: str_efore {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp E &kp F &kp O &kp R &kp E>;
-            label = "STR_EFORE";
-            wait-ms = <40>;
-            tap-ms = <4>;
-        };
-
-        str_ue: str_ue {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp U &kp E>;
-            label = "STR_UE";
-            wait-ms = <30>;
-            tap-ms = <4>;
-        };
-
-        vim_nav_i: vim_nav_i {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&tog 9 &kp I>;
-            label = "VIM_NAV_I";
-        };
-
-        vim_nav_o: vim_nav_o {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&tog 9 &kp O>;
-            label = "VIM_NAV_O";
-        };
-
-        vim_nav_a: vim_nav_a {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&tog 9 &kp A>;
-            label = "VIM_NAV_A";
-        };
-
-        str_px: str_px {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp P &kp X>;
-            label = "STR_PX";
-            wait-ms = <30>;
-            tap-ms = <4>;
-        };
-
-        str_returns_q: str_returns_q {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp BSPC &kp Q>;
-            label = "STR_RETURNS_Q";
-        };
     };
 
     combos {
@@ -398,7 +244,7 @@
             bindings = <
 &m_lbkt_minus        &kp Y           &lh_lt 6 L     &lh_lt 5 D        &kp W          &kp V              &kp X         &kp B           &kp O           &rh_lt 6 U     &kp COMMA       &m_rbkt_equal
 &kp TAB              &lh_hm LCTRL C  &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S  &kp G              &kp P         &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &kp FSLH
-&layer_switcher 4 4  &ad_z_can2b2    &kp J          &kp K             &kp M          &kp F              &ad_q_can2b2  &kp H           &kp SQT         &kp SEMI       &kp DOT         &lang_switch
+&layer_switcher 4 4  &kp Z    &kp J          &kp K             &kp M          &kp F              &kp Q  &kp H           &kp SQT         &kp SEMI       &kp DOT         &lang_switch
                                                     &layer_gresc 8 0  &lt 9 SPACE           &lt 10 RET                &mt RSHFT BSPC  &smart_shft
             >;
         };
@@ -486,9 +332,9 @@
             //                       |     | ADJ | BKSP |    |     |
 
             bindings = <
-&trans   &sk RC(RA(RS(RGUI)))  &sk LC(LCMD)  &none        &kp LG(A)  &kp LG(LBKT)              &kp LS(HOME)  &kp LC(E)  &kp LC(Y)  &kp LS(END)  &vim_nav_o  &trans
-&kp TAB  &sk LCTRL             &sk LALT      &smart_shft  &sk LCMD   &kp LG(RBKT)              &kp LEFT      &kp DOWN   &kp UP     &kp RIGHT    &vim_nav_i  &none
-&trans   &kp LG(Z)             &kp LG(X)     &kp LG(C)    &kp LG(V)  &kp LS(LG(Z))             &kp HOME      &kp PG_DN  &kp PG_UP  &kp END      &vim_nav_a  &trans
+&trans   &sk RC(RA(RS(RGUI)))  &sk LC(LCMD)  &none        &kp LG(A)  &kp LG(LBKT)              &kp LS(HOME)  &kp LC(E)  &kp LC(Y)  &kp LS(END)  &none  &trans
+&kp TAB  &sk LCTRL             &sk LALT      &smart_shft  &sk LCMD   &kp LG(RBKT)              &kp LEFT      &kp DOWN   &kp UP     &kp RIGHT    &none  &none
+&trans   &kp LG(Z)             &kp LG(X)     &kp LG(C)    &kp LG(V)  &kp LS(LG(Z))             &kp HOME      &kp PG_DN  &kp PG_UP  &kp END      &none  &trans
                                              &kp ESC      &kp SPACE                 &kp ENTER                &kp BSPC   &kp DEL
             >;
         };
