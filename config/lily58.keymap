@@ -114,6 +114,17 @@
             mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_LSFT|MOD_RSFT|MOD_RCTL|MOD_LALT|MOD_RALT)>;
         };
 
+        layer_gresc: layer_gresc {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_GRESC";
+            bindings = <&mo>, <&grave_escape>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+            flavor = "tap-preferred";
+        };
+
         lh_hm_quick: lh_hm_quick {
             compatible = "zmk,behavior-hold-tap";
             label = "LH_HM_QUICK";
