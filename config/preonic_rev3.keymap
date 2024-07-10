@@ -12,13 +12,9 @@
 #define LOWER   1
 #define RAISE   2
 
-&mt {
-    quick-tap-ms = <150>;
-};
+&mt { quick-tap-ms = <150>; };
 
-&sl {
-    /delete-property/ quick-release;
-};
+&sl { /delete-property/ quick-release; };
 
 &gresc {
     keep-mods = <(MOD_RSFT|MOD_LGUI|MOD_LCTL)>;
@@ -26,9 +22,7 @@
 };
 
 / {
-    chosen {
-        zmk,matrix_transform = &layout_grid_transform;
-    };
+    chosen { zmk,matrix_transform = &layout_grid_transform; };
 
     behaviors {
         lh_hm: lh_hm {
@@ -40,7 +34,7 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             flavor = "balanced";
-            global-quick-tap;
+            require-prior-idle-ms = <75>;
             hold-trigger-on-release;
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59>;
         };
@@ -54,7 +48,7 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             flavor = "balanced";
-            global-quick-tap;
+            require-prior-idle-ms = <75>;
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 38 40 37 38 39 40 49 50 51 52 48 49 50 51 52 53 54 55 56 57 58 59 41>;
             hold-trigger-on-release;
         };
@@ -97,7 +91,7 @@
             flavor = "balanced";
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 50 51 52 53 54 55 56 57 58 59 30 34 35 43 44 45 46 47 48 49 56 57 58 59 42>;
             hold-trigger-on-release;
-            require-prior-idle-ms = <125>;
+            require-prior-idle-ms = <75>;
         };
 
         rh_lt: rh_lt {
@@ -111,7 +105,7 @@
             flavor = "balanced";
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 51 52 53 54 55 56 57 58 59 29 41 49 48 50>;
             hold-trigger-on-release;
-            require-prior-idle-ms = <125>;
+            require-prior-idle-ms = <75>;
         };
 
         grave_escape: grave_escape {
@@ -135,23 +129,14 @@
             flavor = "tap-preferred";
         };
 
-        dot_end_sentence: dot_end_sentence {
+        m_semi_flsh: m_semi_flsh {
             compatible = "zmk,behavior-mod-morph";
-            label = "DOT_END_SENTENCE";
-            bindings = <&kp DOT>, <&end_sentence>;
+            label = "M_SEMI_FLSH";
+            bindings = <&kp SEMI>, <&kp FSLH>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        semi_end_question: semi_end_question {
-            compatible = "zmk,behavior-mod-morph";
-            label = "SEMI_END_QUESTION";
-            bindings = <&kp SEMI>, <&m_question_comment>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_LGUI|MOD_RGUI)>;
-            keep-mods = <(MOD_LGUI|MOD_RGUI)>;
+            mods = <(MOD_LSFT|MOD_LGUI|MOD_LCTL|MOD_LALT)>;
+            keep-mods = <(MOD_LGUI|MOD_LCTL|MOD_LSFT)>;
         };
 
         layer_repeat: layer_repeat {
@@ -162,16 +147,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <150>;
-        };
-
-        m_question_comment: m_question_comment {
-            compatible = "zmk,behavior-mod-morph";
-            label = "M_QUESTION_COMMENT";
-            bindings = <&kp FSLH>, <&end_question>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-            keep-mods = <(MOD_LSFT)>;
         };
 
         lh_hm_quick: lh_hm_quick {
@@ -187,69 +162,71 @@
             require-prior-idle-ms = <125>;
             hold-trigger-key-positions = <47 46 53 54 55 58 59>;
         };
+
+        layer_switcher: layer_switcher {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_SWITCHER";
+            bindings = <&mo>, <&tog>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+        };
+
+        m_sqt_minus: m_sqt_minus {
+            compatible = "zmk,behavior-mod-morph";
+            label = "M_SQT_MINUS";
+            bindings = <&kp SQT>, <&kp MINUS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_LGUI|MOD_LALT)>;
+            keep-mods = <(MOD_LSFT|MOD_LGUI)>;
+        };
+
+        m_comma_lt: m_comma_lt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "M_COMMA_LT";
+            bindings = <&kp COMMA>, <&kp LT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+        };
+
+        m_dot_gt: m_dot_gt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "M_DOT_GT";
+            bindings = <&kp DOT>, <&kp GT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+        };
     };
 
     macros {
-        up_dir: up_dir {
-            compatible = "zmk,behavior-macro";
-            label = "UP_DIR";
-            #binding-cells = <0>;
-            bindings = <&kp DOT &kp DOT &kp FSLH>;
-        };
-
-        end_sentence: end_sentence {
-            compatible = "zmk,behavior-macro";
-            label = "END_SENTENCE";
-            #binding-cells = <0>;
-            bindings = <&kp DOT &kp SPACE &quick_sk LSHFT>;
-            wait-ms = <30>;
-            tap-ms = <30>;
-        };
-
-        end_question: end_question {
-            compatible = "zmk,behavior-macro";
-            label = "END_QUESTION";
-            #binding-cells = <0>;
-            bindings = <&kp QMARK &kp SPACE &quick_sk LSHFT>;
-            tap-ms = <30>;
-            wait-ms = <30>;
-        };
-
         lang_switch: lang_switch {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog 1 &kp RA(SPACE)>;
+            bindings = <&tog 3 &kp RA(SPACE)>;
             label = "LANG_SWITCH";
             wait-ms = <40>;
             tap-ms = <40>;
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        one_hand_mode {
-            bindings = <&to 4>;
-            key-positions = <40 53>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
-        whorfv_layer {
+        maya_layer {
             bindings = <
-&kp N1          &kp N2         &kp N3                &kp N4               &kp N5     &lang_switch  &kp LG(LC(Q))  &kp N6     &kp N7          &kp N8          &kp N9              &kp N0
-&kp F           &kp L          &lh_lt 5 H            &kp K                &kp Q      &kp DOWN      &kp UP         &kp Z      &kp Y           &kp O           &kp U               &kp COMMA
-&lh_hm LCTRL S  &lh_hm LALT R  &lh_hm_quick LSHFT N  &lh_hm_quick LCMD T  &kp M      &kp LEFT      &kp RIGHT      &kp G      &rh_hm RCMD W   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I
-&kp J           &kp X          &lh_lt 5 B            &kp D                &kp V      &kp LBKT      &kp RBKT       &kp P      &kp C           &kp SQT         &semi_end_question  &dot_end_sentence
-&none           &none          &layer_gresc 6 0      &lt 7 SPACE          &lt 4 TAB  &lt 6 ENTER   &lt 6 ENTER    &lt 4 RET  &mt RSHFT BSPC  &smart_shft     &kp MINUS           &kp EQUAL
+&kp N1               &kp N2          &kp N3         &kp N4            &kp N5         &kp EQUAL  &kp BSLH  &kp N6          &kp N7          &kp N8         &kp N9          &kp N0
+&kp LBKT             &kp B           &lh_lt 5 L     &lh_lt 6 D        &kp W          &kp Q      &kp J      &kp F           &kp O           &rh_lt 5 U     &kp COMMA       &kp RBKT
+&kp MINUS             &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S  &kp G      &kp K      &rh_hm RCMD H   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &kp SEMI
+&kp LG(LC(Q))        &kp Z           &kp X          &kp M             &kp C          &kp V      &kp P      &kp Y           &kp SQT         &kp FSLH       &kp DOT         &lang_switch
+&layer_switcher 4 4  &none           &mo 9          &layer_gresc 7 0  &lt 8 SPACE    &kp TAB    &lt 9 RET  &mt RSHFT BSPC  &mt TAB LEFT    &kp DOWN       &kp UP          &kp RIGHT
             >;
-
-            label = "WrfV";
         };
 
-        stirred_layer {
+        second_layer {
             //  -------------------------------------------------------------------------------------------------
             // |  GRAV |  1   |  2   |  3   |  4    |  5     |   6     |  7     |  8   |  9    |   0   | BSPC   |
             // |  TAB  |  Q   |  W   |  E   |  R    |  T     |   Y     |  U     |  I   |  O    |   P   | DEL    |
@@ -258,48 +235,52 @@
             // |       | LGUI | LALT | LCTL | LOWER | SPACE  |  SPACE  |  RAISE | LEFT |  DOWN |   UP  | RIGHT  |
 
             bindings = <
-&kp N1          &kp N2         &kp N3                &kp N4               &kp N5     &trans       &kp LG(LC(Q))  &kp N6     &kp N7          &kp N8          &kp N9              &kp N0
-&kp V           &kp M          &lh_lt 5 L            &kp Y                &kp P      &kp DOWN     &kp UP         &kp J      &kp F           &kp O           &kp U               &kp COMMA
-&lh_hm LCTRL S  &lh_hm LALT T  &lh_hm_quick LSHFT R  &lh_hm_quick LCMD D  &kp G      &kp LEFT     &kp RIGHT      &kp K      &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E       &rh_hm RCTRL I
-&kp K           &kp X          &kp Q                 &kp C                &kp W      &kp LBKT     &kp Z          &kp B      &kp H           &kp SQT         &semi_end_question  &dot_end_sentence
-&none           &none          &layer_gresc 6 0      &lt 7 SPACE          &lt 4 TAB  &lt 6 ENTER  &lt 6 ENTER    &lt 4 RET  &mt RSHFT BSPC  &smart_shft     &kp MINUS           &kp EQUAL
+&kp N1  &kp N2               &kp N3         &kp N4            &kp N5         &lang_switch  &kp LG(LC(Q))  &kp N6          &kp N7          &kp N8         &kp N9          &kp N0
+&none   &kp B                &lh_lt 5 L     &lh_lt 6 D        &kp W          &kp Q         &kp DOWN       &kp F           &kp O           &rh_lt 5 U     &kp COMMA       &none
+&none   &lh_hm LCTRL N       &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S  &kp G         &kp LEFT       &rh_hm RCMD H   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &none
+&none   &kp Z                &kp X          &kp M             &kp C          &kp V         &kp LBKT       &kp Y           &kp SQT         &kp SEMI       &kp DOT         &none
+&none   &layer_switcher 4 4  &none          &layer_gresc 7 0  &lt 8 SPACE    &lt 5 TAB     &lt 7 ENTER    &mt RSHFT BSPC  &smart_shft     &kp MINUS      &kp EQUAL       &none
             >;
-
-            label = "stirred";
         };
 
         vnmak_layer {
             bindings = <
-&kp N1          &kp N2         &kp N3                &kp N4               &kp N5     &trans       &kp LG(LC(Q))  &kp N6     &kp N7          &kp N8          &kp N9              &kp N0
-&kp Y           &kp P          &lh_lt 5 D            &kp X                &kp J      &kp DOWN     &kp UP         &kp K      &kp G           &kp U           &kp A               &kp COMMA
-&lh_hm LCTRL O  &lh_hm LALT N  &lh_hm_quick LSHFT H  &lh_hm_quick LCMD S  &kp R      &kp LEFT     &kp RIGHT      &kp C      &rh_hm RCMD T   &rh_hm RSHFT I  &rh_hm RALT E       &rh_hm RCTRL W
-&kp Z           &kp M          &lh_lt 5 B            &kp Q                &kp F      &kp LBKT     &kp RBKT       &kp L      &kp V           &kp SQT         &semi_end_question  &dot_end_sentence
-&none           &none          &layer_gresc 6 0      &lt 7 SPACE          &lt 4 TAB  &lt 6 ENTER  &lt 6 ENTER    &lt 4 RET  &mt RSHFT BSPC  &smart_shft     &kp MINUS           &kp EQUAL
+&kp N1          &kp N2         &kp N3            &kp N4         &kp N5     &trans       &trans       &kp N6     &kp N7          &kp N8          &kp N9         &kp N0
+&kp G           &kp T          &lh_lt 6 D        &kp Q          &kp F      &kp DOWN     &kp UP       &kp DOT    &kp U           &kp E           &kp Y          &kp B
+&lh_hm LCTRL C  &lh_hm LALT N  &lh_hm LSHFT H    &lh_hm LCMD S  &kp R      &kp LEFT     &kp RIGHT    &kp COMMA  &rh_hm RCMD I   &rh_hm RSHFT A  &rh_hm RALT O  &rh_hm RCTRL W
+&kp V           &kp L          &kp M             &kp X          &kp J      &kp LBKT     &kp RBKT     &kp Z      &kp SEMI        &kp SQT         &kp P          &kp K
+&trans          &none          &layer_gresc 7 0  &lt 8 SPACE    &lt 5 TAB  &lt 7 ENTER  &lt 7 ENTER  &lt 5 RET  &mt RSHFT BSPC  &smart_shft     &kp MINUS      &kp EQUAL
             >;
-
-            label = "vnmak2";
         };
 
         qwerty_layer {
             bindings = <
-&kp N1  &kp N2  &kp N3            &kp N4       &kp N5     &trans       &trans       &kp N6     &kp N7          &kp N8       &kp N9     &kp N0
-&kp Q   &kp W   &kp E             &kp R        &kp T      &kp DOWN     &kp UP       &kp Y      &kp U           &kp I        &kp O      &kp P
-&kp A   &kp S   &kp D             &kp F        &kp G      &kp LEFT     &kp RIGHT    &kp H      &kp J           &kp K        &kp L      &kp SEMI
-&kp Z   &kp X   &kp C             &kp V        &kp B      &kp LBKT     &kp RBKT     &kp N      &kp M           &kp COMMA    &kp DOT    &kp FSLH
-&none   &none   &layer_gresc 6 0  &lt 7 SPACE  &lt 4 TAB  &lt 6 ENTER  &lt 6 ENTER  &lt 4 RET  &mt RSHFT BSPC  &smart_shft  &kp MINUS  &kp EQUAL
+&kp N1               &kp N2  &kp N3      &kp N4            &kp N5       &trans     &trans     &kp N6          &kp N7     &kp N8      &kp N9    &kp N0
+&kp LBKT             &kp Q   &lh_lt 5 W  &lh_lt 6 E        &kp R        &kp T      &kp Y      &kp U           &kp I      &rh_lt 5 O  &kp P     &kp RBKT
+&kp BSLH             &kp A   &kp S       &kp D             &kp F        &kp G      &kp H      &kp J           &kp K      &kp L       &kp SEMI  &kp SQT
+&kp LG(LC(Q))        &kp Z   &kp X       &kp C             &kp V        &kp B      &kp N      &kp M           &kp COMMA  &kp DOT     &kp FSLH  &lang_switch
+&layer_switcher 4 4  &mo 9   &none       &layer_gresc 7 0  &lt 8 SPACE  &lt 5 TAB  &lt 5 RET  &mt RSHFT BSPC  &kp LEFT   &kp DOWN    &kp UP    &kp RIGHT
             >;
         };
 
-        code_sym_layer {
+        vim_nav_layer {
             bindings = <
-&kp N1     &kp N2     &kp N3    &kp N4     &kp N5    &none  &none  &kp N6     &kp N7     &kp N8    &kp N9    &kp N0
-&kp GRAVE  &kp LT     &kp GT    &kp DQT    &kp BSLH  &none  &none  &kp PIPE   &kp CARET  &kp LBKT  &kp RBKT  &kp AT
-&kp EXCL   &kp MINUS  &kp PLUS  &kp EQUAL  &kp HASH  &none  &none  &kp AMPS   &kp COLON  &kp LPAR  &kp RPAR  &kp QMARK
-&kp DOT    &kp FSLH   &kp STAR  &kp UNDER  &up_dir   &none  &none  &kp TILDE  &kp DLLR   &kp LBRC  &kp RBRC  &kp PRCNT
-&none      &none      &to 0     &kp SPACE  &none     &none  &none  &none      &kp BSPC   &none     &none     &none
+&kp N1  &kp N2        &kp N3        &kp N4       &kp N5     &none     &none      &kp N6     &kp N7     &kp N8     &kp N9  &kp N0
+&none   &sk LC(LCMD)  &sk LA(LCMD)  &mo 6        &none      &none     &kp LC(E)  &kp LC(D)  &kp LC(U)  &kp LC(Y)  &none   &none
+&none   &sk LCTRL     &sk LALT      &smart_shft  &sk LGUI   &kp CAPS  &kp H      &kp J      &kp K      &kp L      &none   &none
+&none   &none         &none         &none        &none      &none     &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &none   &none
+&none   &trans        &none         &kp ESC      &kp SPACE  &kp TAB   &kp ENTER  &kp BSPC   &kp DEL    &none      &none   &none
             >;
+        };
 
-            label = "code";
+        sym_layer {
+            bindings = <
+&kp N1  &kp N2             &kp N3           &kp N4             &kp N5             &none     &none      &kp N6             &kp N7             &kp N8            &kp N9              &kp N0
+&none   &kp GRAVE          &kp LT           &kp GT             &kp FSLH           &kp BSLH  &kp PIPE   &kp TILDE          &kp LBKT           &kp RBKT          &kp AT              &none
+&none   &lh_hm LCTRL EXCL  &lh_hm LALT DQT  &lh_hm LSHFT PLUS  &lh_hm LCMD EQUAL  &kp HASH  &kp AMPS   &rh_hm RCMD COLON  &rh_hm RSHFT LPAR  &rh_hm RALT RPAR  &rh_hm RCTRL PRCNT  &none
+&none   &kp BSLH           &kp BSLH         &kp UNDER          &kp MINUS          &kp STAR  &kp CARET  &kp DLLR           &kp LBRC           &kp RBRC          &kp QMARK           &none
+&none   &trans             &none            &to 0              &kp SPACE          &mo 5     &mo 5      &kp BSPC           &kp DEL            &none             &none               &none
+            >;
         };
 
         num_layer {
@@ -311,43 +292,41 @@
             // | LALT  |      |      |      |      |      |       |       | NEXT | VOL- | VOL+  | PLAY  |
 
             bindings = <
-&none      &none     &none      &none      &none     &none     &none      &none      &none     &none   &none   &none
-&none      &none     &none      &none      &none     &none     &none      &kp COLON  &kp N7    &kp N8  &kp N9  &kp ASTRK
-&sk LCTRL  &sk LALT  &sk LSHFT  &sk LCMD   &none     &none     &none      &kp N0     &kp N1    &kp N2  &kp N3  &kp FSLH
-&none      &none     &none      &none      &none     &none     &kp COMMA  &kp DOT    &kp N4    &kp N5  &kp N6  &kp EQUAL
-&none      &none     &kp MINUS  &kp SPACE  &kp PLUS  &kp PLUS  &kp PLUS   &kp BSPC   &kp BSPC  &none   &none   &none
+&none  &none      &none     &none      &none      &none    &none     &none     &none    &none   &none      &none
+&none  &kp LT     &mo 6     &none      &kp GT     &none    &kp FSLH  &kp N7    &kp N8   &kp N9  &kp MINUS  &kp FSLH
+&none  &sk LCTRL  &sk LALT  &sk LSHFT  &sk LCMD   &none    &kp STAR  &kp N4    &kp N5   &kp N6  &kp PLUS   &kp STAR
+&none  &none      &none     &none      &none      &none    &kp N0    &kp N1    &kp N2   &kp N3  &kp DOT    &kp COMMA
+&none  &trans     &none     &kp ESC    &kp SPACE  &kp TAB  &kp RET   &kp BSPC  &kp DEL  &none   &kp COMMA  &none
             >;
         };
 
         fun_layer {
             bindings = <
-&none      &none      &none      &none           &none           &none         &none         &none    &none   &none   &none   &none
-&none      &kp LG(W)  &none      &kp LS(LG(N4))  &kp LS(LG(N5))  &kp C_VOL_DN  &kp C_VOL_UP  &kp F12  &kp F7  &kp F8  &kp F9  &none
-&kp LG(A)  &none      &none      &none           &kp LG(BSLH)    &kp K_MUTE    &kp C_PP      &kp F11  &kp F4  &kp F5  &kp F6  &none
-&kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)       &kp LG(LS(Z))   &kp C_BRI_DN  &kp C_BRI_UP  &kp F10  &kp F1  &kp F2  &kp F3  &none
-&none      &none      &to 0      &lt 7 SPACE     &kp RET         &none         &none         &none    &none   &mo 8   &none   &none
+&none  &none      &none      &none      &none           &none           &none    &none   &none       &none         &none         &none
+&none  &none      &none      &none      &kp LS(LG(N4))  &kp LS(LG(N5))  &kp F12  &kp F7  &kp F8      &kp F9        &none         &none
+&none  &kp LG(A)  &none      &none      &none           &kp LG(BSLH)    &kp F11  &kp F4  &kp F5      &kp F6        &none         &none
+&none  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)       &kp LG(LS(Z))   &kp F10  &kp F1  &kp F2      &kp F3        &none         &none
+&none  &trans     &none      &to 0      &lt 8 SPACE     &kp RET         &none    &none   &kp K_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PP
             >;
-
-            label = "Fun";
         };
 
         nav_layer {
             bindings = <
-&none      &none      &none      &none           &none          &none    &none    &none         &none         &none      &none          &none
-&kp LG(A)  &kp LG(W)  &none      &kp LS(LG(N4))  &kp LG(LBKT)   &none    &none    &kp LA(UP)    &kp LA(LEFT)  &kp UP     &kp LA(RIGHT)  &kp LA(BSPC)
-&sk LCTRL  &sk LALT   &sk LSHFT  &sk LCMD        &kp LG(RBKT)   &none    &none    &kp LA(DOWN)  &kp LEFT      &kp DOWN   &kp RIGHT      &kp BSPC
-&kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)       &kp LS(LG(Z))  &none    &none    &kp DEL       &kp LG(LEFT)  &kp LG(A)  &kp LG(RIGHT)  &kp LG(BSPC)
-&none      &none      &to 0      &kp SPACE       &none          &kp RET  &kp RET  &kp BSPC      &kp BSPC      &none      &none          &none
+&none  &none         &none         &none        &none      &none          &none     &none      &none      &none      &none  &none
+&none  &sk LC(LCMD)  &sk LA(LCMD)  &none        &kp LG(A)  &none          &none     &none      &none      &none      &none  &none
+&none  &sk LCTRL     &sk LALT      &smart_shft  &sk LCMD   &kp CLCK       &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &none  &none
+&none  &kp LG(Z)     &kp LG(X)     &kp LG(C)    &kp LG(V)  &kp LS(LG(Z))  &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &none  &none
+&none  &trans        &none         &kp ESC      &kp SPACE  &kp TAB        &kp RET   &kp BSPC   &kp DEL    &none      &none  &none
             >;
         };
 
         sys_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans           &trans           &trans           &trans       &trans      &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &rgb_ug RGB_TOG  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &trans       &trans      &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans           &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &trans       &trans      &trans  &trans  &trans
-&tog 1  &tog 2  &tog 3  &trans  &trans           &trans           &trans           &bootloader  &sys_reset  &trans  &trans  &trans
-&trans  &trans  &to 0   &trans  &trans           &trans           &trans           &trans       &trans      &trans  &trans  &trans
+&none  &none   &none   &none   &none            &none            &none            &none       &none  &none  &none  &none
+&none  &none   &none   &none   &rgb_ug RGB_TOG  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &none       &none  &none  &none  &none
+&none  &none   &none   &none   &none            &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &none       &none  &none  &none  &none
+&none  &tog 1  &tog 2  &tog 3  &none            &none            &bootloader      &sys_reset  &none  &none  &none  &none
+&none  &trans  &none   &to 0   &none            &none            &none            &none       &none  &none  &none  &none
             >;
         };
     };
