@@ -129,24 +129,6 @@
             flavor = "tap-preferred";
         };
 
-        dot_end_sentence: dot_end_sentence {
-            compatible = "zmk,behavior-mod-morph";
-            label = "DOT_END_SENTENCE";
-            bindings = <&kp DOT>, <&end_sentence>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        spc_end_sent: spc_end_sent {
-            compatible = "zmk,behavior-mod-morph";
-            label = "SPC_END_SENT";
-            bindings = <&lt 5 SPACE>, <&end_sentence>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
         m_semi_flsh: m_semi_flsh {
             compatible = "zmk,behavior-mod-morph";
             label = "M_SEMI_FLSH";
@@ -165,15 +147,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <150>;
-        };
-
-        m_question_comment: m_question_comment {
-            compatible = "zmk,behavior-mod-morph";
-            label = "M_QUESTION_COMMENT";
-            bindings = <&kp FSLH>, <&end_question>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
         };
 
         lh_hm_quick: lh_hm_quick {
