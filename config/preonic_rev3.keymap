@@ -546,8 +546,8 @@
             bindings = <
 &kp N1               &kp N2          &kp N3         &kp N4            &kp N5         &kp EQUAL  &kp MINUS  &kp N6          &kp N7          &kp N8         &kp N9          &kp N0
 &ad_lbkt_maya        &kp B           &lh_lt 5 L     &lh_lt 6 D        &kp W          &kp Q      &kp J      &kp F           &kp O           &rh_lt 5 U     &kp COMMA       &kp RBKT
-&kp BSLH             &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S  &kp G      &kp P      &rh_hm RCMD H   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &kp SEMI
-&kp LG(LC(Q))        &ad_z_maya      &kp X          &kp M             &kp C          &kp V      &kp K      &kp Y           &kp SQT         &kp FSLH       &kp DOT         &lang_switch
+&kp BSLH             &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S  &kp G      &kp K      &rh_hm RCMD H   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &kp SEMI
+&kp LG(LC(Q))        &kp Z           &kp X          &kp M             &kp C          &kp V      &kp P      &kp Y           &kp SQT         &kp FSLH       &kp DOT         &lang_switch
 &layer_switcher 4 4  &none           &mo 9          &layer_gresc 7 0  &lt 8 SPACE    &kp TAB    &lt 9 RET  &mt RSHFT BSPC  &mt TAB LEFT    &kp DOWN       &kp UP          &kp RIGHT
             >;
         };
@@ -592,7 +592,7 @@
         vim_nav_layer {
             bindings = <
 &kp N1  &kp N2                &kp N3        &kp N4       &kp N5     &none     &none      &kp N6     &kp N7     &kp N8     &kp N9  &kp N0
-&none   &kp LS(LA(LC(LCMD)))  &sk LC(LCMD)  &mo 6        &none      &none     &kp LC(E)  &kp LC(D)  &kp LC(U)  &kp LC(Y)  &none   &none
+&none   &sk LC(LCMD)          &sk LA(LCMD)  &mo 6        &none      &none     &kp LC(E)  &kp LC(D)  &kp LC(U)  &kp LC(Y)  &none   &none
 &none   &sk LCTRL             &sk LALT      &smart_shft  &sk LGUI   &kp CAPS  &kp H      &kp J      &kp K      &kp L      &none   &none
 &none   &none                 &none         &none        &none      &none     &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &none   &none
 &none   &trans                &none         &kp ESC      &kp SPACE  &kp TAB   &kp ENTER  &kp BSPC   &kp DEL    &none      &none   &none
@@ -619,17 +619,17 @@
 
             bindings = <
 &none  &none      &none      &none      &none      &none     &none      &none     &none    &none   &none      &none
-&none  &kp LPAR   &kp MINUS  &none      &kp PLUS   &kp RPAR  &kp COLON  &kp N7    &kp N8   &kp N9  &kp ASTRK  &none
-&none  &sk LCTRL  &sk LALT   &sk LSHFT  &sk LCMD   &none     &kp N0     &kp N4    &kp N5   &kp N6  &kp FSLH   &none
-&none  &none      &none      &none      &none      &none     &kp EQUAL  &kp N1    &kp N2   &kp N3  &kp DOT    &kp COMMA
-&none  &trans     &none      &kp MINUS  &kp SPACE  &kp PLUS  &kp RET    &kp BSPC  &kp DEL  &none   &kp COMMA  &none
+&none  &kp LT     &mo 6      &none      &kp GT     &none     &kp FSLH   &kp N7    &kp N8   &kp N9  &kp MINUS  &kp FSLH
+&none  &sk LCTRL  &sk LALT   &sk LSHFT  &sk LCMD   &none     &kp STAR   &kp N4    &kp N5   &kp N6  &kp PLUS   &kp STAR
+&none  &none      &none      &none      &none      &none     &kp N0     &kp N1    &kp N2   &kp N3  &kp DOT    &kp COMMA
+&none  &trans     &none      &kp ESC    &kp SPACE  &kp TAB   &kp RET    &kp BSPC  &kp DEL  &none   &kp COMMA  &none
             >;
         };
 
         fun_layer {
             bindings = <
 &none  &none      &none      &none         &none           &none           &none    &none   &none       &none         &none         &none
-&none  &none      &kp LG(W)  &kp LG(BSLH)  &kp LS(LG(N4))  &kp LS(LG(N5))  &kp F12  &kp F7  &kp F8      &kp F9        &none         &none
+&none  &none      &none      &none         &kp LS(LG(N4))  &kp LS(LG(N5))  &kp F12  &kp F7  &kp F8      &kp F9        &none         &none
 &none  &kp LG(A)  &none      &none         &none           &kp LG(BSLH)    &kp F11  &kp F4  &kp F5      &kp F6        &none         &none
 &none  &kp LG(Z)  &kp LG(X)  &kp LG(C)     &kp LG(V)       &kp LG(LS(Z))   &kp F10  &kp F1  &kp F2      &kp F3        &none         &none
 &none  &trans     &none      &to 0         &lt 8 SPACE     &kp RET         &none    &none   &kp K_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PP
@@ -639,8 +639,8 @@
         nav_layer {
             bindings = <
 &none  &none                 &none         &none        &none      &none          &none     &none      &none      &none      &none       &none
-&none  &sk RA(RC(RS(RGUI)))  &sk LC(LCMD)  &none        &kp LG(A)  &kp LG(LBKT)   &none     &none      &none      &none      &vim_nav_o  &none
-&none  &sk LCTRL             &sk LALT      &smart_shft  &sk LCMD   &kp LG(RBKT)   &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &vim_nav_i  &none
+&none  &sk LC(LCMD)          &sk LA(LCMD)  &none        &kp LG(A)  &none          &none     &none      &none      &none      &vim_nav_o  &none
+&none  &sk LCTRL             &sk LALT      &smart_shft  &sk LCMD   &kp CLCK       &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &vim_nav_i  &none
 &none  &kp LG(Z)             &kp LG(X)     &kp LG(C)    &kp LG(V)  &kp LS(LG(Z))  &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &vim_nav_a  &none
 &none  &trans                &none         &kp ESC      &kp SPACE  &kp TAB        &kp RET   &kp BSPC   &kp DEL    &none      &none       &none
             >;

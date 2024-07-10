@@ -5,13 +5,13 @@ manifest:
     - name: voidyourwarranty
       url-base: https://github.com/voidyourwarranty2
   projects:
-    # - name: zmk
-    #   remote: zmkfirmware
-    #   revision: main
-    #   import: app/west.yml
     - name: zmk
-      remote: voidyourwarranty
-      revision: devel-adaptive
+      remote: zmkfirmware
+      revision: main
       import: app/west.yml
+    # - name: zmk
+    #   remote: voidyourwarranty
+    #   revision: devel-adaptive
+    #   import: app/west.yml
   self:
     path: config
