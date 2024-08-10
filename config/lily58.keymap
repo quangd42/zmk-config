@@ -28,10 +28,11 @@
             #binding-cells = <2>;
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
-            flavor = "balanced";
+            flavor = "hold-preferred";
             hold-trigger-on-release;
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 34 35 43 44 45 46 47 48 49 55 56 57 58 59 50 51 52 53 54>;
             require-prior-idle-ms = <75>;
+            hold-while-undecided;
         };
 
         rh_hm: rh_hm {
@@ -42,10 +43,11 @@
             #binding-cells = <2>;
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
-            flavor = "balanced";
+            flavor = "hold-preferred";
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 40 39 50 51 52 53 54 55 56 57 58 59 17 29 41 42>;
             hold-trigger-on-release;
             require-prior-idle-ms = <75>;
+            hold-while-undecided;
         };
 
         smart_shft: smart_shft {
@@ -137,6 +139,7 @@
             hold-trigger-on-release;
             require-prior-idle-ms = <10>;
             hold-trigger-key-positions = <55 46 47 48>;
+            hold-while-undecided;
         };
 
         layer_switcher: layer_switcher {
