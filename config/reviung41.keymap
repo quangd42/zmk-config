@@ -208,10 +208,10 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-&m_lbkt_minus        &kp B           &lh_lt 6 L     &lh_lt 5 D        &kp W          &kp V                 &kp Z  &kp F           &kp O           &rh_lt 6 U     &kp COMMA       &m_rbkt_equal
-&kp MINUS            &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S  &kp G                 &kp P  &rh_hm RCMD H   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &kp SEMI
-&layer_switcher 4 4  &kp Q           &kp X          &kp M             &kp C          &kp J                 &kp K  &kp Y           &kp SQT         &kp FSLH       &kp DOT         &lang_switch
-                                                    &layer_gresc 8 0  &lt 9 SPACE           &mt LCTRL RET         &mt RSHFT BSPC  &lt 10 TAB
+&m_lbkt_minus        &kp B           &lh_lt 6 L     &lh_lt 5 D        &kp W          &kp Q                 &kp SQT  &kp F           &kp O           &rh_lt 6 U     &kp COMMA       &m_rbkt_equal
+&kp MINUS            &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S  &kp G                 &kp Y    &rh_hm RCMD H   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &kp SEMI
+&layer_switcher 4 4  &kp Z           &kp X          &kp M             &kp C          &kp V                 &kp P    &kp J           &kp K           &kp FSLH       &kp DOT         &lang_switch
+                                                    &layer_gresc 8 0  &lt 9 SPACE           &mt LCTRL RET           &mt RSHFT BSPC  &lt 10 TAB
             >;
         };
 
