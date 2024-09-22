@@ -153,24 +153,14 @@
             flavor = "balanced";
         };
 
-        m_lbkt_minus: m_lbkt_minus {
+        m_lang_switch_equal: m_lang_switch_equal {
             compatible = "zmk,behavior-mod-morph";
-            label = "M_LBKT_MINUS";
-            bindings = <&kp LBKT>, <&kp MINUS>;
+            label = "M_LANG_SWITCH_EQUAL";
+            bindings = <&lang_switch>, <&kp EQUAL>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RGUI)>;
-            keep-mods = <(MOD_RGUI)>;
-        };
-
-        m_rbkt_equal: m_rbkt_equal {
-            compatible = "zmk,behavior-mod-morph";
-            label = "M_RBKT_EQUAL";
-            bindings = <&kp RBKT>, <&kp EQUAL>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RGUI)>;
-            keep-mods = <(MOD_RGUI)>;
+            mods = <(MOD_RGUI|MOD_LGUI)>;
+            keep-mods = <(MOD_RGUI|MOD_LGUI)>;
         };
     };
 
@@ -208,9 +198,9 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-&m_lbkt_minus        &kp B           &lh_lt 6 L     &lh_lt 5 D        &kp W          &kp Q                 &kp J  &kp F           &kp O           &rh_lt 6 U     &kp COMMA       &m_rbkt_equal
+&kp LBKT             &kp B           &lh_lt 6 L     &lh_lt 5 D        &kp W          &kp Q                 &kp J  &kp F           &kp O           &rh_lt 6 U     &kp COMMA       &kp RBKT
 &kp MINUS            &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S  &kp G                 &kp K  &rh_hm RCMD H   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &kp SEMI
-&layer_switcher 4 4  &kp Z           &kp X          &kp M             &kp C          &kp V                 &kp P  &kp Y           &kp SQT         &kp FSLH       &kp DOT         &lang_switch
+&layer_switcher 4 4  &kp Z           &kp X          &kp M             &kp C          &kp V                 &kp P  &kp Y           &kp SQT         &kp FSLH       &kp DOT         &m_lang_switch_equal
                                                     &layer_gresc 8 0  &lt 9 SPACE           &mt LCTRL RET         &mt RSHFT BSPC  &lt 10 TAB
             >;
         };
@@ -223,9 +213,9 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-&m_lbkt_minus        &kp COMMA       &lh_lt 6 U     &lh_lt 5 O        &kp F          &kp Q             &kp P  &kp C           &kp L           &rh_lt 6 M     &kp V           &m_rbkt_equal
+&kp LBKT             &kp COMMA       &lh_lt 6 U     &lh_lt 5 O        &kp F          &kp Q             &kp P  &kp C           &kp L           &rh_lt 6 M     &kp V           &kp RBKT
 &kp SEMI             &lh_hm LCTRL I  &lh_hm LALT E  &lh_hm LSHFT A    &lh_hm LCMD N  &kp B             &kp Y  &rh_hm RCMD D   &rh_hm RSHFT R  &rh_hm RALT T  &rh_hm RCTRL S  &kp MINUS
-&layer_switcher 4 4  &kp DOT         &kp FSLH       &kp SQT           &kp H          &kp Z             &kp W  &kp G           &kp J           &kp K          &kp X           &lang_switch
+&layer_switcher 4 4  &kp DOT         &kp FSLH       &kp SQT           &kp H          &kp Z             &kp W  &kp G           &kp J           &kp K          &kp X           &m_lang_switch_equal
                                                     &layer_gresc 8 0  &lt 9 SPACE           &lt 6 RET         &mt RSHFT BSPC  &lt 10 TAB
             >;
         };
