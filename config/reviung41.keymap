@@ -215,7 +215,7 @@
             >;
         };
 
-        canary2b2_layer {
+        stirred_layer {
             // -------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  :  |   BKSP    |
             // | CTRL |  A  |  R  |  S  |  T  |  G  |   |  M  |  N   |  E  |  I  |  O  |    '      |
@@ -223,10 +223,10 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-&m_lbkt_minus        &kp Y           &lh_lt 6 L     &lh_lt 5 D        &kp W          &kp V              &kp X  &kp B           &kp O           &rh_lt 6 U     &kp COMMA       &m_rbkt_equal
-&kp TAB              &lh_hm LCTRL C  &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S  &kp G              &kp P  &rh_hm RCMD N   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &kp FSLH
-&layer_switcher 4 4  &kp Z           &kp J          &kp K             &kp M          &kp F              &kp Q  &kp H           &kp SQT         &kp SEMI       &kp DOT         &lang_switch
-                                                    &layer_gresc 8 0  &lt 9 SPACE           &lt 10 RET         &mt RSHFT BSPC  &smart_shft
+&m_lbkt_minus        &kp COMMA       &lh_lt 6 U     &lh_lt 5 O        &kp F          &kp Q             &kp P  &kp C           &kp L           &rh_lt 6 M     &kp V           &m_rbkt_equal
+&kp SEMI             &lh_hm LCTRL I  &lh_hm LALT E  &lh_hm LSHFT A    &lh_hm LCMD N  &kp B             &kp Y  &rh_hm RCMD D   &rh_hm RSHFT R  &rh_hm RALT T  &rh_hm RCTRL S  &kp MINUS
+&layer_switcher 4 4  &kp DOT         &kp FSLH       &kp SQT           &kp H          &kp Z             &kp W  &kp G           &kp J           &kp K          &kp X           &lang_switch
+                                                    &layer_gresc 8 0  &lt 9 SPACE           &lt 6 RET         &mt RSHFT BSPC  &lt 10 TAB
             >;
         };
 
@@ -280,10 +280,10 @@
 
         sym_layer {
             bindings = <
-&trans  &kp GRAVE          &kp LT           &lt 7 GT           &kp FSLH           &kp DOT          &kp PIPE   &kp TILDE          &kp LBKT           &kp RBKT          &kp AT              &trans
-&none   &lh_hm LCTRL EXCL  &lh_hm LALT DQT  &lh_hm LSHFT PLUS  &lh_hm LCMD EQUAL  &kp HASH         &kp AMPS   &rh_hm RCMD COLON  &rh_hm RSHFT LPAR  &rh_hm RALT RPAR  &rh_hm RCTRL PRCNT  &none
-&trans  &kp BSLH           &kp BSLH         &kp UNDER          &kp MINUS          &kp STAR         &kp CARET  &kp DLLR           &kp LBRC           &kp RBRC          &kp QMARK           &none
-                                            &none              &kp SPACE                    &mo 6             &kp BSPC           &kp DEL
+&trans     &kp GRAVE          &kp LT           &lt 7 GT           &kp FSLH           &kp DOT          &kp PIPE   &kp TILDE          &kp LBKT           &kp RBKT          &kp AT              &trans
+&kp MINUS  &lh_hm LCTRL EXCL  &lh_hm LALT DQT  &lh_hm LSHFT PLUS  &lh_hm LCMD EQUAL  &kp HASH         &kp AMPS   &rh_hm RCMD COLON  &rh_hm RSHFT LPAR  &rh_hm RALT RPAR  &rh_hm RCTRL PRCNT  &none
+&trans     &kp BSLH           &kp BSLH         &kp UNDER          &kp MINUS          &kp STAR         &kp CARET  &kp DLLR           &kp LBRC           &kp RBRC          &kp QMARK           &none
+                                               &none              &kp SPACE                    &mo 6             &kp BSPC           &kp DEL
             >;
         };
 
