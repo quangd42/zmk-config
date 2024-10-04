@@ -20,7 +20,7 @@
 
 &sl { /delete-property/ quick-release; };
 
-&caps_word { continue-list = <UNDERSCORE BACKSPACE DELETE LSHIFT RSHFT>; };
+&caps_word { continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>; };
 
 / {
     behaviors {
