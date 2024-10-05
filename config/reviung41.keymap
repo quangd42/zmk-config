@@ -162,6 +162,15 @@
             mods = <(MOD_RGUI|MOD_LGUI)>;
             keep-mods = <(MOD_RGUI|MOD_LGUI)>;
         };
+
+        m_dot_dqt: m_dot_dqt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "M_DOT_DQT";
+            bindings = <&kp DOT>, <&kp DQT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
+        };
     };
 
     macros {
@@ -198,10 +207,10 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-&kp LBKT             &kp B           &lh_lt 6 L     &lh_lt 5 D        &kp W          &kp Q             &kp K  &kp F           &kp O           &rh_lt 6 U     &kp COMMA       &kp RBKT
-&kp MINUS            &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S  &kp G             &kp J  &rh_hm RCMD H   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &kp SEMI
-&layer_switcher 4 4  &kp Z           &kp X          &kp M             &kp C          &kp V             &kp P  &kp Y           &kp SQT         &kp FSLH       &kp DOT         &m_lang_switch_equal
-                                                    &layer_gresc 8 0  &lt 9 SPACE           &lt 4 RET         &mt RSHFT BSPC  &lt 10 TAB
+&kp LBKT             &kp B           &lh_lt 6 L     &lh_lt 5 D        &kp W          &kp Q             &kp APOS  &kp F           &kp O           &rh_lt 6 U     &kp J           &kp RBKT
+&kp MINUS            &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S  &kp G             &kp K     &rh_hm RCMD H   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &kp SEMI
+&layer_switcher 4 4  &kp Z           &kp X          &kp M             &kp C          &kp V             &kp P     &kp Y           &m_dot_dqt      &kp FSLH       &kp COMMA       &m_lang_switch_equal
+                                                    &layer_gresc 8 0  &lt 9 SPACE           &lt 4 RET            &mt RSHFT BSPC  &lt 10 TAB
             >;
         };
 
