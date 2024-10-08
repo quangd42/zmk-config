@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
 #define CMK 0
@@ -35,7 +36,7 @@
             flavor = "balanced";
             require-prior-idle-ms = <60>;
             hold-trigger-on-release;
-            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 40 39 38 37 36>;
+            hold-trigger-key-positions = <6 7 8 9 10 18 19 20 21 22 30 31 32 33 34 40 39 38 37 36 23 11 35 0 12 24>;
         };
 
         rh_hm: rh_hm {
@@ -48,7 +49,7 @@
             quick-tap-ms = <200>;
             flavor = "balanced";
             require-prior-idle-ms = <60>;
-            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 40 39>;
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 40 39 11 23 35>;
             hold-trigger-on-release;
         };
 
@@ -171,6 +172,16 @@
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LSFT)>;
         };
+
+        m_cmd_tab: m_cmd_tab {
+            compatible = "zmk,behavior-mod-morph";
+            label = "M_CMD_TAB";
+            bindings = <&kt LCMD>, <&kp TAB>;
+
+            #binding-cells = <0>;
+            keep-mods = <(MOD_LGUI|MOD_RGUI)>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
+        };
     };
 
     macros {
@@ -182,19 +193,7 @@
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        sym_minus {
-            bindings = <&kp MINUS>;
-            key-positions = <37 28>;
-        };
-
-        sym_underscore {
-            bindings = <&kp UNDER>;
-            key-positions = <37 27>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
@@ -208,8 +207,8 @@
 
             bindings = <
 &kp LBKT             &kp B           &lh_lt 6 L     &lh_lt 5 D        &kp W          &kp Q             &kp APOS  &kp F           &kp O           &rh_lt 6 U     &kp J           &kp RBKT
-&kp MINUS            &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S  &kp G             &kp K     &rh_hm RCMD H   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &kp SEMI
-&layer_switcher 4 4  &kp Z           &kp X          &kp M             &kp C          &kp V             &kp P     &kp Y           &m_dot_dqt      &kp FSLH       &kp COMMA       &m_lang_switch_equal
+&kp MINUS            &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S  &kp G             &kp K     &rh_hm RCMD H   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &kp COMMA
+&layer_switcher 4 4  &kp Z           &kp X          &kp M             &kp C          &kp V             &kp P     &kp Y           &m_dot_dqt      &kp FSLH       &kp SEMI        &m_lang_switch_equal
                                                     &layer_gresc 8 0  &lt 9 SPACE           &lt 4 RET            &mt RSHFT BSPC  &lt 10 TAB
             >;
         };
@@ -312,10 +311,10 @@
             //                       |     | ADJ | BKSP |    |     |
 
             bindings = <
-&trans   &sk RC(RA(RS(RGUI)))  &sk LC(LCMD)  &none        &kp LG(A)  &kp LG(LBKT)              &kp LS(HOME)  &kp LC(E)  &kp LC(Y)  &kp LS(END)  &none  &trans
-&kp TAB  &sk LCTRL             &sk LALT      &smart_shft  &sk LCMD   &kp LG(RBKT)              &kp LEFT      &kp DOWN   &kp UP     &kp RIGHT    &none  &none
-&trans   &kp LG(Z)             &kp LG(X)     &kp LG(C)    &kp LG(V)  &kp LS(LG(Z))             &kp HOME      &kp PG_DN  &kp PG_UP  &kp END      &none  &trans
-                                             &kp ESC      &kp SPACE                 &kp ENTER                &kp BSPC   &kp DEL
+&m_cmd_tab  &sk LG(LCTRL)  &sk LG(LALT)  &none        &kp LG(A)  &none                     &none     &kp PG_DN  &kp PG_UP  &none      &none  &trans
+&none       &sk LCTRL      &sk LALT      &smart_shft  &sk LCMD   &none                     &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &none  &none
+&trans      &kp LG(Z)      &kp LG(X)     &kp LG(C)    &kp LG(V)  &kp LS(LG(Z))             &kp H     &kp J      &kp K      &kp L      &none  &trans
+                                         &kp ESC      &kp SPACE                 &kp ENTER            &kp BSPC   &kp DEL
             >;
         };
 
