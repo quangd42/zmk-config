@@ -173,15 +173,6 @@
             keep-mods = <(MOD_LGUI|MOD_RGUI)>;
             mods = <(MOD_LGUI|MOD_RGUI)>;
         };
-
-        m_colon_semi_flip: m_colon_semi_flip {
-            compatible = "zmk,behavior-mod-morph";
-            label = "M_COLON_SEMI_FLIP";
-            bindings = <&kp COLON>, <&kp SEMI>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
     };
 
     macros {
@@ -207,7 +198,7 @@
 
             bindings = <
 &kp LBKT             &kp B           &lh_lt 6 L     &lh_lt 5 D        &kp W          &kp Q             &kp SQT  &kp F           &kp O           &rh_lt 6 U     &kp COMMA       &kp RBKT
-&m_colon_semi_flip   &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S  &kp G             &kp K    &rh_hm RCMD H   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &kp MINUS
+&kp MINUS            &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S  &kp G             &kp K    &rh_hm RCMD H   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &kp SEMI
 &layer_switcher 4 4  &kp Z           &kp J          &kp M             &kp C          &kp V             &kp P    &kp Y           &kp X           &kp FSLH       &kp DOT         &m_lang_switch_equal
                                                     &layer_gresc 8 0  &lt 9 SPACE           &lt 4 RET           &mt RSHFT BSPC  &lt 10 TAB
             >;
