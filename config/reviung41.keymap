@@ -114,8 +114,8 @@
             bindings = <&kp ESC>, <&kp GRAVE>;
 
             #binding-cells = <0>;
-            keep-mods = <(MOD_LGUI|MOD_LCTL|MOD_RSFT)>;
-            mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_LSFT|MOD_RALT|MOD_RSFT|MOD_LALT|MOD_RCTL)>;
+            keep-mods = <(MOD_LGUI|MOD_RGUI)>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
         };
 
         layer_gresc: layer_gresc {
