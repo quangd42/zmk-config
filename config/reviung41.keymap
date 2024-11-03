@@ -7,7 +7,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
 #define CMK 0
@@ -163,16 +162,6 @@
             mods = <(MOD_RGUI|MOD_LGUI)>;
             keep-mods = <(MOD_RGUI|MOD_LGUI)>;
         };
-
-        m_cmd_tab: m_cmd_tab {
-            compatible = "zmk,behavior-mod-morph";
-            label = "M_CMD_TAB";
-            bindings = <&kt LCMD>, <&kp TAB>;
-
-            #binding-cells = <0>;
-            keep-mods = <(MOD_LGUI|MOD_RGUI)>;
-            mods = <(MOD_LGUI|MOD_RGUI)>;
-        };
     };
 
     macros {
@@ -302,10 +291,10 @@
             //                       |     | ADJ | BKSP |    |     |
 
             bindings = <
-&m_cmd_tab  &sk LG(LCTRL)  &sk LG(LALT)  &none        &kp LG(A)  &none                     &none     &kp PG_DN  &kp PG_UP  &none      &none  &trans
-&none       &sk LCTRL      &sk LALT      &smart_shft  &sk LCMD   &none                     &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &none  &none
-&trans      &kp LG(Z)      &kp LG(X)     &kp LG(C)    &kp LG(V)  &kp LS(LG(Z))             &kp H     &kp J      &kp K      &kp L      &none  &trans
-                                         &kp ESC      &kp SPACE                 &kp ENTER            &kp BSPC   &kp DEL
+&kp LA(TAB)  &sk LG(LCTRL)  &sk LG(LALT)  &none        &kp LG(A)  &none                     &none     &kp PG_DN  &kp PG_UP  &none      &none  &trans
+&none        &sk LCTRL      &sk LALT      &smart_shft  &sk LCMD   &none                     &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &none  &none
+&trans       &kp LG(Z)      &kp LG(X)     &kp LG(C)    &kp LG(V)  &kp LS(LG(Z))             &kp H     &kp J      &kp K      &kp L      &none  &trans
+                                          &kp ESC      &kp SPACE                 &kp ENTER            &kp BSPC   &kp DEL
             >;
         };
 
