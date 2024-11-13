@@ -208,7 +208,7 @@
             >;
         };
 
-        vnmak3_layer {
+        qwerty_with_hm_layer {
             // -------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  :  |   BKSP    |
             // | CTRL |  A  |  R  |  S  |  T  |  G  |   |  M  |  N   |  E  |  I  |  O  |    '      |
@@ -216,10 +216,10 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-&trans   &kp T           &kp D          &lh_lt 5 C        &kp J          &kp Q              &kp DOT    &kp U           &kp E           &kp Y          &kp B           &trans
-&kp TAB  &lh_hm LCTRL G  &lh_hm LALT H  &lh_hm LSHFT N    &lh_hm LCMD S  &kp R              &kp COMMA  &rh_hm RCMD I   &rh_hm RSHFT A  &rh_hm RALT O  &rh_hm RCTRL W  &trans
-&trans   &kp L           &kp M          &kp V             &kp X          &kp F              &kp Z      &kp SEMI        &kp SQT         &kp P          &kp K           &trans
-                                        &layer_gresc 8 0  &lt 9 SPACE           &lt 10 RET             &mt RSHFT BSPC  &smart_shft
+&none   &kp Q  &lh_lt 6 W  &lh_lt 5 E        &kp R        &kp T                 &kp Y  &kp U           &kp I      &rh_lt 6 O  &kp P     &trans
+&kp MINUS  &lh_hm LCTRL A  &lh_hm LALT S       &lh_hm LSHFT D             &lh_hm LCMD F        &kp G                 &kp H  &rh_hm RCMD J           &rh_hm RSHFT K      &rh_hm RALT L       &rh_hm RCTRL SEMI  &kp SQT
+&trans   &kp Z  &kp X       &kp C             &kp V        &kp B                 &kp N  &kp M           &kp COMMA  &kp DOT     &kp FSLH  &trans
+                            &layer_gresc 8 0  &lt 9 SPACE         &mt LCTRL RET         &mt RSHFT BSPC  &kp TAB
             >;
         };
 
@@ -231,8 +231,8 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-&trans   &kp Q  &lh_lt 6 W  &lh_lt 5 E        &kp R        &kp T                 &kp Y  &kp U           &kp I      &rh_lt 6 O  &kp P     &trans
-&kp TAB  &kp A  &kp S       &kp D             &kp F        &kp G                 &kp H  &kp J           &kp K      &kp L       &kp SEMI  &kp SQT
+&none   &kp Q  &lh_lt 6 W  &lh_lt 5 E        &kp R        &kp T                 &kp Y  &kp U           &kp I      &rh_lt 6 O  &kp P     &trans
+&kp MINUS  &kp A  &kp S       &kp D             &kp F        &kp G                 &kp H  &kp J           &kp K      &kp L       &kp SEMI  &kp SQT
 &trans   &kp Z  &kp X       &kp C             &kp V        &kp B                 &kp N  &kp M           &kp COMMA  &kp DOT     &kp FSLH  &trans
                             &layer_gresc 8 0  &lt 9 SPACE         &mt LCTRL RET         &mt RSHFT BSPC  &kp TAB
             >;
@@ -249,7 +249,7 @@
 
         num_layer {
             bindings = <
-&trans  &none      &lt 6 FSLH      &none      &kp STAR       &none           &none  &kp N7    &kp N8   &kp N9  &kp COMMA  &none
+&none  &none      &lt 6 FSLH      &none      &kp STAR       &none           &none  &kp N7    &kp N8   &kp N9  &kp COMMA  &none
 &to 0   &sk LCTRL  &mt LALT MINUS  &sk LSHFT  &mt LCMD PLUS  &none           &none  &kp N1    &kp N2   &kp N3  &kp N0     &none
 &trans  &none      &none           &none      &none          &none           &none  &kp N4    &kp N5   &kp N6  &kp DOT    &none
                                    &kp ESC    &kp SPACE             &kp RET         &kp BSPC  &kp DEL
@@ -258,7 +258,7 @@
 
         sym_layer {
             bindings = <
-&trans     &kp GRAVE          &kp LT           &lt 7 GT           &kp FSLH           &kp DOT          &kp PIPE   &kp TILDE          &kp LBKT           &kp RBKT          &kp AT              &trans
+&none     &kp GRAVE          &kp LT           &lt 7 GT           &kp FSLH           &kp DOT          &kp PIPE   &kp TILDE          &kp LBKT           &kp RBKT          &kp AT              &trans
 &kp MINUS  &lh_hm LCTRL EXCL  &lh_hm LALT DQT  &lh_hm LSHFT PLUS  &lh_hm LCMD EQUAL  &kp HASH         &kp AMPS   &rh_hm RCMD COLON  &rh_hm RSHFT LPAR  &rh_hm RALT RPAR  &rh_hm RCTRL PRCNT  &none
 &trans     &kp BSLH           &kp BSLH         &kp UNDER          &kp MINUS          &kp STAR         &kp CARET  &kp DLLR           &kp LBRC           &kp RBRC          &kp QMARK           &none
                                                &none              &kp SPACE                    &mo 6             &kp BSPC           &kp DEL
@@ -276,9 +276,9 @@
 
         fun_layer {
             bindings = <
-&trans  &none      &none      &kp LG(BSLH)  &kp LS(LG(N4))  &kp LS(LG(N5))         &kp F12  &kp F7  &kp F8  &kp F9  &kp LG(LBKT)  &trans
-&none   &kp LG(A)  &none      &none         &none           &kp LG(BSLH)           &kp F11  &kp F4  &kp F5  &kp F6  &kp LG(RBKT)  &none
-&trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)     &kp LG(V)       &kp LG(LS(Z))          &kp F10  &kp F1  &kp F2  &kp F3  &kp LG(BSLH)  &kp LC(LG(Q))
+&none  &none      &none      &kp LG(BSLH)  &kp LS(LG(N4))  &kp LS(LG(N5))         &kp F12  &kp F7  &kp F8  &kp F9  &none  &trans
+&none   &sk LCTRL      &sk LALT      &smart_shft  &sk LCMD  &caps_word            &kp F11  &kp F1  &kp F2  &kp F3  &none  &none
+&trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)     &kp LG(V)       &kp LG(LS(Z))          &kp F10  &kp F4  &kp F5  &kp F6  &none  &kp LC(LG(Q))
                               &to 0         &none                           &none           &none   &mo 10
             >;
         };
@@ -291,8 +291,8 @@
             //                       |     | ADJ | BKSP |    |     |
 
             bindings = <
-&kp LA(TAB)  &sk LG(LCTRL)  &sk LG(LALT)  &none        &kp LG(A)  &none                     &none     &kp PG_DN  &kp PG_UP  &none      &none  &trans
-&none        &sk LCTRL      &sk LALT      &smart_shft  &sk LCMD   &none                     &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &none  &none
+&none  &sk LG(LCTRL)  &sk LG(LALT)  &none        &kp LG(A)  &none                     &none     &kp PG_DN  &kp PG_UP  &none      &none  &trans
+&none        &sk LCTRL      &sk LALT      &smart_shft  &sk LCMD   &caps_word                     &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &none  &none
 &trans       &kp LG(Z)      &kp LG(X)     &kp LG(C)    &kp LG(V)  &kp LS(LG(Z))             &kp H     &kp J      &kp K      &kp L      &none  &trans
                                           &kp ESC      &kp SPACE                 &kp ENTER            &kp BSPC   &kp DEL
             >;
@@ -306,8 +306,8 @@
             //                                              |     |     |     |     |     |
 
             bindings = <
-&trans  &none   &none   &none   &none         &none                &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR  &trans
-&to 0   &none   &none   &none   &none         &none                &kp C_MUTE    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PP      &none       &none
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR &none   &none   &kp C_BRI_DN   &kp C_BRI_UP         &none &trans
+&none   &none   &none   &none   &none         &none                &kp C_MUTE    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PP      &none       &none
 &none   &tog 1  &tog 2  &tog 3  &out OUT_USB  &out OUT_BLE         &bootloader   &none         &none         &none         &none       &kp LC(LG(Q))
                         &to 0   &none                       &none                &none         &none
             >;
