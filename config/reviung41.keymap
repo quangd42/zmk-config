@@ -189,7 +189,7 @@
 &kp LBKT             &kp B           &lh_lt 6 L     &lh_lt 5 D        &kp W          &kp Q             &kp K  &kp F           &kp O           &rh_lt 6 U     &kp COMMA       &kp RBKT
 &kp MINUS            &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S  &kp G             &kp J  &rh_hm RCMD H   &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &kp SEMI
 &layer_switcher 4 4  &kp Z           &kp X          &kp M             &kp C          &kp V             &kp P  &kp Y           &kp SQT         &kp FSLH       &kp DOT         &m_lang_switch_equal
-                                                    &layer_gresc 8 0  &lt 9 SPACE           &lt 4 RET         &mt RSHFT BSPC  &lt 10 TAB
+                                                    &layer_gresc 7 0  &lt 8 SPACE           &lt 4 RET         &mt RSHFT BSPC  &lt 9 TAB
             >;
         };
 
@@ -204,7 +204,7 @@
 &kp LBKT             &kp COMMA       &lh_lt 6 U     &lh_lt 5 O        &kp F          &kp X             &kp P  &kp C           &kp L           &rh_lt 6 M     &kp V           &kp RBKT
 &kp MINUS            &lh_hm LCTRL I  &lh_hm LALT E  &lh_hm LSHFT A    &lh_hm LCMD N  &kp B             &kp Y  &rh_hm RCMD D   &rh_hm RSHFT R  &rh_hm RALT T  &rh_hm RCTRL S  &kp SEMI
 &layer_switcher 4 4  &kp DOT         &kp FSLH       &kp SQT           &kp H          &kp Q             &kp W  &kp G           &kp J           &kp K          &kp Z           &m_lang_switch_equal
-                                                    &layer_gresc 8 0  &lt 9 SPACE           &lt 6 RET         &mt RSHFT BSPC  &lt 10 TAB
+                                                    &layer_gresc 7 0  &lt 8 SPACE           &lt 6 RET         &mt RSHFT BSPC  &lt 9 TAB
             >;
         };
 
@@ -216,10 +216,10 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-&none   &kp Q  &lh_lt 6 W  &lh_lt 5 E        &kp R        &kp T                 &kp Y  &kp U           &kp I      &rh_lt 6 O  &kp P     &trans
-&kp MINUS  &lh_hm LCTRL A  &lh_hm LALT S       &lh_hm LSHFT D             &lh_hm LCMD F        &kp G                 &kp H  &rh_hm RCMD J           &rh_hm RSHFT K      &rh_hm RALT L       &rh_hm RCTRL SEMI  &kp SQT
-&trans   &kp Z  &kp X       &kp C             &kp V        &kp B                 &kp N  &kp M           &kp COMMA  &kp DOT     &kp FSLH  &trans
-                            &layer_gresc 8 0  &lt 9 SPACE         &mt LCTRL RET         &mt RSHFT BSPC  &kp TAB
+&none      &kp Q           &lh_lt 6 W     &lh_lt 5 E        &kp R          &kp T                 &kp Y  &kp U           &kp I           &rh_lt 6 O     &kp P              &trans
+&kp MINUS  &lh_hm LCTRL A  &lh_hm LALT S  &lh_hm LSHFT D    &lh_hm LCMD F  &kp G                 &kp H  &rh_hm RCMD J   &rh_hm RSHFT K  &rh_hm RALT L  &rh_hm RCTRL SEMI  &kp SQT
+&trans     &kp Z           &kp X          &kp C             &kp V          &kp B                 &kp N  &kp M           &kp COMMA       &kp DOT        &kp FSLH           &trans
+                                          &layer_gresc 7 0  &lt 8 SPACE           &mt LCTRL RET         &mt RSHFT BSPC  &kp TAB
             >;
         };
 
@@ -231,10 +231,10 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-&none   &kp Q  &lh_lt 6 W  &lh_lt 5 E        &kp R        &kp T                 &kp Y  &kp U           &kp I      &rh_lt 6 O  &kp P     &trans
+&none      &kp Q  &lh_lt 6 W  &lh_lt 5 E        &kp R        &kp T                 &kp Y  &kp U           &kp I      &rh_lt 6 O  &kp P     &trans
 &kp MINUS  &kp A  &kp S       &kp D             &kp F        &kp G                 &kp H  &kp J           &kp K      &kp L       &kp SEMI  &kp SQT
-&trans   &kp Z  &kp X       &kp C             &kp V        &kp B                 &kp N  &kp M           &kp COMMA  &kp DOT     &kp FSLH  &trans
-                            &layer_gresc 8 0  &lt 9 SPACE         &mt LCTRL RET         &mt RSHFT BSPC  &kp TAB
+&trans     &kp Z  &kp X       &kp C             &kp V        &kp B                 &kp N  &kp M           &kp COMMA  &kp DOT     &kp FSLH  &trans
+                              &layer_gresc 7 0  &lt 8 SPACE         &mt LCTRL RET         &mt RSHFT BSPC  &kp TAB
             >;
         };
 
@@ -249,37 +249,28 @@
 
         num_layer {
             bindings = <
-&none  &none      &lt 6 FSLH      &none      &kp STAR       &none           &none  &kp N7    &kp N8   &kp N9  &kp COMMA  &none
-&to 0   &sk LCTRL  &mt LALT MINUS  &sk LSHFT  &mt LCMD PLUS  &none           &none  &kp N1    &kp N2   &kp N3  &kp N0     &none
-&trans  &none      &none           &none      &none          &none           &none  &kp N4    &kp N5   &kp N6  &kp DOT    &none
-                                   &kp ESC    &kp SPACE             &kp RET         &kp BSPC  &kp DEL
+&none   &none      &lt 6 FSLH      &none      &kp STAR       &none           &none      &kp N7    &kp N8   &kp N9  &kp COMMA  &none
+&none   &sk LCTRL  &mt LALT MINUS  &sk LSHFT  &mt LCMD PLUS  &none           &kp UNDER  &kp N1    &kp N2   &kp N3  &kp N0     &none
+&trans  &none      &none           &none      &none          &none           &none      &kp N4    &kp N5   &kp N6  &kp DOT    &none
+                                   &kp ESC    &kp SPACE             &kp RET             &kp BSPC  &kp DEL
             >;
         };
 
         sym_layer {
             bindings = <
-&none     &kp GRAVE          &kp LT           &lt 7 GT           &kp FSLH           &kp DOT          &kp PIPE   &kp TILDE          &kp LBKT           &kp RBKT          &kp AT              &trans
+&none      &kp GRAVE          &kp LT           &kp GT             &kp FSLH           &kp DOT          &kp PIPE   &kp TILDE          &kp LBKT           &kp RBKT          &kp AT              &trans
 &kp MINUS  &lh_hm LCTRL EXCL  &lh_hm LALT DQT  &lh_hm LSHFT PLUS  &lh_hm LCMD EQUAL  &kp HASH         &kp AMPS   &rh_hm RCMD COLON  &rh_hm RSHFT LPAR  &rh_hm RALT RPAR  &rh_hm RCTRL PRCNT  &none
 &trans     &kp BSLH           &kp BSLH         &kp UNDER          &kp MINUS          &kp STAR         &kp CARET  &kp DLLR           &kp LBRC           &kp RBRC          &kp QMARK           &none
                                                &none              &kp SPACE                    &mo 6             &kp BSPC           &kp DEL
             >;
         };
 
-        light_num {
-            bindings = <
-&none  &none  &none  &none  &none  &none         &none   &kp N7  &kp N8  &kp N9  &none  &none
-&none  &none  &none  &none  &none  &none         &none   &kp N4  &kp N5  &kp N6  &none  &none
-&none  &none  &none  &none  &none  &none         &kp N0  &kp N1  &kp N2  &kp N3  &none  &none
-                     &none  &none         &none          &none   &none
-            >;
-        };
-
         fun_layer {
             bindings = <
-&none  &none      &none      &kp LG(BSLH)  &kp LS(LG(N4))  &kp LS(LG(N5))         &kp F12  &kp F7  &kp F8  &kp F9  &none  &trans
-&none   &sk LCTRL      &sk LALT      &smart_shft  &sk LCMD  &caps_word            &kp F11  &kp F1  &kp F2  &kp F3  &none  &none
+&none   &none      &none      &kp LG(BSLH)  &kp LS(LG(N4))  &kp LS(LG(N5))         &kp F12  &kp F7  &kp F8  &kp F9  &none  &trans
+&none   &sk LCTRL  &sk LALT   &smart_shft   &sk LCMD        &caps_word             &kp F11  &kp F1  &kp F2  &kp F3  &none  &none
 &trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)     &kp LG(V)       &kp LG(LS(Z))          &kp F10  &kp F4  &kp F5  &kp F6  &none  &kp LC(LG(Q))
-                              &to 0         &none                           &none           &none   &mo 10
+                              &to 0         &none                           &none           &none   &mo 9
             >;
         };
 
@@ -291,10 +282,10 @@
             //                       |     | ADJ | BKSP |    |     |
 
             bindings = <
-&none  &sk LG(LCTRL)  &sk LG(LALT)  &none        &kp LG(A)  &none                     &none     &kp PG_DN  &kp PG_UP  &none      &none  &trans
-&none        &sk LCTRL      &sk LALT      &smart_shft  &sk LCMD   &caps_word                     &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &none  &none
-&trans       &kp LG(Z)      &kp LG(X)     &kp LG(C)    &kp LG(V)  &kp LS(LG(Z))             &kp H     &kp J      &kp K      &kp L      &none  &trans
-                                          &kp ESC      &kp SPACE                 &kp ENTER            &kp BSPC   &kp DEL
+&none   &sk LG(LCTRL)  &sk LG(LALT)  &none        &kp LG(A)  &none                     &none     &kp PG_DN  &kp PG_UP  &none      &none  &trans
+&none   &sk LCTRL      &sk LALT      &smart_shft  &sk LCMD   &caps_word                &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &none  &none
+&trans  &kp LG(Z)      &kp LG(X)     &kp LG(C)    &kp LG(V)  &kp LS(LG(Z))             &kp H     &kp J      &kp K      &kp L      &none  &trans
+                                     &kp ESC      &kp SPACE                 &kp ENTER            &kp BSPC   &kp DEL
             >;
         };
 
@@ -306,10 +297,10 @@
             //                                              |     |     |     |     |     |
 
             bindings = <
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR &none   &none   &kp C_BRI_DN   &kp C_BRI_UP         &none &trans
-&none   &none   &none   &none   &none         &none                &kp C_MUTE    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PP      &none       &none
-&none   &tog 1  &tog 2  &tog 3  &out OUT_USB  &out OUT_BLE         &bootloader   &none         &none         &none         &none       &kp LC(LG(Q))
-                        &to 0   &none                       &none                &none         &none
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR           &none        &kp C_BRI_DN  &kp C_BRI_UP  &none     &none  &trans
+&none   &none         &none         &none         &none         &none                &kp C_MUTE   &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PP  &none  &none
+&none   &tog 1        &tog 2        &tog 3        &out OUT_USB  &out OUT_BLE         &bootloader  &none         &none         &none     &none  &kp LC(LG(Q))
+                                    &to 0         &none                       &none               &none         &none
             >;
         };
     };
