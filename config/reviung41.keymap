@@ -193,7 +193,7 @@
             >;
         };
 
-        stirred_layer {
+        vimaya_layer {
             // -------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  :  |   BKSP    |
             // | CTRL |  A  |  R  |  S  |  T  |  G  |   |  M  |  N   |  E  |  I  |  O  |    '      |
@@ -201,10 +201,10 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-&kp LBKT             &kp COMMA       &lh_lt 6 U     &lh_lt 5 O        &kp F          &kp X             &kp P  &kp C           &kp L           &rh_lt 6 M     &kp V           &kp RBKT
-&kp MINUS            &lh_hm LCTRL I  &lh_hm LALT E  &lh_hm LSHFT A    &lh_hm LCMD N  &kp B             &kp Y  &rh_hm RCMD D   &rh_hm RSHFT R  &rh_hm RALT T  &rh_hm RCTRL S  &kp SEMI
-&layer_switcher 4 4  &kp DOT         &kp FSLH       &kp SQT           &kp H          &kp Q             &kp W  &kp G           &kp J           &kp K          &kp Z           &m_lang_switch_equal
-                                                    &layer_gresc 7 0  &lt 8 SPACE           &lt 6 RET         &mt RSHFT BSPC  &lt 9 TAB
+&kp LBKT             &kp B           &lh_lt 6 L     &lh_lt 5 D        &kp W          &kp Q             &kp P  &kp F           &kp U           &rh_lt 6 O     &kp COMMA       &kp RBKT
+&kp MINUS            &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S  &kp G             &kp Y  &rh_hm RCMD H   &rh_hm RSHFT E  &rh_hm RALT A  &rh_hm RCTRL I  &kp SEMI
+&layer_switcher 4 4  &kp Z           &kp X          &kp M             &kp C          &kp V             &kp SQT  &kp J           &kp K         &kp FSLH       &kp DOT         &m_lang_switch_equal
+                                                    &layer_gresc 7 0  &lt 8 SPACE           &lt 4 RET         &mt RSHFT BSPC  &lt 9 TAB
             >;
         };
 
