@@ -169,7 +169,7 @@
             #binding-cells = <0>;
             defaults = <&kp E>;
             bindings =
-                <&str_ue>,
+                <&str_ue>;
 
             max-delay-ms = <500>;
             antecedents = <Q>;
