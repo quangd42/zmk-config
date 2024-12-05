@@ -162,6 +162,18 @@
             mods = <(MOD_RGUI|MOD_LGUI)>;
             keep-mods = <(MOD_RGUI|MOD_LGUI)>;
         };
+
+        ad_e_maya: ad_e_maya {
+            compatible = "zmk,behavior-antecedent-morph";
+            label = "AD_E_MAYA";
+            #binding-cells = <0>;
+            defaults = <&kp E>;
+            bindings =
+                <&str_ue>,
+
+            max-delay-ms = <500>;
+            antecedents = <Q>;
+        };
     };
 
     macros {
@@ -170,6 +182,15 @@
             #binding-cells = <0>;
             bindings = <&tog 3 &kp RA(SPACE)>;
             label = "LANG_SWITCH";
+        };
+
+        str_ue: str_ue {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp U &kp E>;
+            label = "STR_UE";
+            wait-ms = <30>;
+            tap-ms = <4>;
         };
     };
 
