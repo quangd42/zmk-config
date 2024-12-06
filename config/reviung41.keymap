@@ -282,9 +282,9 @@
             //                       |     | ADJ | BKSP |    |     |
 
             bindings = <
-&none   &sk LG(LCTRL)  &sk LG(LALT)  &none        &kp LG(A)  &none                     &none     &kp PG_DN  &kp PG_UP  &none      &none  &trans
-&none   &sk LCTRL      &sk LALT      &smart_shft  &sk LCMD   &caps_word                &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &none  &none
-&trans  &kp LG(Z)      &kp LG(X)     &kp LG(C)    &kp LG(V)  &kp LS(LG(Z))             &kp H     &kp J      &kp K      &kp L      &none  &trans
+&none   &sk LG(LCTRL)  &sk LG(LALT)  &none        &kp LG(A)  &none                     &none     &kp PG_DN  &kp PG_UP  &none      &none      &trans
+&none   &sk LCTRL      &sk LALT      &smart_shft  &sk LCMD   &caps_word                &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp SPACE  &none
+&trans  &kp LG(Z)      &kp LG(X)     &kp LG(C)    &kp LG(V)  &kp LS(LG(Z))             &kp H     &kp J      &kp K      &kp L      &none      &trans
                                      &kp ESC      &kp SPACE                 &kp ENTER            &kp BSPC   &kp DEL
             >;
         };
