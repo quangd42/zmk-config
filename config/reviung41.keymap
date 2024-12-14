@@ -22,6 +22,11 @@
 
 &caps_word { continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>; };
 
+&gresc {
+    mods = <(MOD_LGUI|MOD_RGUI)>;
+    keep-mods = <(MOD_LGUI|MOD_RGUI)>;
+};
+
 / {
     behaviors {
         lh_hm: lh_hm {
@@ -108,20 +113,10 @@
             require-prior-idle-ms = <75>;
         };
 
-        grave_escape: grave_escape {
-            compatible = "zmk,behavior-mod-morph";
-            label = "GRAVE_ESCAPE";
-            bindings = <&kp ESC>, <&kp GRAVE>;
-
-            #binding-cells = <0>;
-            keep-mods = <(MOD_LGUI|MOD_RGUI)>;
-            mods = <(MOD_LGUI|MOD_RGUI)>;
-        };
-
         layer_gresc: layer_gresc {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_GRESC";
-            bindings = <&mo>, <&grave_escape>;
+            bindings = <&mo>, <&gresc>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
