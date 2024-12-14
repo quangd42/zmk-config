@@ -14,9 +14,11 @@
 &sl { /delete-property/ quick-release; };
 
 &gresc {
-    keep-mods = <(MOD_RSFT|MOD_LGUI|MOD_LCTL)>;
-    mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT|MOD_LCTL)>;
+    keep-mods = <(MOD_RGUI|MOD_LGUI)>;
+    mods = <(MOD_LGUI|MOD_RGUI)>;
 };
+
+&caps_word { continue-list = <UNDERSCORE BACKSPACE DELETE MINUS>; };
 
 / {
     behaviors {
@@ -106,20 +108,10 @@
             require-prior-idle-ms = <60>;
         };
 
-        grave_escape: grave_escape {
-            compatible = "zmk,behavior-mod-morph";
-            label = "GRAVE_ESCAPE";
-            bindings = <&kp ESC>, <&kp GRAVE>;
-
-            #binding-cells = <0>;
-            keep-mods = <(MOD_RSFT|MOD_LCTL|MOD_LGUI)>;
-            mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_LSFT|MOD_RSFT|MOD_RCTL|MOD_LALT|MOD_RALT)>;
-        };
-
         layer_gresc: layer_gresc {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_GRESC";
-            bindings = <&mo>, <&grave_escape>;
+            bindings = <&mo>, <&gresc>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
