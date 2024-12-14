@@ -75,16 +75,6 @@
             quick-release;
         };
 
-        quick_hold_tap: quick_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "QUICK_HOLD_TAP";
-            bindings = <&quick_sk>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <120>;
-            flavor = "balanced";
-        };
-
         lh_lt: lh_lt {
             compatible = "zmk,behavior-hold-tap";
             label = "left_hand_layer_tap";
@@ -122,20 +112,6 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <150>;
             flavor = "tap-preferred";
-        };
-
-        lh_hm_quick: lh_hm_quick {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LH_HM_QUICK";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <280>;
-            quick-tap-ms = <175>;
-            flavor = "balanced";
-            hold-trigger-on-release;
-            require-prior-idle-ms = <125>;
-            hold-trigger-key-positions = <34 38 33 32>;
         };
 
         layer_switcher: layer_switcher {
