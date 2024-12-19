@@ -229,10 +229,10 @@
 
         sym_layer {
             bindings = <
-&none      &kp GRAVE          &kp LT           &kp GT             &kp FSLH           &kp DOT          &kp PIPE   &kp TILDE          &kp LBKT           &kp RBKT          &kp AT              &trans
-&kp MINUS  &lh_hm LCTRL EXCL  &lh_hm LALT DQT  &lh_hm LSHFT PLUS  &lh_hm LCMD EQUAL  &kp HASH         &kp AMPS   &rh_hm RCMD COLON  &rh_hm RSHFT LPAR  &rh_hm RALT RPAR  &rh_hm RCTRL PRCNT  &none
-&trans     &kp BSLH           &kp BSLH         &kp UNDER          &kp MINUS          &kp STAR         &kp CARET  &kp DLLR           &kp LBRC           &kp RBRC          &kp QMARK           &none
-                                               &none              &kp SPACE                    &mo 6             &kp BSPC           &kp DEL
+&none      &kp GRAVE          &kp LT           &kp GT             &kp FSLH           &kp DOT           &kp PIPE   &kp TILDE          &kp LBKT           &kp RBKT          &kp AT              &trans
+&kp MINUS  &lh_hm LCTRL EXCL  &lh_hm LALT DQT  &lh_hm LSHFT PLUS  &lh_hm LCMD EQUAL  &kp MINUS         &kp AMPS   &rh_hm RCMD COLON  &rh_hm RSHFT LPAR  &rh_hm RALT RPAR  &rh_hm RCTRL PRCNT  &none
+&trans     &kp BSLH           &kp BSLH         &kp UNDER          &kp HASH           &kp STAR          &kp CARET  &kp DLLR           &kp LBRC           &kp RBRC          &kp QMARK           &none
+                                               &none              &kp SPACE                     &mo 6             &kp BSPC           &kp DEL
             >;
         };
 
@@ -253,10 +253,10 @@
             //                       |     | ADJ | BKSP |    |     |
 
             bindings = <
-&none   &sk LG(LCTRL)  &sk LG(LALT)  &none        &kp LG(A)  &none                     &none     &kp HOME   &kp UP     &kp END    &kp PG_UP &trans
-&none   &sk LCTRL      &sk LALT      &smart_shft  &sk LCMD   &caps_word                &kp SPACE &kp LEFT   &kp DOWN   &kp RIGHT  &kp PG_DN &none 
-&trans  &kp LG(Z)      &kp LG(X)     &kp LG(C)    &kp LG(V)  &kp LS(LG(Z))             &kp H     &kp J      &kp K      &kp L      &kp SPACE &trans
-                                     &kp ESC      &kp SPACE                 &kp ENTER            &kp BSPC   &kp DEL
+&none   &sk LG(LCTRL)  &sk LG(LALT)  &none        &kp LG(A)  &none                     &none      &kp HOME  &kp UP    &kp END    &kp PG_UP  &trans
+&none   &sk LCTRL      &sk LALT      &smart_shft  &sk LCMD   &caps_word                &kp SPACE  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN  &none
+&trans  &kp LG(Z)      &kp LG(X)     &kp LG(C)    &kp LG(V)  &kp LS(LG(Z))             &kp H      &kp J     &kp K     &kp L      &kp SPACE  &trans
+                                     &kp ESC      &kp SPACE                 &kp ENTER             &kp BSPC  &kp DEL
             >;
         };
 
@@ -268,10 +268,10 @@
             //                                              |     |     |     |     |     |
 
             bindings = <
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR           &none        &none         &kp C_VOL_UP  &none     &kp C_BRI_UP  &none 
-&none   &none         &none         &none         &none         &none                &none        &kp C_MUTE    &kp C_VOL_DN  &kp C_PP  &kp C_BRI_DN  &none 
-&none   &tog 1        &tog 2        &tog 3        &out OUT_USB  &out OUT_BLE         &bootloader  &none         &none         &none     &none  &kp LC(LG(Q))
-                                    &to 0         &none                       &none               &none         &none
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR           &none        &none       &kp C_VOL_UP  &none     &kp C_BRI_UP  &none
+&none   &none         &none         &none         &none         &none                &none        &kp C_MUTE  &kp C_VOL_DN  &kp C_PP  &kp C_BRI_DN  &none
+&none   &tog 1        &tog 2        &tog 3        &out OUT_USB  &out OUT_BLE         &bootloader  &none       &none         &none     &none         &kp LC(LG(Q))
+                                    &to 0         &none                       &none               &none       &none
             >;
         };
     };
