@@ -148,7 +148,7 @@
 &kp LBKT             &kp B           &lh_lt 6 L     &lh_lt 5 D           &kp W             &kp Q                                       &kp SQT         &kp F          &kp O           &rh_lt 6 U     &kp J           &kp RBKT
 &kp MINUS            &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T       &lh_hm LCMD S     &kp G                                       &kp K           &rh_hm RCMD H  &rh_hm RSHFT A  &rh_hm RALT E  &rh_hm RCTRL I  &kp FSLH
 &layer_switcher 4 4  &kp Z           &kp X          &lh_lt 5 M           &kp C             &kp V        &kp C_VOL_DN    &kp C_VOL_UP   &kp P           &kp Y          &kp DOT         &kp SEMI       &kp COMMA       &lang_switch
-                                                    &layer_switcher 4 4  &layer_gresc 7 0  &lt 8 SPACE  &lt 4 TAB       &mt RCTRL RET  &mt RSHFT BSPC  &kp TAB        &none
+                                                    &layer_switcher 4 4  &layer_gresc 7 0  &lt 8 SPACE  &lt 4 TAB       &mt RCTRL RET  &mt RSHFT BSPC  &kp TAB        &mo 9
             >;
 
             label = "Graphite";
@@ -248,9 +248,9 @@
         nav_layer {
             bindings = <
 &none      &none         &none         &none        &none      &none                                  &none     &none      &none      &none      &none  &none
-&none      &sk LC(LCMD)  &sk LA(LCMD)  &none        &kp LG(A)  &none                                  &none     &none      &none      &none      &none  &none
-&kp LG(A)  &sk LCTRL     &sk LALT      &smart_shft  &sk LCMD   &caps_word                             &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &none  &none
-&none      &kp LG(Z)     &kp LG(X)     &kp LG(C)    &kp LG(V)  &kp LS(LG(Z))  &kp K_MUTE    &kp C_PP  &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &none  &none
+&none      &sk LC(LCMD)  &sk LA(LCMD)  &none        &kp LG(A)  &none                                  &none     &kp HOME   &kp UP     &kp END    &kp PG_UP &none
+&kp LG(A)  &sk LCTRL     &sk LALT      &smart_shft  &sk LCMD   &caps_word                             &kp SPACE &kp LEFT   &kp DOWN   &kp RIGHT  &kp PG_DN &none
+&none      &kp LG(Z)     &kp LG(X)     &kp LG(C)    &kp LG(V)  &kp LS(LG(Z))  &kp K_MUTE    &kp C_PP  &kp H     &kp J      &kp K      &kp L      &kp SPACE  &none
                                        &none        &to 0      &kp SPACE      &kp TAB       &kp RET   &kp BSPC  &kp DEL    &none
             >;
 
@@ -260,8 +260,8 @@
         sys_layer {
             bindings = <
 &none  &none         &none         &none         &none         &none                           &none        &none         &none         &none     &none  &none
-&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR                      &none        &kp C_BRI_DN  &kp C_BRI_UP  &none     &none  &none
-&none  &none         &none         &none         &none         &none                           &kp C_MUTE   &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PP  &none  &none
+&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR                      &none        &none         &kp C_VOL_UP  &none     &kp C_BRI_UP  &none
+&none  &none         &none         &none         &none         &none                           &none        &kp C_MUTE    &kp C_VOL_DN  &kp C_PP  &kp C_BRI_DN  &none
 &none  &tog 1        &tog 2        &tog 3        &out OUT_USB  &out OUT_BLE  &trans    &trans  &bootloader  &none         &none         &none     &none  &none
                                    &none         &to 0         &none         &none     &none   &none        &none         &none
             >;
