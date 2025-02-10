@@ -211,11 +211,11 @@
 
         num_layer {
             bindings = <
-&none  &none      &none           &none      &none          &none                          &none      &none    &none   &none   &none      &none
-&none  &none      &lt 6 FSLH      &none      &kp STAR       &none                          &kp FSLH   &kp N7   &kp N8  &kp N9  &kp MINUS  &none
-&to 0  &sk LCTRL  &mt LALT MINUS  &sk LSHFT  &mt LCMD PLUS  &none                          &kp STAR   &kp N4   &kp N5  &kp N6  &kp PLUS   &none
-&none  &none      &none           &none      &none          &none      &trans     &trans   &kp UNDER  &kp N1   &kp N2  &kp N3  &kp COMMA  &trans
-                                  &none      &kp ESC        &kp SPACE  &kp TAB    &kp RET  &kp 0   &kp DOT  &none
+&none  &none      &none          &none      &none          &none                          &none      &none    &none   &none   &none      &none
+&none  &none      &lt 6 LT       &none      &kp GT         &none                          &kp FSLH   &kp N7   &kp N8  &kp N9  &kp MINUS  &none
+&to 0  &sk LCTRL  &mt LALT LPAR  &sk LSHFT  &mt LCMD RPAR  &none                          &kp STAR   &kp N4   &kp N5  &kp N6  &kp PLUS   &none
+&none  &none      &none          &none      &none          &none      &trans     &trans   &kp UNDER  &kp N1   &kp N2  &kp N3  &kp COMMA  &trans
+                                 &none      &kp ESC        &kp SPACE  &kp TAB    &kp RET  &kp N0     &kp DOT  &none
             >;
 
             label = "Num";
@@ -247,11 +247,11 @@
 
         nav_layer {
             bindings = <
-&none      &none         &none         &none        &none      &none                                  &none     &none      &none      &none      &none  &none
-&none      &sk LC(LCMD)  &sk LA(LCMD)  &none        &kp LG(A)  &none                                  &none     &kp HOME   &kp UP     &kp END    &kp PG_UP &none
-&kp LG(A)  &sk LCTRL     &sk LALT      &smart_shft  &sk LCMD   &caps_word                             &kp SPACE &kp LEFT   &kp DOWN   &kp RIGHT  &kp PG_DN &none
-&none      &kp LG(Z)     &kp LG(X)     &kp LG(C)    &kp LG(V)  &kp LS(LG(Z))  &kp K_MUTE    &kp C_PP  &kp H     &kp J      &kp K      &kp L      &kp SPACE  &none
-                                       &none        &to 0      &kp SPACE      &kp TAB       &kp RET   &kp BSPC  &kp DEL    &none
+&none      &none         &none         &none        &none      &none                                  &none      &none     &none     &none      &none      &none
+&none      &sk LC(LCMD)  &sk LA(LCMD)  &none        &kp LG(A)  &none                                  &none      &kp HOME  &kp UP    &kp END    &kp PG_UP  &none
+&kp LG(A)  &sk LCTRL     &sk LALT      &smart_shft  &sk LCMD   &caps_word                             &kp SPACE  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN  &none
+&none      &kp LG(Z)     &kp LG(X)     &kp LG(C)    &kp LG(V)  &kp LS(LG(Z))  &kp K_MUTE    &kp C_PP  &kp H      &kp J     &kp K     &kp L      &kp SPACE  &none
+                                       &none        &to 0      &kp SPACE      &kp TAB       &kp RET   &kp BSPC   &kp DEL   &none
             >;
 
             label = "Nav";
@@ -259,11 +259,11 @@
 
         sys_layer {
             bindings = <
-&none  &none         &none         &none         &none         &none                           &none        &none         &none         &none     &none  &none
-&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR                      &none        &none         &kp C_VOL_UP  &none     &kp C_BRI_UP  &none
-&none  &none         &none         &none         &none         &none                           &none        &kp C_MUTE    &kp C_VOL_DN  &kp C_PP  &kp C_BRI_DN  &none
-&none  &tog 1        &tog 2        &tog 3        &out OUT_USB  &out OUT_BLE  &trans    &trans  &bootloader  &none         &none         &none     &none  &none
-                                   &none         &to 0         &none         &none     &none   &none        &none         &none
+&none  &none         &none         &none         &none         &none                           &none        &none       &none         &none     &none         &none
+&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR                      &none        &none       &kp C_VOL_UP  &none     &kp C_BRI_UP  &none
+&none  &none         &none         &none         &none         &none                           &none        &kp C_MUTE  &kp C_VOL_DN  &kp C_PP  &kp C_BRI_DN  &none
+&none  &tog 1        &tog 2        &tog 3        &out OUT_USB  &out OUT_BLE  &trans    &trans  &bootloader  &none       &none         &none     &none         &none
+                                   &none         &to 0         &none         &none     &none   &none        &none       &none
             >;
 
             label = "Sys";
