@@ -213,9 +213,9 @@
             bindings = <
 &none  &none      &none          &none      &none          &none                          &none      &none    &none   &none   &none      &none
 &none  &none      &lt 6 LT       &none      &kp GT         &none                          &kp FSLH   &kp N7   &kp N8  &kp N9  &kp MINUS  &none
-&to 0  &sk LCTRL  &mt LALT LPAR  &sk LSHFT  &mt LCMD RPAR  &none                          &kp STAR   &kp N4   &kp N5  &kp N6  &kp PLUS   &none
-&none  &none      &none          &none      &none          &none      &trans     &trans   &kp UNDER  &kp N1   &kp N2  &kp N3  &kp COMMA  &trans
-                                 &none      &kp ESC        &kp SPACE  &kp TAB    &kp RET  &kp N0     &kp DOT  &none
+&to 0  &sk LCTRL  &mt LALT LPAR  &sk LSHFT  &mt LCMD RPAR  &none                          &kp DOT    &kp N4   &kp N5  &kp N6  &kp N0     &kp COMMA
+&none  &none      &none          &none      &none          &none      &trans     &trans   &kp STAR   &kp N1   &kp N2  &kp N3  &kp PLUS   &trans
+                                 &none      &kp ESC        &kp SPACE  &kp TAB    &kp RET  &kp BSPC   &kp DEL  &none
             >;
 
             label = "Num";
