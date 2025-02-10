@@ -220,10 +220,10 @@
 
         num_layer {
             bindings = <
-&none   &none      &lt 6 FSLH      &none      &kp STAR       &none           &none      &kp N7    &kp N8   &kp N9  &kp COMMA  &none
-&none   &sk LCTRL  &mt LALT MINUS  &sk LSHFT  &mt LCMD PLUS  &none           &kp UNDER  &kp N1    &kp N2   &kp N3  &kp N0     &none
-&trans  &none      &none           &none      &none          &none           &none      &kp N4    &kp N5   &kp N6  &kp DOT    &none
-                                   &kp ESC    &kp SPACE             &kp RET             &kp BSPC  &kp DEL
+&none   &none      &lt 6 FSLH      &none      &kp STAR       &none           &kp FSLH   &kp N7   &kp N8  &kp N9  &kp MINUS  &none
+&none   &sk LCTRL  &mt LALT MINUS  &sk LSHFT  &mt LCMD PLUS  &none           &kp STAR   &kp N4   &kp N5  &kp N6  &kp PLUS   &none
+&trans  &none      &none           &none      &none          &none           &kp UNDER  &kp N1   &kp N2  &kp N3  &kp COMMA  &none
+                                   &kp ESC    &kp SPACE             &kp RET             &kp 0  &kp DOT
             >;
         };
 
@@ -239,8 +239,8 @@
         fun_layer {
             bindings = <
 &none   &none      &none      &kp LG(BSLH)  &kp LS(LG(N4))  &kp LS(LG(N5))         &kp F12  &kp F7  &kp F8  &kp F9  &none  &trans
-&none   &sk LCTRL  &sk LALT   &smart_shft   &sk LCMD        &caps_word             &kp F11  &kp F1  &kp F2  &kp F3  &none  &none
-&trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)     &kp LG(V)       &kp LG(LS(Z))          &kp F10  &kp F4  &kp F5  &kp F6  &none  &kp LC(LG(Q))
+&none   &sk LCTRL  &sk LALT   &smart_shft   &sk LCMD        &caps_word             &kp F11  &kp F4  &kp F5  &kp F6  &none  &none
+&trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)     &kp LG(V)       &kp LG(LS(Z))          &kp F10  &kp F1  &kp F2  &kp F3  &none  &kp LC(LG(Q))
                               &to 0         &none                           &none           &none   &mo 9
             >;
         };

@@ -212,10 +212,10 @@
         num_layer {
             bindings = <
 &none  &none      &none           &none      &none          &none                          &none      &none    &none   &none   &none      &none
-&none  &none      &lt 6 FSLH      &none      &kp STAR       &none                          &none      &kp N7   &kp N8  &kp N9  &kp COMMA  &none
-&to 0  &sk LCTRL  &mt LALT MINUS  &sk LSHFT  &mt LCMD PLUS  &none                          &kp UNDER  &kp N1   &kp N2  &kp N3  &kp N0     &none
-&none  &none      &none           &none      &none          &none      &trans     &trans   &none      &kp N4   &kp N5  &kp N6  &kp DOT    &trans
-                                  &none      &kp ESC        &kp SPACE  &kp TAB    &kp RET  &kp BSPC   &kp DEL  &none
+&none  &none      &lt 6 FSLH      &none      &kp STAR       &none                          &kp FSLH   &kp N7   &kp N8  &kp N9  &kp MINUS  &none
+&to 0  &sk LCTRL  &mt LALT MINUS  &sk LSHFT  &mt LCMD PLUS  &none                          &kp STAR   &kp N4   &kp N5  &kp N6  &kp PLUS   &none
+&none  &none      &none           &none      &none          &none      &trans     &trans   &kp UNDER  &kp N1   &kp N2  &kp N3  &kp COMMA  &trans
+                                  &none      &kp ESC        &kp SPACE  &kp TAB    &kp RET  &kp 0   &kp DOT  &none
             >;
 
             label = "Num";
@@ -237,8 +237,8 @@
             bindings = <
 &none  &none      &none      &none         &none           &none                                   &none    &none   &none   &none   &none  &none
 &none  &none      &none      &kp LG(BSLH)  &kp LS(LG(N4))  &kp LS(LG(N5))                          &kp F12  &kp F7  &kp F8  &kp F9  &none  &none
-&none  &sk LCTRL  &sk LALT   &smart_shft   &sk LCMD        &caps_word                              &kp F11  &kp F1  &kp F2  &kp F3  &none  &none
-&none  &kp LG(Z)  &kp LG(X)  &kp LG(C)     &kp LG(V)       &kp LG(LS(Z))   &kp K_MUTE    &kp C_PP  &kp F10  &kp F4  &kp F5  &kp F6  &none  &kp LC(LG(Q))
+&none  &sk LCTRL  &sk LALT   &smart_shft   &sk LCMD        &caps_word                              &kp F11  &kp F4  &kp F5  &kp F6  &none  &none
+&none  &kp LG(Z)  &kp LG(X)  &kp LG(C)     &kp LG(V)       &kp LG(LS(Z))   &kp K_MUTE    &kp C_PP  &kp F10  &kp F1  &kp F2  &kp F3  &none  &kp LC(LG(Q))
                              &none         &to 0           &lt 8 SPACE     &kp RET       &none     &none    &mo 9   &none
             >;
 
