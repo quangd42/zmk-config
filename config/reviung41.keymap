@@ -220,10 +220,10 @@
 
         num_layer {
             bindings = <
-&none   &none      &lt 6 FSLH      &none      &kp STAR       &none           &kp FSLH   &kp N7   &kp N8  &kp N9  &kp MINUS  &none
-&none   &sk LCTRL  &mt LALT MINUS  &sk LSHFT  &mt LCMD PLUS  &none           &kp STAR   &kp N4   &kp N5  &kp N6  &kp PLUS   &none
-&trans  &none      &none           &none      &none          &none           &kp UNDER  &kp N1   &kp N2  &kp N3  &kp COMMA  &none
-                                   &kp ESC    &kp SPACE             &kp RET             &kp 0  &kp DOT
+&none   &none      &lt 6 LT       &none      &kp GT         &none           &kp FSLH   &kp N7  &kp N8   &kp N9  &kp MINUS  &none
+&none   &sk LCTRL  &mt LALT LPAR  &sk LSHFT  &mt LCMD RPAR  &none           &kp STAR   &kp N4  &kp N5   &kp N6  &kp PLUS   &none
+&trans  &none      &none          &none      &none          &none           &kp UNDER  &kp N1  &kp N2   &kp N3  &kp COMMA  &none
+                                  &kp ESC    &kp SPACE             &kp RET             &kp N0  &kp DOT
             >;
         };
 
