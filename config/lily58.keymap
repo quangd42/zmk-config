@@ -143,8 +143,8 @@
             bindings = <&lh_lt 5 D>, <&kp D>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT)>;
-            keep-mods = <(MOD_RSFT)>;
+            mods = <(MOD_RCTL)>;
+            keep-mods = <(MOD_RCTL)>;
         };
 
         repeat_space: repeat_space {
