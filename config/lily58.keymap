@@ -126,6 +126,36 @@
             tapping-term-ms = <200>;
             flavor = "balanced";
         };
+
+        repeat_lt_sym_u: repeat_lt_sym_u {
+            compatible = "zmk,behavior-mod-morph";
+            label = "REPEAT_LT_SYM_U";
+            bindings = <&rh_lt 6 U>, <&kp U>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
+        };
+
+        repeat_lt_num_d: repeat_lt_num_d {
+            compatible = "zmk,behavior-mod-morph";
+            label = "REPEAT_LT_NUM_D";
+            bindings = <&lh_lt 5 D>, <&kp D>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+            keep-mods = <(MOD_RSFT)>;
+        };
+
+        repeat_space: repeat_space {
+            compatible = "zmk,behavior-mod-morph";
+            label = "REPEAT_SPACE";
+            bindings = <&lt 8 SPACE>, <&kp SPACE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+            keep-mods = <(MOD_RSFT)>;
+        };
     };
 
     macros {
@@ -145,10 +175,10 @@
         graphite_layer {
             bindings = <
 &kp EQUAL            &kp N1          &kp N2         &kp N3               &kp N4            &kp N5                                      &kp N6          &kp N7         &kp N8          &kp N9         &kp N0          &kp BSLH
-&kp LBKT             &kp B           &lh_lt 6 L     &lh_lt 5 D           &kp W             &kp Q                                       &kp SQT         &kp F          &kp O           &rh_lt 6 U     &kp J           &kp RBKT
+&kp LBKT             &kp B           &lh_lt 6 L     &repeat_lt_num_d     &kp W             &kp Q                                       &kp SQT         &kp F          &kp O           &repeat_lt_sym_u  &kp J           &kp RBKT
 &kp MINUS            &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T       &lh_hm LCMD S     &kp G                                       &kp K           &rh_hm RCMD H  &rh_hm RSHFT A  &rh_hm LALT E  &rh_hm RCTRL I  &kp FSLH
 &layer_switcher 4 4  &kp Z           &kp X          &lh_lt 5 M           &kp C             &kp V        &kp C_VOL_DN    &kp C_VOL_UP   &kp P           &kp Y          &kp DOT         &kp SEMI       &kp COMMA       &lang_switch
-                                                    &layer_switcher 4 4  &layer_gresc 7 0  &lt 8 SPACE  &lt 4 TAB       &mt RCTRL RET  &mt RSHFT BSPC  &kp TAB        &mo 9
+                                                    &layer_switcher 4 4  &layer_gresc 7 0  &repeat_space  &lt 4 TAB       &mt RCTRL RET  &mt RSHFT BSPC  &kp TAB        &mo 9
             >;
 
             label = "Graphite";
