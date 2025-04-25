@@ -220,10 +220,10 @@
 
         num_l {
             bindings = <
-&none      &kp MINUS  &kp N7  &kp N8  &kp N9   &kp FSLH           &none     &none     &none      &none     &none      &none  
-&kp UNDER  &kp N0     &kp N4  &kp N5  &kp N6   &kp BSPC           &none     &kp RGUI  &kp RSHFT  &kp LALT  &kp RCTRL  &none  
-&none      &kp PLUS   &kp N1  &kp N2  &kp N3   &kp STAR           &none     &none     &none      &none     &none      &trans 
-                                  &kp ESC    &kp SPACE             &kp RET             &kp BACKSPACE  &kp DEL
+&kp TAB    &kp FSLH  &kp N7  &kp N8   &kp N9     &kp FSLH           &none  &none          &none      &none     &kp BSPC   &kp BSPC
+&kp MINUS  &kp N0    &kp N4  &kp N5   &kp N6     &kp PLUS           &none  &kp RGUI       &kp RSHFT  &kp LALT  &kp RCTRL  &none
+&none      &kp N0    &kp N1  &kp N2   &kp N3     &kp STAR           &none  &none          &none      &none     &none      &trans
+                             &kp DOT  &kp SPACE            &kp RET         &kp BACKSPACE  &kp DEL
             >;
         };
 
@@ -262,10 +262,10 @@
             //                       |     | ADJ | BKSP |    |     |
 
             bindings = <
-&none   &sk LG(LCTRL)  &sk LG(LALT)  &none      &kp LG(A)  &none                     &none  &kp HOME  &kp UP    &kp END    &kp PG_UP  &trans
-&none   &sk LCTRL      &sk LALT      &sk LSHFT  &sk LCMD   &caps_word                &none  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN  &none
-&trans  &kp LG(Z)      &kp LG(X)     &kp LG(C)  &kp LG(V)  &kp LS(LG(Z))             &kp H  &kp J     &kp K     &kp L      &none      &trans
-                                     &kp ESC    &kp SPACE                 &kp ENTER         &kp BSPC  &kp DEL
+&none   &sk LG(LCTRL)  &sk LG(LALT)  &none      &kp LG(A)  &none                     &none     &kp PG_UP  &kp UP    &kp PG_DN  &none    &trans
+&none   &sk LCTRL      &sk LALT      &sk LSHFT  &sk LCMD   &caps_word                &kp HOME  &kp LEFT   &kp DOWN  &kp RIGHT  &kp END  &none
+&trans  &kp LG(Z)      &kp LG(X)     &kp LG(C)  &kp LG(V)  &kp LS(LG(Z))             &kp H     &kp J      &kp K     &kp L      &none    &trans
+                                     &kp ESC    &kp SPACE                 &kp ENTER            &kp BSPC   &kp DEL
             >;
         };
 
