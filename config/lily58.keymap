@@ -256,11 +256,11 @@
 
         nav_layer {
             bindings = <
-&none  &none         &none         &none      &none      &none                                  &none     &none     &none     &none      &none      &none
-&none  &sk LC(LCMD)  &sk LA(LCMD)  &none      &kp LG(A)  &none                                  &none     &kp HOME  &kp UP    &kp END    &kp PG_UP  &none
-&none  &sk LCTRL     &sk LALT      &sk LSHFT  &sk LCMD   &caps_word                             &none     &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN  &none
-&none  &kp LG(Z)     &kp LG(X)     &kp LG(C)  &kp LG(V)  &kp LS(LG(Z))  &kp K_MUTE    &kp C_PP  &kp H     &kp J     &kp K     &kp L      &none      &none
-                                   &none      &to 0      &kp SPACE      &kp TAB       &kp RET   &kp BSPC  &kp DEL   &none
+&none  &none         &none         &none      &none      &none                                  &none     &none      &none     &none      &none    &none
+&none  &sk LC(LCMD)  &sk LA(LCMD)  &none      &kp LG(A)  &none                                  &none     &kp PG_UP  &kp UP    &kp PG_DN  &none    &none
+&none  &sk LCTRL     &sk LALT      &sk LSHFT  &sk LCMD   &caps_word                             &kp HOME  &kp LEFT   &kp DOWN  &kp RIGHT  &kp END  &none
+&none  &kp LG(Z)     &kp LG(X)     &kp LG(C)  &kp LG(V)  &kp LS(LG(Z))  &kp K_MUTE    &kp C_PP  &kp H     &kp J      &kp K     &kp L      &none    &none
+                                   &none      &to 0      &kp SPACE      &kp TAB       &kp RET   &kp BSPC  &kp DEL    &none
             >;
 
             label = "Nav";
