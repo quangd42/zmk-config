@@ -211,11 +211,11 @@
         num_l {
             label = "NumL";
             bindings = <
-&none      &none      &none   &none   &none    &none                          &none     &none     &none      &none     &none      &none
-&none      &kp UNDER  &kp N7  &kp N8  &kp N9   &kp FSLH                       &none     &none     &none      &none     &none      &none
-&kp MINUS  &kp N0     &kp N4  &kp N5  &kp N6   &kp BSPC                       &none     &kp RGUI  &kp RSHFT  &kp LALT  &kp RCTRL  &none
-&none      &kp PLUS   &kp N1  &kp N2  &kp N3   &kp STAR   &trans     &trans   &none     &none     &none      &none     &none      &trans
-                              &none   &kp DOT  &kp SPACE  &kp TAB    &kp RET  &kp BSPC  &kp DEL   &none
+&none      &none     &none   &none   &none    &none                          &none     &none     &none      &none     &none      &none
+&none      &kp FSLH  &kp N7  &kp N8  &kp N9   &kp FSLH                       &none     &none     &none      &none     &kp BSPC   &kp BSPC
+&kp MINUS  &kp N0    &kp N4  &kp N5  &kp N6   &kp PLUS                       &none     &kp RGUI  &kp RSHFT  &kp LALT  &kp RCTRL  &none
+&none      &kp N0    &kp N1  &kp N2  &kp N3   &kp STAR   &trans     &trans   &none     &none     &none      &none     &none      &trans
+                             &none   &kp DOT  &kp SPACE  &kp TAB    &kp RET  &kp BSPC  &kp DEL   &none
             >;
         };
 
