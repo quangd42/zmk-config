@@ -178,7 +178,7 @@
 &kp LBKT   &kp B           &lh_lt 4 L     &repeat_lt_num_d  &kp W             &kp Q                                        &kp SQT         &kp F          &kp O           &repeat_lt_sym_u  &kp J           &kp RBKT
 &kp MINUS  &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S     &kp G                                        &kp K           &rh_hm RCMD H  &rh_hm RSHFT A  &rh_hm LALT E     &rh_hm RCTRL I  &kp FSLH
 &kp BSLH   &kp Z           &kp X          &kp M             &kp C             &kp V          &kp C_VOL_DN    &kp C_VOL_UP  &kp P           &kp Y          &kp DOT         &kp SEMI          &kp COMMA       &lang_switch
-                                          &kp LCTRL         &layer_gresc 5 0  &repeat_space  &lt 8 TAB       &lt 3 RET     &mt RSHFT BSPC  &lt 6 TAB      &mo 8
+                                          &kp LCTRL         &layer_gresc 5 0  &repeat_space  &lt 4 TAB       &lt 4 RET     &mt RSHFT BSPC  &lt 3 TAB      &mo 8
             >;
 
             label = "Graphite";
