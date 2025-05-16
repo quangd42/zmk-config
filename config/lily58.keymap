@@ -190,7 +190,7 @@
 &kp LBKT   &kp Q   &lh_lt 4 W  &lh_lt 2 E  &kp R             &kp T                                        &kp Y           &kp U    &kp I      &rh_lt 4 O  &kp P     &kp RBKT
 &trans     &kp A   &kp S       &kp D       &kp F             &kp G                                        &kp H           &kp J    &kp K      &kp L       &kp SEMI  &kp APOS
 &trans     &kp Z   &kp X       &kp C       &kp V             &kp B          &kp C_VOL_DN    &kp C_VOL_UP  &kp N           &kp M    &kp COMMA  &kp DOT     &kp FSLH  &trans
-                               &trans      &layer_gresc 5 0  &repeat_space  &lt 8 TAB       &lt 3 ENTER   &mt RSHFT BSPC  &kp TAB  &none
+                               &trans      &trans            &trans         &trans          &trans        &trans          &trans   &trans
             >;
 
             label = "Qwrt";

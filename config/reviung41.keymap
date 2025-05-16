@@ -205,7 +205,7 @@
 &none      &kp Q  &lh_lt 4 W  &lh_lt 2 E        &kp R        &kp T                 &kp Y  &kp U           &kp I      &rh_lt 4 O  &kp P     &trans
 &kp MINUS  &kp A  &kp S       &kp D             &kp F        &kp G                 &kp H  &kp J           &kp K      &kp L       &kp SEMI  &kp SQT
 &trans     &kp Z  &kp X       &kp C             &kp V        &kp B                 &kp N  &kp M           &kp COMMA  &kp DOT     &kp FSLH  &trans
-                              &layer_gresc 5 0  &lt 7 SPACE         &mt LCTRL RET         &mt RSHFT BSPC  &kp TAB
+                              &trans  &trans         &trans           &trans  &trans
             >;
         };
 
