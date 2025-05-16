@@ -82,10 +82,8 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <280>;
-            quick-tap-ms = <200>;
-            flavor = "balanced";
+            flavor = "hold-preferred";
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 36 37 38>;
-            hold-trigger-on-release;
             require-prior-idle-ms = <75>;
         };
 
@@ -96,10 +94,8 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <280>;
-            quick-tap-ms = <200>;
-            flavor = "balanced";
+            flavor = "hold-preferred";
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40>;
-            hold-trigger-on-release;
             require-prior-idle-ms = <75>;
         };
 
@@ -163,6 +159,16 @@
             mods = <(MOD_RSFT)>;
             keep-mods = <(MOD_RSFT)>;
         };
+
+        thumb_lt: thumb_lt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "THUMB_LT";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            flavor = "hold-preferred";
+        };
     };
 
     macros {
@@ -187,10 +193,10 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-&kp LBKT   &kp B           &lh_lt 4 L     &repeat_lt_num_d  &kp W          &kp Q             &kp SQT  &kp F           &kp O           &repeat_lt_sym_u  &kp J           &kp RBKT
-&kp MINUS  &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S  &kp G             &kp K    &rh_hm RCMD H   &rh_hm RSHFT A  &rh_hm LALT E     &rh_hm RCTRL I  &kp FSLH
-&mt LSHFT BSLH   &kp Z           &kp X          &kp M             &kp C          &kp V             &kp P    &kp Y           &kp DOT         &kp SEMI          &kp COMMA       &m_lang_switch_equal
-                                          &layer_gresc 5 0  &repeat_space         &lt 4 RET           &lt 3 BSPC  &lt 6 TAB
+&kp LBKT        &kp B           &lh_lt 4 L     &repeat_lt_num_d  &kp W          &kp Q             &kp SQT  &kp F          &kp O           &repeat_lt_sym_u  &kp J           &kp RBKT
+&kp MINUS       &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S  &kp G             &kp K    &rh_hm RCMD H  &rh_hm RSHFT A  &rh_hm LALT E     &rh_hm RCTRL I  &kp FSLH
+&mt LSHFT BSLH  &kp Z           &kp X          &kp M             &kp C          &kp V             &kp P    &kp Y          &kp DOT         &kp SEMI          &kp COMMA       &m_lang_switch_equal
+                                               &layer_gresc 5 0  &repeat_space         &lt 4 RET           &lt 3 BSPC     &lt 6 TAB
             >;
         };
 
@@ -202,10 +208,10 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-&none      &kp Q  &lh_lt 4 W  &lh_lt 2 E        &kp R        &kp T                 &kp Y  &kp U           &kp I      &rh_lt 4 O  &kp P     &trans
-&kp MINUS  &kp A  &kp S       &kp D             &kp F        &kp G                 &kp H  &kp J           &kp K      &kp L       &kp SEMI  &kp SQT
-&trans     &kp Z  &kp X       &kp C             &kp V        &kp B                 &kp N  &kp M           &kp COMMA  &kp DOT     &kp FSLH  &trans
-                              &trans  &trans         &trans           &trans  &trans
+&none      &kp Q  &lh_lt 4 W  &lh_lt 2 E  &kp R   &kp T          &kp Y  &kp U   &kp I      &rh_lt 4 O  &kp P     &trans
+&kp MINUS  &kp A  &kp S       &kp D       &kp F   &kp G          &kp H  &kp J   &kp K      &kp L       &kp SEMI  &kp SQT
+&trans     &kp Z  &kp X       &kp C       &kp V   &kp B          &kp N  &kp M   &kp COMMA  &kp DOT     &kp FSLH  &trans
+                              &trans      &trans         &trans         &trans  &trans
             >;
         };
 
