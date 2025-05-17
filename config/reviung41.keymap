@@ -169,6 +169,17 @@
             tapping-term-ms = <280>;
             flavor = "hold-preferred";
         };
+
+        thumb_ls: thumb_ls {
+            compatible = "zmk,behavior-hold-tap";
+            label = "THUMB_LS";
+            bindings = <&mo>, <&sk>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <130>;
+            flavor = "hold-preferred";
+            retro-tap;
+        };
     };
 
     macros {
@@ -186,6 +197,8 @@
         bspc {
             bindings = <&kp BSPC>;
             key-positions = <8 9>;
+            require-prior-idle-ms = <60>;
+            layers = <0 1>;
         };
     };
 
@@ -200,10 +213,10 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-&kp LBKT        &kp B           &lh_lt 4 L     &repeat_lt_num_d  &kp W          &kp Q                   &kp SQT  &kp F             &kp O           &repeat_lt_sym_u  &kp J           &kp RBKT
-&kp MINUS       &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S  &kp G                   &kp K    &rh_hm RCMD H     &rh_hm RSHFT A  &rh_hm LALT E     &rh_hm RCTRL I  &kp FSLH
-&mt LSHFT BSLH  &kp Z           &kp X          &kp M             &kp C          &kp V                   &kp P    &kp Y             &kp DOT         &kp SEMI          &kp COMMA       &m_lang_switch_equal
-                                               &layer_gresc 5 0  &repeat_space         &thumb_lt 4 RET           &thumb_lt 3 BSPC  &lt 6 TAB
+&kp LBKT        &kp B           &lh_lt 4 L     &repeat_lt_num_d  &kp W          &kp Q                   &kp SQT  &kp F              &kp O           &repeat_lt_sym_u  &kp J           &kp RBKT
+&kp MINUS       &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S  &kp G                   &kp K    &rh_hm RCMD H      &rh_hm RSHFT A  &rh_hm LALT E     &rh_hm RCTRL I  &kp FSLH
+&mt LSHFT BSLH  &kp Z           &kp X          &kp M             &kp C          &kp V                   &kp P    &kp Y              &kp DOT         &kp SEMI          &kp COMMA       &m_lang_switch_equal
+                                               &layer_gresc 5 0  &repeat_space         &thumb_lt 4 RET           &thumb_ls 3 LSHFT  &lt 6 TAB
             >;
         };
 
