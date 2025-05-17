@@ -180,7 +180,14 @@
         };
     };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        bspc {
+            bindings = <&kp BSPC>;
+            key-positions = <8 9>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
