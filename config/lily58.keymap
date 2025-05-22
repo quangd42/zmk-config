@@ -186,8 +186,8 @@
         graphite_layer {
             bindings = <
 &kp EQUAL  &kp N1          &kp N2         &kp N3            &kp N4            &kp N5                                       &kp N6          &kp N7         &kp N8          &kp N9            &kp N0          &kp BSLH
-&kp LBKT   &kp B           &lh_lt 4 L     &kp D             &kp W             &kp Q                                        &kp SQT         &kp F          &kp O           &repeat_lt_sym_u  &kp J           &kp RBKT
-&kp MINUS  &lh_hm LSHFT N  &lh_hm LALT R  &lh_hm LCTRL T    &lh_hm LCMD S     &kp G                                        &kp K           &rh_hm RCMD H  &rh_hm RCTRL A  &rh_hm LALT E     &rh_hm RSHFT I  &kp FSLH
+&kp LBKT   &kp B           &lh_lt 4 L     &kp D  &kp W             &kp Q                                        &kp SQT         &kp F          &kp O           &repeat_lt_sym_u  &kp J           &kp RBKT
+&kp MINUS  &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T    &lh_hm LCMD S     &kp G                                        &kp K           &rh_hm RCMD H  &rh_hm RSHFT A  &rh_hm LALT E     &rh_hm RCTRL I  &kp FSLH
 &kp BSLH   &kp Z           &kp X          &kp M             &kp C             &kp V          &kp C_VOL_DN    &kp C_VOL_UP  &kp P           &kp Y          &kp DOT         &kp SEMI          &kp COMMA       &lang_switch
                                           &kp LCTRL         &layer_gresc 5 0  &repeat_space  &lt 8 TAB       &thumb_lt 3 RET     &thumb_mt RSHFT BSPC  &lt 6 TAB      &mo 8
             >;
@@ -211,7 +211,7 @@
             bindings = <
 &none  &none      &none          &none      &none          &none                          &none      &none    &none   &none   &none      &none
 &none  &none      &lt 4 LT       &none      &kp GT         &none                          &none      &kp N7   &kp N8  &kp N9  &kp MINUS  &none
-&none  &sk LSHFT  &mt LALT LPAR  &sk LCTRL  &mt LCMD RPAR  &none                          &kp UNDER  &kp N4   &kp N5  &kp N6  &kp N0     &kp FSLH
+&none  &sk LCTRL  &mt LALT LPAR  &sk LSHFT  &mt LCMD RPAR  &none                          &kp UNDER  &kp N4   &kp N5  &kp N6  &kp N0     &kp FSLH
 &none  &none      &none          &none      &none          &none      &trans     &trans   &kp STAR   &kp N1   &kp N2  &kp N3  &kp PLUS   &trans
                                  &none      &kp ESC        &kp SPACE  &kp TAB    &kp RET  &kp BSPC   &kp DEL  &none
             >;
@@ -224,7 +224,7 @@
             bindings = <
 &none      &none     &none   &none   &none    &none                          &none     &none     &none      &none     &none      &none
 &none      &kp FSLH  &kp N7  &kp N8  &kp N9   &kp FSLH                       &none     &none     &none      &none     &kp BSPC   &kp BSPC
-&kp MINUS  &kp N0    &kp N4  &kp N5  &kp N6   &kp PLUS                       &none     &kp RGUI  &kp RCTRL  &kp LALT  &kp RSHFT  &none
+&kp MINUS  &kp N0    &kp N4  &kp N5  &kp N6   &kp PLUS                       &none     &kp RGUI  &kp RSHFT  &kp LALT  &kp RCTRL  &none
 &none      &kp N0    &kp N1  &kp N2  &kp N3   &kp STAR   &trans     &trans   &none     &none     &none      &none     &none      &trans
                              &none   &kp DOT  &kp SPACE  &kp TAB    &kp RET  &kp BSPC  &kp DEL   &none
             >;
@@ -234,7 +234,7 @@
             bindings = <
 &kp N1  &kp N2             &kp N3           &kp N4             &kp N5             &none                              &none      &kp N6             &kp N7             &kp N8            &kp N9              &kp N0
 &none   &kp GRAVE          &kp LT           &kp GT             &kp FSLH           &kp DOT                            &kp PIPE   &kp TILDE          &kp LBKT           &kp RBKT          &kp AT              &none
-&none   &lh_hm LSHFT EXCL  &lh_hm LALT DQT  &lh_hm LCTRL PLUS  &lh_hm LCMD EQUAL  &kp MINUS                          &kp AMPS   &rh_hm RCMD COLON  &rh_hm RCTRL LPAR  &rh_hm LALT RPAR  &rh_hm RSHFT PRCNT  &none
+&none   &lh_hm LCTRL EXCL  &lh_hm LALT DQT  &lh_hm LSHFT PLUS  &lh_hm LCMD EQUAL  &kp MINUS                          &kp AMPS   &rh_hm RCMD COLON  &rh_hm RSHFT LPAR  &rh_hm LALT RPAR  &rh_hm RCTRL PRCNT  &none
 &none   &kp BSLH           &kp BSLH         &kp UNDER          &kp HASH           &kp STAR   &kp K_MUTE    &kp C_PP  &kp CARET  &kp DLLR           &kp LBRC           &kp RBRC          &kp QMARK           &trans
                                             &none              &trans             &trans     &trans        &trans    &trans     &trans             &none
             >;
@@ -246,7 +246,7 @@
             bindings = <
 &none  &none      &none      &none         &none           &none                                   &none    &none   &none   &none   &none  &none
 &none  &none      &none      &kp LG(BSLH)  &kp LS(LG(N4))  &kp LS(LG(N5))                          &kp F12  &kp F7  &kp F8  &kp F9  &none  &none
-&none  &sk LSHFT  &sk LALT   &sk LCTRL     &sk LCMD        &caps_word                              &kp F11  &kp F4  &kp F5  &kp F6  &none  &none
+&none  &sk LCTRL  &sk LALT   &sk LSHFT     &sk LCMD        &caps_word                              &kp F11  &kp F4  &kp F5  &kp F6  &none  &none
 &none  &kp LG(Z)  &kp LG(X)  &kp LG(C)     &kp LG(V)       &kp LG(LS(Z))   &kp K_MUTE    &kp C_PP  &kp F10  &kp F1  &kp F2  &kp F3  &none  &kp LC(LG(Q))
                              &none         &trans          &trans          &trans        &trans    &trans   &mo 8   &none
             >;
@@ -259,7 +259,7 @@
             bindings = <
 &none  &none    &none   &none   &none   &none                               &none   &none     &none      &none     &none      &none
 &none  &kp F12  &kp F7  &kp F8  &kp F9  &none                               &none   &none     &none      &none     &none      &none
-&none  &kp F11  &kp F4  &kp F5  &kp F6  &caps_word                          &none   &kp RGUI  &kp RCTRL  &kp LALT  &kp RSHFT  &none
+&none  &kp F11  &kp F4  &kp F5  &kp F6  &caps_word                          &none   &kp RGUI  &kp RSHFT  &kp LALT  &kp RCTRL  &none
 &none  &kp F10  &kp F1  &kp F2  &kp F3  &none       &kp K_MUTE    &kp C_PP  &none   &none     &none      &none     &none      &trans
                         &none   &none   &trans      &trans        &trans    &trans  &trans    &none
             >;
@@ -269,7 +269,7 @@
             bindings = <
 &none  &none         &none         &none      &none      &none                                  &none     &none      &none     &none      &none    &none
 &none  &sk LC(LCMD)  &sk LA(LCMD)  &none      &kp LG(A)  &none                                  &none     &kp PG_UP  &kp UP    &kp PG_DN  &none    &none
-&none  &sk LSHFT     &sk LALT      &sk LCTRL  &sk LCMD   &caps_word                             &kp HOME  &kp LEFT   &kp DOWN  &kp RIGHT  &kp END  &none
+&none  &sk LCTRL     &sk LALT      &sk LSHFT  &sk LCMD   &caps_word                             &kp HOME  &kp LEFT   &kp DOWN  &kp RIGHT  &kp END  &none
 &none  &kp LG(Z)     &kp LG(X)     &kp LG(C)  &kp LG(V)  &kp LS(LG(Z))  &kp K_MUTE    &kp C_PP  &kp H     &kp J      &kp K     &kp L      &none    &none
                                    &none      &to 0      &kp SPACE      &kp TAB       &kp RET   &kp BSPC  &kp DEL    &none
             >;
