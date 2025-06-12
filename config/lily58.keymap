@@ -53,7 +53,7 @@
         smart_shft: smart_shft {
             compatible = "zmk,behavior-mod-morph";
             label = "SMART_SHFT";
-            bindings = <&quick_sk LSHFT>, <&caps_word>;
+            bindings = <&sk LSHFT>, <&caps_word>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -157,10 +157,10 @@
             flavor = "hold-preferred";
         };
 
-        lsk: lsk {
+        layer_sshft: lsk {
             compatible = "zmk,behavior-hold-tap";
-            label = "Layer/Sticky";
-            bindings = <&mo>, <&sk>;
+            label = "LAYER_SSHFT";
+            bindings = <&mo>, <&smart_shft>;
 
             #binding-cells = <2>;
             tapping-term-ms = <150>;
@@ -184,11 +184,11 @@
 
         graphite_layer {
             bindings = <
-&kp GRAVE          &kp N1          &kp N2         &kp N3          &kp N4            &kp N5                                             &kp N6        &kp N7           &kp N8          &kp N9         &kp N0          &kp BSLH
-&kp GRAVE          &kp B           &kp L          &kp D           &kp W             &kp Q                                              &kp SQT       &kp F            &kp O           &kp U          &kp J           &kp BSPC
-&thumb_lt 4 MINUS  &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T  &lh_hm LCMD S     &kp G                                              &kp K         &rh_hm RCMD H    &rh_hm RSHFT A  &rh_hm LALT E  &rh_hm RCTRL I  &thumb_lt 4 FSLH
-&kp EQUAL          &kp Z           &kp X          &kp M           &kp C             &kp V          &kp LBKT           &kp RBKT         &kp P         &kp Y            &kp DOT         &kp SEMI       &kp COMMA       &lang_switch
-                                                  &kp LCTRL       &layer_gresc 5 0  &repeat_space  &thumb_lt 4 TAB    &thumb_lt 4 RET  &lsk 3 LSHFT  &thumb_lt 6 TAB  &mo 8
+&kp GRAVE          &kp N1          &kp N2         &kp N3          &kp N4            &kp N5                                             &kp N6                &kp N7           &kp N8          &kp N9         &kp N0          &kp BSLH
+&kp GRAVE          &kp B           &kp L          &kp D           &kp W             &kp Q                                              &kp SQT               &kp F            &kp O           &kp U          &kp J           &kp BSPC
+&thumb_lt 4 MINUS  &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T  &lh_hm LCMD S     &kp G                                              &kp K                 &rh_hm RCMD H    &rh_hm RSHFT A  &rh_hm LALT E  &rh_hm RCTRL I  &thumb_lt 4 FSLH
+&kp EQUAL          &kp Z           &kp X          &kp M           &kp C             &kp V          &kp LBKT           &kp RBKT         &kp P                 &kp Y            &kp DOT         &kp SEMI       &kp COMMA       &lang_switch
+                                                  &kp LCTRL       &layer_gresc 5 0  &repeat_space  &thumb_lt 4 TAB    &thumb_lt 4 RET  &layer_sshft 3 LSHFT  &thumb_lt 6 TAB  &mo 8
             >;
 
             label = "Graphite";
@@ -222,7 +222,7 @@
             label = "NumL";
             bindings = <
 &none      &none     &none   &none   &none    &none                          &none     &none     &none      &none     &none      &none
-&none      &kp FSLH  &kp N7  &kp N8  &kp N9   &kp FSLH                       &none     &none     &none      &none     &kp BSPC   &kp BSPC
+&none      &kp FSLH  &kp N7  &kp N8  &kp N9   &kp FSLH                       &none     &none     &none      &none     &kp DEL    &kp BSPC
 &kp MINUS  &kp N0    &kp N4  &kp N5  &kp N6   &kp PLUS                       &none     &kp RGUI  &kp RSHFT  &kp LALT  &kp RCTRL  &none
 &none      &kp N0    &kp N1  &kp N2  &kp N3   &kp STAR   &trans     &trans   &none     &none     &none      &none     &none      &trans
                              &none   &kp DOT  &kp SPACE  &kp TAB    &kp RET  &kp BSPC  &kp DEL   &none
@@ -267,7 +267,7 @@
         nav_layer {
             bindings = <
 &none  &none         &none         &none      &none      &none                                  &none     &none      &none     &none      &none    &none
-&none  &sk LC(LCMD)  &sk LA(LCMD)  &none      &kp LG(A)  &none                                  &none     &kp PG_UP  &kp UP    &kp PG_DN  &none    &none
+&none  &sk LC(LCMD)  &sk LA(LCMD)  &none      &kp LG(A)  &none                                  &none     &kp PG_UP  &kp UP    &kp PG_DN  &none    &kp BSPC
 &none  &sk LCTRL     &sk LALT      &sk LSHFT  &sk LCMD   &caps_word                             &kp HOME  &kp LEFT   &kp DOWN  &kp RIGHT  &kp END  &none
 &none  &kp LG(Z)     &kp LG(X)     &kp LG(C)  &kp LG(V)  &kp LS(LG(Z))  &kp K_MUTE    &kp C_PP  &kp H     &kp J      &kp K     &kp L      &none    &none
                                    &none      &to 0      &kp SPACE      &kp TAB       &kp RET   &kp BSPC  &kp DEL    &none
