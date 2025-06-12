@@ -174,11 +174,11 @@
 
         graphite_layer {
             bindings = <
-&kp GRAVE          &kp N1          &kp N2         &kp N3          &kp N4            &kp N5                                           &kp N6   &kp N7         &kp N8          &kp N9         &kp N0          &kp BSLH
-&thumb_lt 4 LBKT   &kp B           &kp L          &kp D           &kp W             &kp Q                                            &kp SQT  &kp F          &kp O           &kp U          &kp J           &thumb_lt 4 RBKT
-&thumb_lt 4 MINUS  &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T  &lh_hm LCMD S     &kp G                                            &kp K    &rh_hm RCMD H  &rh_hm RSHFT A  &rh_hm LALT E  &rh_hm RCTRL I  &thumb_lt 4 FSLH
-&kp EQUAL          &kp Z           &kp X          &kp M           &kp C             &kp V          &kp C_VOL_DN     &kp C_VOL_UP     &kp P    &kp Y          &kp DOT         &kp SEMI       &kp COMMA       &lang_switch
-                                                  &kp LCTRL       &layer_gresc 5 0  &repeat_space  &mt LCTRL TAB    &thumb_lt 3 RET  &none    &lt 6 TAB      &mo 8
+&kp GRAVE          &kp N1          &kp N2         &kp N3          &kp N4            &kp N5                                           &kp N6          &kp N7         &kp N8          &kp N9         &kp N0          &kp BSLH
+&thumb_lt 4 LBKT   &kp B           &kp L          &kp D           &kp W             &kp Q                                            &kp SQT         &kp F          &kp O           &kp U          &kp J           &thumb_lt 4 RBKT
+&thumb_lt 4 MINUS  &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T  &lh_hm LCMD S     &kp G                                            &kp K           &rh_hm RCMD H  &rh_hm RSHFT A  &rh_hm LALT E  &rh_hm RCTRL I  &thumb_lt 4 FSLH
+&kp EQUAL          &kp Z           &kp X          &kp M           &kp C             &kp V          &kp C_VOL_DN     &kp C_VOL_UP     &kp P           &kp Y          &kp DOT         &kp SEMI       &kp COMMA       &lang_switch
+                                                  &kp LCTRL       &layer_gresc 5 0  &repeat_space  &mt LCTRL TAB    &thumb_lt 3 RET  &mt LSHFT BSPC  &lt 6 TAB      &mo 8
             >;
 
             label = "Graphite";
