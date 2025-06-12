@@ -130,20 +130,20 @@
         num_l {
             label = "NumL";
             bindings = <
-&none      &none     &none   &none   &none    &none                          &none     &none     &none      &none     &none      &none
-&none      &kp FSLH  &kp N7  &kp N8  &kp N9   &kp FSLH                       &none     &none     &none      &none     &kp DEL    &kp BSPC
-&kp MINUS  &kp N0    &kp N4  &kp N5  &kp N6   &kp PLUS                       &none     &kp RGUI  &kp RSHFT  &kp LALT  &kp RCTRL  &none
-&none      &kp N0    &kp N1  &kp N2  &kp N3   &kp STAR   &trans     &trans   &none     &none     &none      &none     &none      &trans
-                             &none   &kp DOT  &kp SPACE  &kp TAB    &kp RET  &kp BSPC  &kp DEL   &none
+&none      &none      &none   &none   &none    &none                          &none     &none     &none      &none     &none      &none
+&none      &kp EQUAL  &kp N7  &kp N8  &kp N9   &kp FSLH                       &none     &none     &none      &none     &kp DEL    &kp BSPC
+&kp MINUS  &kp N0     &kp N4  &kp N5  &kp N6   &kp PLUS                       &none     &kp RGUI  &kp RSHFT  &kp LALT  &kp RCTRL  &none
+&none      &kp N0     &kp N1  &kp N2  &kp N3   &kp STAR   &trans     &trans   &none     &none     &none      &none     &none      &trans
+                              &none   &kp DOT  &kp SPACE  &kp TAB    &kp RET  &kp BSPC  &kp DEL   &none
             >;
         };
 
         sym_layer {
             bindings = <
 &kp N1  &kp N2             &kp N3           &kp N4             &kp N5             &none                              &none      &kp N6             &kp N7             &kp N8            &kp N9              &kp N0
-&none   &kp GRAVE          &kp LT           &kp GT             &kp FSLH           &kp DOT                            &kp PIPE   &kp TILDE          &kp LBKT           &kp RBKT          &kp AT              &none
+&none   &kp AT             &kp LT           &kp GT             &kp FSLH           &kp DOT                            &kp PIPE   &kp TILDE          &kp LBKT           &kp RBKT          &kp AT              &none
 &none   &lh_hm LCTRL EXCL  &lh_hm LALT DQT  &lh_hm LSHFT PLUS  &lh_hm LCMD EQUAL  &kp MINUS                          &kp AMPS   &rh_hm RCMD COLON  &rh_hm RSHFT LPAR  &rh_hm LALT RPAR  &rh_hm RCTRL PRCNT  &none
-&none   &kp BSLH           &kp BSLH         &kp UNDER          &kp HASH           &kp STAR   &kp K_MUTE    &kp C_PP  &kp CARET  &kp DLLR           &kp LBRC           &kp RBRC          &kp QMARK           &trans
+&none   &kp FSLH           &kp DOT          &kp UNDER          &kp HASH           &kp STAR   &kp K_MUTE    &kp C_PP  &kp CARET  &kp DLLR           &kp LBRC           &kp RBRC          &kp QMARK           &trans
                                             &none              &trans             &trans     &trans        &trans    &trans     &trans             &none
             >;
 
@@ -164,7 +164,7 @@
         nav_layer {
             bindings = <
 &none  &none         &none         &none      &none                 &none                                   &none     &none      &none     &none      &none    &none
-&none  &sk LC(LCMD)  &sk LA(LCMD)  &none      &kp LS(LG(NUMBER_4))  &kp LS(LG(N5))                          &none     &kp PG_UP  &kp UP    &kp PG_DN  &none    &kp BSPC
+&none  &sk LC(LCMD)  &sk LA(LCMD)  &none      &kp LS(LG(NUMBER_4))  &kp LS(LG(N5))                          &none     &kp PG_UP  &kp UP    &kp PG_DN  &kp DEL  &kp BSPC
 &none  &sk LCTRL     &sk LALT      &sk LSHFT  &sk LCMD              &kp LG(A)                               &kp HOME  &kp LEFT   &kp DOWN  &kp RIGHT  &kp END  &none
 &none  &kp LG(Z)     &kp LG(X)     &kp LG(C)  &kp LG(V)             &kp LS(LG(Z))   &kp K_MUTE    &kp C_PP  &kp H     &kp J      &kp K     &kp L      &none    &none
                                    &none      &to 0                 &kp SPACE       &kp TAB       &kp RET   &kp BSPC  &kp DEL    &none
