@@ -105,10 +105,10 @@
 
         graphite_layer {
             bindings = <
-&kp GRAVE          &kp N1          &kp N2         &kp N3          &kp N4         &kp N5                                           &kp N6                &kp N7           &kp N8          &kp N9         &kp N0          &kp BSLH
+&kp EQUAL          &kp N1          &kp N2         &kp N3          &kp N4         &kp N5                                           &kp N6                &kp N7           &kp N8          &kp N9         &kp N0          &kp MINUS
 &kp GRAVE          &kp B           &kp L          &kp D           &kp W          &kp Q                                            &kp SQT               &kp F            &kp O           &kp U          &kp J           &kp BSPC
 &thumb_lt 3 MINUS  &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T  &lh_hm LCMD S  &kp G                                            &kp K                 &rh_hm RCMD H    &rh_hm RSHFT A  &rh_hm LALT E  &rh_hm RCTRL I  &thumb_lt 3 FSLH
-&kp EQUAL          &kp Z           &kp X          &kp M           &kp C          &kp V        &kp LBKT           &kp RBKT         &kp P                 &kp Y            &kp DOT         &kp SEMI       &kp COMMA       &lang_switch
+&lang_switch       &kp Z           &kp X          &kp M           &kp C          &kp V        &kp LBKT           &kp RBKT         &kp P                 &kp Y            &kp DOT         &kp SEMI       &kp COMMA       &kp BSLH
                                                   &mo 6           &mt LCTRL ESC  &lt 5 SPACE  &thumb_lt 3 TAB    &thumb_lt 3 RET  &layer_sshft 2 LSHFT  &thumb_lt 4 TAB  &mo 6
             >;
 
