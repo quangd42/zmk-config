@@ -105,10 +105,10 @@
 
         graphite_layer {
             bindings = <
-&kp EQUAL          &kp N1          &kp N2         &kp N3          &kp N4         &kp N5                                           &kp N6                &kp N7           &kp N8          &kp N9         &kp N0          &kp MINUS
+&kp LBKT           &kp N1          &kp N2         &kp N3          &kp N4         &kp N5                                           &kp N6                &kp N7           &kp N8          &kp N9         &kp N0          &kp RBKT
 &kp GRAVE          &kp B           &kp L          &kp D           &kp W          &kp Q                                            &kp SQT               &kp F            &kp O           &kp U          &kp J           &kp BSPC
 &thumb_lt 3 MINUS  &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T  &lh_hm LCMD S  &kp G                                            &kp K                 &rh_hm RCMD H    &rh_hm RSHFT A  &rh_hm LALT E  &rh_hm RCTRL I  &thumb_lt 3 FSLH
-&lang_switch       &kp Z           &kp X          &kp M           &kp C          &kp V        &kp LBKT           &kp RBKT         &kp P                 &kp Y            &kp DOT         &kp SEMI       &kp COMMA       &kp BSLH
+&lang_switch       &kp Z           &kp X          &kp M           &kp C          &kp V        &kp C_VOL_DN       &kp C_VOL_UP     &kp P                 &kp Y            &kp DOT         &kp SEMI       &kp COMMA       &kp BSLH
                                                   &mo 6           &mt LCTRL ESC  &lt 5 SPACE  &thumb_lt 3 TAB    &thumb_lt 3 RET  &layer_sshft 2 LSHFT  &thumb_lt 4 TAB  &mo 6
             >;
 
@@ -127,8 +127,8 @@
             label = "Qwrt";
         };
 
-        num_l {
-            label = "NumL";
+        num {
+            label = "Num";
             bindings = <
 &none      &none      &none   &none   &none    &none                          &none     &none     &none      &none     &none      &none
 &none      &kp EQUAL  &kp N7  &kp N8  &kp N9   &kp FSLH                       &none     &none     &none      &none     &kp DEL    &kp BSPC
@@ -141,8 +141,8 @@
         sym_layer {
             bindings = <
 &kp N1  &kp N2             &kp N3           &kp N4             &kp N5             &none                              &none      &kp N6             &kp N7             &kp N8            &kp N9              &kp N0
-&none   &kp AT             &kp LT           &kp GT             &kp FSLH           &kp DOT                            &kp PIPE   &kp TILDE          &kp LBKT           &kp RBKT          &kp AT              &none
-&none   &lh_hm LCTRL EXCL  &lh_hm LALT DQT  &lh_hm LSHFT PLUS  &lh_hm LCMD EQUAL  &kp MINUS                          &kp AMPS   &rh_hm RCMD COLON  &rh_hm RSHFT LPAR  &rh_hm LALT RPAR  &rh_hm RCTRL PRCNT  &none
+&none   &kp AT             &kp LT           &kp GT             &kp MINUS          &kp FSLH                           &kp PIPE   &kp TILDE          &kp LBKT           &kp RBKT          &kp AT              &none
+&none   &lh_hm LCTRL EXCL  &lh_hm LALT DQT  &lh_hm LSHFT PLUS  &lh_hm LCMD EQUAL  &kp UNDER                          &kp AMPS   &rh_hm RCMD COLON  &rh_hm RSHFT LPAR  &rh_hm LALT RPAR  &rh_hm RCTRL PRCNT  &none
 &none   &kp FSLH           &kp DOT          &kp UNDER          &kp HASH           &kp STAR   &kp K_MUTE    &kp C_PP  &kp CARET  &kp DLLR           &kp LBRC           &kp RBRC          &kp QMARK           &trans
                                             &none              &trans             &trans     &trans        &trans    &trans     &trans             &none
             >;
