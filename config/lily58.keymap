@@ -125,9 +125,9 @@
             bindings = <
 &kp LBKT           &kp N1          &kp N2         &kp N3          &kp N4         &kp N5                                           &kp N6                &kp N7           &kp N8          &kp N9         &kp N0          &kp RBKT
 &kp GRAVE          &kp B           &kp L          &kp D           &kp W          &kp Q                                            &kp SQT               &kp F            &kp O           &kp U          &kp J           &kp BSPC
-&thumb_lt 3 MINUS  &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T  &lh_hm LCMD S  &kp G                                            &kp K                 &rh_hm RCMD H    &rh_hm RSHFT A  &rh_hm LALT E  &rh_hm RCTRL I  &thumb_lt 3 FSLH
+&thumb_lt 4 MINUS  &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T  &lh_hm LCMD S  &kp G                                            &kp K                 &rh_hm RCMD H    &rh_hm RSHFT A  &rh_hm LALT E  &rh_hm RCTRL I  &thumb_lt 4 FSLH
 &lang_switch       &kp Z           &kp X          &kp M           &kp C          &kp V        &kp C_VOL_DN       &kp C_VOL_UP     &kp P                 &kp Y            &dot_excl       &kp SEMI       &comm_qmrk      &lang_switch
-                                                  &mo 6           &mt LCTRL ESC  &lt 5 SPACE  &thumb_lt 3 TAB    &thumb_lt 3 RET  &layer_sshft 2 LSHFT  &thumb_lt 4 TAB  &mo 6
+                                                  &mo 7           &mt LCTRL ESC  &lt 6 SPACE  &thumb_lt 4 TAB    &thumb_lt 4 RET  &layer_sshft 3 LSHFT  &thumb_lt 5 TAB  &mo 7
             >;
 
             label = "Graphite";
@@ -142,7 +142,18 @@
                         &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
             >;
 
+            label = "Vn";
+        };
+
+        qwerty {
             label = "Qwrt";
+            bindings = <
+&trans           &trans  &trans  &trans  &trans        &trans                                           &trans            &trans        &trans     &trans   &trans    &trans
+&trans           &kp Q   &kp W   &kp E   &kp R         &kp T                                            &kp Y             &kp U         &kp I      &kp O    &kp P     &trans
+&mt LCTRL MINUS  &kp A   &kp S   &kp D   &kp F         &kp G                                            &kp H             &kp J         &kp K      &kp L    &kp SEMI  &mt APOS LSHFT
+&mt LSHFT LBKT   &kp Z   &kp X   &kp C   &kp V         &kp B        &trans             &trans           &kp N             &kp M         &kp COMMA  &kp DOT  &kp FSLH  &mt LSHFT RBKT
+                                 &trans  &mt LCMD ESC  &lt 6 SPACE  &thumb_lt 4 TAB    &thumb_lt 4 RET  &layer_sshft 3 0  &mt LALT TAB  &trans
+            >;
         };
 
         num {
@@ -158,11 +169,11 @@
 
         sym_layer {
             bindings = <
-&kp N1  &kp N2             &kp N3             &kp N4             &kp N5             &none                              &none      &kp N6            &kp N7             &kp N8           &kp N9              &kp N0
-&none   &kp FSLH           &kp LT             &kp GT             &kp MINUS          &kp PIPE                           &kp SQT    &kp AT            &kp LBKT           &kp RBKT         &kp BSLH            &kp BSPC
-&none   &lh_hm LCTRL EXCL  &lh_hm LALT COLON  &lh_hm LSHFT STAR  &lh_hm LCMD EQUAL  &kp AMPS                           &kp HASH   &rh_hm RCMD LPAR  &rh_hm RSHFT RPAR  &rh_hm LALT DQT  &rh_hm RCTRL PRCNT  &kp FSLH
-&none   &kp QMARK          &kp PLUS           &kp LBRC           &kp RBRC           &kp TILDE  &kp K_MUTE    &kp C_PP  &kp CARET  &kp DLLR          &kp DOT            &kp SEMI         &kp COMMA           &trans
-                                              &none              &trans             &trans     &trans        &trans    &trans     &trans            &none
+&kp N1     &kp N2             &kp N3             &kp N4             &kp N5             &none                              &none      &kp N6            &kp N7             &kp N8           &kp N9              &kp N0
+&none      &kp FSLH           &kp LT             &kp GT             &kp MINUS          &kp PIPE                           &kp SQT    &kp AT            &kp LBKT           &kp RBKT         &kp BSLH            &kp BSPC
+&kp MINUS  &lh_hm LCTRL EXCL  &lh_hm LALT COLON  &lh_hm LSHFT STAR  &lh_hm LCMD EQUAL  &kp AMPS                           &kp HASH   &rh_hm RCMD LPAR  &rh_hm RSHFT RPAR  &rh_hm LALT DQT  &rh_hm RCTRL PRCNT  &kp FSLH
+&none      &kp QMARK          &kp PLUS           &kp LBRC           &kp RBRC           &kp TILDE  &kp K_MUTE    &kp C_PP  &kp CARET  &kp DLLR          &kp DOT            &kp SEMI         &kp COMMA           &trans
+                                                 &none              &trans             &trans     &trans        &trans    &trans     &trans            &none
             >;
 
             label = "Code";
