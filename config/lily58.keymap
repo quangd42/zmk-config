@@ -169,11 +169,11 @@
 
         sym_layer {
             bindings = <
-&kp N1     &kp N2             &kp N3            &kp N4              &kp N5             &none                              &none      &kp N6            &kp N7             &kp N8           &kp N9              &kp N0
-&none      &kp AT             &kp LBRC          &kp RBRC            &kp STAR           &kp PIPE                           &kp SQT    &kp UNDER         &kp LBKT           &kp RBKT         &kp BSLH            &kp BSPC
-&kp MINUS  &lh_hm LCTRL EXCL  &lh_hm LALT PLUS  &lh_hm LSHFT COLON  &lh_hm LCMD EQUAL  &kp AMPS                           &kp HASH   &rh_hm RCMD LPAR  &rh_hm RSHFT RPAR  &rh_hm LALT DQT  &rh_hm RCTRL PRCNT  &kp FSLH
-&none      &kp LT             &kp GT            &kp LPAR            &kp RPAR           &kp TILDE  &kp K_MUTE    &kp C_PP  &kp CARET  &kp DLLR          &kp DOT            &kp SEMI         &kp COMMA           &trans
-                                                &none               &trans             &trans     &trans        &trans    &trans     &trans            &none
+&kp N1     &kp N2             &kp N3          &kp N4              &kp N5             &none                              &none      &kp N6            &kp N7             &kp N8           &kp N9              &kp N0
+&none      &kp AT             &kp LBRC        &kp RBRC            &kp STAR           &kp PIPE                           &kp SQT    &kp UNDER         &kp LBKT           &kp RBKT         &kp BSLH            &kp BSPC
+&kp MINUS  &lh_hm LCTRL EXCL  &lh_hm LALT GT  &lh_hm LSHFT COLON  &lh_hm LCMD EQUAL  &kp AMPS                           &kp HASH   &rh_hm RCMD LPAR  &rh_hm RSHFT RPAR  &rh_hm LALT DQT  &rh_hm RCTRL PRCNT  &kp FSLH
+&none      &kp PLUS           &kp LT          &kp LPAR            &kp RPAR           &kp TILDE  &kp K_MUTE    &kp C_PP  &kp CARET  &kp DLLR          &kp DOT            &kp SEMI         &kp COMMA           &trans
+                                              &none               &trans             &trans     &trans        &trans    &trans     &trans            &none
             >;
 
             label = "Code";
