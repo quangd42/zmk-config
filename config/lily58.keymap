@@ -105,6 +105,16 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        under_minus: under_minus {
+            compatible = "zmk,behavior-mod-morph";
+            label = "UNDER_MINUS";
+            bindings = <&kp UNDER>, <&kp MINUS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_LGUI|MOD_RGUI|MOD_RCTL|MOD_LALT|MOD_RALT)>;
+            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+        };
     };
 
     macros {
@@ -123,11 +133,11 @@
 
         graphite_layer {
             bindings = <
-&kp LBKT   &kp N1          &kp N2         &kp N3          &kp N4         &kp N5                                           &kp N6                &kp N7            &kp N8          &kp N9         &kp N0          &kp RBKT
-&kp GRAVE  &kp B           &kp L          &kp D           &kp W          &kp Q                                            &kp SQT               &kp F             &kp O           &kp U          &kp J           &kp BSPC
-&kp MINUS  &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T  &lh_hm LCMD S  &kp G                                            &kp K                 &rh_hm RCMD H     &rh_hm RSHFT A  &rh_hm LALT E  &rh_hm RCTRL I  &kp FSLH
-&kp LBKT   &kp Z           &kp X          &kp M           &kp C          &kp V        &kp C_VOL_DN       &kp C_VOL_UP     &kp P                 &kp Y             &dot_excl       &kp SEMI       &comm_qmrk      &kp RBKT
-                                          &lang_switch    &mt LCTRL ESC  &lt 6 SPACE  &thumb_lt 4 TAB    &thumb_lt 4 RET  &layer_sshft 3 LSHFT  &thumb_lt 5 BSPC  &mo 7
+&kp GRAVE     &kp N1          &kp N2         &kp N3          &kp N4           &kp N5                                           &kp N6                &kp N7         &kp N8          &kp N9         &kp N0          &kp BSPC
+&kp GRAVE     &kp B           &kp L          &kp D           &kp W            &kp Q                                            &kp SQT               &kp F          &kp O           &kp U          &kp J           &kp BSPC
+&under_minus  &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T  &lh_hm LCMD S    &kp G                                            &kp K                 &rh_hm RCMD H  &rh_hm RSHFT A  &rh_hm LALT E  &rh_hm RCTRL I  &kp FSLH
+&kp LBKT      &kp Z           &kp X          &kp M           &kp C            &kp V        &kp C_VOL_DN       &kp C_VOL_UP     &kp P                 &kp Y          &dot_excl       &kp SEMI       &comm_qmrk      &kp RBKT
+                                             &lang_switch    &thumb_lt 5 ESC  &lt 6 SPACE  &thumb_lt 4 TAB    &thumb_lt 4 RET  &layer_sshft 3 LSHFT  &kp BSPC       &mo 7
             >;
 
             label = "Graphite";
