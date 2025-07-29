@@ -182,7 +182,7 @@
 &kp N1     &kp N2             &kp N3            &kp N4             &kp N5             &none                              &none      &kp N6           &kp N7             &kp N8            &kp N9              &kp N0
 &kp GRAVE  &kp LT             &kp GT            &kp LPAR           &kp RPAR           &kp PIPE                           &kp SQT    &kp AT           &kp UNDER          &kp BSLH          &kp QMARK           &kp BSPC
 &kp UNDER  &lh_hm LCTRL EXCL  &lh_hm LALT LBRC  &lh_hm LSHFT RBRC  &lh_hm LCMD EQUAL  &kp AMPS                           &kp HASH   &rh_hm RCMD DQT  &rh_hm RSHFT LBKT  &rh_hm LALT RBKT  &rh_hm RCTRL PRCNT  &kp FSLH
-&none      &kp PLUS           &kp STAR          &kp COLON          &kp MINUS          &kp TILDE  &kp K_MUTE    &kp C_PP  &kp CARET  &kp DLLR         &kp DOT            &kp SEMI          &kp COMMA           &trans
+&none      &kp PLUS           &kp COLON         &kp STAR           &kp MINUS          &kp TILDE  &kp K_MUTE    &kp C_PP  &kp CARET  &kp DLLR         &kp DOT            &kp SEMI          &kp COMMA           &trans
                                                 &none              &trans             &trans     &trans        &trans    &trans     &trans           &none
             >;
 
