@@ -135,7 +135,7 @@
             bindings = <
 &kp EQUAL     &kp N1          &kp N2         &kp N3          &kp N4           &kp N5                                           &kp N6                &kp N7         &kp N8          &kp N9         &kp N0          &kp MINUS
 &kp GRAVE     &kp B           &kp L          &kp D           &kp W            &kp Q                                            &kp SQT               &kp F          &kp O           &kp U          &kp J           &kp BSPC
-&under_minus  &lh_hm LCTRL N  &lh_hm LALT R  &lh_hm LSHFT T  &lh_hm LCMD S    &kp G                                            &kp K                 &rh_hm RCMD H  &rh_hm RSHFT A  &rh_hm LALT E  &rh_hm RCTRL I  &kp FSLH
+&under_minus  &lh_hm LSHFT N  &lh_hm LALT R  &lh_hm LCMD T  &lh_hm LCTRL S    &kp G                                            &kp K                 &rh_hm RCTRL H  &rh_hm RCMD A  &rh_hm LALT E  &rh_hm RSHFT I  &kp FSLH
 &kp LBKT      &kp Z           &kp X          &kp M           &kp C            &kp V        &kp C_VOL_DN       &kp C_VOL_UP     &kp P                 &kp Y          &dot_excl       &kp SEMI       &comm_qmrk      &kp RBKT
                                              &lang_switch    &thumb_lt 5 ESC  &lt 6 SPACE  &thumb_lt 4 TAB    &thumb_lt 4 RET  &layer_sshft 3 LSHFT  &kp BSPC       &mo 7
             >;
@@ -171,7 +171,7 @@
             bindings = <
 &none      &none      &none   &none   &none    &none                          &none     &none     &none      &none     &none      &none
 &none      &kp EQUAL  &kp N7  &kp N8  &kp N9   &kp FSLH                       &none     &none     &none      &none     &kp DEL    &kp BSPC
-&kp MINUS  &kp N0     &kp N4  &kp N5  &kp N6   &kp PLUS                       &none     &kp RGUI  &kp RSHFT  &kp LALT  &kp RCTRL  &none
+&kp MINUS  &kp N0     &kp N4  &kp N5  &kp N6   &kp PLUS                       &none     &kp RCTRL  &kp RCMD  &kp LALT  &kp RSHFT  &none
 &none      &kp N0     &kp N1  &kp N2  &kp N3   &kp STAR   &trans     &trans   &none     &none     &none      &none     &none      &trans
                               &none   &kp DOT  &kp SPACE  &kp TAB    &kp RET  &kp BSPC  &kp DEL   &none
             >;
@@ -181,7 +181,7 @@
             bindings = <
 &kp N1     &kp N2             &kp N3            &kp N4             &kp N5             &none                              &none      &kp N6           &kp N7             &kp N8            &kp N9              &kp N0
 &kp GRAVE  &kp LT             &kp GT            &kp LPAR           &kp RPAR           &kp PIPE                           &kp SQT    &kp AT           &kp UNDER          &kp BSLH          &kp QMARK           &kp BSPC
-&kp UNDER  &lh_hm LCTRL EXCL  &lh_hm LALT LBRC  &lh_hm LSHFT RBRC  &lh_hm LCMD EQUAL  &kp AMPS                           &kp HASH   &rh_hm RCMD DQT  &rh_hm RSHFT LBKT  &rh_hm LALT RBKT  &rh_hm RCTRL PRCNT  &kp FSLH
+&kp UNDER  &lh_hm LSHFT EXCL  &lh_hm LALT LBRC  &lh_hm LCMD RBRC  &lh_hm LCTRL EQUAL  &kp AMPS                           &kp HASH   &rh_hm RCTRL DQT  &rh_hm RCMD LBKT  &rh_hm LALT RBKT  &rh_hm RSHFT PRCNT  &kp FSLH
 &none      &kp PLUS           &kp COLON         &kp STAR           &kp MINUS          &kp TILDE  &kp K_MUTE    &kp C_PP  &kp CARET  &kp DLLR         &kp DOT            &kp SEMI          &kp COMMA           &trans
                                                 &none              &trans             &trans     &trans        &trans    &trans     &trans           &none
             >;
@@ -194,7 +194,7 @@
             bindings = <
 &none  &none    &none   &none   &none   &none                               &none   &none     &none      &none     &none      &none
 &none  &kp F12  &kp F7  &kp F8  &kp F9  &none                               &none   &none     &none      &none     &none      &none
-&none  &kp F11  &kp F4  &kp F5  &kp F6  &caps_word                          &none   &kp RGUI  &kp RSHFT  &kp LALT  &kp RCTRL  &none
+&none  &kp F11  &kp F4  &kp F5  &kp F6  &caps_word                          &none   &kp RCTRL  &kp RCMD  &kp LALT  &kp RSHFT  &none
 &none  &kp F10  &kp F1  &kp F2  &kp F3  &none       &kp K_MUTE    &kp C_PP  &none   &none     &none      &none     &none      &trans
                         &none   &none   &trans      &trans        &trans    &trans  &trans    &none
             >;
@@ -204,7 +204,7 @@
             bindings = <
 &none  &none         &none         &none      &none                 &none                                   &none     &none      &none     &none      &none    &none
 &none  &sk LC(LCMD)  &sk LA(LCMD)  &none      &kp LS(LG(NUMBER_4))  &kp LS(LG(N5))                          &none     &kp PG_UP  &kp UP    &kp PG_DN  &kp DEL  &kp BSPC
-&none  &sk LCTRL     &sk LALT      &sk LSHFT  &sk LCMD              &kp LG(A)                               &kp HOME  &kp LEFT   &kp DOWN  &kp RIGHT  &kp END  &none
+&none  &sk LSHFT     &sk LALT      &sk LCMD  &sk LCTRL              &kp LG(A)                               &kp HOME  &kp LEFT   &kp DOWN  &kp RIGHT  &kp END  &none
 &none  &kp LG(Z)     &kp LG(X)     &kp LG(C)  &kp LG(V)             &kp LS(LG(Z))   &kp K_MUTE    &kp C_PP  &kp H     &kp J      &kp K     &kp L      &none    &none
                                    &none      &to 0                 &kp SPACE       &kp TAB       &kp RET   &kp BSPC  &kp DEL    &none
             >;
