@@ -181,8 +181,8 @@
             bindings = <
 &kp N1     &kp N2             &kp N3            &kp N4            &kp N5              &none                              &none      &kp N6            &kp N7            &kp N8            &kp N9              &kp N0
 &kp GRAVE  &kp LT             &kp GT            &kp COLON         &kp MINUS           &kp PIPE                           &kp SQT    &kp AT            &kp UNDER         &kp BSLH          &kp QMARK           &kp BSPC
-&kp UNDER  &lh_hm LSHFT EXCL  &lh_hm LALT RPAR  &lh_hm LCMD LPAR  &lh_hm LCTRL EQUAL  &kp AMPS                           &kp HASH   &rh_hm RCTRL DQT  &rh_hm RCMD LBKT  &rh_hm LALT RBKT  &rh_hm RSHFT PRCNT  &kp FSLH
-&none      &kp PLUS           &kp STAR          &kp RBRC          &kp LBRC            &kp TILDE  &kp K_MUTE    &kp C_PP  &kp CARET  &kp DLLR          &kp DOT           &kp SEMI          &kp COMMA           &trans
+&kp UNDER  &lh_hm LSHFT EXCL  &lh_hm LALT LPAR  &lh_hm LCMD RPAR  &lh_hm LCTRL EQUAL  &kp AMPS                           &kp HASH   &rh_hm RCTRL DQT  &rh_hm RCMD LBKT  &rh_hm LALT RBKT  &rh_hm RSHFT PRCNT  &kp FSLH
+&none      &kp PLUS           &kp STAR          &kp LBRC          &kp RBRC            &kp TILDE  &kp K_MUTE    &kp C_PP  &kp CARET  &kp DLLR          &kp DOT           &kp SEMI          &kp COMMA           &trans
                                                 &none             &trans              &trans     &trans        &trans    &trans     &trans            &none
             >;
 
