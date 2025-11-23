@@ -135,7 +135,7 @@
         repeat_lt_sym_u: repeat_lt_sym_u {
             compatible = "zmk,behavior-mod-morph";
             label = "REPEAT_LT_SYM_U";
-            bindings = <&rh_lt 4 U>, <&kp U>;
+            bindings = <&rh_lt 3 U>, <&kp U>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
@@ -145,7 +145,7 @@
         repeat_space: repeat_space {
             compatible = "zmk,behavior-mod-morph";
             label = "REPEAT_SPACE";
-            bindings = <&lt 7 SPACE>, <&kp SPACE>;
+            bindings = <&lt 5 SPACE>, <&kp SPACE>;
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT)>;
@@ -223,10 +223,10 @@
             //              | LGUI   |  LWR/SPC  | RSE/ENT |   LSHFT/BKSP  | ALT |
 
             bindings = <
-&kp RBKT      &kp B           &kp L          &kp D             &kp W           &kp Q                   &kp SQT  &kp F                     &kp O          &kp U          &kp J           &kp LBKT
-&under_minus  &lh_hm LSHFT N  &lh_hm LALT R  &lh_hm LCMD T     &lh_hm LCTRL S  &kp G                   &kp K    &rh_hm RCTRL H            &rh_hm RCMD A  &rh_hm LALT E  &rh_hm RSHFT I  &kp FSLH
-&kp MINUS     &kp Z           &kp X          &kp M             &kp C           &kp V                   &kp P    &kp Y                     &kp DOT        &kp SEMI       &kp COMMA       &m_lang_switch_equal
-                                             &layer_gresc 5 0  &repeat_space          &thumb_lt 4 RET           &layer_sshft 3 LSHFT  &kp BSPC
+&kp RBKT      &kp B           &kp L          &kp D             &kp W           &kp Q                   &kp SQT  &kp F                 &kp O          &kp U          &kp J           &kp LBKT
+&under_minus  &lh_hm LSHFT N  &lh_hm LALT R  &lh_hm LCMD T     &lh_hm LCTRL S  &kp G                   &kp K    &rh_hm RCTRL H        &rh_hm RCMD A  &rh_hm LALT E  &rh_hm RSHFT I  &kp FSLH
+&kp MINUS     &kp Z           &kp X          &kp M             &kp C           &kp V                   &kp P    &kp Y                 &kp DOT        &kp SEMI       &kp COMMA       &m_lang_switch_equal
+                                             &layer_gresc 0 0  &repeat_space          &thumb_lt 3 RET           &layer_sshft 2 LSHFT  &kp BSPC
             >;
         };
 
@@ -245,39 +245,21 @@
             >;
         };
 
-        num_layer {
+        num {
             bindings = <
-&none   &none      &lt 4 LT       &none     &kp GT          &none           &none      &kp N7         &kp N8   &kp N9  &kp MINUS  &none
-&none   &sk LSHFT  &mt LALT LPAR  &sk LCMD  &mt LCTRL RPAR  &none           &kp UNDER  &kp N4         &kp N5   &kp N6  &kp N0     &kp FSLH
-&trans  &none      &none          &none     &none           &none           &kp STAR   &kp N1         &kp N2   &kp N3  &kp PLUS   &none
-                                  &kp ESC   &kp SPACE              &kp RET             &kp BACKSPACE  &kp DEL
-            >;
-        };
-
-        num_l {
-            bindings = <
-&kp TAB    &kp FSLH  &kp N7  &kp N8   &kp N9     &kp MINUS           &none  &none          &none     &none     &kp BSPC   &kp BSPC
-&kp EQUAL  &kp N0    &kp N4  &kp N5   &kp N6     &kp PLUS            &none  &kp RCTRL      &kp RGUI  &kp LALT  &kp RSHFT  &none
-&none      &kp N0    &kp N1  &kp N2   &kp N3     &kp STAR            &none  &none          &none     &none     &none      &trans
-                             &kp DOT  &kp SPACE             &kp RET         &kp BACKSPACE  &kp DEL
+&kp TAB    &kp FSLH   &kp N7  &kp N8   &kp N9     &kp MINUS           &none  &none      &none     &none     &none      &none
+&kp EQUAL  &kp N0     &kp N4  &kp N5   &kp N6     &kp PLUS            &none  &kp RCTRL  &kp RGUI  &kp LALT  &kp RSHFT  &none
+&none      &kp EQUAL  &kp N1  &kp N2   &kp N3     &kp STAR            &none  &kp LPAR   &kp RPAR  &kp BSPC  &none      &trans
+                              &kp DOT  &kp SPACE             &kp RET         &kp DEL    &kp BSPC
             >;
         };
 
         sym_layer {
             bindings = <
-&kp GRAVE  &kp LT             &kp GT            &kp COLON         &kp MINUS           &kp PIPE          &kp SQT    &kp AT            &two_semi         &kp BSLH          &kp QMARK           &none
-&kp UNDER  &lh_hm LSHFT EXCL  &lh_hm LALT LBRC  &lh_hm LCMD RBRC  &lh_hm LCTRL EQUAL  &kp AMPS          &kp HASH   &rh_hm RCTRL DQT  &rh_hm RCMD LBKT  &rh_hm LALT RBKT  &rh_hm RSHFT PRCNT  &kp FSLH
-&none      &kp PLUS           &kp STAR          &kp LPAR          &kp RPAR            &kp TILDE         &kp CARET  &kp DLLR          &kp DOT           &kp SEMI          &kp COMMA           &trans
-                                               &trans             &trans                      &trans             &trans           &trans
-            >;
-        };
-
-        muz_layer {
-            bindings = <
-&none   &none      &none      &kp LG(BSLH)  &kp LS(LG(N4))  &kp LS(LG(N5))         &kp F12  &kp F7  &kp F8  &kp F9  &none  &trans
-&none   &sk LSHFT  &sk LALT   &sk LCMD      &sk LCTRL       &caps_word             &kp F11  &kp F4  &kp F5  &kp F6  &none  &none
-&trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)     &kp LG(V)       &kp LG(LS(Z))          &kp F10  &kp F1  &kp F2  &kp F3  &none  &kp LC(LG(Q))
-                              &to 0         &none                           &none           &none   &mo 8
+&kp GRAVE  &kp LT             &kp GT            &kp COLON         &kp MINUS           &kp PIPE           &kp SQT    &kp AT            &two_semi         &kp BSLH          &kp QMARK           &none
+&kp UNDER  &lh_hm LSHFT EXCL  &lh_hm LALT LBRC  &lh_hm LCMD RBRC  &lh_hm LCTRL EQUAL  &kp AMPS           &kp HASH   &rh_hm RCTRL DQT  &rh_hm RCMD LBKT  &rh_hm LALT RBKT  &rh_hm RSHFT PRCNT  &kp FSLH
+&none      &kp PLUS           &kp STAR          &kp LPAR          &kp RPAR            &kp TILDE          &kp CARET  &kp DLLR          &kp DOT           &kp SEMI          &kp COMMA           &trans
+                                                &trans            &trans                         &trans             &trans            &trans
             >;
         };
 
@@ -286,7 +268,7 @@
 &none   &none      &none      &kp LG(BSLH)  &kp LS(LG(N4))  &kp LS(LG(N5))         &kp F12  &kp F7  &kp F8  &kp F9  &none  &trans
 &none   &sk LSHFT  &sk LALT   &sk LCMD      &sk LCTRL       &caps_word             &kp F11  &kp F4  &kp F5  &kp F6  &none  &none
 &trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)     &kp LG(V)       &kp LG(LS(Z))          &kp F10  &kp F1  &kp F2  &kp F3  &none  &kp LC(LG(Q))
-                              &to 0         &none                           &none           &none   &mo 8
+                              &to 0         &none                           &none           &none   &mo 6
             >;
         };
 
@@ -298,10 +280,10 @@
             //                       |     | ADJ | BKSP |    |     |
 
             bindings = <
-&none  &sk LC(LCMD)  &sk LA(LCMD)  &none      &kp LS(LG(NUMBER_4))  &kp LS(LG(N5))  &none     &kp PG_UP  &kp UP    &kp PG_DN  &none    &none
-&none  &sk LSHFT     &sk LALT      &sk LCMD   &sk LCTRL             &kp LG(A)       &kp HOME  &kp LEFT   &kp DOWN  &kp RIGHT  &kp END  &none
-&none  &kp LG(Z)     &kp LG(X)     &kp LG(C)  &kp LG(V)             &kp LS(LG(Z))   &kp H     &kp J      &kp K     &kp L      &none    &none
-                                     &kp ESC    &kp SPACE                 &kp ENTER            &kp DEL   &kp BSPC
+&kp TAB  &sk LC(LCMD)  &sk LA(LCMD)  &none      &kp LS(LG(NUMBER_4))  &kp LS(LG(N5))             &none     &kp PG_UP  &kp UP    &kp PG_DN  &none    &none
+&none    &sk LSHFT     &sk LALT      &sk LCMD   &sk LCTRL             &kp LG(A)                  &kp HOME  &kp LEFT   &kp DOWN  &kp RIGHT  &kp END  &none
+&none    &kp LG(Z)     &kp LG(X)     &kp LG(C)  &kp LG(V)             &kp LS(LG(Z))              &kp H     &kp J      &kp K     &kp L      &none    &lang_switch
+                                     &kp ESC    &kp SPACE                             &kp ENTER            &kp DEL    &kp BSPC
             >;
         };
 
