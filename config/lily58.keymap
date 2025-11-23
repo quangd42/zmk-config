@@ -158,11 +158,11 @@
         num {
             label = "Num";
             bindings = <
-&none      &none     &none   &none   &none    &none                          &none     &none      &none     &none     &none      &none
-&none      &kp FSLH  &kp N7  &kp N8  &kp N9   &kp MINUS                      &none     &none      &none     &none     &kp DEL    &kp BSPC
-&kp EQUAL  &kp N0    &kp N4  &kp N5  &kp N6   &kp PLUS                       &none     &kp RCTRL  &kp RCMD  &kp LALT  &kp RSHFT  &none
-&none      &kp N0    &kp N1  &kp N2  &kp N3   &kp STAR   &trans     &trans   &none     &none      &none     &none     &none      &trans
-                             &none   &kp DOT  &kp SPACE  &kp TAB    &kp RET  &kp BSPC  &kp DEL    &none
+&none      &none     &none   &none   &none    &none                          &none  &none      &none     &none     &none      &trans
+&none      &kp FSLH  &kp N7  &kp N8  &kp N9   &kp MINUS                      &none  &none      &none     &none     &none      &none
+&kp EQUAL  &kp N0    &kp N4  &kp N5  &kp N6   &kp PLUS                       &none  &kp RCTRL  &kp RCMD  &kp LALT  &kp RSHFT  &none
+&none      &kp N0    &kp N1  &kp N2  &kp N3   &kp STAR   &trans     &trans   &none  &none      &none     &none     &none      &trans
+                             &none   &kp DOT  &kp SPACE  &kp TAB    &kp RET  &none  &kp BSPC   &none
             >;
         };
 
@@ -192,10 +192,10 @@
         nav_layer {
             bindings = <
 &none  &none         &none         &none      &none                 &none                                   &none     &none      &none     &none      &none    &none
-&none  &sk LC(LCMD)  &sk LA(LCMD)  &none      &kp LS(LG(NUMBER_4))  &kp LS(LG(N5))                          &none     &kp PG_UP  &kp UP    &kp PG_DN  &kp DEL  &kp BSPC
+&none  &sk LC(LCMD)  &sk LA(LCMD)  &none      &kp LS(LG(NUMBER_4))  &kp LS(LG(N5))                          &none     &kp PG_UP  &kp UP    &kp PG_DN  &none    &none
 &none  &sk LSHFT     &sk LALT      &sk LCMD   &sk LCTRL             &kp LG(A)                               &kp HOME  &kp LEFT   &kp DOWN  &kp RIGHT  &kp END  &none
 &none  &kp LG(Z)     &kp LG(X)     &kp LG(C)  &kp LG(V)             &kp LS(LG(Z))   &kp K_MUTE    &kp C_PP  &kp H     &kp J      &kp K     &kp L      &none    &none
-                                   &none      &to 0                 &kp SPACE       &kp TAB       &kp RET   &kp BSPC  &kp DEL    &none
+                                   &none      &to 0                 &kp SPACE       &kp TAB       &kp RET   &kp BSPC  &kp DEL    &kp DEL
             >;
 
             label = "Nav";
