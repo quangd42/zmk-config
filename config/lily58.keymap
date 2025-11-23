@@ -158,18 +158,18 @@
         num {
             label = "Num";
             bindings = <
-&none      &none     &none   &none   &none    &none                          &none  &none      &none     &none     &none      &trans
-&none      &kp FSLH  &kp N7  &kp N8  &kp N9   &kp MINUS                      &none  &none      &none     &none     &none      &none
-&kp EQUAL  &kp N0    &kp N4  &kp N5  &kp N6   &kp PLUS                       &none  &kp RCTRL  &kp RCMD  &kp LALT  &kp RSHFT  &none
-&none      &kp N0    &kp N1  &kp N2  &kp N3   &kp STAR   &trans     &trans   &none  &none      &none     &none     &none      &trans
-                             &none   &kp DOT  &kp SPACE  &kp TAB    &kp RET  &none  &kp BSPC   &none
+&none      &none      &none   &none   &none    &none                          &none  &none      &none     &none     &none      &trans
+&none      &kp FSLH   &kp N7  &kp N8  &kp N9   &kp MINUS                      &none  &none      &none     &none     &none      &none
+&kp EQUAL  &kp N0     &kp N4  &kp N5  &kp N6   &kp PLUS                       &none  &kp RCTRL  &kp RCMD  &kp LALT  &kp RSHFT  &none
+&none      &kp EQUAL  &kp N1  &kp N2  &kp N3   &kp STAR   &trans     &trans   &none  &kp LPAR   &kp RPAR  &none     &none      &trans
+                              &none   &kp DOT  &kp SPACE  &kp TAB    &kp RET  &none  &kp BSPC   &none
             >;
         };
 
         sym_layer {
             bindings = <
 &kp GRAVE  &kp N1             &kp N2            &kp N3            &kp N4              &kp N5                             &kp N6     &kp N7            &kp N8            &kp N9            &kp N0              &kp BSPC
-&kp LBKT   &kp LT             &kp GT            &kp COLON         &kp MINUS           &kp PIPE                           &kp SQT    &kp AT            &two_semi         &kp BSLH          &kp QMARK           &kp RBKT
+&kp GRAVE  &kp LT             &kp GT            &kp COLON         &kp MINUS           &kp PIPE                           &kp SQT    &kp AT            &two_semi         &kp BSLH          &kp QMARK           &none
 &kp UNDER  &lh_hm LSHFT EXCL  &lh_hm LALT LBRC  &lh_hm LCMD RBRC  &lh_hm LCTRL EQUAL  &kp AMPS                           &kp HASH   &rh_hm RCTRL DQT  &rh_hm RCMD LBKT  &rh_hm LALT RBKT  &rh_hm RSHFT PRCNT  &kp FSLH
 &none      &kp PLUS           &kp STAR          &kp LPAR          &kp RPAR            &kp TILDE  &kp K_MUTE    &kp C_PP  &kp CARET  &kp DLLR          &kp DOT           &kp SEMI          &kp COMMA           &trans
                                                 &none             &trans              &trans     &trans        &trans    &trans     &trans            &none
@@ -191,11 +191,11 @@
 
         nav_layer {
             bindings = <
-&none  &none         &none         &none      &none                 &none                                   &none     &none      &none     &none      &none    &none
+&none  &none         &none         &none      &none                 &none                                   &none     &none      &none     &none      &none    &kp BSPC
 &none  &sk LC(LCMD)  &sk LA(LCMD)  &none      &kp LS(LG(NUMBER_4))  &kp LS(LG(N5))                          &none     &kp PG_UP  &kp UP    &kp PG_DN  &none    &none
 &none  &sk LSHFT     &sk LALT      &sk LCMD   &sk LCTRL             &kp LG(A)                               &kp HOME  &kp LEFT   &kp DOWN  &kp RIGHT  &kp END  &none
 &none  &kp LG(Z)     &kp LG(X)     &kp LG(C)  &kp LG(V)             &kp LS(LG(Z))   &kp K_MUTE    &kp C_PP  &kp H     &kp J      &kp K     &kp L      &none    &none
-                                   &none      &to 0                 &kp SPACE       &kp TAB       &kp RET   &kp BSPC  &kp DEL    &kp DEL
+                                   &none      &to 0                 &kp SPACE       &kp TAB       &kp RET   &kp DEL   &kp BSPC   &kp DEL
             >;
 
             label = "Nav";
