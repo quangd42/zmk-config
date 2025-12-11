@@ -147,10 +147,10 @@
         qwerty {
             label = "Qwrt";
             bindings = <
-&trans        &trans  &trans  &trans  &trans        &trans                                           &trans            &trans         &trans     &trans   &trans    &trans
-&trans        &kp Q           &kp W          &kp E          &kp R            &kp T                                            &kp Y               &kp U           &kp I          &kp O          &kp P           &trans
+&trans        &trans          &trans         &trans         &trans           &trans                                           &trans                &trans          &trans         &trans         &trans             &trans
+&trans        &kp Q           &kp W          &kp E          &kp R            &kp T                                            &kp Y                 &kp U           &kp I          &kp O          &kp P              &trans
 &under_minus  &lh_hm LSHFT A  &lh_hm LALT S  &lh_hm LCMD D  &lh_hm LCTRL F   &kp G                                            &kp H                 &rh_hm RCTRL J  &rh_hm RCMD K  &rh_hm LALT L  &rh_hm RSHFT SEMI  &kp SQT
-&kp MINUS     &kp Z           &kp X          &kp C          &kp V            &kp B        &kp C_VOL_DN       &kp C_VOL_UP     &kp N                 &kp M           &kp COMMA        &kp DOT       &kp FSLH       &trans
+&kp MINUS     &kp Z           &kp X          &kp C          &kp V            &kp B        &kp C_VOL_DN       &kp C_VOL_UP     &kp N                 &kp M           &kp COMMA      &kp DOT        &kp FSLH           &trans
                                              &lang_switch   &thumb_lt 5 ESC  &lt 6 SPACE  &thumb_lt 4 TAB    &thumb_lt 4 RET  &layer_sshft 3 LSHFT  &kp BSPC        &mo 7
             >;
         };
@@ -158,11 +158,11 @@
         num {
             label = "Num";
             bindings = <
-&none      &none      &none   &none   &none    &none                          &none  &none      &none     &none     &none      &trans
-&none      &kp FSLH   &kp N7  &kp N8  &kp N9   &kp MINUS                      &none  &none      &none     &none     &none      &none
-&kp EQUAL  &kp N0     &kp N4  &kp N5  &kp N6   &kp PLUS                       &none  &kp RCTRL  &kp RCMD  &kp LALT  &kp RSHFT  &none
-&none      &kp EQUAL  &kp N1  &kp N2  &kp N3   &kp STAR   &trans     &trans   &none  &kp LPAR   &kp RPAR  &none     &none      &trans
-                              &none   &kp DOT  &kp SPACE  &kp TAB    &kp RET  &none  &kp BSPC   &none
+&none      &none      &none   &none   &none    &none                          &none  &none           &none          &none           &none      &trans
+&none      &kp FSLH   &kp N7  &kp N8  &kp N9   &kp MINUS                      &none  &none           &kp UP         &none           &none      &none
+&kp EQUAL  &kp N0     &kp N4  &kp N5  &kp N6   &kp PLUS                       &none  &mt RCTRL LEFT  &mt RCMD DOWN  &mt LALT RIGHT  &kp RSHFT  &none
+&none      &kp EQUAL  &kp N1  &kp N2  &kp N3   &kp STAR   &trans     &trans   &none  &kp LPAR        &kp RPAR       &none           &none      &trans
+                              &none   &kp DOT  &kp SPACE  &kp TAB    &kp RET  &none  &kp BSPC        &none
             >;
         };
 
